@@ -1,0 +1,2040 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- DIALOGUE -->
+<dialogue>
+
+	<chapter _name="1">
+		<!-- SCENE -->
+		<scene _name="C1_ShipDeck">
+			<npc _name="Beardy">
+				<condition _condition="level_1">
+					<line>This is Chapter 1 Level 1</line>
+				</condition>
+				<condition _condition="level_2">
+					<line>This is Chapter 1 Level 2</line>
+				</condition>
+				<leavedialogue/>
+			</npc>
+		</scene>
+	</chapter>
+
+	<chapter _name="2">
+	
+		<scene _name="C2_ShipDeck">
+		
+			<npc _name="Eurylochus">
+			
+				<condition _condition="level_1">
+					<changecharacter>Left</changecharacter>
+					<line>Hey Eurylochus, are you able to help me scout the area for food?</line>
+					<changecharacter>Right</changecharacter>
+					<line>I'm sorry Sir, but I'm too hungry to do anything right now.</line>
+					<line>In addition to that, I'm suffering from a sore throat.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Aren't you being too lazy?</line>
+					<line>As the second-in-command, you should be doing some tasks!</line>
+					<changecharacter>Right</changecharacter>
+					<line>But Odysseus, I'm really starving right now.</line>
+					<line>I'm sorry for not helping you out on this task.</line>
+					<line>If it is work that you want, I promise I'll do a great job at the next task that you assign me to.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Hmm, alright then.</line>
+					<line>I accept your apology.</line>
+					<line>Of course remember to keep your promise then.</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="level_3">
+					<condition _condition="!odysseus_informed">
+						<changecharacter>Left</changecharacter>
+						<line>Eurylochus, what's the matter? You look as if you'd seen a ghost!</line>
+						<question _question="1" _choices="3" _sentence="There was a witch in the castle! She turned my comrades into pigs, Odysseus!">
+							<option _sentence="Pigs? Eurylochus, are you sure you didn't have too much wine to drink?">
+								<changecharacter>Right</changecharacter>
+								<line>Why would I lie to you? I wouldn't lie to you, sir!</line>
+								<changecharacter>Left</changecharacter>
+								<line>Fine, fine.</line>
+								<line>I'll go and check it out.</line>
+								<result _name="condition">odysseus_informed</result>
+								<leavedialogue/>
+							</option>
+							<option _sentence="Are you serious? If you are, we need to go rescue them!">
+								<changecharacter>Right</changecharacter>
+								<line>No, I am never going back there!</line>
+								<line>Not even if you'd threaten to cut me down where I stand!</line>
+								<line>You can go save them yourself!</line>
+								<changecharacter>Left</changecharacter>
+								<line>What are you, a coward?</line>
+								<line>I'll go rescue our comrades by myself.</line>
+								<result _name="condition">odysseus_informed</result>
+								<leavedialogue/>
+							</option>
+							<option _sentence="Calm down, I have no idea what you are talking about!">
+								<changecharacter>Right</changecharacter>
+								<line>When we first arrived at her home, she offered us fine food and drink.</line>
+								<line>I stayed outside because I was suspicious.</line>
+								<line>Soon after the men had eaten, she cast a magic spell on all of them, turning them into pigs and locking them away!</line>
+								<changecharacter>Left</changecharacter>
+								<line>Why didn't you say that in the first place?</line>
+								<line>You stay here and rest. You've earned it.</line>
+								<result _name="condition">odysseus_informed</result>
+								<leavedialogue/>
+							</option>
+						</question>
+					</condition>
+						<changecharacter>Left</changecharacter>
+						<line>Eurylochus, about what happened in the castle ...</line>
+						<question _question="1" _choices="2" _sentence="Y-yes Odysseus?">
+							<option _sentence="Can you tell me what happened in the castle again, Eurylochus?">
+								<changecharacter>Right</changecharacter>
+								<line>When we first arrived at her home, she offered us fine food and drink.</line>
+								<line>I stayed outside because I was suspicious.</line>
+								<line>Soon after the men had eaten, she cast a magic spell on all of them, turning them into pigs and locking them away!</line>
+								<changecharacter>Left</changecharacter>
+								<line>Thank you, Eurylochus.</line>
+								<leavedialogue/>
+							</option>
+							<option _sentence="Can you show me the way to the castle, Eurylochus?">
+								<changecharacter>Right</changecharacter>
+								<line>No, sir. I don't dare go back.</line>
+								<line>I don't want to be turned into a pig like the rest of them!</line>
+								<changecharacter>Left</changecharacter>
+								<line>Are you too afraid to help our friends, Eurylochus?</line>
+								<line>You are a coward.</line>
+								<leavedialogue/>
+							</option>
+						</question>
+				</condition>
+				
+			</npc>
+		
+			<npc _name="Elpenor">
+			
+				<condition _condition="level_1">
+					<condition _condition="deerKilled">
+						<condition _condition="selected_CutGrass">
+							<changecharacter>Left</changecharacter>
+							<line>Here is the grass, Elpenor.</line>
+							<changecharacter>Right</changecharacter>
+							<line>Okay, just a second.</line>
+							<line> ... ... </line>
+							<line>Done. Here you go.</line>
+							<result _name="deleteinventory">CutGrass</result>
+							<result _name="addinventory">Rope</result>
+							<result _name="condition">!deerKilled</result>
+							<leavedialogue/>
+						</condition>
+							<changecharacter>Left</changecharacter>
+							<line>Elpenor, do you happen to have any rope?</line>
+							<changecharacter>Right</changecharacter>
+							<line>Nope, but if you can get me some cut grass, I can make one for you!</line>
+							<changecharacter>Left</changecharacter>
+							<line>Really?</line>
+							<line>Wow, it looks like there is finally someone reliable on board!</line>
+							<leavedialogue/>
+					</condition>
+						<line>Odysseus, we need to find supplies.</line>
+						<question _question="1" _choices="3" _sentence="The men are hungry and we have no idea where we are!">
+							<option _sentence="Don't worry, Elpenor! I'll go scout the area and find us something to eat.">
+								<changecharacter>Right</changecharacter>
+								<line>That is for the best, Sir.</line>
+								<line>Lead with your example!</line>
+								<changecharacter>Left</changecharacter>
+								<line>I know. I'm the best, aren't I?</line>
+								<leavedialogue/>
+							</option>
+							<option _sentence="I feel like we've had this same discussion before, Elpenor.">
+								<changecharacter>Right</changecharacter>
+								<line>I have no idea what you mean, Sir!</line>
+								<changecharacter>Left</changecharacter>
+								<line>I'll just go scout the area, then.</line>
+								<leavedialogue/>
+							</option>
+							<option _sentence="Why not send someone to scout the area, then?">
+								<changecharacter>Right</changecharacter>
+								<line>Sir, the men are starving.</line>
+								<line>They are not fit for a task like that!</line>
+								<changecharacter>Left</changecharacter>
+								<line>Hmm, weaklings!</line>
+								<line>I'll do it myself.</line>
+								<leavedialogue/>
+							</option>
+						</question>
+				</condition>
+				
+				<condition _condition="level_2">
+					<line>Hey, Eurylochus!</line>
+					<line>Having a fine day, I see.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Urgh ...</line>
+					<line>What do you know ...</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="level_3">
+					<line>Hey, Odysseus!</line>
+					<line>Having a fine day, I see.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Sure do ...</line>
+					<line>Everyday is a fine day, with me around of course!</line>
+					<leavedialogue/>
+				</condition>
+				
+			</npc>
+			
+			<npc _name="Chef">
+			
+				<condition _condition="level_1">
+					<condition _condition="selected_DeadDeer">
+						<changecharacter>Left</changecharacter>
+						<line>Chef, start making a feast for the men!</line>
+						<changecharacter>Right</changecharacter>
+						<line>With pleasure, Sir!</line>
+						<result _name="deleteinventory">DeadDeer</result>
+						<result _name="condition">!level_1</result>
+						<result _name="condition">level_2</result>
+						<result _name="changeplayer">Eurylochus</result>
+						<!-- CHANGE TO CUTSCENE OF ODYSSEUS ASKING EURYLOCHUS TO MEET THE NATIVES -->
+						<result _name="loadscene">C2_ShipDeck</result>
+						<leavedialogue/>
+					</condition>
+						<changecharacter>Left</changecharacter>
+						<line>Why are you not making food for the men?</line>
+						<line>The men are hungry!</line>
+						<question _question="1" _choices="2" _sentence="Sir, our reserves are empty. There is nothing to eat.">
+							<option _sentence="Why don't you go find something to eat, then?">
+								<changecharacter>Right</changecharacter>
+								<line>Surely you are joking, Sir?</line>
+								<line>I am not a hunter or a warrior!</line>
+								<changecharacter>Left</changecharacter>
+								<line>Then what good are you? Hmph, I'll just go find something myself!</line>
+								<leavedialogue/>
+							</option>
+							<option _sentence="Alright, I'll see if I can find anything for you to cook.">
+								<changecharacter>Right</changecharacter>
+								<line>Thank you, Sir.</line>
+								<line>Please tell me if you find anything of use.</line>
+								<changecharacter>Left</changecharacter>
+								<line>As soon as I find anything, you'll be the first to know.</line>
+								<leavedialogue/>
+							</option>
+						</question>
+				</condition>
+				
+				<condition _condition="level_2">
+					<line>Hey, Eurylochus!</line>
+					<line>Are you still hungry? Do you want more roast meat?</line>
+					<line>I still have some raw meat ready to be roasted!</line>
+					<changecharacter>Left</changecharacter>
+					<line>It's fine. My throat is too hoarse to eat roast meat.</line>
+					<line>Maybe after I recover from it.</line>
+					<changecharacter>Right</changecharacter>
+					<line>Alright then.</line>
+					<line>I'll preserve some raw meat for you just in case.</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="level_3">
+					<condition _condition="!odysseus_gotMeat">
+						<changecharacter>Left</changecharacter>
+						<line>Is there anything left to eat, chef?</line>
+						<line>I don't know how long I will be gone.</line>
+						<changecharacter>Right</changecharacter>
+						<line>There is some meat I meant to keep for Eurylochus.</line>
+						<line>You can have it if you want, however I cannot cut it up myself, as my knives have became dull and blunt.</line>
+						<changecharacter>Left</changecharacter>
+						<line>I'll just use my sword instead! Step aside, let me handle this!</line>
+						<condition _condition="have_SharpenedSword">
+							<result _name="addinventory">Meat</result>
+							<result _name="addinventory">Meat</result>
+							<result _name="condition">odysseus_gotMeat</result>
+							<leavedialogue/>
+						</condition>
+							<line>(On another thought, I should sharpen my sword beforehand. Just in case.)</line>
+							<line>Actually, nevermind. I'm not hungry anyway.</line>
+							<leavedialogue/>
+					</condition>
+						<changecharacter>Left</changecharacter>
+						<line>Thanks for the meat, chef!</line>
+						<leavedialogue/>
+				</condition>
+				
+			</npc>
+			
+		</scene>
+		
+		<scene _name="C2_OdysseusRoom">
+		
+			<npc _name="Odysseus">
+			
+				<condition _condition="level_2">
+					<changecharacter>Left</changecharacter>
+					<line>Hey Odysseus, can you remind me what am I supposed to do again?</line>
+					<changecharacter>Right</changecharacter>
+					<line>What? You meant you have forgotten what I have just said?</line>
+					<line>Well, it doesn't matter.</line>
+					<line>I'll explain briefly once more.</line>
+					<line>Earlier on, while scouting the area for food, I caught a glimpse of a castle far away.</line>
+					<line>I want you to bring a group of men and meet those residing in the castle.</line>
+					<line>Report back to me if you find anything of interest.</line>
+					<condition _condition="!gotten_Helmet">
+						<condition _condition="have_GreyHelmet">
+							<result _name="condition">gotten_Helmet</result>
+						</condition>
+						<condition _condition="!have_GreyHelmet">
+							<line>Oh, and you can have my helmet over there if you need it that is.</line>
+						</condition>
+					</condition>
+					<changecharacter>Left</changecharacter>
+					<line>Sigh ... alright then.</line>
+					<line>I guess I'll have to keep my promise.</line>
+					<leavedialogue/>
+				</condition>
+			
+			</npc>
+			
+		</scene>
+		
+		<scene _name="C2_Clearing">
+		
+			<npc _name="Hermes">
+				<condition _condition="!odysseus_gotMoly">
+					<changecharacter>Left</changecharacter>
+					<line>Where did you come from, stranger?</line>
+					<changecharacter>Right</changecharacter>
+					<line>I am Hermes, messenger of the gods.</line>
+					<line>I know what perils await you in Circe's castle and do not want you to come to harm, Odysseus.</line>
+					<question _question="1" _choices="2" _sentence="I want to offer you my help.">
+						<option _sentence="Surely you don't think I believe you? For all I know, this might be a trap!">
+							<changecharacter>Right</changecharacter>
+							<line>What choice do you have?</line>
+							<line>If you go into the castle of the witch without being prepared, you will only invite doom to yourself.</line>
+						</option>
+						<option _sentence="I would be grateful for any help you can offer me, Hermes.">
+							<changecharacter>Right</changecharacter>
+							<line>Good choice.</line>
+							<line>Listen carefully to what I am going to tell you, as it is the only thing that can save you from the Witch.</line>
+						</option>
+					</question>
+					<line>The witch will prepare a feast for you, but she will enchant the food and the drink.</line>
+					<line>After you drink and eat, she will strike you with her magic wand and turn you into a pig like the rest of your men.</line>
+					<changecharacter>Left</changecharacter>
+					<line>And what can I do to stop this from happening?</line>
+					<line>That didn't sound very helpful, really.</line>
+					<changecharacter>Right</changecharacter>
+					<line>Do you see that root over there?</line>
+					<line>Mortal men cannot uproot it, but we gods can do with it what we will.</line>
+					<line>I will give this herb for you.</line>
+					<line>Using it will make you immune to the enchantment in the food and drink.</line>
+					<line>Then, you must threaten Circe to let your men go.</line>
+					<line>But be careful!</line>
+					<line>She will try to seduce you and lure you into another trap.</line>
+					<line>You must stay firm and refuse her offers.</line>
+					<line>Only when your men are free can you rest easy.</line>
+					<line>Do you understand, Odysseus?</line>
+					<changecharacter>Left</changecharacter>
+					<line>I understand.</line>
+					<result _name="addinventory">WhiteMoly</result>
+					<result _name="condition">odysseus_gotMoly</result>
+					<leavedialogue/>
+				</condition>
+					<line>I wish you all the best for the confrontation against Circe.</line>
+					<leavedialogue/>
+			</npc>
+		
+		</scene>
+		
+		<scene _name="C2_CastleExterior">
+		
+			<npc _name="Circe">
+			
+				<condition _condition="level_2">
+					<condition _condition="have_HelmetWithHoneyWater">
+						<changecharacter>Left</changecharacter>
+						<line>(Now that I've had a drink, I can try calling out to her.)</line>
+						<line>Hello! Can you hear me in there?</line>
+						<question _question="1" _choices="2" _sentence="Oh? Who's calling me?">
+							<option _sentence="I am but a lost traveller from Ithaca, looking for food and shelter with my men.">
+								<changecharacter>Right</changecharacter>
+								<line>A lost traveller, hm? Why don't you come in and let me help you and your men?</line>
+								<result _name="deleteinventory">HelmetWithHoneyWater</result>
+								<result _name="condition">!level_2</result>
+								<result _name="condition">level_3</result>
+								<result _name="changeplayer">Odysseus</result>
+								<!-- CHANGE TO CUTSCENE OF CIRCE TURNING MEN INTO PIGS -->
+								<!-- LOAD EURYLOCHUS ESCAPING CIRCE MINIGAME -->
+								<result _name="loadscene">EscapingCirce</result>
+								<leavedialogue/>
+							</option>
+							<option _sentence="My name is Eurylochus. I was sent by Odysseus to meet the natives of this island.">
+								<changecharacter>Right</changecharacter>
+								<line>Odysseus? I have not heard of him. Come inside, let me prepare a meal for you and your men.</line>
+								<result _name="deleteinventory">HelmetWithHoneyWater</result>
+								<result _name="condition">!level_2</result>
+								<result _name="condition">level_3</result>
+								<result _name="changeplayer">Odysseus</result>
+								<!-- CHANGE TO CUTSCENE OF CIRCE TURNING MEN INTO PIGS -->
+								<!-- LOAD EURYLOCHUS ESCAPING CIRCE MINIGAME -->
+								<result _name="loadscene">EscapingCirce</result>
+								<leavedialogue/>
+							</option>
+						</question>
+					</condition>
+						<changecharacter>Left</changecharacter>
+						<line>... Hello? Miss?</line>
+						<changecharacter>Right</changecharacter>
+						<line>(No response)</line>
+						<changecharacter>Left</changecharacter>
+						<line>(Dang, she can't hear me and my throat is too sore for shouting ... )</line>
+						<line>(I've got to find another way to get her attention.)</line>
+						<line>(Either that or I have to cure my sore throat.)</line>
+						<leavedialogue/>
+				</condition>
+			
+			</npc>
+		
+		</scene>
+		
+		<scene _name="C2_CastleInterior">
+		
+			<npc _name="Circe">
+			
+				<condition _condition="odysseus_toastCirce">
+					<condition _condition="have_GobletWithMoly">
+						<changecharacter>Right</changecharacter>
+						<line>Aren't you going to drink yet?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Alright, just a second.</line>
+						<line>*Glug glug*</line>
+						<line>Oh my, this taste so great!</line>
+						<line>Is it alright if I can have more?</line>
+						<changecharacter>Right</changecharacter>
+						<line> ... </line>
+						<line>I-I don't understand ...</line>
+						<line>Why aren't you turned into a pig yet?</line>
+						<changecharacter>Left</changecharacter>
+						<line>(Now's my chance to threaten her!)</line>
+						<result _name="deleteinventory">GobletWithMoly</result>
+						<result _name="condition">!odysseus_toastCirce</result>
+						<result _name="condition">odysseus_drankWine</result>
+						<!-- DELETE EXIT -->
+						<result _name="setactive" _sentence="Castle">false</result>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="have_Goblet">
+						<line>Why aren't you drinking yet, Odysseus?</line>
+						<line>Are you feeling ill?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Nope, I'm just admiring your wonderful castle.</line>
+						<line>(I've got to remember what Hermes said.)</line>
+						<line>(I need to add the herb into the wine before drinking it.)</line>
+						<changecharacter>Right</changecharacter>
+						<line>Ohh, is that so?</line>
+						<leavedialogue/>
+					</condition>
+						<line>Trust me, my wine is good.</line>
+						<line>You can drink it from my goblet on the table.</line>
+						<leavedialogue/>
+				</condition>
+					<condition _condition="odysseus_drankWine">
+						<condition _condition="selected_SharpenedSword">
+							<line>Please spare me, Odysseus! I promise I will bring you no harm.</line>
+							<line>Let us be friends instead.</line>
+							<changecharacter>Left</changecharacter>
+							<line>How can I believe your words when my men are still locked in your pigsty, you witch?</line>
+							<line>You were trying to trick me too, and now you still try to plot against me.</line>
+							<line>Release my men and promise you will not harm any of us.</line>
+							<changecharacter>Right</changecharacter>
+							<line>I promise. I'll free your men and you will come to no harm, Odysseus.</line>
+							<!-- CHANGE TO CUTSCENE OF CIRCE FREEING MEN AND ENDING -->
+							<!-- LOAD EURYLOCHUS DUEL ODYSSEUS MINIGAME -->
+							<result _name="deleteinventory">SharpenedSword</result>
+							<result _name="endchapter"/>
+							<result _name="loadscene">SwordClash</result>
+							<leavedialogue/>
+						</condition>
+							<line>H-how is it possible?</line>
+							<line>You should have turned into a pig!</line>
+							<changecharacter>Left</changecharacter>
+							<line>(I shouldn't miss this chance to threaten her!)</line>
+							<leavedialogue/>
+					</condition>
+						<changecharacter>Left</changecharacter>
+						<line>Circe, release my men at once!</line>
+						<changecharacter>Right</changecharacter>
+						<line>Oh Odysseus.</line>
+						<line>I have been waiting for you. I will do what you ask, but let's not hurry.</line>
+						<line>Let's have a drink first. I have great wine.</line>
+						<line>You can drink from the goblet on the table.</line>
+						<changecharacter>Left</changecharacter>
+						<line>(Alright, I need to remember what Hermes said!)</line>
+						<line>Of course, anything for a beautiful woman such as yourself.</line>
+						<result _name="condition">odysseus_toastCirce</result>
+						<leavedialogue/>
+			</npc>
+			
+		</scene>
+		
+	</chapter>
+
+	<chapter _name="3">
+		<!-- SCENE -->
+		<scene _name="C3_EndOfDock">
+			<npc _name="Charon">
+				<condition _condition="selected_GoldNugget">
+					<changecharacter>Left</changecharacter>
+					<line>I have your gold nugget right here.</line>
+					<line>Now let me pass as promised.</line>
+					<changecharacter>Right</changecharacter>
+					<line>Welcome to the land of Death mortal.</line>
+					<line>Enjoy your stay, you might be here for longer than you expected ...</line>
+					<result _name="condition">reaper_paid</result>
+					<result _name="deleteinventory">GoldNugget</result>
+					<result _name="setactive" _sentence="GateBlocked">false</result>
+					<result _name="setactive" _sentence="Gate">true</result>
+					<leavedialogue/>
+				</condition>
+				<condition _condition="reaper_paid">
+					<question _question="1" _choices="2" _sentence="What business do you have with me, mortal?">
+						<option _sentence="You look awfully ghastly today.">
+							<line>You should seek out for some beauty products.</line>
+							<changecharacter>Right</changecharacter>
+							<line>Insolent mortal!</line>
+							<line>My appearance means little to an individual such as myself!</line>
+							<leavedialogue/>
+						</option>
+						<option _sentence="Nothing ... just moving on ...">
+							<changecharacter>Right</changecharacter>
+							<line>Watch your step!</line>
+							<line>For death lurks among us.</line>
+							<leavedialogue/>
+						</option>
+					</question>
+				</condition>
+					<line>Halt foolish mortal!</line>
+					<question _question="1" _choices="3" _sentence="For what reasons do you venture into this forbidden realm of the dead?">
+						<option _sentence="Mind your own business Charon!">
+							<changecharacter>Right</changecharacter>
+							<line>Fool!</line>
+							<line>I'll give you one last chance to tell me the truth.</line>
+							<line>If not your life will be forfeited here and now!</line>
+						</option>
+						<option _sentence="To visit you of course! Did I mention you look absolutely stunning?">
+							<changecharacter>Right</changecharacter>
+							<line>Flattery will get you nowhere mortal.</line>
+							<line>Speak now, or I'll make this place your permanent home!</line>
+						</option>
+						<option _sentence="I am here to seek out the Prophet Tiresias for instructions.">
+							<changecharacter>Right</changecharacter>
+							<line>If you wish to pass, you must first pay the toll of one gold nugget.</line>
+							<line>Only then can you pass by me and proceed on your journey.</line>
+						</option>
+					</question>
+					<leavedialogue/>
+			</npc>
+		</scene>
+		
+		<scene _name="C3_GateEntrance">
+			<npc _name="Monologue">
+				<line>What is this, some sort of puzzle?</line>
+				<line>It seems I'll have to activate the skulls in order to tread past this gate!</line>
+				<line>Well then, let's give it a shot!</line>
+				<result _name="condition">gate_unlocked</result>
+				<!-- CHANGE TO GATE MINIGAME -->
+				<result _name="loadscene">HadesGateMinigame</result>
+				<leavedialogue/>
+			</npc>
+		</scene>
+		
+		<scene _name="C3_Trench">
+			<npc _name="Chef">
+				<condition _condition="done_ritual">
+					<condition _condition="gotten_Blood">
+						<line>Do you still need more blood, Sir?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Nope, I have enough.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Alright then. Feel free to come back to me if you need more.</line>
+						<leavedialogue/>
+					</condition>
+						<line>The ritual is a huge success Sir!</line>
+						<changecharacter>Left</changecharacter>
+						<line>Yes it is.</line>
+						<line>With me to fend the ghost away, nothing could go wrong!</line>
+						<changecharacter>Right</changecharacter>
+						<line>Here is the blood of the sacrificed sheeps.</line>
+						<line>You'll probably need it to talk to certain ghosts.</line>
+						<result _name="condition">gotten_Blood</result>
+						<result _name="addinventory">BloodBag</result>
+						<leavedialogue/>
+				</condition>
+					<changecharacter>Left</changecharacter>
+					<line>Men, prepare the sacrificial ritual!</line>
+					<changecharacter>Right</changecharacter>
+					<line>Odysseus! The honey, milk, wine, water and white barley meal are all here.</line>
+					<condition _condition="have_Sword">
+						<changecharacter>Left</changecharacter>
+						<line>I have brought my sword with me.</line>
+						<line>Let's commence the ritual at once.</line>
+						<result _name="deleteinventory">Sword</result>
+						<result _name="condition">done_ritual</result>
+						<!-- CHANGE TO BLOOD SACRIFICE MINIGAME -->
+						<result _name="loadscene">BloodSacrificeMinigame</result>
+						<leavedialogue/>
+					</condition>
+						<question _question="1" _choices="2" _sentence="All that's left is your sword, Sir!">
+							<option _sentence="Very well, I shall retrieve it.">
+								<line>It should be at the boat.</line>
+								<changecharacter>Right</changecharacter>
+								<line>Please do, Sir!</line>
+								<line>We shall continue our preparations.</line>
+								<leavedialogue/>
+							</option>
+							<option _sentence="Why does it have to be my sword?">
+								<line>Must I do everything myself?</line>
+								<changecharacter>Right</changecharacter>
+								<line>I'm sorry Sir!</line>
+								<line>Please spare my life!</line>
+								<leavedialogue/>
+							</option>
+						</question>
+						<leavedialogue/>
+			</npc>
+		</scene>
+		
+		<scene _name="C3_Junction">
+		
+			<npc _name="Headless">
+				<condition _condition="!headless_gotBone">
+					<condition _condition="selected_BigBone">
+						<changecharacter>Left</changecharacter>
+						<line>Hey, soldier.</line>
+						<line>I've gotten your bone.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Alright, let me see it.</line>
+						<line>... ...</line>
+						<line>Wait a minute, this isn't my bone!</line>
+						<line>It could be one of my fellow soldier's bone.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Oh I see.</line>
+						<line>I'll return once I find your bone.</line>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="selected_SmallBones">
+						<changecharacter>Left</changecharacter>
+						<line>Hey, soldier.</line>
+						<line>I've gotten your bone.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Alright, let me see it.</line>
+						<line>... ...</line>
+						<line>Wait a minute, this isn't my bone!</line>
+						<line>It could be one of my fellow soldier's bone.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Oh I see.</line>
+						<line>I'll return once I find your bone.</line>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="selected_SkullBone">
+						<changecharacter>Left</changecharacter>
+						<line>Here, might this be your remains?</line>
+						<changecharacter>Right</changecharacter>
+						<line>Yes. Thanks for the help.</line>
+						<result _name="deleteinventory">SkullBone</result>
+						<result _name="condition">headless_gotBone</result>
+					</condition>
+					<condition _condition="!selected_SkullBone">
+						<line>Speak, mortal. What is your name?</line>
+						<changecharacter>Left</changecharacter>
+						<line>I am Odysseus, son of Laertes and Anticlea.</line>
+						<line>I wish to seek guidance from the Prophet Tiresias to return home.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Son of Anticlea, you say?</line>
+						<line>So you have not heard of the news yet.</line>
+						<changecharacter>Left</changecharacter>
+						<line>You knew my mother? What news have you heard?</line>
+						<changecharacter>Right</changecharacter>
+						<line>She is an acquaintance of sorts ... I'm sure she'll inform you in due time.</line>
+						<line>As for the Prophet, I'm unsure of where he is.</line>
+						<line>If you were to head past the bridge, you will meet a couple of ladies.</line>
+						<line>They may know where the Prophet is.</line>
+						<line>All I ask, in exchange for this information, is to seek my remains scattered across this accursed land.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Anything for my mother's friend.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Thank you, and be safe.</line>
+						<leavedialogue/>
+					</condition>
+				</condition>
+					<changecharacter>Right</changecharacter>
+					<line>Did you see your mother?</line>
+					<condition _condition="mother_gotBlood">
+						<changecharacter>Left</changecharacter>
+						<line>Yes I did. For such a thing to happen while I was away, I must hurry back home.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Godspeed, my friend.</line>
+						<leavedialogue/>
+					</condition>
+						<changecharacter>Left</changecharacter>
+						<line>No I haven't. I'm unable to find her.</line>
+						<changecharacter>Right</changecharacter>
+						<line>I suggest you look harder.</line>
+						<line>What she will impart to you will be important.</line>
+						<leavedialogue/>
+			</npc>
+			
+			<npc _name="Brawny">
+				<condition _condition="selected_SkullBone">
+					<changecharacter>Left</changecharacter>
+					<line>Hey, soldier.</line>
+					<line>I've gotten your bone.</line>
+					<changecharacter>Right</changecharacter>
+					<line>Alright, let me see it.</line>
+					<line>... ...</line>
+					<line>Wait a minute, this isn't my bone!</line>
+					<line>It could be one of my fellow soldier's bone.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Oh I see.</line>
+					<line>I'll return once I find your bone.</line>
+					<leavedialogue/>
+				</condition>
+				<condition _condition="selected_SmallBones">
+					<changecharacter>Left</changecharacter>
+					<line>Hey, soldier.</line>
+					<line>I've gotten your bone.</line>
+					<changecharacter>Right</changecharacter>
+					<line>Alright, let me see it.</line>
+					<line>... ...</line>
+					<line>Wait a minute, this isn't my bone!</line>
+					<line>It could be one of my fellow soldier's bone.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Oh I see.</line>
+					<line>I'll return once I find your bone.</line>
+					<leavedialogue/>
+				</condition>
+				<condition _condition="selected_BigBone">
+					<line>Ah, my remains.</line>
+					<line>You finally found it.</line>
+					<line>Thank you for your help.</line>
+					<result _name="deleteinventory">BigBone</result>
+					<result _name="condition">brawny_gotBone</result>
+				</condition>
+				<condition _condition="brawny_gotBone">
+					<condition _condition="headless_gotBone scrawny_gotBone">
+						<line>It looks like everyone have gotten their remains.</line>
+						<line>It's all thanks to you.</line>
+						<line>As promised, I will open the gate for you to enter.</line>
+						<line>Do you want to depart now?</line>
+						<changecharacter>Left</changecharacter>
+						<condition _condition="got_prophecy">
+							<line>Yes please.</line>
+							<line>I've enough of these uncomfortable place.</line>
+							<result _name="deleteinventory">BloodBag</result>
+							<result _name="endchapter"/>
+							<!-- CHANGE TO ESCAPE HADES MINIGAME -->
+							<result _name="loadscene">HadesExitMinigame</result>
+							<leavedialogue/>
+						</condition>
+							<line>Not just yet.</line>
+							<line>I've got to speak to the Prophet Tiresias.</line>
+							<changecharacter>Right</changecharacter>
+							<line>Alright then.</line>
+							<line>He's always standing outside the fiery cave, right after the ladies past the bridge.</line>
+							<line>Tell me when you're ready to leave.</line>
+							<leavedialogue/>
+					</condition>
+						<line>It seems like my fellow soldiers have not gotten their bones yet.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Alright, alright.</line>
+						<line>Please don't get impatient just yet...</line>
+						<leavedialogue/>
+				</condition>
+					<changecharacter>Left</changecharacter>
+					<line>Hey, mighty soldier.</line>
+					<line>Where does this gate leads to?</line>
+					<changecharacter>Right</changecharacter>
+					<line>This gate leads right back to the dock.</line>
+					<line>However, since I am the guard of this gate, none shall pass unless I allow them to.</line>
+					<changecharacter>Left</changecharacter>
+					<line>I am Odysseus, son of Laertes and Anticlea.</line>
+					<line>Upon hearing my name, do you still dare to defy me?</line>
+					<changecharacter>Right</changecharacter>
+					<line>It does not matter who you are.</line>
+					<line>Anyways, I will give you one chance to redeem yourself out of this unearthly place.</line>
+					<line>My fellow soldiers and I had our remains scattered across this island.</line>
+					<line>If you could kindly find and return our bones back to us, I will allow you to leave through this gate.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Fair enough.</line>
+					<leavedialogue/>
+			</npc>
+			
+		</scene>
+		
+		<scene _name="C3_HallOfSin">
+			<npc _name="Prisoner">
+				<condition _condition="selected_BowlWithWater">
+					<changecharacter>Left</changecharacter>
+					<line>I've brought the water.</line>
+					<line>Here, drink up.</line>
+					<changecharacter>Right</changecharacter>
+					<line>Alright, finally!</line>
+					<line>*glug glug glug*</line>
+					<line>...</line>
+					<line>Huh? WHo are you?</line>
+					<line>The pain ... </line>
+					<line>The pain ... is gone?!</line>
+					<line>Haha!</line>
+					<line>I don't feel pain anymore.</line>
+					<changecharacter>Left</changecharacter>
+					<line>You don't remember me?</line>
+					<line>The one you've sent to fetch that water that you've only heard from a rumor?</line>
+					<changecharacter>Right</changecharacter>
+					<line>Haha! Calm down boy!</line>
+					<line>I can no longer feel pain anymore.</line>
+					<line>Haha! I'm in such a good mood today, you can have my comb.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Sigh. Better than nothing.</line>
+					<result _name="deleteinventory">BowlWithWater</result>
+					<result _name="addinventory">Comb</result>
+					<result _name="condition">prisoner_gotWater</result>
+					<leavedialogue/>
+				</condition>
+				<condition _condition="!prisoner_gotWater">
+					<question _question="1" _choices="3" _sentence="Human! Please help me!">
+						<option _sentence="Hmph! Foolish peasant! How dare you demand of the Great Odysseus!">
+							<changecharacter>Right</changecharacter>
+							<line>Forgive me, Great Odysseus!</line>
+							<line>But please help me!</line>
+						</option>
+						<option _sentence="Perhaps ... if you can catch me.">
+							<changecharacter>Right</changecharacter>
+							<line>Please!</line>
+							<line>Don't leave!</line>
+							<line>I'll do anything!</line>
+							<line>I beg thee!</line>
+						</option>
+						<option _sentence="Very well. But I expect a reward for my troubles.">
+							<changecharacter>Right</changecharacter>
+							<line>Oh thank you so much!</line>
+							<line>I request you to travel past the fiery cave and fetch me some water from the Lake of Lethe.</line>
+							<line>Rumor has it that drinking this water will make one forget their pain.</line>
+							<line>After enduring it for so long, I can no longer stand this pain anymore!</line>
+							<line>Please hurry!</line>
+							<changecharacter>Left</changecharacter>
+							<line>I'll see what I can do.</line>
+							<line>Please, bear with the pain just a little longer.</line>
+							<leavedialogue/>
+						</option>
+					</question>
+				</condition>
+					<line>Pain?</line>
+					<line>What pain?</line>
+					<line>I feel no pain!</line>
+					<line>Ha ha ha ha!</line>
+					<changecharacter>Left</changecharacter>
+					<line>Better leave him alone.</line>
+					<leavedialogue/>
+         	</npc>
+		</scene>
+		
+		<scene _name="C3_PathToBridge">
+			<npc _name="Scrawny">
+				<condition _condition="selected_SmallBones">
+					<changecharacter>Left</changecharacter>
+					<line>I've done as you asked.</line>
+					<changecharacter>Right</changecharacter>
+					<line>Thank you for your help.</line>
+					<line>I'm eternally grateful to you.</line>
+					<result _name="deleteinventory">SmallBones</result>
+					<result _name="condition">scrawny_gotBone</result>
+					<leavedialogue/>
+				</condition>
+				<condition _condition="selected_SkullBone">
+					<line>I'm sorry, but this isn't my bone.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Well, I guess this belongs to another soldier then.</line>
+					<leavedialogue/>
+				</condition>
+				<condition _condition="selected_BigBone">
+					<line>I'm sorry, but this isn't my bone.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Well, I guess this belongs to another soldier then.</line>
+					<leavedialogue/>
+				</condition>
+				<condition _condition="!scrawny_gotBone">
+					<question _question="1" _choices="3" _sentence="Mortal, I would like to enlist your help.">
+						<option _sentence="I shall accept for the soldier who risked his life so others may live.">
+							<changecharacter>Right</changecharacter>
+							<line>Thank you, kind sir!</line>
+							<line>I request your help in retrieving my remains, which lies at the mercy of Cerberus whom I'm unable to fend off.</line>
+							<changecharacter>Left</changecharacter>
+							<line>I will do as you ask.</line>
+							<leavedialogue/>
+						</option>
+						<option _sentence="Be off! I'm no mercenary for hire!">
+							<changecharacter>Right</changecharacter>
+							<line>Please, heed my plea.</line>
+							<line>Just for a minute!</line>
+							<leavedialogue/>
+						</option>
+						<option _sentence="If you want something, do it yourself!">
+							<changecharacter>Right</changecharacter>
+							<line>If I could, Sir, I would've done it by now!</line>
+							<leavedialogue/>
+						</option>
+					</question>
+				</condition>
+					<line>Thank you.</line>
+					<line>Had I went to retrieve it myself, Cerberus would have chewed me up and spat me out.</line>
+					<leavedialogue/>
+         	</npc>
+		</scene>
+		
+		<scene _name="C3_OnBridge">
+			<npc _name="Paranoid">
+				<condition _condition="!got_Bowl">
+					<changecharacter>Left</changecharacter>
+					<line>Poor soul! Why are you shaking?</line>
+					<changecharacter>Right</changecharacter>
+					<line>I was tricked by a merchant to buy this accursed magical bowl, which led to my death when I was struck by lightning.</line>
+					<question _question="1" _choices="3" _sentence="I wish to be rid of it but I feared to suffer even more bad luck if I do.">
+						<option _sentence="Man up! It's just a normal bowl as far as I can see!">
+							<changecharacter>Right</changecharacter>
+							<line>It is not! My death is proof that this bowl is cursed!</line>
+							<leavedialogue/>
+						</option>
+						<option _sentence="Give it to me. I shall take on this curse myself!">
+							<changecharacter>Right</changecharacter>
+							<line>Y-you would? For me?</line>
+							<line>Thank you! Thank you so much!</line>
+							<line>I can finally rest in peace!</line>
+							<result _name="addinventory">Bowl</result>
+							<result _name="condition">got_Bowl</result>
+							<leavedialogue/>
+						</option>
+						<option _sentence="Such a gullible fool!">
+							<changecharacter>Right</changecharacter>
+							<line>H-how could you say such a thing?</line>
+							<leavedialogue/>
+						</option>
+					</question>
+				</condition>
+					<line>Thank you so much for lifting this burden off me!</line>
+					<leavedialogue/>
+			</npc>
+		</scene>
+		
+		<scene _name="C3_EndOfBridge">
+			<npc _name="Elpenor">
+				<changecharacter>Left</changecharacter>
+				<line>Elpenor! What are you doing here?</line>
+				<changecharacter>Right</changecharacter>
+				<line>Odysseus!</line>
+				<line>I was asleep on the roof on the day you left Circe's island.</line>
+				<question _question="1" _choices="3" _sentence="By the time I've awoken, in my drunken haze, I tripped and fell off the roof, breaking my neck.">
+					<option _sentence="You were a foolish one. Had you watched your step ...">
+						<changecharacter>Right</changecharacter>
+						<line>Odysseus. It is unwise to mock the dead, lest you wish to be cursed.</line>
+						<leavedialogue/>
+					</option>
+					<option _sentence="Now that you're dead, assist me in taking over the Land of Death.">
+						<changecharacter>Right</changecharacter>
+						<line>Sir, cease your jokes!</line>
+						<leavedialogue/>
+					</option>
+					<option _sentence="My poor befallen comrade. Is there anything I can do for you?">
+						<changecharacter>Right</changecharacter>
+						<line>I wish for you, on your return to Circe's island, to give me a proper burial with my oar on my grave on the sea shore.</line>
+						<changecharacter>Left</changecharacter>
+						<line>For my dear comrade, I will do as you asked.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Thank you, Sir.</line>
+						<leavedialogue/>
+					</option>
+				</question>
+			</npc>
+		</scene>
+		
+		<scene _name="C3_MotherArea">
+			<npc _name="Anticlea">
+				<condition _condition="mother_gotBlood">
+					<line>I wish you all the best on your way back to Ithaca.</line>
+					<changecharacter>Left</changecharacter>
+					<line>I will miss you mother.</line>
+					<changecharacter>Right</changecharacter>
+					<line>I will miss you too.</line>
+					<leavedialogue/>
+				</condition>
+				<condition _condition="selected_BloodBag">
+					<changecharacter>Left</changecharacter>
+					<line>Mother? Do you recognise me?</line>
+					<changecharacter>Right</changecharacter>
+					<line>My son!</line>
+					<line>Why have you come into the Land of Death?</line>
+					<line>Are you still finding your way home to Ithaca?</line>
+					<changecharacter>Left</changecharacter>
+					<line>I wish to seek advice from the Prophet Tiresias on how to return home.</line>
+					<line>How did you end up here mother?</line>
+					<line>What about father, my wife and son? Are they well?</line>
+					<changecharacter>Right</changecharacter>
+					<line>I grew so worried about you that I passed on.</line>
+					<line>Your father still lives but continues to grieve in rags.</line>
+					<line>Your wife remains faithful but remains teared up both day and night.</line>
+					<line>As for your son, Telemachus, he still holds your land undistributed and has to entertain a lot of people as a magistrate.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Oh Mother, how could I have let you all suffer so much?</line>
+					<line>Let me embrace you, for it may be the last time I can ever do so ...</line>
+					<changecharacter>Right</changecharacter>
+					<line>You can no longer touch me, my son, for I am no longer flesh and bones.</line>
+					<changecharacter>Left</changecharacter>
+					<line>If we could embrace each other, to find comfort in sharing our sorrows.</line>
+					<line>Does Proserpine intend to mock me further with only a phantom?</line>
+					<changecharacter>Right</changecharacter>
+					<line>Everyone experience this when they are dead.</line>
+					<line>Their bodies to perish in the consuming fire, leaving the soul behind.</line>
+					<line>Take this jewel.</line>
+					<line>I hope it may help in your journey back to Ithaca.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Thank you, mother.</line>
+					<line>... ...</line>
+					<line>I guess ... this is goodbye, Mother. I ... will miss you.</line>
+					<changecharacter>Right</changecharacter>
+					<line>Take care my poor, unfortunate child.</line>
+					<line>I wish you the best in your journey.</line>
+					<result _name="addinventory">Jewel</result>
+					<result _name="condition">mother_gotBlood</result>
+					<leavedialogue/>
+				</condition>
+					<changecharacter>Left</changecharacter>
+					<line>Mother? Is that you?</line>
+					<changecharacter>Right</changecharacter>
+					<line>... ...</line>
+					<changecharacter>Left</changecharacter>
+					<line>Does she not recognise me?</line>
+					<line>Maybe some blood will help.</line>
+					<leavedialogue/>
+         	</npc>
+		</scene>
+		
+		<scene _name="C3_Townhall">
+		
+			<npc _name="Girl1">
+				<condition _condition="girl_gotComb">
+					<line>Thanks for the comb.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Well, I should thank you instead for the lyre.</line>
+					<leavedialogue/>
+				</condition>
+				<condition _condition="selected_JeweledComb">
+					<changecharacter>Left</changecharacter>
+					<line>Is this comb good enough for your lyre?</line>
+					<changecharacter>Right</changecharacter>
+					<line>My oh my ...</line>
+					<line>It's gorgeous!</line>
+					<line>Alright, you can have my lyre.</line>
+					<result _name="deleteinventory">JeweledComb</result>
+					<result _name="addinventory">Lyre</result>
+					<result _name="condition">girl_gotComb</result>
+					<leavedialogue/>
+				</condition>
+					<changecharacter>Left</changecharacter>
+					<line>What a fabulous lyre you have.</line>
+					<line>Is it alright with you if I were to borrow it?</line>
+					<changecharacter>Right</changecharacter>
+					<line>How dare you foolish mortal try to steal our lyre.</line>
+					<line>The lyre is beyond you, you filthy beast.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Is there a chance to convince you to lend it to me?</line>
+					<changecharacter>Right</changecharacter>
+					<line>Hmm ... perhaps, if you can find me a new hair accessory, I may consider ...</line>
+					<changecharacter>Left</changecharacter>
+					<line>Consider it done.</line>
+					<leavedialogue/>
+			</npc>
+			
+			<npc _name="Girl2">
+				<changecharacter>Left</changecharacter>
+				<line>Hey there!</line>
+				<line>I have something that I wish to inquire with you.</line>
+				<changecharacter>Right</changecharacter>
+				<line>Ask me anything.</line>
+				<line>I know all there is to know about this place!</line>
+				<changecharacter>Left</changecharacter>
+				<line>I seek for a certain Theban Prophet. Do you know where he is?</line>
+				<changecharacter>Right</changecharacter>
+				<line>If it is Tiresias you seek, he's right around the corner near the fiery cave.</line>
+				<changecharacter>Left</changecharacter>
+				<line>Thank you.</line>
+				<line>I shall be off now. Please excuse me.</line>
+				<leavedialogue/>
+			</npc>
+			
+		</scene>
+		
+		<scene _name="C3_ProphetArea">
+			
+			<npc _name="Tiresias">
+				<condition _condition="got_prophecy">
+					<line>Be on your way now Odysseus.</line>
+					<line>Your wife and son needs you.</line>
+					<line>Have a pleasant journey ahead.</line>
+					<leavedialogue/>
+				</condition>
+				<condition _condition="selected_BloodBag">
+					<line>Mmmm!</line>
+					<question _question="1" _choices="3" _sentence="This is good blood.">
+						<option _sentence="Of course! Only the best for you.">
+							<changecharacter>Right</changecharacter>
+							<line>I see.</line>
+							<line>Now that I'm filled, I shall answer your question.</line>
+							<continuedialogue _question="1"/>
+						</option>
+						<option _sentence="Hurry up old man, I do not have all day.">
+							<changecharacter>Right</changecharacter>
+							<line>Patience, young one! Or you'll meet an unsightly end.</line>
+							<continuedialogue _question="1"/>
+						</option>
+						<option _sentence="That will be ten gold per sip.">
+							<changecharacter>Right</changecharacter>
+							<line>Only death awaits those with a filthy mouth.</line>
+							<continuedialogue _question="1"/>
+						</option>
+					</question>
+					<line>You wish to return home, but the road is still uneasy.</line>
+					<line>Poseidon still holds a bitter grudge against you for blinding his son.</line>
+					<line>You will reach Thrinacian island, where the sheep and cattle graze.</line>
+					<line>Leave them untouched, and you'll return home without hardship.</line>
+					<line>If you do harm them, I foresaw the destruction of your ship and its crew.</line>
+					<line>In another man's ship, you'll return home to find trouble.</line>
+					<line>Your wife being courted by many suitors devouring your substance.</line>
+					<line>You'll take revenge on the suitors, disposing by force out of your home.</line>
+					<line>All that I've said will come true.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Thank you wise one, I'll be on my way now.</line>
+					<result _name="condition">got_prophecy</result>
+					<leavedialogue/>
+				</condition>
+					<line>So you finally arrive, Odysseus, noble son of Laertes.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Oh wise prophet, did you forsee my visit?</line>
+					<changecharacter>Right</changecharacter>
+					<line>Yes I did.</line>
+					<line>But before I answer your questions, I'm in need of some blood of the sheep you've sacrificed.</line>
+					<leavedialogue/>
+			</npc>
+			
+			<npc _name="Monologue">
+				<line>This leads to the fiery cave everyone is talking about.</line>
+				<line>I've got to watch my step here ...</line>
+				<line>I don't want to get burned!</line>
+				<result _name="condition">firecave_passed</result>
+				<!-- CHANGE TO FIRE CAVE MINIGAME -->
+				<result _name="loadscene">FireCaveMinigame</result>
+				<leavedialogue/>
+			</npc>
+			
+		</scene>
+		
+	</chapter>
+
+	<!-- CHAPTER -->
+	<chapter _name="4">
+		<!-- SCENE -->
+		<scene _name="C4_ShipDeck">
+
+			<!-- NPC NAME -->
+			<npc _name="Beardy">
+				<condition _condition="level_1">
+					<condition _condition="beardy_gotWax">
+						<line>Thank you for the wax Sir! What about you?</line>
+						<changecharacter>Left</changecharacter>
+						<line>I'm curious about the singing, perhaps I'll pass up the wax.</line>
+						<changecharacter>Right</changecharacter>
+						<line>What!</line>
+						<line>But Sir, what will you do if you get enchanted by their song and jump off the ship to you death?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Hah! What nonsense!</line>
+						<line>I'll find a way to prevent that.</line>
+						<line>Maybe Eurylochus could help me.</line>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="!selected_PieceOfWax">
+						<line>Sir! We should follow Circe's advice and use something to plug our ears</line>
+						<line>so that we may not hear the siren's singing.</line>
+						<line>Perhaps we should find something on this ship?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Pfft - fine, I'll take that woman's advice and look around this ship.</line>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="selected_PieceOfWax">
+						<line>Thank you Sir.</line>
+						<result _name="condition">beardy_gotWax</result>
+						<result _name="deleteinventory">PieceOfWax</result>
+						<leavedialogue/>
+					</condition>
+				</condition>
+				
+				<condition _condition="level_2">
+					<condition _condition="!odysseus_bound">
+						<line>Sir, there might be rope on this ship that you could use to bind his Highness to the mast.</line>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="!beardy_gotOar">
+						<condition _condition="selected_Oar">
+							<line>Thank you Sir!</line>
+							<result _name="condition">beardy_gotOar</result>
+							<result _name="deleteinventory">Oar</result>
+							<leavedialogue/>
+						</condition>
+							<changecharacter>Left</changecharacter>
+							<line>What are you standing here for?</line>
+							<changecharacter>Right</changecharacter>
+							<line>I need my oar Sir, could you get it for me?</line>
+							<line>My back is killing me ...</line>
+							<changecharacter>Left</changecharacter>
+							<line>Alright, fine. They were left at the bow of the ship right?</line>
+							<changecharacter>Right</changecharacter>
+							<line>That's right Sir.</line>
+							<leavedialogue/>
+					</condition>
+					<condition _condition="beardy_gotOar moustache_gotOar hairy_gotOar">
+						<line>You will need to inform Odysseus that we are ready to set sail.</line>
+						<leavedialogue/>
+					</condition>
+						<line>I heard one of our other crew members needs help getting his oar.</line>
+						<leavedialogue/>
+				</condition>
+				
+				<condition _condition="level_3">
+					<question _question="1" _choices="3" _sentence="Hey there Eurylochus!">
+						<option _sentence="Do you have anything sharp that I could use?">
+							<changecharacter>Right</changecharacter>
+							<condition _condition="!taken_Dagger">
+								<line>Yes I happen to have a dagger Sir.</line>
+								<line>You can have it.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Thanks.</line>
+								<result _name="addinventory">Dagger</result>
+								<result _name="condition">taken_Dagger</result>
+								<leavedialogue/>
+							</condition>
+							<condition _condition="taken_Dagger">
+								<line>I don't have it right now.</line>
+								<leavedialogue/>
+							</condition>
+						</option>
+						<option _sentence="Phew! We were so close to drowning earlier ...">
+							<changecharacter>Right</changecharacter>
+							<line>We sure were ... fortunately we did not.</line>
+							<line>I'm way too old for this kind of excitement.</line>
+							<leavedialogue/>
+						</option>
+						<option _sentence="Did you see the sirens earlier?">
+							<line>They were so beautiful!</line>
+							<changecharacter>Right</changecharacter>
+							<line>Not as beautiful as my wife back home,</line>
+							<line>I hope we will be reaching Ithaca soon.</line>
+							<leavedialogue/>
+						</option>
+					</question>
+				</condition>
+				
+				<condition _condition="level_4">
+					<question _question="1" _choices="3" _sentence="Whirlpools are scary ... Whirlpools are scary ... Whirlpools are scary ... Whirlpools are scary ... ">
+						<option _sentence="No they're not!">
+							<changecharacter>Right</changecharacter>
+							<line>Yes they are!</line>
+							<line>Can't you see how that thing sucks up the saltwater?</line>
+							<line>It's terrifying!</line>
+							<leavedialogue/>
+						</option>
+						<option _sentence="Just keep rowing. I don't want to die here as well.">
+							<changecharacter>Right</changecharacter>
+							<line>I'm too terrified to continue rowing ...</line>
+							<leavedialogue/>
+						</option>
+						<option _sentence="Trust in me, my friend. We shall live to look back on all of this as well.">
+							<line>Row on with all your might and strength.</line>
+							<changecharacter>Right</changecharacter>
+							<line>You're ... you're right. I'll get back to rowing.</line>
+							<leavedialogue/>
+						</option>
+					</question>
+				</condition>
+			</npc>
+			
+			<npc _name="Moustache">
+				<condition _condition="level_1">
+					<condition _condition="moustache_gotWax">
+						<line>Your Highness, do you want to listen to the siren's song?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Yes, I'm thinking of tying myself to the mast of the ship as Circe suggested.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Ask Eurylochus for help, I'm sure he'll be happy to bind you to the mast.</line>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="!selected_PieceOfWax">
+						<line>What shall we do about the siren's singing?</line>
+						<line>If what Circe said about the sirens is true,</line>
+						<line>We may not make it passed them.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Do not fear Moustache!</line>
+						<line>I've gotten us out of even more dangerous situations than this.</line>
+						<line>I'll look around in my room, there's sure to be something.</line>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="selected_PieceOfWax">
+						<line>Thank you Sir.</line>
+						<result _name="condition">moustache_gotWax</result>
+						<result _name="deleteinventory">PieceOfWax</result>
+						<leavedialogue/>
+					</condition>
+				</condition>
+				
+				<condition _condition="level_2">
+					<condition _condition="!odysseus_bound">
+						<line>Hurry, Eurylochus. Odysseus is waiting for you to bind him to the mast.</line>
+						<line>Head towards the front of this ship once you've gotten the rope.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Alright, alright ...</line>
+						<line>Why do I have to do all the work ...</line>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="!moustache_gotOar">
+						<condition _condition="selected_Oar">
+							<line>Thank you Sir!</line>
+							<result _name="condition">moustache_gotOar</result>
+							<result _name="deleteinventory">Oar</result>
+							<leavedialogue/>
+						</condition>
+							<line>Let's get going! Bring me my oar!</line>
+							<line>They were left at the bow of this ship.</line>
+							<leavedialogue/>
+					</condition>
+					<condition _condition="beardy_gotOar moustache_gotOar hairy_gotOar">
+						<line>You will need to inform Odysseus that we are ready to set sail.</line>
+						<leavedialogue/>
+					</condition>
+						<line>I heard one of our other crew members needs help getting his oar.</line>
+						<leavedialogue/>
+				</condition>
+				
+				<condition _condition="level_3">
+					<changecharacter>Left</changecharacter>
+					<line>Do you have anything sharp that I could use?</line>
+					<changecharacter>Right</changecharacter>
+					<line>My apologies Sir, I do not have any. How about checking with the others?</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="level_4">
+					<line>I hope the other crew members can keep their calm after seeing the whirlpool.</line>
+					<leavedialogue/>
+				</condition>
+			</npc>
+			
+			<npc _name="Hairy">
+				<condition _condition="level_1">
+					<condition _condition="hairy_gotWax">
+						<line>This wax will definitely help us to block out the siren's singing!</line>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="!selected_PieceOfWax">
+						<changecharacter>Left</changecharacter>
+						<line>You there!</line>
+						<line>Do you have anything we can use to plug our ears with?</line>
+						<changecharacter>Right</changecharacter>
+						<line>Sorry your Highness, I do not have anything on me at the moment.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Alright, I'll try looking somewhere else.</line>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="selected_PieceOfWax">
+						<line>Thank you Sir.</line>
+						<result _name="condition">hairy_gotWax</result>
+						<result _name="deleteinventory">PieceOfWax</result>
+						<leavedialogue/>
+					</condition>
+				</condition>
+				
+				<condition _condition="level_2">
+					<condition _condition="!odysseus_bound">
+						<changecharacter>Left</changecharacter>
+						<line>Hairy, do you have any more of those rope I can use?</line>
+						<changecharacter>Right</changecharacter>
+						<line>Sorry Eurylochus, how about you use the one by the deck?</line>
+						<line>Odysseus said he'd be waiting for you at the bow of this ship.</line>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="!hairy_gotOar">
+						<condition _condition="selected_Oar">
+							<line>Thank you Sir!</line>
+							<result _name="condition">hairy_gotOar</result>
+							<result _name="deleteinventory">Oar</result>
+							<leavedialogue/>
+						</condition>
+							<line>I hope we make it through this one ...</line>
+							<changecharacter>Left</changecharacter>
+							<line>Fear not Hairy, we have everything under control.</line>
+							<line>Let me get you your oar so that we may proceed.</line>
+							<leavedialogue/>
+					</condition>
+					<condition _condition="beardy_gotOar moustache_gotOar hairy_gotOar">
+						<line>You will need to inform Odysseus that we are ready to set sail.</line>
+						<leavedialogue/>
+					</condition>
+						<line>I heard one of our other crew members needs help getting his oar.</line>
+						<leavedialogue/>
+				</condition>
+				
+				<condition _condition="level_3">
+					<changecharacter>Left</changecharacter>
+					<line>Do you have anything sharp that I could use?</line>
+					<changecharacter>Right</changecharacter>
+					<line>My apologies Sir, I do not have any. How about checking with the others?</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="level_4">
+					<question _question="1" _choices="3" _sentence="I don't want to die ... I don't want to die ... I don't want to die ... I don't want to die ... ">
+						<option _sentence="Urgh you're hopeless!">
+							<changecharacter>Right</changecharacter>
+							<line>I don't want to die ... I don't want to die ... I don't want to die ... I don't want to die ... </line>
+							<leavedialogue/>
+						</option>
+						<option _sentence="Man up Hairy! My courage and wise counsel has saved us countless times.">
+							<line>It'll do so again today.</line>
+							<changecharacter>Right</changecharacter>
+							<line>You're ... you're right. I'll get back to rowing.</line>
+							<leavedialogue/>
+						</option>
+						<option _sentence="Don't worry. That's just an ordinary whirlpool.">
+							<changecharacter>Right</changecharacter>
+							<line>Don't lie to me!</line>
+							<leavedialogue/>
+						</option>
+					</question>
+				</condition>
+			</npc>
+			
+			<!-- ANOTHER NPC -->
+			<npc _name="Eurylochus">
+				<condition _condition="level_1">
+					<condition _condition="eurylochus_gotWax">
+						<condition _condition="beardy_gotWax moustache_gotWax hairy_gotWax">
+							<changecharacter>Left</changecharacter>
+							<line>Eurylochus! I want to listen to the siren's song.</line>
+							<line>However, I fear that I may lose myself and cast myself off this ship.</line>
+							<changecharacter>Right</changecharacter>
+							<line>What do you suggest we do?</line>
+							<changecharacter>Left</changecharacter>
+							<line>I need you to bind me as I stand upright against the mast of this ship.</line>
+							<line>If I beg and pray for you to unbind me, then you must bind me tighter.</line>
+							<line>Can I count on you to do that?</line>
+							<changecharacter>Right</changecharacter>
+							<line>Alright then.</line>
+							<!-- CHANGE PLAYER'S CHARACTER TO EURYLOCHUS -->
+							<result _name="condition">!level_1</result>
+							<result _name="condition">!beardy_gotWax</result>
+							<result _name="condition">!hairy_gotWax</result>
+							<result _name="condition">!moustache_gotWax</result>
+							<result _name="condition">!eurylochus_gotWax</result>
+							<result _name="condition">level_2</result>
+							<result _name="setactive" _sentence="Eurylochus">false</result>
+							<result _name="changeplayer">Eurylochus</result>
+							<leavedialogue/>
+						</condition>
+						<line>I'm grateful for the wax Sir.</line>
+						<line>If you have any more of those wax, I suggest you give it to the crew members.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Exactly what I was about to do.</line>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="!selected_PieceOfWax">
+						<question _question="1" _choices="3" _sentence="What are you going to do Odysseus?">
+							<option _sentence="I don't know! You think of something.">
+								<changecharacter>Right</changecharacter>
+								<line>Well, if I were you, I would look around in my room to see if there's anything there I could use.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Maybe I should do that.</line>
+								<leavedialogue/>
+							</option>
+							<option _sentence="I'll slay the sirens before they get anywhere near here!">
+								<line>I'll make sure they'll regret making an enemy out of me.</line>
+								<changecharacter>Right</changecharacter>
+								<line>Well, if I were you, I would look around in my room to see if there's anything there I could use.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Maybe I should do that.</line>
+								<leavedialogue/>
+							</option>
+							<option _sentence="How about we wait till the sirens are fast asleep before we sneak past their island?">
+								<changecharacter>Right</changecharacter>
+								<line>Well, if I were you, I would look around in my room to see if there's anything there I could use.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Maybe I should do that.</line>
+								<leavedialogue/>
+							</option>
+						</question>
+					</condition>
+					<condition _condition="selected_PieceOfWax">
+						<line>Thank you Sir.</line>
+						<result _name="condition">eurylochus_gotWax</result>
+						<result _name="deleteinventory">PieceOfWax</result>
+						<leavedialogue/>
+					</condition>
+				</condition>
+				
+				<condition _condition="level_4">
+					<condition _condition="!player_gotDagger">
+						<changecharacter>Left</changecharacter>
+						<line>Eurylochus, I need something sharp.</line>
+						<line>You would not happen to have any, would you?</line>
+						<changecharacter>Right</changecharacter>
+						<line>I've got a dagger here.</line>
+						<line>Can't remember who I took this from.</line>
+						<line>Here you go.</line>
+						<result _name="condition">player_gotDagger</result>
+						<result _name="addinventory">Dagger</result>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="player_gotDagger">
+						<changecharacter>Right</changecharacter>
+						<line>Should we set sail?</line>
+						<condition _condition="player_gotArmor">
+							<changecharacter>Left</changecharacter>
+							<line>Yes, let's go!</line>
+							<result _name="condition">!player_gotDagger</result>
+							<result _name="condition">!player_gotArmor</result>
+							<result _name="deleteinventory">Sword</result>
+							<result _name="deleteinventory">Dagger</result>
+							<result _name="deleteinventory">Helmet</result>
+							<result _name="deleteinventory">Chestplate</result>
+							<result _name="deleteinventory">Gauntlets</result>
+							<result _name="deleteinventory">Greaves</result>
+							<result _name="condition">shipAtCave</result>
+							<result _name="condition">!level_4</result>
+							<result _name="condition">level_5</result>
+							<!-- CHANGE TO CUTSCENE OF SHIP APPROACHING SCYLLA -->
+							<result _name="loadscene">C4_Cutscenes_Scylla</result>
+							<leavedialogue/>
+						</condition>
+						<condition _condition="!player_gotArmor">
+							<changecharacter>Left</changecharacter>
+							<line>Erm, hold on ...</line>
+							<line>Let me get my armor first ...</line>
+							<leavedialogue/>
+						</condition>
+					</condition>
+				</condition>
+			</npc>
+			
+		</scene>
+		
+		<!-- ANOTHER SCENE -->
+		<scene _name="C4_ShipDeck2">
+			
+			<npc _name="Odysseus">
+				<condition _condition="level_2">
+					<condition _condition="!odysseus_bound">
+						<condition _condition="!selected_Rope">
+							<line>Bind me Eurylochus, with any rope or whatever you can find.</line>
+							<line>I can't wait to listen to the siren's song ...</line>
+							<line>I wonder what it'll be like.</line>
+							<leavedialogue/>
+						</condition>
+						<line>Looks like you found something.</line>
+						<line>Now then, bind me to the mast and after you do so, give the men their oars so that we may proceed to the land of the sirens.</line>
+						<result _name="condition">odysseus_bound</result>
+						<result _name="animationbool" _sentence="isInteracting">true</result>
+						<result _name="deleteinventory">Rope</result>
+						<leavedialogue/>
+					</condition>
+					<condition _condition="beardy_gotOar moustache_gotOar hairy_gotOar">
+						<line>It looks like all the men have their oars.</line>
+						<line>Lets get moving then!</line>
+						<result _name="condition">!beardy_gotOar</result>
+						<result _name="condition">!moustache_gotOar</result>
+						<result _name="condition">!hairy_gotOar</result>
+						<result _name="condition">!level_2</result>
+						<result _name="condition">level_3</result>
+							<!-- CHANGE TO CUTSCENE OF SHIP APPROACHING SIRENS -->
+						<result _name="loadscene">C4_Cutscenes_Siren</result>
+						<leavedialogue/>
+					</condition>
+					<line>Give the oars to the men, we don't have all day, Eurylochus.</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="level_3">
+					<condition _condition="odysseus_bound">
+						<condition _condition="selected_Dagger">
+							<line>Finally! We've made it past the sirens in one piece.</line>
+							<line>What do you say we have a feast tonight, Eurylochus?</line>
+							<changecharacter>Left</changecharacter>
+							<line>I would love to Sir but what's that over there?</line>
+							<result _name="deleteinventory">Dagger</result>
+							<result _name="condition">!odysseus_bound</result>
+							<result _name="condition">!beardy_gotOar</result>
+							<result _name="condition">!hairy_gotOar</result>
+							<result _name="condition">!moustache_gotOar</result>
+							<result _name="condition">!level_3</result>
+							<result _name="condition">level_4</result>
+							<result _name="setactive" _sentence="Odysseus">false</result>
+							<result _name="changeplayer">Odysseus</result>
+							<!-- CHANGE TO CUTSCENE OF SHIP APPROACHING CHARYBDIS -->
+							<result _name="loadscene">C4_Cutscenes_TwoMonsters</result>
+							<leavedialogue/>
+						</condition>
+							<line>Eurylochus, the sirens sang their song most musically.</line>
+							<line>Luckily I was bound to this mast or I would have definitely abandoned ship.</line>
+							<line>Unbind me now please, this is getting quite uncomfortable ...</line>
+							<line>You will need something sharp, maybe you can ask my men for help.</line>
+							<leavedialogue/>
+					</condition>
+					<leavedialogue/>
+				</condition>
+			</npc>
+		
+		</scene>
+		
+		<scene _name="C4_ShipDeckAfterMG">
+			
+			<npc _name="Beardy">
+				<condition _condition="level_5">
+					<condition _condition="!beardy_gotFood">
+						<condition _condition="selected_Fish">
+							<line>Thank you. I was so hungry.</line>
+							<line>Now if only I have chips ...</line>
+							<line>Haha just kidding!</line>
+							<result _name="condition">beardy_gotFood</result>
+							<result _name="deleteinventory">Fish</result>
+							<leavedialogue/>
+						</condition>
+						<condition _condition="selected_Egg">
+							<line>Yay!</line>
+							<line>Omelette for lunch!</line>
+							<result _name="condition">beardy_gotFood</result>
+							<result _name="deleteinventory">Egg</result>
+							<leavedialogue/>
+						</condition>
+						<condition _condition="selected_DeadBird">
+							<line>Wow! Thanks!</line>
+							<line>This will definitely satisfy my appetite ...</line>
+							<line>... hopefully.</line>
+							<result _name="condition">beardy_gotFood</result>
+							<result _name="deleteinventory">DeadBird</result>
+							<leavedialogue/>
+						</condition>
+							<line>My tummy is grumbling, get us some food!</line>
+							<changecharacter>Left</changecharacter>
+							<line>Alright, fine.</line>
+							<line>I'll look around the island for something.</line>
+							<leavedialogue/>
+					</condition>
+						<line>I'm so full now ...</line>
+						<condition _condition="beardy_gotFood hairy_gotFood moustache_gotFood eurylochus_gotFood">
+							<line>I heard Eurylochus has got something to give to you.</line>
+						</condition>
+						<leavedialogue/>
+				</condition>
+			
+				<condition _condition="level_6">
+					<condition _condition="beardy_gotMeat">
+						<condition _condition="hairy_gotMeat moustache_gotMeat">
+							<condition _condition="have_Meat">
+								<line>Alright! Let's make a campfire and have the feast of our lifes.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Thanks for waiting for me guys! Let's feast!</line>
+								<!-- CHANGE TO CUTSCENE OF MEN EATING MEAT -->
+								<result _name="deleteinventory">Meat</result>
+								<result _name="deleteinventory">Bow</result>
+								<result _name="deleteinventory">Arrow2</result>
+								<result _name="endchapter"/>
+								<result _name="loadscene">C4_Cutscenes_Cattle</result>
+								<leavedialogue/>
+							</condition>
+								<line>Hey, you have not gotten your meat yet.</line>
+								<line>We will wait for you before we start.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Really? Alright then, I better be quick.</line>
+								<leavedialogue/>
+						</condition>
+							<line>Thanks, Eurylochus!</line>
+							<line>I heard someone has not gotten his share yet.</line>
+							<line>I guess I'll just have to wait for everyone else.</line>
+							<changecharacter>Left</changecharacter>
+							<line>Alright. I'm onto it.</line>
+							<leavedialogue/>
+					</condition>
+					<condition _condition="selected_Meat">
+						<line>Wow finally! What took you so long?</line>
+						<changecharacter>Left</changecharacter>
+						<line>The cattle are scattered all around the place.</line>
+						<line>It's so hard trying to find enough meat for all of us.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Ohh right ... Anyways, thanks for the meat!</line>
+						<result _name="deleteinventory">Meat</result>
+						<result _name="condition">beardy_gotMeat</result>
+						<condition _condition="hairy_gotMeat moustache_gotMeat have_Meat">
+							<line>Alright! Let's make a campfire and have the feast of our lifes.</line>
+							<changecharacter>Left</changecharacter>
+							<line>Let's feast!</line>
+							<!-- CHANGE TO CUTSCENE OF MEN EATING MEAT -->
+							<result _name="deleteinventory">Meat</result>
+							<result _name="deleteinventory">Bow</result>
+							<result _name="deleteinventory">Arrow2</result>
+							<result _name="endchapter"/>
+							<result _name="loadscene">C4_Cutscenes_Cattle</result>
+							<leavedialogue/>
+						</condition>
+							<line>Since you went through that much trouble, I guess I'll wait for everyone else as well.</line>
+							<leavedialogue/>
+					</condition>
+						<line>Since there is five of us, that means we need 5 portions of meat to satisfy us?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Well, Odysseus is away, besides, he is against hunting the cattle.</line>
+						<line>So I think we should just leave him out.</line>
+						<line>Four portions of meat. One for each of us.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Alright then.</line>
+						<line>I hope Odysseus won't get angry at us then.</line>
+						<leavedialogue/>
+				</condition>
+			</npc>
+			
+			<npc _name="Moustache">
+				<condition _condition="level_5">
+					<condition _condition="!moustache_gotFood">
+						<condition _condition="selected_Fish">
+							<line>Thank you. I was so hungry.</line>
+							<line>Now if only I have chips ...</line>
+							<line>Haha just kidding!</line>
+							<result _name="condition">moustache_gotFood</result>
+							<result _name="deleteinventory">Fish</result>
+							<leavedialogue/>
+						</condition>
+						<condition _condition="selected_Egg">
+							<line>Yay!</line>
+							<line>Omelette for lunch!</line>
+							<result _name="condition">moustache_gotFood</result>
+							<result _name="deleteinventory">Egg</result>
+							<leavedialogue/>
+						</condition>
+						<condition _condition="selected_DeadBird">
+							<line>Wow! Thanks!</line>
+							<line>This will definitely satisfy my appetite ...</line>
+							<line>... hopefully.</line>
+							<result _name="condition">moustache_gotFood</result>
+							<result _name="deleteinventory">DeadBird</result>
+							<leavedialogue/>
+						</condition>
+							<line>Sir, everyone here is starving!</line>
+							<changecharacter>Left</changecharacter>
+							<line>Alright, alright. I know ...</line>
+							<line>I'm going to explore the area for food.</line>
+							<line>You guys just sit tight and wait for my return.</line>
+							<changecharacter>Right</changecharacter>
+							<line>Okay, if that's what you say ...</line>
+							<leavedialogue/>
+					</condition>
+						<line>I'm so full now ...</line>
+						<condition _condition="beardy_gotFood hairy_gotFood moustache_gotFood eurylochus_gotFood">
+							<line>I heard Eurylochus has got something to give to you.</line>
+						</condition>
+						<leavedialogue/>
+				</condition>
+			
+				<condition _condition="level_6">
+					<condition _condition="moustache_gotMeat">
+						<condition _condition="hairy_gotMeat beardy_gotMeat">
+							<condition _condition="have_Meat">
+								<line>Alright! Let's make a campfire and have the feast of our lifes.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Thanks for waiting for me guys! Let's feast!</line>
+								<!-- CHANGE TO CUTSCENE OF MEN EATING MEAT -->
+								<result _name="deleteinventory">Meat</result>
+								<result _name="deleteinventory">Bow</result>
+								<result _name="deleteinventory">Arrow2</result>
+								<result _name="endchapter"/>
+								<result _name="loadscene">C4_Cutscenes_Cattle</result>
+								<leavedialogue/>
+							</condition>
+								<line>Hey, you have not gotten your meat yet.</line>
+								<line>We will wait for you before we start.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Really? Alright then, I better be quick.</line>
+								<leavedialogue/>
+						</condition>
+							<line>Thanks, Eurylochus!</line>
+							<line>I heard someone has not gotten his share yet.</line>
+							<line>I guess I'll just have to wait for everyone else.</line>
+							<changecharacter>Left</changecharacter>
+							<line>Alright. I'm onto it.</line>
+							<leavedialogue/>
+					</condition>
+					<condition _condition="selected_Meat">
+						<line>Yes! Now I won't starve to death!</line>
+						<changecharacter>Left</changecharacter>
+						<line>Enjoy your meat. There's enough for everyone.</line>
+						<result _name="deleteinventory">Meat</result>
+						<result _name="condition">moustache_gotMeat</result>
+						<condition _condition="hairy_gotMeat beardy_gotMeat have_Meat">
+							<changecharacter>Right</changecharacter>
+							<line>Alright! Let's make a campfire and have the feast of our lifes.</line>
+							<changecharacter>Left</changecharacter>
+							<line>Let's feast!</line>
+							<!-- CHANGE TO CUTSCENE OF MEN EATING MEAT -->
+							<result _name="deleteinventory">Meat</result>
+							<result _name="deleteinventory">Bow</result>
+							<result _name="deleteinventory">Arrow2</result>
+							<result _name="endchapter"/>
+							<result _name="loadscene">C4_Cutscenes_Cattle</result>
+							<leavedialogue/>
+						</condition>
+							<changecharacter>Right</changecharacter>
+							<line>I'll just wait for everyone before starting.</line>
+							<leavedialogue/>
+					</condition>
+						<line>I hope the Gods won't mind us if we hunt their cattle.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Relax. We can always give back offerings to the Gods to please them.</line>
+						<line>What's more, it's our survival here.</line>
+						<changecharacter>Right</changecharacter>
+						<line>You're right. Okay, let's do this.</line>
+						<leavedialogue/>
+				</condition>
+			</npc>
+			
+			<npc _name="Hairy">
+				<condition _condition="level_5">
+					<condition _condition="!hairy_gotFood">
+						<condition _condition="selected_Fish">
+							<line>Thank you. I was so hungry.</line>
+							<line>Now if only I have chips ...</line>
+							<line>Haha just kidding!</line>
+							<result _name="condition">hairy_gotFood</result>
+							<result _name="deleteinventory">Fish</result>
+							<leavedialogue/>
+						</condition>
+						<condition _condition="selected_Egg">
+							<line>Yay!</line>
+							<line>Omelette for lunch!</line>
+							<result _name="condition">hairy_gotFood</result>
+							<result _name="deleteinventory">Egg</result>
+							<leavedialogue/>
+						</condition>
+						<condition _condition="selected_DeadBird">
+							<line>Wow! Thanks!</line>
+							<line>This will definitely satisfy my appetite ...</line>
+							<line>... hopefully.</line>
+							<result _name="condition">hairy_gotFood</result>
+							<result _name="deleteinventory">DeadBird</result>
+							<leavedialogue/>
+						</condition>
+							<line>Your Highness, we're really starving!</line>
+							<line>Could you get us some food from the area?</line>
+							<changecharacter>Left</changecharacter>
+							<line>I'm starving too.</line>
+							<line>I'll see if I can find any nearby river with fish in it.</line>
+							<leavedialogue/>
+					</condition>
+						<line>I'm so full now ...</line>
+						<condition _condition="beardy_gotFood hairy_gotFood moustache_gotFood eurylochus_gotFood">
+							<line>I heard Eurylochus has got something to give to you.</line>
+						</condition>
+						<leavedialogue/>
+				</condition>
+			
+				<condition _condition="level_6">
+					<condition _condition="hairy_gotMeat">
+						<condition _condition="moustache_gotMeat beardy_gotMeat">
+							<condition _condition="have_Meat">
+								<line>Alright! Let's make a campfire and have the feast of our lifes.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Thanks for waiting for me guys! Let's feast!</line>
+								<!-- CHANGE TO CUTSCENE OF MEN EATING MEAT -->
+								<result _name="deleteinventory">Meat</result>
+								<result _name="deleteinventory">Bow</result>
+								<result _name="deleteinventory">Arrow2</result>
+								<result _name="endchapter"/>
+								<result _name="loadscene">C4_Cutscenes_Cattle</result>
+								<leavedialogue/>
+							</condition>
+								<line>Hey, you have not gotten your meat yet.</line>
+								<line>We will wait for you before we start.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Really? Alright then, I better be quick.</line>
+								<leavedialogue/>
+						</condition>
+							<line>Thanks, Eurylochus!</line>
+							<line>I heard someone has not gotten his share yet.</line>
+							<line>I guess I'll just have to wait for everyone else.</line>
+							<changecharacter>Left</changecharacter>
+							<line>Alright. I'm onto it.</line>
+							<leavedialogue/>
+					</condition>
+					<condition _condition="selected_Meat">
+						<line>Hooray! Finally!</line>
+						<line>I'm going to enjoy every last bit of it.</line>
+						<result _name="deleteinventory">Meat</result>
+						<result _name="condition">hairy_gotMeat</result>
+						<condition _condition="moustache_gotMeat beardy_gotMeat have_Meat">
+							<line>Alright! Let's make a campfire and have the feast of our lifes.</line>
+							<changecharacter>Left</changecharacter>
+							<line>Let's feast!</line>
+							<!-- CHANGE TO CUTSCENE OF MEN EATING MEAT -->
+							<result _name="deleteinventory">Meat</result>
+							<result _name="deleteinventory">Bow</result>
+							<result _name="deleteinventory">Arrow2</result>
+							<result _name="endchapter"/>
+							<result _name="loadscene">C4_Cutscenes_Cattle</result>
+							<leavedialogue/>
+						</condition>
+							<line>I'm going to wait for everyone before I start.</line>
+							<line>It'll be ill-mannered of me if I start first.</line>
+							<leavedialogue/>
+					</condition>
+						<line>I'm still so hungry, where's Odysseus at a time like this?</line>
+						<line>Let's just hunt some cattle.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Yes, we should.</line>
+						<line>We'll just enrich Helios' temple with every kind of ornament we can find later.</line>
+						<changecharacter>Right</changecharacter>
+						<line>There should be some hunting tools in Odysseus room.</line>
+						<line>We could use that.</line>
+						<leavedialogue/>
+				</condition>
+			</npc>
+			
+			<npc _name="Eurylochus">
+				<condition _condition="level_5">
+					<condition _condition="!eurylochus_gotFood">
+						<condition _condition="selected_Fish">
+							<line>Thank you. I was so hungry!</line>
+							<condition _condition="beardy_gotFood hairy_gotFood moustache_gotFood">
+								<line>Here, have an axe, it might come in handy soon.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Hmm, I think I need the God's guidance on the next step of the journey.</line>
+								<line>I'll find a quiet place to pray.</line>
+								<changecharacter>Right</changecharacter>
+								<line>Okay then.</line>
+								<line>Try to return before nightfall.</line>
+								<result _name="addinventory">Axe</result>
+								<result _name="condition">eurylochus_gotFood</result>
+								<result _name="deleteinventory">Fish</result>
+								<leavedialogue/>
+							</condition>
+								<line>It looks like one of the crew members have not gotten any food yet.</line>
+								<changecharacter>Left</changecharacter>
+								<line>I know!</line>
+								<line>I'll return when I find enough food for everyone.</line>
+								<result _name="condition">eurylochus_gotFood</result>
+								<result _name="deleteinventory">Fish</result>
+								<leavedialogue/>
+						</condition>
+						<condition _condition="selected_Egg">
+							<line>Thank you. I was so hungry!</line>
+							<condition _condition="beardy_gotFood hairy_gotFood moustache_gotFood">
+								<line>Here, have an axe, it might come in handy soon.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Hmm, I think I need the God's guidance on the next step of the journey.</line>
+								<line>I'll find a quiet place to pray.</line>
+								<changecharacter>Right</changecharacter>
+								<line>Okay then.</line>
+								<line>Try to return before nightfall.</line>
+								<result _name="addinventory">Axe</result>
+								<result _name="condition">eurylochus_gotFood</result>
+								<result _name="deleteinventory">Egg</result>
+								<leavedialogue/>
+							</condition>
+								<line>It looks like one of the crew members have not gotten any food yet.</line>
+								<changecharacter>Left</changecharacter>
+								<line>I know!</line>
+								<line>I'll return when I find enough food for everyone.</line>
+								<result _name="condition">eurylochus_gotFood</result>
+								<result _name="deleteinventory">Egg</result>
+								<leavedialogue/>
+						</condition>
+						<condition _condition="selected_DeadBird">
+							<line>Thank you. I was so hungry!</line>
+							<condition _condition="beardy_gotFood hairy_gotFood moustache_gotFood">
+								<line>Here, have an axe, it might come in handy soon.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Hmm, I think I need the God's guidance on the next step of the journey.</line>
+								<line>I'll find a quiet place to pray.</line>
+								<changecharacter>Right</changecharacter>
+								<line>Okay then.</line>
+								<line>Try to return before nightfall.</line>
+								<result _name="addinventory">Axe</result>
+								<result _name="condition">eurylochus_gotFood</result>
+								<result _name="deleteinventory">DeadBird</result>
+								<leavedialogue/>
+							</condition>
+								<line>It looks like one of the crew members have not gotten any food yet.</line>
+								<changecharacter>Left</changecharacter>
+								<line>I know!</line>
+								<line>I'll return when I find enough food for everyone.</line>
+								<result _name="condition">eurylochus_gotFood</result>
+								<result _name="deleteinventory">DeadBird</result>
+								<leavedialogue/>
+						</condition>
+							<line>Sir, we are all hungry!</line>
+							<line>Try looking around the island for something edible.</line>
+							<leavedialogue/>
+					</condition>
+						<condition _condition="beardy_gotFood hairy_gotFood moustache_gotFood">
+							<condition _condition="!have_Axe">
+								<line>Here, have an axe, it might come in handy soon.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Hmm, I think I need the God's guidance on the next step of the journey.</line>
+								<line>I'll find a quiet place to pray.</line>
+								<changecharacter>Right</changecharacter>
+								<line>Okay then.</line>
+								<line>Try to return before nightfall.</line>
+								<result _name="addinventory">Axe</result>
+							</condition>
+								<line>Have you find any good spots to pray?</line>
+								<changecharacter>Left</changecharacter>
+								<line>Not yet.</line>
+								<leavedialogue/>
+						</condition>
+							<line>It looks like one of the crew members have not gotten any food yet.</line>
+							<changecharacter>Left</changecharacter>
+							<line>I know!</line>
+							<line>I'll return when I find enough food for everyone.</line>
+							<leavedialogue/>
+				</condition>
+			
+			</npc>
+			
+		</scene>
+	
+		<scene _name="C4_Temple">
+			<npc _name="Monologue">
+				<condition _condition="level_5">
+					<line>Hmm ...</line>
+					<line>This seems like a good spot to pray.</line>
+					<line>But maybe I should rest first ...</line>
+					<result _name="condition">odysseus_sleeping</result>
+					<result _name="condition">!level_5</result>
+					<result _name="condition">!beardy_gotFood</result>
+					<result _name="condition">!moustache_gotFood</result>
+					<result _name="condition">!hairy_gotFood</result>
+					<result _name="condition">!eurylochus_gotFood</result>
+					<result _name="condition">level_6</result>
+					<result _name="changeplayer">Eurylochus</result>
+					<!-- CHANGE TO CUTSCENE OF ODYSSEUS SLEEPING -->
+					<result _name="loadscene">C4_Cutscenes_Blackout</result>
+					<leavedialogue/>
+				</condition>
+				<condition _condition="level_6">
+					<line>This should be the statue of one of the Gods.</line>
+					<line>We will have to bring offerings here later, but first we got to eat.</line>
+					<line>I can't wait to get back to the ship.</line>
+					<leavedialogue/>
+				</condition>
+			</npc>
+		</scene>
+		
+	</chapter>
+	
+</dialogue>
