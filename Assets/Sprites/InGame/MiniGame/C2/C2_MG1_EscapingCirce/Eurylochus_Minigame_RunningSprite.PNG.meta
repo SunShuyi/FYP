@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: 2f284e4c834f2714babfc2a5221133cd
+timeCreated: 1439261287
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Eurylochus_Minigame_RunningSprite_0
+    21300002: Eurylochus_Minigame_RunningSprite_1
+    21300004: Eurylochus_Minigame_RunningSprite_2
+    21300006: Eurylochus_Minigame_RunningSprite_3
+    21300008: Eurylochus_Minigame_RunningSprite_4
+    21300010: Eurylochus_Minigame_RunningSprite_5
+    21300012: Eurylochus_Minigame_RunningSprite_6
+    21300014: Eurylochus_Minigame_RunningSprite_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Eurylochus_Minigame_RunningSprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 594
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eurylochus_Minigame_RunningSprite_1
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 0
+        width: 594
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eurylochus_Minigame_RunningSprite_2
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 0
+        width: 594
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eurylochus_Minigame_RunningSprite_3
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 0
+        width: 594
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eurylochus_Minigame_RunningSprite_4
+      rect:
+        serializedVersion: 2
+        x: 2376
+        y: 0
+        width: 594
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eurylochus_Minigame_RunningSprite_5
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 0
+        width: 594
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eurylochus_Minigame_RunningSprite_6
+      rect:
+        serializedVersion: 2
+        x: 3564
+        y: 0
+        width: 594
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Eurylochus_Minigame_RunningSprite_7
+      rect:
+        serializedVersion: 2
+        x: 4158
+        y: 0
+        width: 594
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
