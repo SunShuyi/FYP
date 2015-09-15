@@ -133,3 +133,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter4/Cutscenes/C4_Cutscenes_Siren.unity
   - enabled: 1
     path: Assets/Scenes/Chapter4/Cutscenes/C4_Cutscenes_TwoMonsters.unity
+  - enabled: 1
+    path: Assets/Scenes/Mini-games/C5/FindEumaeus's.unity
