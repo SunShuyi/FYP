@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Rocks
+  - Exit
+  - Items
+  - InventorySlot
+  - Wave
+  - Debris
+  - Player
+  - BGM
+  - SFX
+  - GUI
+  - wall
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 16915529
+    locked: 0
+  - name: Midground
+    uniqueID: 96710489
+    locked: 0
+  - name: Items
+    uniqueID: 41280947
+    locked: 0
+  - name: Objects
+    uniqueID: 3483878699
+    locked: 0
+  - name: Player
+    uniqueID: 1385805299
+    locked: 0
+  - name: Foreground
+    uniqueID: 2496070883
+    locked: 0
+  - name: UI
+    uniqueID: 785760183
+    locked: 0
