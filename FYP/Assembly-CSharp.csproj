@@ -81,6 +81,7 @@
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\C_healthh.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\CountDownTimer.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Level1.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\wayPoint.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter1.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter2.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter3.cs" />
