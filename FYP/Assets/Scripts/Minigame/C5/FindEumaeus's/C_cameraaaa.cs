@@ -4,7 +4,6 @@ using System.Collections;
 public class C_cameraaaa : MonoBehaviour {
 
 	public GameObject theOdysseusMG1 ;
-	public GameObject bonus;
 	float dist = 10.0f;
 	
 	// Update is called once per frame

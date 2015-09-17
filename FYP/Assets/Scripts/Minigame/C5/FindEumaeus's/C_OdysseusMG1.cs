@@ -14,19 +14,20 @@ public class C_OdysseusMG1 : MonoBehaviour {
 	public float bounceVal = 0.1f;
 	private bool isMoving = false;
 
-
+	public CountDownTimer hpbar;
 	private bool instructions;
 	private bool playGame;
 
+	public bool GodMode;
 
 	Rigidbody2D playerRB;
 
 
 	private float tiltAngle;
 
-	public Text theLives;
 
-	public int lifeCount;
+
+
 
 	void Awake()
 	{
@@ -52,12 +53,13 @@ public class C_OdysseusMG1 : MonoBehaviour {
 
 		theInput.InputUpdate ();
 
-		//lifeCount = lifeScript.lifeCount;
+	
 
 #if UNITY_EDITOR || UNITY_STANDALONE_WIN
 
 		if (Input.GetKeyDown ("space") && instructions) { //Start the game
 			instructions = false;
+			hpbar.enabled = true;
 		}
 
 
@@ -95,7 +97,8 @@ public class C_OdysseusMG1 : MonoBehaviour {
 			playGame = true;
 		}
 	
-		if (playGame && !instructions) { 
+		if (playGame && !instructions )  {//&& collided)
+
 			if (Input.GetKey (KeyCode.UpArrow) || Input.GetKeyDown ("w"))
 				transform.Translate (Vector3.up * Time.deltaTime * playerSpeed_normal * 5);
 			if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKeyDown ("a"))
@@ -142,29 +145,63 @@ public class C_OdysseusMG1 : MonoBehaviour {
 			Application.LoadLevel ("FindEumaeus's");
 		}
 	
+
+
 		Vector3 heading = coll.transform.position - this.transform.position;
 		float Distance = heading.magnitude;
 		Vector3 Direction = heading / Distance;
 		playerRB.AddForce (-Direction * 0.01f * bounceVal);
 		playerRB.drag = 2.0f;
 		//}
-		if (coll.CompareTag ("wall")) {
-			ProgressBar.value -= 15;
-		}
+		if (!GodMode) {
+			if (coll.CompareTag ("wall")) {
+				ProgressBar.value -= 3;
+				instructions = true;
+			}
 
-		if (coll.CompareTag ("enemy")) {
-			ProgressBar.value -= 15;
+			if (coll.CompareTag ("enemy")) {
+				ProgressBar.value -= 3;
+				instructions = true;
+				playerRB.AddForce (-Direction * bounceVal * 0.05f);
+				//coll.gameObject.GetComponent<wayPoint>().Combat = true;
+			}
 		}
-
 			if (coll.CompareTag ("bonus")) { 
 				Destroy(coll.gameObject);
-				ProgressBar.value += 15;
-		
+				ProgressBar.value += 5;
 		}
+	}
+
+	void OnTriggerStay2D(Collider2D coll)
+	{
+		//if (!coll.CompareTag ("enemy")) {
+			Vector3 heading = coll.transform.position - this.transform.position;
+			float Distance = heading.magnitude;
+			Vector3 Direction = heading / Distance;
+			playerRB.AddForce (-Direction * 0.01f * bounceVal);
+			playerRB.drag = 2.0f;
+		//}
+	}
+
+	void OnTriggerExit2D(Collider2D coll)
+	{
+		instructions = false;
+		//if (coll.CompareTag ("enemy"))
+		//	coll.gameObject.GetComponent<wayPoint>().Combat = false;
 	}
 	//}
 
+//	void rebound(Vector3 pos)
+//	{
+//		Vector3 heading = pos - this.transform.position;
+//		float Distance = heading.magnitude;
+//		Vector3 Direction = heading / Distance;
+//		playerRB.AddForce (-Direction * 0.01f * bounceVal);
+//		playerRB.drag = 2.0f;
+//
+//	}
 	void Reset ()
-	{ Application.LoadLevel ("FindEumaeus's"); }
+	{ 
+		Application.LoadLevel ("FindEumaeus's"); }
 
 }

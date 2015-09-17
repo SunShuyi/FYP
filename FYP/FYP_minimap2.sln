@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{9BD37F4B-81AD-61C6-2D41-C897A0D35268}") = "FYP", "Assembly-CSharp-vs.csproj", "{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}"
+Project("{57D64AA6-74BE-59A2-7333-A740B18722AA}") = "FYP_minimap2", "Assembly-CSharp.csproj", "{AAA029A9-85DD-F09D-CAFA-81A22AFF2FAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAA029A9-85DD-F09D-CAFA-81A22AFF2FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA029A9-85DD-F09D-CAFA-81A22AFF2FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA029A9-85DD-F09D-CAFA-81A22AFF2FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA029A9-85DD-F09D-CAFA-81A22AFF2FAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																GlobalSection(MonoDevelopProperties) = preSolution
+	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -36,5 +36,4 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
-
 EndGlobal
