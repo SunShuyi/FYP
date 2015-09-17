@@ -4,7 +4,8 @@ using System.Collections;
 
 public class Porter : MonoBehaviour {
 	public GameObject Target_1;
-	//public GameObject Target_2;
+	public GameObject Target_2;
+	//public GameObject Target_3;
 	
 	//check name of what is collided with to determine where the player teleports to.
 	//also can check its tag instead of name.
@@ -16,9 +17,16 @@ public class Porter : MonoBehaviour {
 			gameObject.transform.position = Target_1.transform.position;
 			break;
 			
-//		case "PorterB":
-//			gameObject.transform.position = Target_2.transform.position;
-//			break;
+		case "PorterB":
+			gameObject.transform.position = Target_2.transform.position;
+			break;
+			//		case "PorterC":
+			//			gameObject.transform.position = Target_2.transform.position;
+			//			break;
+			//
+			//		case "PorterB":
+			//			gameObject.transform.position = Target_3.transform.position;
+			//			break;
 		}
 	}
 	void Start () {
