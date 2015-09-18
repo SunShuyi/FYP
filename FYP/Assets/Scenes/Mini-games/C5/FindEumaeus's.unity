@@ -350,11 +350,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 498982, guid: c55dc41b0a5cfdd4cb3558480b5a7416, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -110
+      value: -76.4499969
       objectReference: {fileID: 0}
     - target: {fileID: 498982, guid: c55dc41b0a5cfdd4cb3558480b5a7416, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -406.399994
+      value: -422.769989
       objectReference: {fileID: 0}
     - target: {fileID: 498982, guid: c55dc41b0a5cfdd4cb3558480b5a7416, type: 2}
       propertyPath: m_LocalPosition.z
@@ -703,11 +703,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 498982, guid: c55dc41b0a5cfdd4cb3558480b5a7416, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -88.5199966
+      value: -93.8099976
       objectReference: {fileID: 0}
     - target: {fileID: 498982, guid: c55dc41b0a5cfdd4cb3558480b5a7416, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -389.209991
+      value: -400.609985
       objectReference: {fileID: 0}
     - target: {fileID: 498982, guid: c55dc41b0a5cfdd4cb3558480b5a7416, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1157,6 +1157,7 @@ GameObject:
   - 114: {fileID: 1525049813}
   - 61: {fileID: 1525049816}
   - 50: {fileID: 1525049815}
+  - 114: {fileID: 1525049817}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -1220,6 +1221,23 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &1525049817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1525049812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a58db35c441bafd4ca81fd2a3464bdea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bonus: {fileID: 101072, guid: c55dc41b0a5cfdd4cb3558480b5a7416, type: 2}
+  numberOfDMeat: 3
+  minX: 1
+  maxX: 30
+  minY: 1
+  maxY: 30
 --- !u!1 &1526345616
 GameObject:
   m_ObjectHideFlags: 0
