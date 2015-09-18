@@ -25,8 +25,12 @@ public class C_OdysseusMG1 : MonoBehaviour {
 
 	private float tiltAngle;
 
-
-
+	public float moveSpeed;
+	public AnimationClip Up;
+	public AnimationClip Down;
+	public AnimationClip Left;
+	public AnimationClip Right;
+	public AnimationClip Idle;
 
 
 	void Awake()
@@ -37,6 +41,8 @@ public class C_OdysseusMG1 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+		moveSpeed = 4 * Time.deltaTime;//TEST
 		lastPlayerPos = transform.position;//PlayerPos
 
 
@@ -97,17 +103,45 @@ public class C_OdysseusMG1 : MonoBehaviour {
 			playGame = true;
 		}
 	
-		if (playGame && !instructions )  {//&& collided)
+		if (playGame && !instructions )  {
 
-			if (Input.GetKey (KeyCode.UpArrow) || Input.GetKeyDown ("w"))
-				transform.Translate (Vector3.up * Time.deltaTime * playerSpeed_normal * 5);
-			if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKeyDown ("a"))
-				transform.Translate (Vector3.left * Time.deltaTime * playerSpeed_normal * 5); 
-			if (Input.GetKey (KeyCode.DownArrow) || Input.GetKeyDown ("s"))
-				transform.Translate (Vector3.down * Time.deltaTime * playerSpeed_normal * 5); 
-			if (Input.GetKey (KeyCode.RightArrow) || Input.GetKeyDown ("d"))
-				transform.Translate (Vector3.right * Time.deltaTime * playerSpeed_normal * 5); 
+
+
+
+
+			Vector2 temp = transform.position;
+			
+			if (Input.GetKey (KeyCode.UpArrow)) {
+				temp.y += moveSpeed;
+				transform.position = temp;
+				GetComponent<Animator>().SetInteger ("Type", 4);
+			} else if (Input.GetKey (KeyCode.DownArrow)) {
+				temp.y -= moveSpeed;
+				transform.position = temp;
+				GetComponent<Animator>().SetInteger ("Type", 3);
+			} else if (Input.GetKey (KeyCode.LeftArrow)) {
+				temp.x -= moveSpeed;
+				transform.position = temp;
+				GetComponent<Animator>().SetInteger ("Type", 1);
+			} else if (Input.GetKey (KeyCode.RightArrow)) {
+				temp.x += moveSpeed;
+				transform.position = temp;
+				GetComponent<Animator>().SetInteger ("Type", 2);
+			} else
+				GetComponent<Animator>().SetInteger ("Type", 0);
 	
+
+//			if (Input.GetKey (KeyCode.UpArrow) || Input.GetKeyDown ("w"))
+//				transform.Translate (Vector3.up * Time.deltaTime * playerSpeed_normal * 5);
+//			if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKeyDown ("a"))
+//				transform.Translate (Vector3.left * Time.deltaTime * playerSpeed_normal * 5); 
+//			if (Input.GetKey (KeyCode.DownArrow) || Input.GetKeyDown ("s"))
+//				transform.Translate (Vector3.down * Time.deltaTime * playerSpeed_normal * 5); 
+//			if (Input.GetKey (KeyCode.RightArrow) || Input.GetKeyDown ("d"))
+//				transform.Translate (Vector3.right * Time.deltaTime * playerSpeed_normal * 5); 
+
+
+//	
 		}
 		//Progress Bar
 		PlayerPos = new Vector3 (transform.position.x, transform.position.y, 10);	//PlayerPos
@@ -123,20 +157,24 @@ public class C_OdysseusMG1 : MonoBehaviour {
 		lastPlayerPos = PlayerPos;//PlayerPos
 		
 	}
+
+
+
+
 	
-	void moveTo (Vector3 targetPos)
-	{
-		if (PlayerPos.x < targetPos.x) { //left//PlayerPos
-			this.transform.Rotate(Vector3.forward * -0.2f);
-		
-		}
-
-		if (PlayerPos.x > targetPos.x) { //right //PlayerPos
-			this.transform.Rotate(Vector3.back * -0.2f);
-
-		} 
-
-	}
+//	void moveTo (Vector3 targetPos)
+//	{
+//		if (PlayerPos.x < targetPos.x) { //left//PlayerPos
+//			this.transform.Rotate(Vector3.forward * -0.2f);
+//		
+//		}
+//
+//		if (PlayerPos.x > targetPos.x) { //right //PlayerPos
+//			this.transform.Rotate(Vector3.back * -0.2f);
+//
+//		} 
+//
+//	}
 
 
 	void OnTriggerEnter2D(Collider2D coll)
@@ -189,17 +227,7 @@ public class C_OdysseusMG1 : MonoBehaviour {
 		//if (coll.CompareTag ("enemy"))
 		//	coll.gameObject.GetComponent<wayPoint>().Combat = false;
 	}
-	//}
 
-//	void rebound(Vector3 pos)
-//	{
-//		Vector3 heading = pos - this.transform.position;
-//		float Distance = heading.magnitude;
-//		Vector3 Direction = heading / Distance;
-//		playerRB.AddForce (-Direction * 0.01f * bounceVal);
-//		playerRB.drag = 2.0f;
-//
-//	}
 	void Reset ()
 	{ 
 		Application.LoadLevel ("FindEumaeus's"); }

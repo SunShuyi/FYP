@@ -27,4 +27,7 @@ public class Detector : MonoBehaviour {
 			wp.patrolling = true;
 			//wp.Combat = false;
 	}
+
+
+
 }

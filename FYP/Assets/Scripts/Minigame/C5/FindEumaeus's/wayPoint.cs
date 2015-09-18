@@ -10,11 +10,13 @@ public class wayPoint : MonoBehaviour {
 	private int lastPoint;
 	public Vector3 target;
 	public Vector3 moveDirection;
-
+	
 	public bool moveBack;
 	public bool Combat = false;
 	public bool patrolling = true;
 	public GameObject player;
+
+
 
 
 	void Start ()
@@ -31,6 +33,44 @@ public class wayPoint : MonoBehaviour {
 			transform.position = Vector2.MoveTowards (transform.position, player.transform.position, moveSpeed * Time.deltaTime);
 		else if(patrolling)
 			Patrol ();
+	}
+
+
+
+	void CheckDirection()
+	{
+		target = wayPoints[currentPoint].position;
+		moveDirection = target - transform.position;
+		
+		if (moveDirection.y > 0) {
+			if (GameObject.FindWithTag ("enemy")) 
+			{
+				GetComponent<Animator> ().SetInteger ("enemyType", 4);
+	
+			}
+		}
+		if (moveDirection.y < 0) {
+			if (GameObject.FindWithTag ("enemy")) 
+			{
+				GetComponent<Animator> ().SetInteger ("enemyType", 3);
+		
+			}
+		}
+		if (moveDirection.x > 0) {
+			if (GameObject.FindWithTag ("enemy")) 
+			{
+				GetComponent<Animator> ().SetInteger ("enemyType", 2);
+		
+			
+			}
+		}
+		if (moveDirection.x < 0) {
+			if (GameObject.FindWithTag ("enemy")) 
+			{
+				GetComponent<Animator> ().SetInteger ("enemyType", 1);
+
+			}
+		}
 	}
 
 	void Patrol()
@@ -61,3 +101,4 @@ public class wayPoint : MonoBehaviour {
 
 	}
 }
+
