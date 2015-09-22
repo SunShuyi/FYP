@@ -193,12 +193,12 @@ public class C_OdysseusMG1 : MonoBehaviour {
 		//}
 		if (!GodMode) {
 			if (coll.CompareTag ("wall")) {
-				ProgressBar.value -= 3;
+				ProgressBar.value -=3;
 				instructions = true;
 			}
 
 			if (coll.CompareTag ("enemy")) {
-				ProgressBar.value -= 3;
+				ProgressBar.value -=3;
 				instructions = true;
 				playerRB.AddForce (-Direction * bounceVal * 0.05f);
 				//coll.gameObject.GetComponent<wayPoint>().Combat = true;
