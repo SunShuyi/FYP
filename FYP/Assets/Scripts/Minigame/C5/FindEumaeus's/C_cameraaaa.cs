@@ -4,7 +4,7 @@ using System.Collections;
 public class C_cameraaaa : MonoBehaviour {
 
 	public GameObject theOdysseusMG1 ;
-	float dist = 1.0f;
+	float dist = 10.0f;
 	public Rotate rotation;
 	// Update is called once per frame
 	void Update () {
