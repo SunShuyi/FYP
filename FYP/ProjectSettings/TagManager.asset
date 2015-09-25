@@ -17,6 +17,9 @@ TagManager:
   - wall
   - enemy
   - bonus
+  - mapbook
+  - health
+  - map
   layers:
   - Default
   - TransparentFX

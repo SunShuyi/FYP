@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}</ProjectGuid>
+	<ProjectGuid>{43DF1055-9BCC-A523-3713-7D78B378BDBE}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -77,13 +77,17 @@
      <Compile Include="Assets\Scripts\Minigame\C4\PassingtheSirens\C_Lives.cs" />
      <Compile Include="Assets\Scripts\Minigame\C4\PassingtheSirens\C_Siren.cs" />
      <Compile Include="Assets\Scripts\Minigame\C4\PassingtheSirens\C_camera.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Blip.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\C_OdysseusMG1.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\C_cameraaaa.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\CountDownTimer.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Level1.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\MiniMap.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Porter.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Rotate.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\open.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\spawnBonus.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\timer.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\wayPoint.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter1.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter2.cs" />

@@ -4,7 +4,7 @@ using System.Collections;
 public class C_cameraaaa : MonoBehaviour {
 
 	public GameObject theOdysseusMG1 ;
-	float dist = 10.0f;
+	float dist = 1.0f;
 	public Rotate rotation;
 	// Update is called once per frame
 	void Update () {
@@ -41,7 +41,7 @@ public class C_cameraaaa : MonoBehaviour {
 	{
 		Vector3 temp = new Vector3 ();
 		temp.x = theOdysseusMG1.transform.position.x;
-		temp.y = theOdysseusMG1.transform.position.y + 3.0f;
+		temp.y = theOdysseusMG1.transform.position.y ;
 		temp.z = theOdysseusMG1.transform.position.z - dist;
 		transform.position = temp;
 	}
@@ -50,7 +50,7 @@ public class C_cameraaaa : MonoBehaviour {
 	{
 		Vector3 temp = new Vector3 ();
 		temp.x = theOdysseusMG1.transform.position.x;
-		temp.y = theOdysseusMG1.transform.position.y - 3.0f;
+		temp.y = theOdysseusMG1.transform.position.y ;
 		temp.z = theOdysseusMG1.transform.position.z - dist;
 		transform.position = temp;
 	}
@@ -58,7 +58,7 @@ public class C_cameraaaa : MonoBehaviour {
 	void LeftOffSet()
 	{
 		Vector3 temp = new Vector3 ();
-		temp.x = theOdysseusMG1.transform.position.x + 3.0f;
+		temp.x = theOdysseusMG1.transform.position.x ;
 		temp.y = theOdysseusMG1.transform.position.y;
 		temp.z = theOdysseusMG1.transform.position.z - dist;
 		transform.position = temp;
@@ -67,7 +67,7 @@ public class C_cameraaaa : MonoBehaviour {
 	void RightOffSet()
 	{
 		Vector3 temp = new Vector3 ();
-		temp.x = theOdysseusMG1.transform.position.x - 3.0f;
+		temp.x = theOdysseusMG1.transform.position.x ;
 		temp.y = theOdysseusMG1.transform.position.y;
 		temp.z = theOdysseusMG1.transform.position.z - dist;
 		transform.position = temp;

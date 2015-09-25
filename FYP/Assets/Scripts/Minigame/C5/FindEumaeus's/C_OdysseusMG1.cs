@@ -14,6 +14,7 @@ public class C_OdysseusMG1 : MonoBehaviour {
 	public float bounceVal = 0.1f;
 	private bool isMoving = false;
 
+	public GameObject instrucPage;
 	public CountDownTimer hpbar;
 	private bool instructions;
 	private bool playGame;
@@ -99,7 +100,8 @@ public class C_OdysseusMG1 : MonoBehaviour {
 #endif
 		
 		if (!instructions) {
-		
+
+			DestroyObject(instrucPage);
 			playGame = true;
 		}
 	
@@ -193,7 +195,7 @@ public class C_OdysseusMG1 : MonoBehaviour {
 		//}
 		if (!GodMode) {
 			if (coll.CompareTag ("wall")) {
-				ProgressBar.value -=3;
+				ProgressBar.value -=3;			
 				instructions = true;
 			}
 
