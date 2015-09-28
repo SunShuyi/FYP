@@ -77,12 +77,10 @@
      <Compile Include="Assets\Scripts\Minigame\C4\PassingtheSirens\C_Lives.cs" />
      <Compile Include="Assets\Scripts\Minigame\C4\PassingtheSirens\C_Siren.cs" />
      <Compile Include="Assets\Scripts\Minigame\C4\PassingtheSirens\C_camera.cs" />
-     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Blip.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\C_OdysseusMG1.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\C_cameraaaa.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\CountDownTimer.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Level1.cs" />
-     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\MiniMap.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Porter.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Rotate.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\open.cs" />

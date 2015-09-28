@@ -131,19 +131,6 @@ public class C_OdysseusMG1 : MonoBehaviour {
 				GetComponent<Animator>().SetInteger ("Type", 2);
 			} else
 				GetComponent<Animator>().SetInteger ("Type", 0);
-	
-
-//			if (Input.GetKey (KeyCode.UpArrow) || Input.GetKeyDown ("w"))
-//				transform.Translate (Vector3.up * Time.deltaTime * playerSpeed_normal * 5);
-//			if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKeyDown ("a"))
-//				transform.Translate (Vector3.left * Time.deltaTime * playerSpeed_normal * 5); 
-//			if (Input.GetKey (KeyCode.DownArrow) || Input.GetKeyDown ("s"))
-//				transform.Translate (Vector3.down * Time.deltaTime * playerSpeed_normal * 5); 
-//			if (Input.GetKey (KeyCode.RightArrow) || Input.GetKeyDown ("d"))
-//				transform.Translate (Vector3.right * Time.deltaTime * playerSpeed_normal * 5); 
-
-
-//	
 		}
 		//Progress Bar
 		PlayerPos = new Vector3 (transform.position.x, transform.position.y, 10);	//PlayerPos
@@ -159,24 +146,6 @@ public class C_OdysseusMG1 : MonoBehaviour {
 		lastPlayerPos = PlayerPos;//PlayerPos
 		
 	}
-
-
-
-
-	
-//	void moveTo (Vector3 targetPos)
-//	{
-//		if (PlayerPos.x < targetPos.x) { //left//PlayerPos
-//			this.transform.Rotate(Vector3.forward * -0.2f);
-//		
-//		}
-//
-//		if (PlayerPos.x > targetPos.x) { //right //PlayerPos
-//			this.transform.Rotate(Vector3.back * -0.2f);
-//
-//		} 
-//
-//	}
 
 
 	void OnTriggerEnter2D(Collider2D coll)
@@ -195,7 +164,7 @@ public class C_OdysseusMG1 : MonoBehaviour {
 		//}
 		if (!GodMode) {
 			if (coll.CompareTag ("wall")) {
-				ProgressBar.value -=3;			
+				//ProgressBar.value -=3;			
 				instructions = true;
 			}
 
@@ -226,8 +195,7 @@ public class C_OdysseusMG1 : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D coll)
 	{
 		instructions = false;
-		//if (coll.CompareTag ("enemy"))
-		//	coll.gameObject.GetComponent<wayPoint>().Combat = false;
+
 	}
 
 	void Reset ()
