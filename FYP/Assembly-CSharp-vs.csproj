@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Detector.cs" />
      <Compile Include="Assets\Scripts\Helpers\C_Constants.cs" />
      <Compile Include="Assets\Scripts\Helpers\C_Extensions.cs" />
      <Compile Include="Assets\Scripts\Helpers\C_Fade.cs" />
@@ -80,6 +79,7 @@
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\C_OdysseusMG1.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\C_cameraaaa.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\CountDownTimer.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Detector.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Level1.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Porter.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Rotate.cs" />

@@ -9,35 +9,46 @@ public class timer : MonoBehaviour {
 	private float rtime;
 	public Image map;
 	public GameObject theMap;
-	//Text text;
+	private int seconds = 5;
+
 
 	// Use this for initialization
 	void Start () 
 	{
 		theMap = GameObject.Find ("Mini-Map-Icon-Opened");
 
-		//text = GetComponent<Text> ();	
 		time = 5;
-		//guiText.text = "map" + timer;
 		rtime = Time.time;
 	}
-
 	// Update is called once per frame
 	void Update () 
 	{
+
+
 		if(theMap == null)
 		{
 			if (Time.time - rtime > 1.0f) 
 			{
+
 				time -=1;
 				rtime = Time.time;
-				//text.text = "" + time;
-				//guiText.text = "map" + timer;
+				seconds =(time*1);
+		
 
 			}
 		}
 			if (time<= 0) {
 				map.enabled = false;
+			    //Time.timeScale =0;
+			  
 		}
 	}
+
+	void OnGUI()
+	{ 
+
+		GUI.Label (new Rect(400, 350, 40, 50),""+ seconds.ToString()+ " secs");
+		
+	}
+
 }
