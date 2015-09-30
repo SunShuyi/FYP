@@ -15,31 +15,52 @@ public class Rotate : MonoBehaviour {
 	//public float zspeed = 0.0f;
 
 	public bool Shaking; 
-	private float ShakeDecay;
-	private float ShakeIntensity;    
+	public bool ReadyToRotate;
+	private float ShakeDecay, ShakeDecayValue;
+	private float ShakeIntensity, ShakeIntensityValue;
 	private Vector3 OriginalPos;
 	private Quaternion OriginalRot;
+	private int SkipFrame, SkipFrameCount;
+	private float MinimumRotateDuration, MaximumRotateDuration;
 
 	// Use this for initialization
 	void Start () {
-		Invoke ("ObjRotate", Random.Range (1.0f, 3.0f));
+		MinimumRotateDuration = 2.0f;
+		MaximumRotateDuration = 4.0f;
+		ShakeIntensity = ShakeIntensityValue = 0.15f;
+		ShakeDecay = ShakeDecayValue = 0.015f;
+		SkipFrame = SkipFrameCount = 5;
+
+		Shaking = false;
+		ReadyToRotate = false;
+
+		Invoke ("DoShake", Random.Range (MinimumRotateDuration, MaximumRotateDuration));
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(ShakeIntensity > 0)
+		if (0 == (SkipFrame--))
 		{
-			transform.position = OriginalPos + Random.insideUnitSphere * ShakeIntensity;
-			transform.rotation = new Quaternion(OriginalRot.x + Random.Range(-ShakeIntensity, ShakeIntensity)*.2f,
-			                                    OriginalRot.y + Random.Range(-ShakeIntensity, ShakeIntensity)*.2f,
-			                                    OriginalRot.z + Random.Range(-ShakeIntensity, ShakeIntensity)*.2f,
-			                                    OriginalRot.w + Random.Range(-ShakeIntensity, ShakeIntensity)*.2f);
-			
-			ShakeIntensity -= ShakeDecay;
+			if ((true == Shaking) && (0 < ShakeIntensity)) {
+				transform.position = OriginalPos + Random.insideUnitSphere * ShakeIntensity;
+				transform.rotation = new Quaternion (OriginalRot.x + Random.Range (-ShakeIntensity, ShakeIntensity) * .2f,
+				                                     OriginalRot.y + Random.Range (-ShakeIntensity, ShakeIntensity) * .2f,
+				                                     OriginalRot.z + Random.Range (-ShakeIntensity, ShakeIntensity) * .2f,
+				                                     OriginalRot.w + Random.Range (-ShakeIntensity, ShakeIntensity) * .2f);
+				
+				ShakeIntensity -= ShakeDecay;
+			}
+			else if ((true == Shaking) && (0 >= ShakeIntensity))
+			{
+				Shaking = false;
+				ReadyToRotate = true;
+			}
+			SkipFrame = SkipFrameCount;
 		}
-		else if (Shaking)
+		if ( true == ReadyToRotate )
 		{
-			Shaking = false;  
+			Invoke("ObjRotate", 0.5f);
+			ReadyToRotate = false;
 		}
 	}
 
@@ -48,8 +69,8 @@ public class Rotate : MonoBehaviour {
 		OriginalPos = transform.position;
 		OriginalRot = transform.rotation;
 		
-		ShakeIntensity = 0.3f;
-		ShakeDecay = 0.02f;
+		ShakeIntensity = ShakeIntensityValue;
+		ShakeDecay = ShakeDecayValue;
 		Shaking = true;
 	}   
 	
@@ -79,8 +100,8 @@ public class Rotate : MonoBehaviour {
 		}
 		else 
 			state = 0;
-		Invoke ("ObjRotate", Random.Range (1.0f, 3.0f));
-		DoShake();
 
+		ReadyToRotate = false;
+		Invoke ("DoShake", Random.Range (MinimumRotateDuration, MaximumRotateDuration));	
 	}
 }
