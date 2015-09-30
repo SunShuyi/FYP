@@ -107,30 +107,153 @@ public class C_OdysseusMG1 : MonoBehaviour {
 	
 		if (playGame && !instructions )  {
 
-
-
-
-
-			Vector2 temp = transform.position;
+			if (!instructions) 
+			{
+				
+				DestroyObject(instrucPage);
+				playGame = true;
+			}
 			
-			if (Input.GetKey (KeyCode.UpArrow)) {
-				temp.y += moveSpeed;
-				transform.position = temp;
-				GetComponent<Animator>().SetInteger ("Type", 4);
-			} else if (Input.GetKey (KeyCode.DownArrow)) {
-				temp.y -= moveSpeed;
-				transform.position = temp;
-				GetComponent<Animator>().SetInteger ("Type", 3);
-			} else if (Input.GetKey (KeyCode.LeftArrow)) {
-				temp.x -= moveSpeed;
-				transform.position = temp;
-				GetComponent<Animator>().SetInteger ("Type", 1);
-			} else if (Input.GetKey (KeyCode.RightArrow)) {
-				temp.x += moveSpeed;
-				transform.position = temp;
-				GetComponent<Animator>().SetInteger ("Type", 2);
-			} else
-				GetComponent<Animator>().SetInteger ("Type", 0);
+			if (playGame && !instructions) 
+			{
+				
+				
+				Vector2 temp = transform.position;
+				
+				switch ((int)this.transform.eulerAngles.z) 
+				{
+					
+				case 0:
+					if (Input.GetKey (KeyCode.UpArrow))
+					{
+						temp.y += moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 4);
+					} 
+					else if (Input.GetKey (KeyCode.DownArrow))
+					{
+						temp.y -= moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 3);
+					}
+					else if (Input.GetKey (KeyCode.LeftArrow))
+					{
+						temp.x -= moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 1);
+					} 
+					else if (Input.GetKey (KeyCode.RightArrow))
+					{
+						temp.x += moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 2);
+					}
+					else
+						GetComponent<Animator> ().SetInteger ("Type", 0);
+					break;
+				case 90:
+					if (Input.GetKey (KeyCode.UpArrow)) 
+					{
+						temp.x -= moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 1);
+					} 
+					else if (Input.GetKey (KeyCode.DownArrow))
+					{
+						
+						temp.x += moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 2);
+					} 
+					else if (Input.GetKey (KeyCode.LeftArrow)) 
+					{
+						
+						temp.y -= moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 3);
+					}
+					else if (Input.GetKey (KeyCode.RightArrow))
+					{
+						
+						temp.y += moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 4);
+						
+					} 
+					else
+						GetComponent<Animator> ().SetInteger ("Type", 0);
+					break;
+				case 180:
+					if (Input.GetKey (KeyCode.UpArrow))
+					{
+						
+						temp.y -= moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 3);
+					} 
+					else if (Input.GetKey (KeyCode.DownArrow)) 
+					{
+						
+						temp.y += moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 4);
+					} 
+					else if (Input.GetKey (KeyCode.LeftArrow))
+					{
+						
+						temp.x += moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 2);
+					} 
+					else if (Input.GetKey (KeyCode.RightArrow)) 
+					{
+						
+						temp.x -= moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 1);
+						
+					} else
+						GetComponent<Animator> ().SetInteger ("Type", 0);
+					break;
+				case 270:
+					if (Input.GetKey (KeyCode.UpArrow))
+					{
+						
+						temp.x += moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 2);
+					} 
+					else if (Input.GetKey (KeyCode.DownArrow)) 
+					{
+						
+						temp.x -= moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 1);
+						
+					} 
+					else if (Input.GetKey (KeyCode.LeftArrow)) 
+					{
+						
+						temp.y += moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 4);
+						
+					} 
+					else if (Input.GetKey (KeyCode.RightArrow))
+					{
+						
+						temp.y -= moveSpeed;
+						transform.position = temp;
+						GetComponent<Animator> ().SetInteger ("Type", 3);
+						
+					} else
+						GetComponent<Animator> ().SetInteger ("Type", 0);
+					break;
+					
+				}
+			}
+			//Progress Bar
+			PlayerPos = new Vector3 (transform.position.x, transform.position.y, 10);	//PlayerPos
 		}
 		//Progress Bar
 		PlayerPos = new Vector3 (transform.position.x, transform.position.y, 10);	//PlayerPos

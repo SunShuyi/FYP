@@ -40,7 +40,7 @@ public class C_cameraaaa : MonoBehaviour {
 	void DownOffSet()
 	{
 		Vector3 temp = new Vector3 ();
-		temp.x = theOdysseusMG1.transform.position.x ;
+		temp.x = theOdysseusMG1.transform.position.x;
 		temp.y = theOdysseusMG1.transform.position.y ;
 		temp.z = theOdysseusMG1.transform.position.z - dist;
 		transform.position = temp;
@@ -58,7 +58,7 @@ public class C_cameraaaa : MonoBehaviour {
 	void LeftOffSet()
 	{
 		Vector3 temp = new Vector3 ();
-		temp.x = theOdysseusMG1.transform.position.x;
+		temp.x = theOdysseusMG1.transform.position.x ;
 		temp.y = theOdysseusMG1.transform.position.y;
 		temp.z = theOdysseusMG1.transform.position.z - dist;
 		transform.position = temp;
@@ -67,7 +67,7 @@ public class C_cameraaaa : MonoBehaviour {
 	void RightOffSet()
 	{
 		Vector3 temp = new Vector3 ();
-		temp.x = theOdysseusMG1.transform.position.x;
+		temp.x = theOdysseusMG1.transform.position.x ;
 		temp.y = theOdysseusMG1.transform.position.y;
 		temp.z = theOdysseusMG1.transform.position.z - dist;
 		transform.position = temp;

@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}</ProjectGuid>
+	<ProjectGuid>{18B12D95-BE95-4954-C277-A63F3B0CF0FD}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -84,6 +84,7 @@
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\CountDownTimer.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Level1.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Porter.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\RandomMap.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Rotate.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\open.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\spawnBonus.cs" />
