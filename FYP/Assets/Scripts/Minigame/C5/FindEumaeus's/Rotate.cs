@@ -6,14 +6,15 @@ public class Rotate : MonoBehaviour {
 	public float xspeed = 0.0f;
 	public float yspeed = 0.0f;
 	public int state = 0;
-
+	
 	public GameObject player;
+	public GameObject StationeryObjects;
 	//0 = down
 	//1 = right
 	//2 = up
 	//3 = down
 	//public float zspeed = 0.0f;
-
+	
 	public bool Shaking; 
 	public bool ReadyToRotate;
 	private float ShakeDecay, ShakeDecayValue;
@@ -22,7 +23,7 @@ public class Rotate : MonoBehaviour {
 	private Quaternion OriginalRot;
 	private int SkipFrame, SkipFrameCount;
 	private float MinimumRotateDuration, MaximumRotateDuration;
-
+	
 	// Use this for initialization
 	void Start () {
 		MinimumRotateDuration = 2.0f;
@@ -30,10 +31,10 @@ public class Rotate : MonoBehaviour {
 		ShakeIntensity = ShakeIntensityValue = 0.15f;
 		ShakeDecay = ShakeDecayValue = 0.015f;
 		SkipFrame = SkipFrameCount = 5;
-
+		
 		Shaking = false;
 		ReadyToRotate = false;
-
+		
 		Invoke ("DoShake", Random.Range (MinimumRotateDuration, MaximumRotateDuration));
 	}
 	
@@ -63,7 +64,7 @@ public class Rotate : MonoBehaviour {
 			ReadyToRotate = false;
 		}
 	}
-
+	
 	public void DoShake()
 	{
 		OriginalPos = transform.position;
@@ -76,31 +77,35 @@ public class Rotate : MonoBehaviour {
 	
 	public void ObjRotate()
 	{
-
+		
 		Quaternion rotation = transform.localRotation;
 		Vector3 angle = rotation.eulerAngles;
 		angle.z += 90.0f;
 		rotation.eulerAngles = angle;
 		this.transform.localRotation = rotation;
-
+		
 		Quaternion rotation2 = transform.localRotation;
 		Vector3 anglePlayer = rotation2.eulerAngles;
 		anglePlayer.z -= 90.0f;
 		rotation2.eulerAngles = angle;
 		player.transform.localRotation = rotation;
-
-
-//		Vector3 temp = transform.position;
-//		temp.z = anglePlayer.z;
-//		player.transform.position = temp;
-
+		
+		Quaternion rotation3 = transform.localRotation;
+		Vector3 angleStationeryObjects = rotation2.eulerAngles;
+		angleStationeryObjects.z -= 90.0f;
+		rotation3.eulerAngles = angle;
+		StationeryObjects.transform.localRotation = rotation;
+		//		Vector3 temp = transform.position;
+		//		temp.z = anglePlayer.z;
+		//		player.transform.position = temp;
+		
 		if (state < 3)
 		{
 			state += 1;
 		}
 		else 
 			state = 0;
-
+		
 		ReadyToRotate = false;
 		Invoke ("DoShake", Random.Range (MinimumRotateDuration, MaximumRotateDuration));	
 	}

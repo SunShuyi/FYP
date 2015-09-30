@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{9BD37F4B-81AD-61C6-2D41-C897A0D35268}") = "FYP", "Assembly-CSharp-vs.csproj", "{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}"
+Project("{F0E579B1-A504-A3A7-F34F-4DBA066DF3CD}") = "FYP - MG1ShakeRotationDone - Copy", "Assembly-CSharp.csproj", "{FB9CFC6A-392D-D8CA-C4FF-D63A3E32C659}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB9CFC6A-392D-D8CA-C4FF-D63A3E32C659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9CFC6A-392D-D8CA-C4FF-D63A3E32C659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9CFC6A-392D-D8CA-C4FF-D63A3E32C659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9CFC6A-392D-D8CA-C4FF-D63A3E32C659}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																																											GlobalSection(MonoDevelopProperties) = preSolution
+	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -36,5 +36,4 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
-
 EndGlobal

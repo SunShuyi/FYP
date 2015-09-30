@@ -22,7 +22,6 @@ public class open : MonoBehaviour {
 			if(this.gameObject.name != "mapbook")
 			{
 				map.enabled = true;
-				map.GetComponent<timer>().enabled=true;
 				Destroy (this.gameObject);
 
 				
