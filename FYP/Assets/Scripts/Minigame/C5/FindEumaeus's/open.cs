@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class open : MonoBehaviour {
 	public Image map;
 	public GameObject player;
-
+	
 	// Use this for initialization
 	void Start () {
 		map.enabled = false;
@@ -13,7 +13,7 @@ public class open : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		
 	}
 	void OnTriggerEnter2D(Collider2D coll)
 	{
@@ -22,16 +22,14 @@ public class open : MonoBehaviour {
 			if(this.gameObject.name != "mapbook")
 			{
 				map.enabled = true;
+				map.GetComponent<timer>().enabled=true;
 				Destroy (this.gameObject);
-
+				
 				
 			}
+			
+		}
 		
-	    }
-
-   }
-
+	}
+	
 }
-
-
-

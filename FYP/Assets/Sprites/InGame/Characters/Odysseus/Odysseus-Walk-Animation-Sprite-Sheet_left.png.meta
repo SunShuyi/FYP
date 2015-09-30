@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: a933bc354e8ab4d4bb50a2b03fc3808f
+timeCreated: 1443601422
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Odysseus-Walk-Animation-Sprite-Sheet_left_0
+    21300002: Odysseus-Walk-Animation-Sprite-Sheet_left_1
+    21300004: Odysseus-Walk-Animation-Sprite-Sheet_left_2
+    21300006: Odysseus-Walk-Animation-Sprite-Sheet_left_3
+    21300008: Odysseus-Walk-Animation-Sprite-Sheet_left_4
+    21300010: Odysseus-Walk-Animation-Sprite-Sheet_left_5
+    21300012: Odysseus-Walk-Animation-Sprite-Sheet_left_6
+    21300014: Odysseus-Walk-Animation-Sprite-Sheet_left_7
+    21300016: Odysseus-Walk-Animation-Sprite-Sheet_left_8
+    21300018: Odysseus-Walk-Animation-Sprite-Sheet_left_9
+    21300020: Odysseus-Walk-Animation-Sprite-Sheet_left_10
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Odysseus-Walk-Animation-Sprite-Sheet_left_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 98
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Odysseus-Walk-Animation-Sprite-Sheet_left_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 10
+        width: 98
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Odysseus-Walk-Animation-Sprite-Sheet_left_2
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 10
+        width: 98
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Odysseus-Walk-Animation-Sprite-Sheet_left_3
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 10
+        width: 98
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Odysseus-Walk-Animation-Sprite-Sheet_left_4
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 10
+        width: 98
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Odysseus-Walk-Animation-Sprite-Sheet_left_5
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 10
+        width: 98
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Odysseus-Walk-Animation-Sprite-Sheet_left_6
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 10
+        width: 98
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Odysseus-Walk-Animation-Sprite-Sheet_left_7
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 10
+        width: 98
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Odysseus-Walk-Animation-Sprite-Sheet_left_8
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 10
+        width: 98
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Odysseus-Walk-Animation-Sprite-Sheet_left_9
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 10
+        width: 98
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Odysseus-Walk-Animation-Sprite-Sheet_left_10
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 10
+        width: 98
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
