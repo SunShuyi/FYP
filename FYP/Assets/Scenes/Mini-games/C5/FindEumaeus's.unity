@@ -808,7 +808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &498639121
 RectTransform:
   m_ObjectHideFlags: 0
@@ -861,7 +861,6 @@ MonoBehaviour:
   text: {fileID: 1977377137}
   time: 5
   map: {fileID: 498639122}
-  theMap: {fileID: 0}
 --- !u!222 &498639124
 CanvasRenderer:
   m_ObjectHideFlags: 0
