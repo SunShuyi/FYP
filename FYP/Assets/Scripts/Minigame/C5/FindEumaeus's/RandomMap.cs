@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class RandomMap : MonoBehaviour {
@@ -12,7 +13,10 @@ public class RandomMap : MonoBehaviour {
 	public EnemySpawner bSpawn;
 	public EnemySpawner t1Spawn;
 	public EnemySpawner t2Spawn;
-
+	public GameObject player;
+	public Vector3[] playerPos;
+	public Image minimap;
+	public Sprite[] levelMap;
 	// Use this for initialization
 	void Start () {
 		Invoke ("CreateBasic", 1.5f);
@@ -26,6 +30,7 @@ public class RandomMap : MonoBehaviour {
 		{
 		case 1: 
 		{
+			player.transform.localPosition = playerPos[platform-1];
 			Instantiate (Map1, new Vector3 (50, 25, 0), Quaternion.identity); 
 			eSpawn.enabled = true;
 			eSpawn.mapVal = platform;
@@ -41,6 +46,9 @@ public class RandomMap : MonoBehaviour {
 				break;
 		case 2:
 		{
+			minimap.sprite = levelMap[0];
+			minimap.enabled = false;
+			player.transform.localPosition = playerPos[platform-1];
 			Instantiate (Map2, new Vector3 (50, 25, 0), Quaternion.identity); 
 			eSpawn.enabled = true;
 			eSpawn.mapVal = platform;
@@ -56,6 +64,9 @@ public class RandomMap : MonoBehaviour {
 				break;
 		case 3:
 		{
+			minimap.sprite = levelMap[1];
+			minimap.enabled = false;
+			player.transform.localPosition = playerPos[platform-1];
 			Instantiate (Map3, new Vector3 (50, 25, 0), Quaternion.identity); 
 			eSpawn.enabled = true;
 			eSpawn.mapVal = platform;

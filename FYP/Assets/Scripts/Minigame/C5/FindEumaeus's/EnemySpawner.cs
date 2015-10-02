@@ -23,6 +23,7 @@ public class EnemySpawner : MonoBehaviour {
 				Array[i] = Instantiate(Object,this.transform.position,Quaternion.identity) as GameObject;
 				//GameObject tempTransform = Instantiate(wayPoint1[i],wayPoint1[i].transform.position,Quaternion.identity) as GameObject;
 				//tempTransform.name = "waypoint";
+				Array[i].SetActive(true);
 				Array[i].transform.parent = this.transform;
 				Array[i].transform.localScale = new Vector3(1,1,1);
 				Array[i].transform.localPosition = Map1Pos[i];
@@ -39,6 +40,7 @@ public class EnemySpawner : MonoBehaviour {
 				Array[i] = Instantiate(Object,this.transform.position,Quaternion.identity) as GameObject;
 				//GameObject tempTransform = Instantiate(wayPoint2[i],wayPoint1[i].transform.position,Quaternion.identity) as GameObject;
 				//tempTransform.name = "waypoint";
+				Array[i].SetActive(true);
 				Array[i].transform.parent = this.transform;
 				Array[i].transform.localScale = new Vector3(1,1,1);
 				Array[i].transform.localPosition = Map2Pos[i];
@@ -55,6 +57,7 @@ public class EnemySpawner : MonoBehaviour {
 				Array[i] = Instantiate(Object,this.transform.position,Quaternion.identity) as GameObject;
 				//GameObject tempTransform = Instantiate(wayPoint3[i],wayPoint1[i].transform.position,Quaternion.identity) as GameObject;
 				//tempTransform.name = "waypoint";
+				Array[i].SetActive(true);
 				Array[i].transform.parent = this.transform;
 				Array[i].transform.localScale = new Vector3(1,1,1);
 				Array[i].transform.localPosition = Map3Pos[i];
