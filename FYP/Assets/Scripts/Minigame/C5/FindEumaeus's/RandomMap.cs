@@ -7,6 +7,10 @@ public class RandomMap : MonoBehaviour {
 	public GameObject Map2;
 	public GameObject Map3;
 	public int platform;
+	public EnemySpawner eSpawn;
+	public EnemySpawner mSpawn;
+	public EnemySpawner bSpawn;
+
 
 	// Use this for initialization
 	void Start () {
@@ -20,13 +24,37 @@ public class RandomMap : MonoBehaviour {
 		switch (platform) 
 		{
 		case 1: 
-				Instantiate (Map1, new Vector3 (50, 25, 0), Quaternion.identity); 
+		{
+			Instantiate (Map1, new Vector3 (50, 25, 0), Quaternion.identity); 
+			eSpawn.enabled = true;
+			eSpawn.mapVal = platform;
+			mSpawn.enabled = true;
+			mSpawn.mapVal = platform;
+			bSpawn.enabled = true;
+			bSpawn.mapVal = platform;	
+		}
 				break;
 		case 2:
-				Instantiate (Map2, new Vector3 (0, 0, 0), Quaternion.identity); 
+		{
+			Instantiate (Map2, new Vector3 (50, 25, 0), Quaternion.identity); 
+			eSpawn.enabled = true;
+			eSpawn.mapVal = platform;
+			mSpawn.enabled = true;
+			mSpawn.mapVal = platform;
+			bSpawn.enabled = true;
+			bSpawn.mapVal = platform;
+		}
 				break;
 		case 3:
-				Instantiate (Map3, new Vector3 (0, 0, 0), Quaternion.identity); 
+		{
+			Instantiate (Map3, new Vector3 (0, 0, 0), Quaternion.identity); 
+			eSpawn.enabled = true;
+			eSpawn.mapVal = platform;
+			mSpawn.enabled = true;
+			mSpawn.mapVal = platform;
+			bSpawn.enabled = true;
+			bSpawn.mapVal = platform;
+		}
 				break;
 		}
 	}

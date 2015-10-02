@@ -16,15 +16,26 @@ public class wayPoint : MonoBehaviour {
 	public bool patrolling = true;
 	public GameObject player;
 
-
+	public string wpName;
 
 
 	void Start ()
 	{
 		moveSpeed = initialMoveSpeed;
-		transform.position = wayPoints [0].position;
+		//
 		currentPoint = 0;
 		moveBack = false;
+
+		GameObject tWayPoint = GameObject.Find (wpName);
+		//waypoint init stuff
+		wayPoints = new Transform[tWayPoint.transform.childCount];
+		for (int i = 0; i < tWayPoint.transform.childCount; i++) {
+			wayPoints[i] = tWayPoint.transform.GetChild(i);
+		}
+
+		transform.position = wayPoints [0].position;
+
+		player = GameObject.Find ("player");
 	}
 
 	void Update()

@@ -3,25 +3,26 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class timer : MonoBehaviour {
-
+	
 	//public static int timers;
+	public Text text;
 	public  int time;
 	private float rtime;
 	public Image map;
 	public GameObject theMap;
-	//Text text;
+	private int seconds = 5;
 
 	// Use this for initialization
 	void Start () 
 	{
+		text.enabled = true;
 		theMap = GameObject.Find ("Mini-Map-Icon-Opened");
 
-		//text = GetComponent<Text> ();	
 		time = 5;
-		//guiText.text = "map" + timer;
 		rtime = Time.time;
+		
 	}
-
+	
 	// Update is called once per frame
 	void Update () 
 	{
@@ -31,13 +32,21 @@ public class timer : MonoBehaviour {
 			{
 				time -=1;
 				rtime = Time.time;
-				//text.text = "" + time;
-				//guiText.text = "map" + timer;
-
+				seconds =(time*1);
+				text.text = seconds.ToString();
+				if(seconds <= 0)
+				{
+					this.enabled = false;
+					text.enabled = false;
+				}
+		
+				
 			}
 		}
-			if (time<= 0) {
-				map.enabled = false;
+		if (time<= 0) {
+			map.enabled = false;
+
 		}
 	}
+
 }

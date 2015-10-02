@@ -116,14 +116,14 @@ public class Rotate : MonoBehaviour {
 		rotation2.eulerAngles = angle;
 		player.transform.localRotation = rotation;
 		
-		Quaternion rotation3 = transform.localRotation;
-		Vector3 angleStationeryObjects = rotation2.eulerAngles;
-		if (angle.z <= -360)
-			angleStationeryObjects.z = 360;
-		angleStationeryObjects.z -= 90.0f;
-		angleStationeryObjects.z = roundOff(angleStationeryObjects.z);
-		rotation3.eulerAngles = angle;
-		StationeryObjects.transform.localRotation = rotation;
+		//Quaternion rotation3 = transform.localRotation;
+		//Vector3 angleStationeryObjects = rotation2.eulerAngles;
+		//if (angle.z <= -360)
+		//	angleStationeryObjects.z = 360;
+		//angleStationeryObjects.z -= 90.0f;
+		//angleStationeryObjects.z = roundOff(angleStationeryObjects.z);
+		//rotation3.eulerAngles = angle;
+		//StationeryObjects.transform.localRotation = rotation;
 		//		Vector3 temp = transform.position;
 		//		temp.z = anglePlayer.z;
 		//		player.transform.position = temp;
