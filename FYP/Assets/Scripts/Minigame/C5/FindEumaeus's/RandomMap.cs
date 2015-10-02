@@ -10,7 +10,8 @@ public class RandomMap : MonoBehaviour {
 	public EnemySpawner eSpawn;
 	public EnemySpawner mSpawn;
 	public EnemySpawner bSpawn;
-
+	public EnemySpawner t1Spawn;
+	public EnemySpawner t2Spawn;
 
 	// Use this for initialization
 	void Start () {
@@ -32,6 +33,10 @@ public class RandomMap : MonoBehaviour {
 			mSpawn.mapVal = platform;
 			bSpawn.enabled = true;
 			bSpawn.mapVal = platform;	
+			t1Spawn.enabled = true;
+			t1Spawn.mapVal = platform;	
+			t2Spawn.enabled = true;
+			t2Spawn.mapVal = platform;
 		}
 				break;
 		case 2:
@@ -43,6 +48,10 @@ public class RandomMap : MonoBehaviour {
 			mSpawn.mapVal = platform;
 			bSpawn.enabled = true;
 			bSpawn.mapVal = platform;
+			t1Spawn.enabled = true;
+			t1Spawn.mapVal = platform;
+			t2Spawn.enabled = true;
+			t2Spawn.mapVal = platform;
 		}
 				break;
 		case 3:
@@ -54,6 +63,10 @@ public class RandomMap : MonoBehaviour {
 			mSpawn.mapVal = platform;
 			bSpawn.enabled = true;
 			bSpawn.mapVal = platform;
+			t1Spawn.enabled = true;
+			t1Spawn.mapVal = platform;
+			t2Spawn.enabled = true;
+			t2Spawn.mapVal = platform;
 		}
 				break;
 		}

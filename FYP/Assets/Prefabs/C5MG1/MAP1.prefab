@@ -352,7 +352,6 @@ MonoBehaviour:
   text: {fileID: 0}
   time: 5
   map: {fileID: 11423710}
-  theMap: {fileID: 0}
 --- !u!114 &11423710
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -380,7 +379,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131904}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a58db35c441bafd4ca81fd2a3464bdea, type: 3}
   m_Name: 
