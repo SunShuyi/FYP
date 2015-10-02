@@ -19,7 +19,7 @@ public class RandomMap : MonoBehaviour {
 
 	void CreateBasic()
 	{
-		platform = Random.Range (1, 3);
+		platform = Random.Range (1, 4);
 
 		switch (platform) 
 		{
@@ -47,7 +47,7 @@ public class RandomMap : MonoBehaviour {
 				break;
 		case 3:
 		{
-			Instantiate (Map3, new Vector3 (0, 0, 0), Quaternion.identity); 
+			Instantiate (Map3, new Vector3 (50, 25, 0), Quaternion.identity); 
 			eSpawn.enabled = true;
 			eSpawn.mapVal = platform;
 			mSpawn.enabled = true;
