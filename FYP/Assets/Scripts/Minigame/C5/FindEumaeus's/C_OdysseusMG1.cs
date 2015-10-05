@@ -170,14 +170,14 @@ public class C_OdysseusMG1 : MonoBehaviour {
 						
 						temp.y -= moveSpeed;
 						transform.position = temp;
-						GetComponent<Animator> ().SetInteger ("Type", 3);
+						GetComponent<Animator> ().SetInteger ("Type", 4);
 					}
 					else if (Input.GetKey (KeyCode.RightArrow))
 					{
 						
 						temp.y += moveSpeed;
 						transform.position = temp;
-						GetComponent<Animator> ().SetInteger ("Type", 4);
+						GetComponent<Animator> ().SetInteger ("Type", 3);
 						
 					} 
 					else
@@ -203,14 +203,14 @@ public class C_OdysseusMG1 : MonoBehaviour {
 						
 						temp.x += moveSpeed;
 						transform.position = temp;
-						GetComponent<Animator> ().SetInteger ("Type", 2);
+						GetComponent<Animator> ().SetInteger ("Type", 1);
 					} 
 					else if (Input.GetKey (KeyCode.RightArrow)) 
 					{
 						
 						temp.x -= moveSpeed;
 						transform.position = temp;
-						GetComponent<Animator> ().SetInteger ("Type", 1);
+						GetComponent<Animator> ().SetInteger ("Type", 2);
 						
 					} else
 						GetComponent<Animator> ().SetInteger ("Type", 0);

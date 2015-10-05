@@ -13,10 +13,12 @@ public class RandomMap : MonoBehaviour {
 	public EnemySpawner bSpawn;
 	public EnemySpawner t1Spawn;
 	public EnemySpawner t2Spawn;
+	public EnemySpawner ExitSpawn;
 	public GameObject player;
 	public Vector3[] playerPos;
 	public Image minimap;
 	public Sprite[] levelMap;
+
 	// Use this for initialization
 	void Start () {
 		Invoke ("CreateBasic", 1.5f);
@@ -42,6 +44,9 @@ public class RandomMap : MonoBehaviour {
 			t1Spawn.mapVal = platform;	
 			t2Spawn.enabled = true;
 			t2Spawn.mapVal = platform;
+			ExitSpawn.enabled = true;
+			ExitSpawn.mapVal = platform;
+
 		}
 				break;
 		case 2:
@@ -60,6 +65,8 @@ public class RandomMap : MonoBehaviour {
 			t1Spawn.mapVal = platform;
 			t2Spawn.enabled = true;
 			t2Spawn.mapVal = platform;
+			ExitSpawn.enabled = true;
+			ExitSpawn.mapVal = platform;
 		}
 				break;
 		case 3:
@@ -78,6 +85,8 @@ public class RandomMap : MonoBehaviour {
 			t1Spawn.mapVal = platform;
 			t2Spawn.enabled = true;
 			t2Spawn.mapVal = platform;
+			ExitSpawn.enabled = true;
+			ExitSpawn.mapVal = platform;
 		}
 				break;
 		}

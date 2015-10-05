@@ -26,11 +26,11 @@ public class Rotate : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		MinimumRotateDuration = 5.0f;
-		MaximumRotateDuration = 15.0f;
+		MinimumRotateDuration = 15.0f;
+		MaximumRotateDuration = 35.0f;
 		ShakeIntensity = ShakeIntensityValue = 0.15f;
-		ShakeDecay = ShakeDecayValue = 0.015f;
-		SkipFrame = SkipFrameCount = 5;
+		ShakeDecay = ShakeDecayValue = 0.035f;
+		SkipFrame = SkipFrameCount = 7;
 		
 		Shaking = false;
 		ReadyToRotate = false;
