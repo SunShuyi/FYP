@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{1ABCCA62-91F9-F14A-5759-1E214CA32ADD}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_1;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Detector.cs" />
+     <Compile Include="Assets\MiniMapObject.cs" />
+     <Compile Include="Assets\Scripts\Helpers\C_Constants.cs" />
+     <Compile Include="Assets\Scripts\Helpers\C_Extensions.cs" />
+     <Compile Include="Assets\Scripts\Helpers\C_Fade.cs" />
+     <Compile Include="Assets\Scripts\Helpers\C_Input.cs" />
+     <Compile Include="Assets\Scripts\Helpers\C_Timer.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C2\ClashingtheE\C_SwordFight.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C2\EscapingCirce\C_C2_MG1_Player.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C3\BloodSacrifice\C_C3_MG2_Ghost.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C3\BloodSacrifice\C_C3_MG2_Manager.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C3\BloodSacrifice\C_C3_MG2_Player.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C3\FireCave\C_C3_MG3_Player.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C3\FireCave\C_C3_MG3_Tile.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C3\HadesExit\C_C3_MG4_Ghost.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C3\HadesExit\C_C3_MG4_Manager.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C3\HadesGate\C_C3_MG1_Bone.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C3\HadesGate\C_C3_MG1_Buttons.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C3\HadesGate\C_HadesGateManager.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C4\DodgingScylla\C_Boat02.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C4\DodgingScylla\C_Camera02.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C4\DodgingScylla\C_Head.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C4\DodgingScylla\C_HeadAnim.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C4\DodgingScylla\C_Scylla.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C4\DodgingScylla\C_Splash.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C4\EscapingCharybdis\C_Debris.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C4\EscapingCharybdis\C_Player_Minigame3.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C4\EscapingCharybdis\C_Whirlpool.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C4\PassingtheSirens\C_Boat.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C4\PassingtheSirens\C_Lives.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C4\PassingtheSirens\C_Siren.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C4\PassingtheSirens\C_camera.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\C_OdysseusMG1.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\C_cameraaaa.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\CameraShake.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\CountDownTimer.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Level1.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Porter.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\RandomMap.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Rotate.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\RotateWithPlayer.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\open.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\spawnBonus.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\timer.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\wayPoint.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_Chapter1.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_Chapter2.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_Chapter3.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_Chapter4.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_Chapter5.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_Character.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_CutsceneTxt.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_DialogueBox.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_Exit.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_InWorldItem.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_InteractableObject.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_MovingBackground.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_OverlappingObject.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\C_Player.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\Managers\C_ChapterManager.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\Managers\C_DialogueManager.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\Managers\C_DialogueUIManager.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\Managers\C_InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\Managers\C_LevelSelectionManager.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\Managers\C_MainMenuManager.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\Managers\C_OptionsManager.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\Managers\C_SceneManager.cs" />
+     <Compile Include="Assets\Scripts\SceneObjects\Managers\CutsceneHandler.cs" />
+     <Compile Include="Assets\Scripts\SubClasses\C_AudioBGM.cs" />
+     <Compile Include="Assets\Scripts\SubClasses\C_AudioSFX.cs" />
+     <Compile Include="Assets\Scripts\SubClasses\C_Chapter.cs" />
+     <Compile Include="Assets\Scripts\SubClasses\C_Combination.cs" />
+     <Compile Include="Assets\Scripts\SubClasses\C_ConditionResult.cs" />
+     <Compile Include="Assets\Scripts\SubClasses\C_DialogueGraphic.cs" />
+     <Compile Include="Assets\Scripts\SubClasses\C_DialogueNode.cs" />
+     <Compile Include="Assets\Scripts\SubClasses\C_InventorySlot.cs" />
+     <Compile Include="Assets\Scripts\SubClasses\C_Item.cs" />
+     <Compile Include="Assets\Scripts\SubClasses\C_PlayerData.cs" />
+     <Compile Include="Assets\Scripts\SubClasses\C_Result.cs" />
+     <None Include="Assets\Scripts\FilesToLoad\DialogueXML.xml" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
