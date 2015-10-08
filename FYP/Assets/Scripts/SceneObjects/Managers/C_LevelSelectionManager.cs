@@ -74,6 +74,14 @@ public class C_LevelSelectionManager : MonoBehaviour
 			break;
 		case 5:
 			// Application.LoadLevel("C5_???");
+			//Application.LoadLevel("C5_Phaeacians'Forest1");
+			if(C_Chapter4.getInstance.conditionTriggers.Contains("startedGame"))
+				Application.LoadLevel("C5_Phaeacians'Beach");
+			else
+			{
+				C_Chapter4.getInstance.conditionTriggers.Add ("startedGame");
+				Application.LoadLevel("C5_Cutscenes_Opening");
+			}
 			break;
 		default:
 			break;
