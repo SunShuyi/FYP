@@ -7,6 +7,10 @@ public class C_Exit : MonoBehaviour {
 	[Header("Enter direction")]
 	public E_HorizontalDirection enterDirection	= E_HorizontalDirection.Right;
 	[HideInInspector]
+//	[Header("Enter direction Vertical")]
+//	public E_VerticalDirection enterVDirection	= E_VerticalDirection.Right;
+//	[HideInInspector]
+
 	public Collider2D exitCollider				= null;
 
 	[Space(10)]
