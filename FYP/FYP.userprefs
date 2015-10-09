@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FilesToLoad\DialogueXML.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SceneObjects\C_InteractableObject.cs">
     <Files>
-      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="1599" Column="23" />
+      <File FileName="Assets\Scripts\SceneObjects\C_InteractableObject.cs" Line="24" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
