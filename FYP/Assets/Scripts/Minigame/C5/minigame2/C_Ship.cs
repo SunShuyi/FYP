@@ -32,7 +32,8 @@ public class C_Ship : MonoBehaviour {
 	StrengthIndicator  StrengthScript;
 	StrengthIndicator StrengthScriptShadow;
 	public int StrengthCount;
-	
+
+	int collidedShips = 0;
 	void Awake()
 	{
 		if(theInput == null)
@@ -113,7 +114,7 @@ public class C_Ship : MonoBehaviour {
 		
 		//Progress Bar
 		ShipPos = new Vector3 (transform.position.x, transform.position.y, 10);	
-		// sliderValue = ShipPos.y;
+		sliderValue += Time.deltaTime * 2;
 		ProgressBar.value = sliderValue;
 		
 		GameObject closestRock = FindClosestRock ();
@@ -192,22 +193,40 @@ public class C_Ship : MonoBehaviour {
 	//Collision for Exit
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		if (coll.CompareTag ("Exit")) 
-		{ Application.LoadLevel("C4_ShipDeck"); }
-		
-		if (coll.CompareTag ("Rocks")) {
-			if(StrengthCount == 0) {
-				shipAnim.SetBool("isDead", true);
+		if (coll.CompareTag ("Exit")) {
+			Application.LoadLevel ("C4_ShipDeck");
+		} else if (coll.CompareTag ("Rocks")) {
+			if (StrengthCount == 0) {
+				shipAnim.SetBool ("isDead", true);
 				shipRB.velocity = Vector2.zero;
 			} else {
-				StrengthScript.SendMessage("Hit");
-				StrengthScriptShadow.SendMessage("Hit");
-				shipRB.AddForce(Vector3.down * 0.04f);
+				StrengthScript.SendMessage ("Hit");
+				StrengthScriptShadow.SendMessage ("Hit");
+				shipRB.AddForce (Vector3.down * 0.04f);
 				shipRB.drag = 2.0f;
+			}
+		} 
+	}
+
+	void OnCollisionEnter2D(Collision2D coll)
+	{
+		if (coll.collider.CompareTag ("enemy")) {
+			collidedShips++;
+			if(collidedShips >= 2)
+			{
+				shipAnim.SetBool ("isDead", true);
+				shipRB.velocity = Vector2.zero;
+
 			}
 		}
 	}
 	
+	void OnCollisionExit2D(Collision2D coll)
+	{
+		if (coll.collider.CompareTag ("enemy")) {
+			collidedShips--;
+		}
+	}
 	void Reset ()
 	{ Application.LoadLevel ("PassingtheSirens"); }
 	
