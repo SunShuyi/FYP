@@ -56,7 +56,8 @@ public class C_OdysseusMG1 : MonoBehaviour {
 
 	}
 
-	void Update () {
+	void Update () 
+	{
 
 		theInput.InputUpdate ();
 
@@ -113,8 +114,11 @@ public class C_OdysseusMG1 : MonoBehaviour {
 				DestroyObject(instrucPage);
 				playGame = true;
 			}
+
+			if (!InstructionsManager.b_IsDone)
+				GetComponent<Animator> ().SetInteger ("Type", 0);
 			
-			if (playGame && !instructions) 
+			if (playGame && !instructions && InstructionsManager.b_IsDone) 
 			{
 				
 				
@@ -278,41 +282,77 @@ public class C_OdysseusMG1 : MonoBehaviour {
 		}
 	
 
-
-		Vector3 heading = coll.transform.position - this.transform.position;
-		float Distance = heading.magnitude;
-		Vector3 Direction = heading / Distance;
-		playerRB.AddForce (-Direction * 0.01f * bounceVal);
-		playerRB.drag = 2.0f;
+//
+//		Vector3 heading = coll.transform.position - this.transform.position;
+//		float Distance = heading.magnitude;
+//		Vector3 Direction = heading / Distance;
+//		playerRB.AddForce (-Direction * 0.01f * bounceVal);
+//		playerRB.drag = 2.0f;
 		//}
-		if (!GodMode) {
-			if (coll.CompareTag ("wall")) {
+		if (!GodMode) 
+		{
+			if (coll.CompareTag ("wall")) 
+			{
 				//ProgressBar.value -=3;			
 				instructions = true;
 			}
 
-			if (coll.CompareTag ("enemy")) {
+			if (coll.CompareTag ("enemy")) 
+			{
+////				Vector3 heading = coll.transform.position - this.transform.position;
+////						float Distance = heading.magnitude;
+////						Vector3 Direction = heading / Distance;
+////						playerRB.AddForce (-Direction * 0.01f * bounceVal);
+////						playerRB.drag = 2.0f;
+//
 				ProgressBar.value -=3;
-				instructions = true;
-				playerRB.AddForce (-Direction * bounceVal * 0.05f);
-				//coll.gameObject.GetComponent<wayPoint>().Combat = true;
+//				instructions = true;
+//				playerRB.AddForce (-Direction * bounceVal * 0.05f);
+//				coll.gameObject.GetComponent<wayPoint>().Combat = true;
 			}
-		}
-			if (coll.CompareTag ("bonus")) { 
-				Destroy(coll.gameObject);
-				ProgressBar.value += 5;
 		}
 	}
 
 	void OnTriggerStay2D(Collider2D coll)
 	{
 		//if (!coll.CompareTag ("enemy")) {
-			Vector3 heading = coll.transform.position - this.transform.position;
-			float Distance = heading.magnitude;
-			Vector3 Direction = heading / Distance;
-			playerRB.AddForce (-Direction * 0.01f * bounceVal);
-			playerRB.drag = 2.0f;
+//			Vector3 heading = coll.transform.position - this.transform.position;
+//			float Distance = heading.magnitude;
+//			Vector3 Direction = heading / Distance;
+//			playerRB.AddForce (-Direction * 0.01f * bounceVal);
+//			playerRB.drag = 2.0f;
 		//}
+
+		if (!GodMode) 
+		{
+			if (coll.CompareTag ("enemy")) 
+			{
+				InstructionsManager.Instance.CreateInstruction(E_Instruct_Type.INSTRUCT_WOLF);
+				////				Vector3 heading = coll.transform.position - this.transform.position;
+				////						float Distance = heading.magnitude;
+				////						Vector3 Direction = heading / Distance;
+				////						playerRB.AddForce (-Direction * 0.01f * bounceVal);
+				////						playerRB.drag = 2.0f;
+				//
+
+				if (InstructionsManager.b_IsDone)
+					ProgressBar.value -= 10*Time.deltaTime;
+				//				instructions = true;
+				//				playerRB.AddForce (-Direction * bounceVal * 0.05f);
+				//				coll.gameObject.GetComponent<wayPoint>().Combat = true;
+			}
+
+			if (coll.CompareTag ("bonus")) 
+			{ 
+				InstructionsManager.Instance.CreateInstruction(E_Instruct_Type.INSTRUCT_MEAT);
+
+				if (InstructionsManager.b_IsDone)
+				{
+					Destroy(coll.gameObject);
+					ProgressBar.value += 5;
+				}
+			}
+		}
 	}
 
 	void OnTriggerExit2D(Collider2D coll)

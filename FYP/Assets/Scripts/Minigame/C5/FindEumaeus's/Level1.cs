@@ -7,6 +7,7 @@ public class Level1 : MonoBehaviour {
 	
 	public Transform backgroundTile;
 	public Transform strawWallTile;
+	public Transform Parent;
 	
 	private Color[] tileColours;
 	
@@ -34,9 +35,15 @@ public class Level1 : MonoBehaviour {
 			for(int x = 0; x < levelWidth; x++)
 			{
 				if(tileColours[x+y*levelWidth] == backgroundColour)
-					Instantiate(backgroundTile, new Vector3(x, y), Quaternion.identity);
+				{
+					GameObject theTile = Instantiate(backgroundTile, new Vector3(x, y), Quaternion.identity) as GameObject;
+					//theTile.transform.parent = Parent;
+				}
 				if(tileColours[x+y*levelWidth] == strawWallColour)
-					Instantiate(strawWallTile, new Vector3(x, y, 1), Quaternion.identity);
+				{
+					GameObject theTile = Instantiate(strawWallTile, new Vector3(x, y, 1), Quaternion.identity) as GameObject;
+					//theTile.transform.parent = Parent;
+				}
 			}
 		}
 	}

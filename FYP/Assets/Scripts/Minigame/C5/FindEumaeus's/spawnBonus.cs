@@ -22,7 +22,8 @@ public class spawnBonus : MonoBehaviour {
 	{
 		for (int i = 0; i < numberOfDMeat; i++)
 		{
-			Instantiate(bonus, GeneratedPosition(),Quaternion.identity);
+			if (bonus != null)
+				Instantiate(bonus, GeneratedPosition(),Quaternion.identity);
 		}
 	}
 	Vector3 GeneratedPosition()

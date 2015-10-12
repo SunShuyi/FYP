@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}</ProjectGuid>
+	<ProjectGuid>{CFC37E36-0CDB-E3C5-497A-95D445464CF6}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -39,15 +39,14 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Detector.cs" />
-     <Compile Include="Assets\MiniMapObject.cs" />
      <Compile Include="Assets\Scripts\Helpers\C_Constants.cs" />
      <Compile Include="Assets\Scripts\Helpers\C_Extensions.cs" />
      <Compile Include="Assets\Scripts\Helpers\C_Fade.cs" />
@@ -84,6 +83,9 @@
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\CountDownTimer.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\FindEumaeus&apos;s\ExitIndicator.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\FindEumaeus&apos;s\InstructionFE.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\FindEumaeus&apos;s\InstructionsManager.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Level1.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Porter.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\RandomMap.cs" />
@@ -97,7 +99,6 @@
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\CameraMiniGame2.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\Detect.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\EmemyWaypoint.cs" />
-     <Compile Include="Assets\Scripts\Minigame\C5\minigame2\EnemyAi.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\StrengthIndicator.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter1.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter2.cs" />
@@ -135,10 +136,10 @@
      <Compile Include="Assets\Scripts\SubClasses\C_Result.cs" />
      <None Include="Assets\Scripts\FilesToLoad\DialogueXML.xml" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ <HintPath>D:/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

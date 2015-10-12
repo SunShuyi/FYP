@@ -7,7 +7,7 @@ public class Rotate : MonoBehaviour {
 	public float yspeed = 0.0f;
 	public int state = 0;
 	
-	public GameObject player;
+	public GameObject[] RotateObjects;
 	public GameObject StationeryObjects;
 	//0 = down
 	//1 = right
@@ -106,15 +106,18 @@ public class Rotate : MonoBehaviour {
 		angle.z = roundOff(angle.z);
 		rotation.eulerAngles = angle;
 		this.transform.localRotation = rotation;
-		
-		Quaternion rotation2 = transform.localRotation;
-		Vector3 anglePlayer = rotation2.eulerAngles;
-		if (angle.z <= -360)
-			anglePlayer.z = 360;
-		anglePlayer.z -= 90.0f;
-		anglePlayer.z = roundOff(anglePlayer.z);
-		rotation2.eulerAngles = angle;
-		player.transform.localRotation = rotation;
+
+		foreach (GameObject Obj in RotateObjects)
+		{
+			Quaternion rotation2 = transform.localRotation;
+			Vector3 anglePlayer = rotation2.eulerAngles;
+			if (angle.z <= -360)
+				anglePlayer.z = 360;
+			anglePlayer.z -= 90.0f;
+			anglePlayer.z = roundOff(anglePlayer.z);
+			rotation2.eulerAngles = angle;
+			Obj.transform.localRotation = rotation;
+		}
 		
 		//Quaternion rotation3 = transform.localRotation;
 		//Vector3 angleStationeryObjects = rotation2.eulerAngles;
