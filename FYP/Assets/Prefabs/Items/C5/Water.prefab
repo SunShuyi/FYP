@@ -41,10 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Water
   itemDescription: Pail of Clean Water
-  combinationList:
-  - itemToCombine: {fileID: 11474320, guid: f43c9e9bba8cd18468325279a92c719d, type: 2}
-    resultItems:
-    - {fileID: 11456502, guid: 073cc6919d66dfb47b96b02fe073a3c0, type: 2}
+  combinationList: []
   itemSprite: {fileID: 21300000, guid: a0d3e9deeeb8c1948a97629cb55c33e9, type: 3}
 --- !u!1001 &100100000
 Prefab:

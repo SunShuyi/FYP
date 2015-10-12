@@ -41,10 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Clothes
   itemDescription: Dirty Clothes
-  combinationList:
-  - itemToCombine: {fileID: 11451680, guid: b4b405ca522b3a646a222867a9861a4c, type: 2}
-    resultItems:
-    - {fileID: 11456502, guid: 073cc6919d66dfb47b96b02fe073a3c0, type: 2}
+  combinationList: []
   itemSprite: {fileID: 21300000, guid: 7233128d449c3804ebeac911f7b74809, type: 3}
 --- !u!1001 &100100000
 Prefab:
