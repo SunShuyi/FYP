@@ -1,13 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SceneObjects\C_Chapter2.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FilesToLoad\DialogueXML.xml">
     <Files>
-      <File FileName="Assets\Scripts\Minigame\C5\FindEumaeus's\FindEumaeus's\ExitIndicator.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Minigame\C5\FindEumaeus's\FindEumaeus's\InstructionFE.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Minigame\C5\FindEumaeus's\FindEumaeus's\InstructionsManager.cs" Line="21" Column="36" />
-      <File FileName="Assets\Scripts\SceneObjects\C_Chapter5.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SceneObjects\C_Chapter4.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SceneObjects\C_Chapter2.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="2070" Column="47" />
+      <File FileName="Assets\Scripts\SceneObjects\C_DialogueBox.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SceneObjects\Managers\C_DialogueManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SceneObjects\Managers\C_DialogueUIManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SubClasses\C_PlayerData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SubClasses\C_DialogueNode.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SubClasses\C_DialogueGraphic.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SubClasses\C_ConditionResult.cs" Line="1" Column="1" />
+      <File FileName="..\..\FYP - MGP 9. RoomQuestEditingMinigame2\Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="1934" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

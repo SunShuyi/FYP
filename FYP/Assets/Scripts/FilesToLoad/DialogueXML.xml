@@ -2036,5 +2036,46 @@
 		</scene>
 		
 	</chapter>
-	
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	<chapter _name="5">
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		<!-- SCENE -->
+		<scene _name="C5_Eumaeu'sKitchen">
+
+			<!-- NPC NAME -->
+			<npc _name="Cook">
+				<condition _condition="have_CutVeggie">
+						<line>Thank you for the wax Sir! What about you?</line>
+						<changecharacter>Left</changecharacter>
+						<line>I'm curious about the singing, perhaps I'll pass up the wax.</line>
+						<changecharacter>Right</changecharacter>
+						<line>What!</line>
+						<line>But Sir, what will you do if you get enchanted by their song and jump off the ship to you death?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Hah! What nonsense!</line>
+						<line>I'll find a way to prevent that.</line>
+						<line>Maybe Eurylochus could help me.</line>
+						<leavedialogue/>
+				</condition>
+				<condition _condition="!have_CutVeggie">
+						<line>GO CUT VEGGIE?</line>
+						<changecharacter>Left</changecharacter>
+						<line>ARE U SINGAPOREAN?</line>
+						<changecharacter>Right</changecharacter>
+						<line>GO CUT VEGGIE??</line>
+						<line>GO CUT VEGGIE!!!!!</line>
+						<changecharacter>Left</changecharacter>
+						<line>GOING LA!</line>
+						<changecharacter>Right</changecharacter>
+						<line>GO CUT VEGGIE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</line>
+						<line>GO CUT VEGGIE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</line>
+						<leavedialogue/>
+				</condition>
+			</npc>
+		</scene>
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+	</chapter>
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 </dialogue>
