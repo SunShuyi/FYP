@@ -707,7 +707,7 @@ MonoBehaviour:
       condition: 
     - resultType: 2
       haveBuffer: 1
-      bufferTime: 2
+      bufferTime: 1
       theSentence: 
       animationBool: 
       obtainItem: {fileID: 11456502, guid: 073cc6919d66dfb47b96b02fe073a3c0, type: 2}
@@ -2579,6 +2579,22 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 22487002, guid: 8ab8c401ef1648943ba4846ee28b3555, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -158
+      objectReference: {fileID: 0}
+    - target: {fileID: 22435856, guid: 8ab8c401ef1648943ba4846ee28b3555, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -158
+      objectReference: {fileID: 0}
+    - target: {fileID: 22487002, guid: 8ab8c401ef1648943ba4846ee28b3555, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -44
+      objectReference: {fileID: 0}
+    - target: {fileID: 22435856, guid: 8ab8c401ef1648943ba4846ee28b3555, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -74
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ab8c401ef1648943ba4846ee28b3555, type: 2}
   m_IsPrefabParent: 0
@@ -2845,7 +2861,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11474216, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: npcInventory.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22480912, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: m_RootOrder
@@ -2861,7 +2877,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22406756, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -103
+      value: -121
       objectReference: {fileID: 0}
     - target: {fileID: 21255178, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: m_SortingLayerID
@@ -2878,16 +2894,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 157216, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: m_Name
-      value: Eumaemu
+      value: FamilyMember
       objectReference: {fileID: 0}
     - target: {fileID: 11474216, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: dialogueGraphic
       value: 
-      objectReference: {fileID: 11469364, guid: 930056b8cde1e994d833ebb0f86851f8,
+      objectReference: {fileID: 11438192, guid: 5dd91eb206b4ccc46b2bc57e9fab66b3,
         type: 2}
     - target: {fileID: 22406756, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 112
+      value: 131
       objectReference: {fileID: 0}
     - target: {fileID: 6130434, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: m_Offset.x
@@ -3879,9 +3895,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 1.04030561, y: -2.62208343}
+  m_Offset: {x: .868077517, y: -2.62208319}
   serializedVersion: 2
-  m_Size: {x: 12.9177275, y: .990488648}
+  m_Size: {x: 12.5732651, y: .990488827}
 --- !u!1 &1481240628
 GameObject:
   m_ObjectHideFlags: 0
@@ -5002,7 +5018,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 471350, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 137260, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
       propertyPath: m_Name

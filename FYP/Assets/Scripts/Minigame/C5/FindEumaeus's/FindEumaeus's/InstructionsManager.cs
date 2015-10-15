@@ -42,10 +42,10 @@ public class InstructionsManager : MonoBehaviour
 		switch (Type)
 		{
 		case E_Instruct_Type.INSTRUCT_MEAT:
-			Instruct.SetText("This is a tasty looking meat! Eating this will regain your health point.");
+			Instruct.SetText("This is a tasty looking meat! Eating this will regain my health point.");
 			break;
 		case E_Instruct_Type.INSTRUCT_WOLF:
-         	Instruct.SetText("It's a wolf! Try to avoid these wolves, as they will hurt you... Bad.");
+         	Instruct.SetText("It's a wolf! I think I better run away from it");
 			break;
 		default: break;
 		}

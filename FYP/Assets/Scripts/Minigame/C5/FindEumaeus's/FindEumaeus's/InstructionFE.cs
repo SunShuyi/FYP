@@ -11,21 +11,25 @@ public class InstructionFE : MonoBehaviour
 		{
 			if (Input.GetMouseButtonDown(0))
 				this.gameObject.SetActive(false);
-
+			
 			yield return null;
 		}
 	}
-
+	
 	// === Set Text === //
 	public void SetText(string Text)
 	{
 		if (this.GetComponentInChildren<Text> () != null)
 			this.GetComponentInChildren<Text> ().text = Text;
 	}
-
+	
+	void OnEnable()
+	{
+		StartCoroutine (CRT_Manage ());
+	}
 	// === Initialisation === //
 	void Start () 
 	{
-		StartCoroutine (CRT_Manage ());
+		//StartCoroutine (CRT_Manage ());
 	}
 }

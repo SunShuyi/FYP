@@ -807,7 +807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &394959271
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -971,7 +971,7 @@ GameObject:
   - 114: {fileID: 498639122}
   - 114: {fileID: 498639123}
   m_Layer: 5
-  m_Name: 
+  m_Name: map
   m_TagString: map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -987,11 +987,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2090094360}
-  m_RootOrder: 1
+  m_Father: {fileID: 1517292496}
+  m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 3, y: -2}
+  m_AnchoredPosition: {x: 3, y: -305}
   m_SizeDelta: {x: 638, y: 720}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &498639122
@@ -1522,7 +1522,7 @@ GameObject:
   - 222: {fileID: 822425971}
   - 114: {fileID: 822425970}
   m_Layer: 5
-  m_Name: 
+  m_Name: InstructionPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1539,7 +1539,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2090094360}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: -3.05175781e-05}
@@ -2293,7 +2293,7 @@ RectTransform:
   m_Children:
   - {fileID: 1977377136}
   m_Father: {fileID: 2090094360}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 640, y: 360.360382}
@@ -2977,6 +2977,7 @@ RectTransform:
   - {fileID: 1504139819}
   - {fileID: 976056573}
   - {fileID: 1054269693}
+  - {fileID: 498639121}
   m_Father: {fileID: 2090094360}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: 1}
@@ -3141,7 +3142,7 @@ RectTransform:
   m_Children:
   - {fileID: 1373444067}
   m_Father: {fileID: 2090094360}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 640, y: 399.770752}
@@ -4065,7 +4066,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 75, y: 0}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1977377137
@@ -4214,6 +4215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOutTex: {fileID: 2800000, guid: 9548f221c7eeb6145bd12b02b55ac4c9, type: 3}
   fadeSpd: .800000012
+  byTime: 1
 --- !u!114 &1985347130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4426,7 +4428,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1517292496}
-  - {fileID: 498639121}
   - {fileID: 822425969}
   - {fileID: 1258752270}
   - {fileID: 1683501450}

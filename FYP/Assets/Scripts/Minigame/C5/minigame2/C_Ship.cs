@@ -10,8 +10,8 @@ public class C_Ship : MonoBehaviour {
 	Vector3 lastShipPos;
 	C_Input theInput = null;
 	public float shipSpeed_normal;
-	public float shipSpeed_lured;
-	
+	public float shipSpeed_collided;
+
 	private bool isMoving = false;
 	
 	public GameObject instrucPage;
@@ -19,8 +19,8 @@ public class C_Ship : MonoBehaviour {
 	private bool playGame;
 	
 	//	public bool isDead;
-	
-	Animator shipAnim;
+	public float damagecd = 0;
+	public Animator shipAnim;
 	Rigidbody2D shipRB;
 	
 	
@@ -29,11 +29,14 @@ public class C_Ship : MonoBehaviour {
 	public Text theStrength;
 	public Text theStrengthShadow;
 	public Text  size;
-	StrengthIndicator  StrengthScript;
-	StrengthIndicator StrengthScriptShadow;
+
+	public StrengthIndicator  StrengthScript;
+	public StrengthIndicator StrengthScriptShadow;
+
+
 	public int StrengthCount;
 
-	int collidedShips = 0;
+	public int collidedShips = 0;
 	void Awake()
 	{
 		if(theInput == null)
@@ -42,6 +45,7 @@ public class C_Ship : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		Time.timeScale = 0;
 		lastShipPos= transform.position;
 		
 		shipAnim = GetComponent<Animator> ();
@@ -55,10 +59,12 @@ public class C_Ship : MonoBehaviour {
 		
 		StrengthScript = theStrength.GetComponent<StrengthIndicator> ();
 		StrengthScriptShadow = theStrengthShadow.GetComponent<StrengthIndicator> ();
+
 	}
 	
 	void Update () {
-		
+		if (damagecd > 0)
+			damagecd -= Time.deltaTime;
 		theInput.InputUpdate ();
 		
 		StrengthCount = StrengthScript.StrengthCount;
@@ -66,7 +72,7 @@ public class C_Ship : MonoBehaviour {
 		#if UNITY_EDITOR || UNITY_STANDALONE_WIN
 		
 		if (Input.GetKeyDown ("space") && instructions) //Start the game 
-		{ instructions = false;}
+		{ instructions = false; Time.timeScale = 1;}
 		
 		
 		if (Input.GetKeyDown ("r")) 
@@ -88,6 +94,7 @@ public class C_Ship : MonoBehaviour {
 		tiltAngles = Input.acceleration.x;
 		if(playGame){
 			if(tiltAngles> 0.2) 
+
 			{ this.transform.Rotate(Vector3.forward * -0.5f); }
 			
 			if(tiltAngles < -0.2) 
@@ -109,12 +116,17 @@ public class C_Ship : MonoBehaviour {
 		{ transform.Translate (Vector3.right * Time.deltaTime * 5.0f); }
 		
 		//Boat moves slowly over time 
-		if (playGame && !instructions) 
-		{ transform.Translate (Vector3.up * Time.deltaTime * shipSpeed_normal); }
+		if (playGame && !instructions)
+		{
+			if(shipRB.velocity != new Vector2(0,0)) 
+			transform.Translate (Vector3.up * Time.deltaTime * shipSpeed_collided);
+			else
+			 transform.Translate (Vector3.up * Time.deltaTime * shipSpeed_normal); 
+		}
 		
 		//Progress Bar
 		ShipPos = new Vector3 (transform.position.x, transform.position.y, 10);	
-		sliderValue += Time.deltaTime * 2;
+		sliderValue += Time.deltaTime * 4;
 		ProgressBar.value = sliderValue;
 		
 		GameObject closestRock = FindClosestRock ();
@@ -122,6 +134,7 @@ public class C_Ship : MonoBehaviour {
 		DetectRocks ();
 		
 		if (DetectRocks () && playGame) 
+
 		{ moveTo(closestRock.transform.position); }
 		
 		if (ShipPos != lastShipPos) {
@@ -212,6 +225,7 @@ public class C_Ship : MonoBehaviour {
 	{
 		if (coll.collider.CompareTag ("enemy")) {
 			collidedShips++;
+
 			if(collidedShips >= 2)
 			{
 				shipAnim.SetBool ("isDead", true);
@@ -228,6 +242,6 @@ public class C_Ship : MonoBehaviour {
 		}
 	}
 	void Reset ()
-	{ Application.LoadLevel ("PassingtheSirens"); }
+	{ Application.LoadLevel ("MiniGame2"); }
 	
 }

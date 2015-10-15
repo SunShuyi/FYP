@@ -58,86 +58,14 @@ public class C_Chapter5 : C_Chapter
 	
 	public override void ConditionCheck()
 	{
-//		if(scene == "C3_GateEntrance")
-//		{
-//			if(conditionTriggers.Contains("gate_unlocked"))
-//			{
-//				GameObject.Find("GateMG").SetActive(false);
-//				
-//				foreach(GameObject go in sceneManager.inactiveGameobjects)
-//				{
-//					if(go.name == "Gate")
-//					{
-//						go.SetActive(true);
-//						break;
-//					}
-//				}
-//			}
-//		}
-//		else if(scene == "C3_EndOfDock")
-//		{
-//			if(conditionTriggers.Contains("reaper_paid"))
-//			{
-//				GameObject.Find("GateBlocked").SetActive(false);
-//				
-//				foreach(GameObject go in sceneManager.inactiveGameobjects)
-//				{
-//					if(go.name == "Gate")
-//					{
-//						go.SetActive(true);
-//						break;
-//					}
-//				}
-//			}
-//		}
-//		else if(scene == "C3_Trench")
-//		{
-//			if(conditionTriggers.Contains("done_ritual"))
-//			{
-//				GameObject.Find("Gate").SetActive(false);
-//				
-//				foreach(GameObject go in sceneManager.inactiveGameobjects)
-//				{
-//					if(go.name == "GateLocked")
-//					{
-//						go.SetActive(true);
-//						break;
-//					}
-//				}
-//			}
-//		}
-//		else if(scene == "C3_CerberusCave")
-//		{
-//			if(conditionTriggers.Contains("cerberus_sleep"))
-//			{
-//				//GameObject.Find("CerberusAwake").SetActive(false);
-//				
-//				foreach(GameObject go in sceneManager.inactiveGameobjects)
-//				{
-//					if(go.name == "CerberusAsleep")
-//					{
-//						go.SetActive(true);
-//						break;
-//					}
-//				}
-//			}
-//		}
-//		else if(scene == "C3_ProphetArea")
-//		{
-//			if(conditionTriggers.Contains("firecave_passed"))
-//			{
-//				GameObject.Find("FieryCave").SetActive(false);
-//				
-//				//				foreach(GameObject go in sceneManager.inactiveGameobjects)
-//				//				{
-//				//					if(go.name == "River")
-//				//					{
-//				//						go.SetActive(true);
-//				//						break;
-//				//					}
-//				//				}
-//			}
-//		}
+		if(scene == "C5_Phaeacians'Beach")
+		{
+			if(conditionTriggers.Contains("pieceOfCanvas"))
+			{
+				Debug.Log("hi");
+			}
+		}
+
 	}
 	
 	#endregion	

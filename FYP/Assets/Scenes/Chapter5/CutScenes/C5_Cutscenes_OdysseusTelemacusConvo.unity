@@ -252,12 +252,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CutsceneArr:
   - {fileID: 21300000, guid: 1c30da8d16d1df24eb0117716896c167, type: 3}
-  - {fileID: 21300000, guid: 762eb103200b14644b8ca45c355c4647, type: 3}
-  - {fileID: 21300000, guid: d0c32711461540f418b6b05a0d76abbe, type: 3}
   SceneCount: 3
   theCSText: {fileID: 1829238108}
   timeSecs: 2
-  nextScene: C5_Phaeacians'Beach
+  nextScene: C5_OdysseusHall
   timeDelay: 0
 --- !u!224 &233177269
 RectTransform:

@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}</ProjectGuid>
+	<ProjectGuid>{6A8D9B31-EBDC-8A4E-0941-D0EA7E0F7EE9}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -99,7 +99,11 @@
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\CameraMiniGame2.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\Detect.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\EmemyWaypoint.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\minigame2\Minigame2Timer.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\minigame2\ShootStrawBall.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\StrengthIndicator.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\minigame2\strawBallBullet.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\minigame2\waypoint.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter1.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter2.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter3.cs" />

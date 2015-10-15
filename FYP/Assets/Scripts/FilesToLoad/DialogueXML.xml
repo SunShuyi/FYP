@@ -112,18 +112,7 @@
 			
 				<condition _condition="level_1">
 					<condition _condition="deerKilled">
-						<condition _condition="selected_CutGrass">
-							<changecharacter>Left</changecharacter>
-							<line>Here is the grass, Elpenor.</line>
-							<changecharacter>Right</changecharacter>
-							<line>Okay, just a second.</line>
-							<line> ... ... </line>
-							<line>Done. Here you go.</line>
-							<result _name="deleteinventory">CutGrass</result>
-							<result _name="addinventory">Rope</result>
-							<result _name="condition">!deerKilled</result>
-							<leavedialogue/>
-						</condition>
+						D
 							<changecharacter>Left</changecharacter>
 							<line>Elpenor, do you happen to have any rope?</line>
 							<changecharacter>Right</changecharacter>
@@ -2036,46 +2025,137 @@
 		</scene>
 		
 	</chapter>
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	<chapter _name="5">
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		<!-- SCENE -->
-		<scene _name="C5_Eumaeu'sKitchen">
 
+	<chapter _name="5">
+		<!-- SCENE -->
+		<scene _name="C5_Phaeacians'Beach">
+			<npc _name="PieceofCanvas">
+			
+				<result _name="condition">pieceOfCanvas</result>
+				<result _name="loadscene">C5_Cutscenes_CloakIdeaPopOut</result>
+			</npc>
+		</scene>
+		
+		<scene _name="C5_Eumaeu'sHutLivingRoom">
+		
 			<!-- NPC NAME -->
-			<npc _name="Cook">
-				<condition _condition="have_CutVeggie">
-						<line>Thank you for the wax Sir! What about you?</line>
+			<npc _name="Eumaemu">
+				<condition _condition="have_CleanClothes">
+						<line>This is exactly what i want.</line>
+						<result _name="deleteinventory">CleanClothes</result>
+						<line>You did great, i think i can help you get a job at where i work!</line>
 						<changecharacter>Left</changecharacter>
-						<line>I'm curious about the singing, perhaps I'll pass up the wax.</line>
+						<line>That is really kind of you. Thank you.</line>
 						<changecharacter>Right</changecharacter>
-						<line>What!</line>
-						<line>But Sir, what will you do if you get enchanted by their song and jump off the ship to you death?</line>
+						<line>Prepare yourself a bit, i will inform you when we leave</line>
 						<changecharacter>Left</changecharacter>
-						<line>Hah! What nonsense!</line>
-						<line>I'll find a way to prevent that.</line>
-						<line>Maybe Eurylochus could help me.</line>
+						<line>Okay.</line>
 						<leavedialogue/>
 				</condition>
-				<condition _condition="!have_CutVeggie">
-						<line>GO CUT VEGGIE?</line>
+				
+				<condition _condition="!have_CleanClothes">
+						<line>You are?</line>
 						<changecharacter>Left</changecharacter>
-						<line>ARE U SINGAPOREAN?</line>
+						<line>Please help me, I need food and shelter.</line>
 						<changecharacter>Right</changecharacter>
-						<line>GO CUT VEGGIE??</line>
-						<line>GO CUT VEGGIE!!!!!</line>
+						<line>Hmmm....Why don't you try helping out around the house.</line>
 						<changecharacter>Left</changecharacter>
-						<line>GOING LA!</line>
-						<changecharacter>Right</changecharacter>
-						<line>GO CUT VEGGIE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</line>
-						<line>GO CUT VEGGIE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</line>
+						<line>Thank you! I will do my best.</line>
 						<leavedialogue/>
 				</condition>
 			</npc>
 		</scene>
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////		
+		
+		<scene _name="C5_Eumaeu'sKitchen">
+		
+			<!-- NPC NAME -->
+			<npc _name="Cook">
+				<condition _condition="have_CutVeggie">
+						<line>Oh! I see that you are all done with the cutting, that's fast.</line>
+						<line>Thanks for the help, now i can start cooking right away!</line>
+						<result _name="deleteinventory">CutVeggie</result>
+						<changecharacter>Left</changecharacter>
+						<line>Welcome!</line>
+						<line>Anything else i can help out with?</line>
+						<changecharacter>Right</changecharacter>
+						<line>Not for now, maybe you can check with the others to see if they need help.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Okay, See you!</line>
+						<leavedialogue/>
+				</condition>
+				
+				<condition _condition="have_Veggie">
+						<line>Please cut them so the i can start cooking.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Okay.</line>
+						<leavedialogue/>
+				</condition>
+				
+				
+				<condition _condition="have_Knife">
+						<line>Why are you pointing a knife at me?!</line>
+						<changecharacter>Left</changecharacter>
+						<line>Oops sorry!</line>
+						<leavedialogue/>
+				</condition>
+				
+				<condition _condition="!have_CutVeggie">
+						<line>Who are you?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Eumaeu asked me to help out in the house.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Alright then, I need to prepare dinner for the family</line>
+						<line>why don't you cut up some vegetables for me?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Sure!</line>
+						<leavedialogue/>
+				</condition>
+			</npc>
+		</scene>
+		
+		<scene _name="C5_Eumaeu'sRoom">
+		
+			<!-- NPC NAME -->
+			<npc _name="FamilyMember">
+				<condition _condition="have_CleanClothes">
+						<line>Thanks for the help.</line>
+						<line>Pass the clean clothes to Eumaeu.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Sure.</line>
+						<leavedialogue/>
+				</condition>
+				
+				<condition _condition="!have_CleanClothes">
+						<line>I heard from Eumaeu that you are the one that is here to help?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Yes.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Help me wash the clothes clean then.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Right away!</line>
+						<leavedialogue/>
+				</condition>
+		
+			</npc>
+		</scene>
+		
+		<scene _name="C5_Beach2">
+		
+			<!-- NPC NAME -->
+			<npc _name="Telemacus">
+				<condition _condition="!have_CleanClothes">
+						<line>.........</line>
+						<changecharacter>Left</changecharacter>
+						<line>...</line>
+						<changecharacter>Right</changecharacter>
+						<line>.............</line>
+						<result _name="loadscene">C5_Cutscenes_Dog</result>
+						<leavedialogue/>
+				</condition>
+		
+			</npc>
+		</scene>
+		
 	</chapter>
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
 </dialogue>

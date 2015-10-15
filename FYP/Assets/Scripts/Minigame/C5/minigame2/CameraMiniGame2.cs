@@ -10,7 +10,7 @@ public class CameraMiniGame2 : MonoBehaviour {
 	void Update () {
 		Vector3 temp = new Vector3();
 		//temp.x = theBoat.transform.position.x;
-		temp.y = theShip.transform.position.y + 3.0f;
+		temp.y = theShip.transform.position.y ;
 		temp.z = theShip.transform.position.z - dist;
 		transform.position = temp;
 	}

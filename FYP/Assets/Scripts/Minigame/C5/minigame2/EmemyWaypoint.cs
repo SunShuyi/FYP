@@ -16,12 +16,7 @@ public class EmemyWaypoint : MonoBehaviour {
 	public Transform ship;
 	public bool Chase = false;
 	bool collided = false;
-	//Rigidbody2D yayaRB;
-	//public int Reverse =2 ;
-	//public int Turning =0.5;
 
-
-	//public float moveVal = -0.005f;
 	
 	
 	void Start ()
@@ -32,7 +27,7 @@ public class EmemyWaypoint : MonoBehaviour {
 		currentPoint = 0;
 		moveBack = false;
 		enemyAnim = GetComponent<Animator> ();
-		//yayaRB = GetComponent<Rigidbody2D> ();
+
 
 	}
 	
@@ -40,15 +35,24 @@ public class EmemyWaypoint : MonoBehaviour {
 
 	void Update()
 	{
-		if (!Chase)
+
+
+
+		if (!Chase && GetComponent<Rigidbody2D>().velocity == new Vector2(0,0))
 			Patrol ();
 		else
 			transform.position = Vector2.MoveTowards (transform.position, player.transform.position, moveSpeed * Time.deltaTime);
 		if (collided) {
+			Vector2 dir = (player.transform.position - transform.position).normalized; 
+			dir.y = -dir.y;
+			Vector2 dir2 = (transform.position - player.transform.position  ).normalized; 
+			dir2.y = -dir2.y;
+			player.GetComponent<Rigidbody2D>().velocity = dir*1f;
+			GetComponent<Rigidbody2D>().velocity = dir2*1f;
+
 			if (player.GetComponent<C_Ship> ().sliderValue > energyReq) {
 				player.GetComponent<C_Ship> ().sliderValue -= energyReq;
 				enemyAnim.SetBool ("isDead", true);
-				//yayaRB.velocity = Vector2.zero;
 				Destroy (this.gameObject);
 				
 			}
@@ -86,25 +90,38 @@ public class EmemyWaypoint : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter2D(Collision2D coll) {
-		
+
 		if (coll.collider.CompareTag ("Player")) 
 		{
 			collided = true;
 			if (coll.collider.gameObject.GetComponent<C_Ship> ().sliderValue > energyReq)
 			{
-				coll.collider.gameObject.GetComponent<C_Ship> ().sliderValue = 0;
-				enemyAnim.SetBool("isDead", true);
-				//yayaRB.velocity = Vector2.zero;
-				Destroy (this.gameObject);
 
+				coll.collider.gameObject.GetComponent<C_Ship> ().sliderValue = 0;
+				Destroy (this.gameObject);
+				enemyAnim.SetBool("isDead", true);
+				player.GetComponent<C_Ship>().collidedShips--;
 			}
-			//else{
-			//	coll.gameObject.GetComponent<Rigidbody2D>
-			//}
+			else 
+			{
+				player.GetComponent<C_Ship>().StrengthScript.StrengthCount--;
+				player.GetComponent<C_Ship>().StrengthScriptShadow.StrengthCount--;
+				if( player.GetComponent<C_Ship>().StrengthScript.StrengthCount == 0)
+				{
+					player.GetComponent<C_Ship>().shipAnim.SetBool ("isDead", true);
+				}
+			}
 		}
 	}
-	
-	
+
+	void OnTriggerEnter2D(Collider2D coll){
+		if (coll.CompareTag  ("Rocks")) {
+			GetComponent<Rigidbody2D>().velocity =new Vector2(0,0);
+			
+		}
+		
+		
+	}
 	void OnTriggerExit2D(Collider2D coll){
 		
 		if (coll.CompareTag ("Player")) 
