@@ -278,7 +278,7 @@ public class C_OdysseusMG1 : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll)
 	{
 		if (coll.CompareTag ("Exit")) {
-			Application.LoadLevel ("C5_Eumaeu'sHutLivingRoom");
+			Application.LoadLevel ("C5_EumaeusHutLivingRoom");
 		}
 	
 
@@ -363,6 +363,6 @@ public class C_OdysseusMG1 : MonoBehaviour {
 
 	void Reset ()
 	{ 
-		Application.LoadLevel ("FindEumaeus's"); }
+		Application.LoadLevel ("C5_Phaeacians'Forest1"); }
 
 }

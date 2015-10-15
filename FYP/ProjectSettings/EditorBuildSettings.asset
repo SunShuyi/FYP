@@ -137,20 +137,22 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter5/C5_Phaeacians'Beach.unity
   - enabled: 1
     path: Assets/Scenes/Chapter5/C5_Phaeacians'Forest1.unity
-  - enabled: 0
-    path: Assets/Scenes/Chapter5/C5_Eumaeu'sHutLivingRoom.unity
   - enabled: 1
-    path: Assets/Scenes/Chapter5/C5_Eumaeu'sHutLivingRoom.unity
+    path: Assets/Scenes/Chapter5/C5_EumaeusHutLivingRoom.unity
   - enabled: 1
-    path: Assets/Scenes/Chapter5/C5_Eumaeu'sKitchen.unity
+    path: Assets/Scenes/Chapter5/C5_EumaeusKitchen.unity
+  - enabled: 1
+    path: Assets/Scenes/Chapter5/C5_EumaeusRoom.unity
   - enabled: 1
     path: Assets/Scenes/Chapter5/C5_Beach2.unity
   - enabled: 1
-    path: Assets/Scenes/Chapter5/C5_OdysseusHall.unity
-  - enabled: 0
+    path: Assets/Scenes/Chapter5/C5_OdysseusLivingRoom.unity
+  - enabled: 1
     path: Assets/Scenes/Chapter5/C5_OdysseusHall.unity
   - enabled: 1
-    path: Assets/Scenes/Chapter5/C5_Eumaeu'sRoom.unity
+    path: Assets/Scenes/Chapter5/C5_OdysseusGarden1.unity
+  - enabled: 1
+    path: Assets/Scenes/Chapter5/C5_OdysseusGarden2.unity
   - enabled: 1
     path: Assets/Scenes/Mini-games/C5/MiniGame2.unity
   - enabled: 1
@@ -179,3 +181,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Mini-games/C5/FindEumaeus's.unity
   - enabled: 0
     path: Assets/Scenes/MenuScreens/LevelSelection.unity
+  - enabled: 0
+    path: Assets/Scenes/Chapter5/C5_EumaeusHutLivingRoom.unity
+  - enabled: 0
+    path: Assets/Scenes/Chapter5/C5_OdysseusLivingRoom.unity
+  - enabled: 0
+    path: Assets/Scenes/Chapter5/C5_OdysseusLivingRoom.unity
+  - enabled: 0
+    path: Assets/Scenes/Chapter5/C5_EumaeusRoom.unity
+  - enabled: 0
+    path: Assets/Scenes/Chapter5/C5_EumaeusKitchen.unity

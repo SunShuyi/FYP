@@ -207,7 +207,7 @@ public class C_Ship : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll)
 	{
 		if (coll.CompareTag ("Exit")) {
-			Application.LoadLevel ("C4_ShipDeck");
+			Application.LoadLevel ("C5_Beach2");
 		} else if (coll.CompareTag ("Rocks")) {
 			if (StrengthCount == 0) {
 				shipAnim.SetBool ("isDead", true);

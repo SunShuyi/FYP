@@ -2345,74 +2345,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1094406523}
---- !u!1 &1115222885
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 142912, guid: 95fe76c638f9b5645899f8c1bbae29ae, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1115222886}
-  - 61: {fileID: 1115222888}
-  - 114: {fileID: 1115222887}
-  m_Layer: 0
-  m_Name: ShipDeckArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1115222886
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22426258, guid: 95fe76c638f9b5645899f8c1bbae29ae,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1115222885}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.08991826, y: 1.08991826, z: 1.08991826}
-  m_Children: []
-  m_Father: {fileID: 1668311868}
-  m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 523, y: 57}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: .5, y: .5}
---- !u!114 &1115222887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11428412, guid: 95fe76c638f9b5645899f8c1bbae29ae,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1115222885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba858228dea20d64abfc09cbde0d25b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextScene: C4_ShipDeck
-  enterDirection: 1
-  exitCollider: {fileID: 0}
-  lockX: 1
-  lockY: 1
-  lockValueX: 0
-  lockValueY: 0
---- !u!61 &1115222888
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6103270, guid: 95fe76c638f9b5645899f8c1bbae29ae,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1115222885}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 125.800003, y: 392.700012}
 --- !u!1 &1169078287
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,7 +3125,7 @@ RectTransform:
   - {fileID: 661706469}
   - {fileID: 1362560425}
   m_Father: {fileID: 2136663957}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 5.99999094, y: 63.9999924}
@@ -3497,40 +3429,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 3, y: 1}
---- !u!1 &1668311867
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 182024, guid: 00f4fc4dbd0c0bd48b8a50b034797a19, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1668311868}
-  m_Layer: 0
-  m_Name: theExits
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1668311868
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 22498738, guid: 00f4fc4dbd0c0bd48b8a50b034797a19,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1668311867}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1115222886}
-  m_Father: {fileID: 2136663957}
-  m_RootOrder: 6
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -82.0021057, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: .5, y: .5}
 --- !u!1 &1674582191
 GameObject:
   m_ObjectHideFlags: 0
@@ -4735,7 +4633,7 @@ RectTransform:
   m_Children:
   - {fileID: 1674582192}
   m_Father: {fileID: 2136663957}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -82.002037, y: -1.00013065}
@@ -4775,7 +4673,6 @@ RectTransform:
   - {fileID: 115848561}
   - {fileID: 1492602863}
   - {fileID: 1252167208}
-  - {fileID: 1668311868}
   - {fileID: 2084176986}
   - {fileID: 1392187465}
   m_Father: {fileID: 770697131}

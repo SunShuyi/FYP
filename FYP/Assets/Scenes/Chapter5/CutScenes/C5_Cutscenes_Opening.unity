@@ -259,7 +259,7 @@ MonoBehaviour:
   SceneCount: 5
   theCSText: {fileID: 1829238108}
   timeSecs: 2
-  nextScene: C5_Phaeacians'Forest1
+  nextScene: C5_Phaeacians'Beach
   timeDelay: 0
 --- !u!224 &233177269
 RectTransform:

@@ -2036,10 +2036,10 @@
 			</npc>
 		</scene>
 		
-		<scene _name="C5_Eumaeu'sHutLivingRoom">
+		<scene _name="C5_EumaeusHutLivingRoom">
 		
 			<!-- NPC NAME -->
-			<npc _name="Eumaemu">
+			<npc _name="Eumaeus">
 				<condition _condition="have_CleanClothes">
 						<line>This is exactly what i want.</line>
 						<result _name="deleteinventory">CleanClothes</result>
@@ -2050,6 +2050,7 @@
 						<line>Prepare yourself a bit, i will inform you when we leave</line>
 						<changecharacter>Left</changecharacter>
 						<line>Okay.</line>
+						<result _name="loadscene">MiniGame2</result>
 						<leavedialogue/>
 				</condition>
 				
@@ -2066,7 +2067,7 @@
 			</npc>
 		</scene>
 		
-		<scene _name="C5_Eumaeu'sKitchen">
+		<scene _name="C5_EumaeusKitchen">
 		
 			<!-- NPC NAME -->
 			<npc _name="Cook">
@@ -2113,7 +2114,7 @@
 			</npc>
 		</scene>
 		
-		<scene _name="C5_Eumaeu'sRoom">
+		<scene _name="C5_EumaeusRoom">
 		
 			<!-- NPC NAME -->
 			<npc _name="FamilyMember">
@@ -2134,9 +2135,9 @@
 						<changecharacter>Left</changecharacter>
 						<line>Right away!</line>
 						<leavedialogue/>
-				</condition>
-		
+				</condition>		
 			</npc>
+			
 		</scene>
 		
 		<scene _name="C5_Beach2">
@@ -2151,9 +2152,54 @@
 						<line>.............</line>
 						<result _name="loadscene">C5_Cutscenes_Dog</result>
 						<leavedialogue/>
-				</condition>
-		
+				</condition>		
 			</npc>
+		</scene>
+		
+		<scene _name="C5_OdysseusLivingRoom">
+		
+			<!-- NPC NAME -->
+			<npc _name="Eumaeus">
+				<condition _condition="!have_CleanClothes">
+						<line>Why don’t you walk around the house and familiarize with the surroundings?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Alright.</line>
+						<leavedialogue/>
+				</condition>
+			</npc>
+		</scene>
+		
+		<scene _name="C5_OdysseusHall">
+			
+			<!-- NPC NAME -->
+			<npc _name="Antinous">
+				<condition _condition="!have_CleanClothes">
+						<line>What is a dirty thing like you doing here!?</line>
+						<leavedialogue/>
+				</condition>
+			</npc>
+			
+			<npc _name="Suitor1">
+				<condition _condition="!have_CleanClothes">
+						<line>Move along, garbage!</line>
+						<leavedialogue/>
+				</condition>
+			</npc>
+			
+			<npc _name="Suitor2">
+				<condition _condition="!have_CleanClothes">
+						<line>Bah! Mere Peasant! Go away!</line>
+						<leavedialogue/>
+				</condition>
+			</npc>
+			
+			<npc _name="Suitor3">
+				<condition _condition="!have_CleanClothes">
+						<line>You are disgusting!</line>
+						<leavedialogue/>
+				</condition>
+			</npc>
+				
 		</scene>
 		
 	</chapter>
