@@ -4,8 +4,11 @@ using System.Collections;
 
 public class C_Ship : MonoBehaviour {
 
+	public Slider ProgressBar1;
 	public Slider ProgressBar;
-	public float sliderValue;
+	public float sliderValue1;
+	float sliderValue;
+	public TimerCountdown hpbar;
 	Vector3 ShipPos;
 	Vector3 lastShipPos;
 	C_Input theInput = null;
@@ -72,7 +75,12 @@ public class C_Ship : MonoBehaviour {
 		#if UNITY_EDITOR || UNITY_STANDALONE_WIN
 		
 		if (Input.GetKeyDown ("space") && instructions) //Start the game 
-		{ instructions = false; Time.timeScale = 1;}
+		{ 
+			instructions = false; Time.timeScale = 1;
+		
+			hpbar.enabled = true;
+		
+		}
 		
 		
 		if (Input.GetKeyDown ("r")) 
@@ -126,8 +134,8 @@ public class C_Ship : MonoBehaviour {
 		
 		//Progress Bar
 		ShipPos = new Vector3 (transform.position.x, transform.position.y, 10);	
-		sliderValue += Time.deltaTime * 4;
-		ProgressBar.value = sliderValue;
+		sliderValue1 += Time.deltaTime * 4;
+		ProgressBar1.value = sliderValue1;
 		
 		GameObject closestRock = FindClosestRock ();
 		
@@ -203,23 +211,23 @@ public class C_Ship : MonoBehaviour {
 		return closest;
 	}
 	
-	//Collision for Exit
-	void OnTriggerEnter2D(Collider2D coll)
-	{
-		if (coll.CompareTag ("Exit")) {
-			Application.LoadLevel ("C5_Beach2");
-		} else if (coll.CompareTag ("Rocks")) {
-			if (StrengthCount == 0) {
-				shipAnim.SetBool ("isDead", true);
-				shipRB.velocity = Vector2.zero;
-			} else {
-				StrengthScript.SendMessage ("Hit");
-				StrengthScriptShadow.SendMessage ("Hit");
-				shipRB.AddForce (Vector3.down * 0.04f);
-				shipRB.drag = 2.0f;
-			}
-		} 
-	}
+//	//Collision for Exit
+//	void OnTriggerEnter2D(Collider2D coll)
+//	{
+//		if (coll.CompareTag ("Exit")) {
+//			Application.LoadLevel ("C4_ShipDeck");
+//		} else if (coll.CompareTag ("Rocks")) {
+//			if (StrengthCount == 0) {
+//				shipAnim.SetBool ("isDead", true);
+//				shipRB.velocity = Vector2.zero;
+//			} else {
+//				StrengthScript.SendMessage ("Hit");
+//				StrengthScriptShadow.SendMessage ("Hit");
+//				shipRB.AddForce (Vector3.down * 0.04f);
+//				shipRB.drag = 2.0f;
+//			}
+//		} 
+//	}
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{

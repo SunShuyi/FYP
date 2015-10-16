@@ -11,11 +11,14 @@ public class EmemyWaypoint : MonoBehaviour {
 	public Vector3 moveDirection;
 	public bool moveBack;
 	public GameObject player;
-	public float energyReq = 25;
-	Animator enemyAnim;
+	public float energyReq = 17;
+	public Animator enemyAnim;
 	public Transform ship;
 	public bool Chase = false;
 	bool collided = false;
+
+	private bool Moving = true;
+	//public bool Dead;
 
 	
 	
@@ -27,6 +30,9 @@ public class EmemyWaypoint : MonoBehaviour {
 		currentPoint = 0;
 		moveBack = false;
 		enemyAnim = GetComponent<Animator> ();
+	
+		//Moving = true;
+
 
 
 	}
@@ -49,18 +55,23 @@ public class EmemyWaypoint : MonoBehaviour {
 			dir2.y = -dir2.y;
 			player.GetComponent<Rigidbody2D>().velocity = dir*1f;
 			GetComponent<Rigidbody2D>().velocity = dir2*1f;
+		
 
-			if (player.GetComponent<C_Ship> ().sliderValue > energyReq) {
-				player.GetComponent<C_Ship> ().sliderValue -= energyReq;
-				enemyAnim.SetBool ("isDead", true);
+			if (player.GetComponent<C_Ship> ().sliderValue1 > energyReq)
+			{
+				player.GetComponent<C_Ship> ().sliderValue1 -= energyReq;
+				enemyAnim.SetBool ("Dead", true);
 				Destroy (this.gameObject);
-				
+
 			}
 		}
 	}
 	
 	void Patrol()
 	{
+
+
+		AnimateEnemy();
 		if (transform.position == wayPoints [currentPoint].position && moveBack == false) {
 			currentPoint++;
 		}
@@ -94,12 +105,12 @@ public class EmemyWaypoint : MonoBehaviour {
 		if (coll.collider.CompareTag ("Player")) 
 		{
 			collided = true;
-			if (coll.collider.gameObject.GetComponent<C_Ship> ().sliderValue > energyReq)
+			if (coll.collider.gameObject.GetComponent<C_Ship> ().sliderValue1 > energyReq)
 			{
 
-				coll.collider.gameObject.GetComponent<C_Ship> ().sliderValue = 0;
+				coll.collider.gameObject.GetComponent<C_Ship> ().sliderValue1 = 0;
 				Destroy (this.gameObject);
-				enemyAnim.SetBool("isDead", true);
+				enemyAnim.SetBool("Dead", true);
 				player.GetComponent<C_Ship>().collidedShips--;
 			}
 			else 
@@ -112,6 +123,15 @@ public class EmemyWaypoint : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	
+	void AnimateEnemy()
+	{
+		if (Moving) 
+ 			enemyAnim.SetBool ("Moving", true);
+		else
+			enemyAnim.SetBool("Moving", false);
 	}
 
 	void OnTriggerEnter2D(Collider2D coll){

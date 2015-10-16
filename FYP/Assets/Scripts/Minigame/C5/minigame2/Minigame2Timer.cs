@@ -38,7 +38,7 @@ public class Minigame2Timer : MonoBehaviour {
 			
 		}
 		if (time<= 0) {
-			Application.LoadLevel ("C5_EumaeusHutLivingRoom");
+			Application.LoadLevel ("C5_Eumaeu'sHutLivingRoom");
 			
 		}
 	}

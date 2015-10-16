@@ -1,15 +1,14 @@
 fileFormatVersion: 2
-guid: 92d38499d53d38449ba96a60b22ae608
-timeCreated: 1444786140
+guid: c95bdc6df914b6b4b826be77ea287a04
+timeCreated: 1444878939
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: S_ShipEnemy_0
-    21300002: S_ShipEnemy_1
-    21300004: S_ShipEnemy_2
-    21300006: S_ShipEnemy_3
-    21300008: S_ShipEnemy_4
-    21300010: S_ShipEnemy_5
+    21300000: S_Ship_0
+    21300002: S_Ship_1
+    21300004: S_Ship_2
+    21300006: S_Ship_3
+    21300008: S_Ship_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -55,63 +54,53 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: S_ShipEnemy_0
+    - name: S_Ship_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 5
-        width: 290
-        height: 290
+        y: 0
+        width: 371
+        height: 295
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: S_ShipEnemy_1
+    - name: S_Ship_1
       rect:
         serializedVersion: 2
-        x: 290
-        y: 5
-        width: 290
-        height: 290
+        x: 371
+        y: 0
+        width: 371
+        height: 295
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: S_ShipEnemy_2
+    - name: S_Ship_2
       rect:
         serializedVersion: 2
-        x: 580
-        y: 5
-        width: 290
-        height: 290
+        x: 742
+        y: 0
+        width: 371
+        height: 295
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: S_ShipEnemy_3
+    - name: S_Ship_3
       rect:
         serializedVersion: 2
-        x: 870
-        y: 5
-        width: 290
-        height: 290
+        x: 1113
+        y: 0
+        width: 371
+        height: 295
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: S_ShipEnemy_4
+    - name: S_Ship_4
       rect:
         serializedVersion: 2
-        x: 1160
-        y: 5
-        width: 290
-        height: 290
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: S_ShipEnemy_5
-      rect:
-        serializedVersion: 2
-        x: 1450
-        y: 5
-        width: 290
-        height: 290
+        x: 1484
+        y: 0
+        width: 371
+        height: 295
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
