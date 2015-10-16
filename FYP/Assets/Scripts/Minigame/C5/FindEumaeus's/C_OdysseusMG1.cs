@@ -363,6 +363,6 @@ public class C_OdysseusMG1 : MonoBehaviour {
 
 	void Reset ()
 	{ 
-		Application.LoadLevel ("C5_Phaeacians'Forest1"); }
+		Application.LoadLevel ("FindEumaeus's"); }
 
 }

@@ -1,11 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FilesToLoad\DialogueXML.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Minigame\C5\minigame2\Minigame2Timer.cs">
     <Files>
-      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="2048" Column="58" />
-      <File FileName="Assets\Scripts\Minigame\C5\minigame2\C_Ship.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SceneObjects\C_Chapter5.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Minigame\C5\FindEumaeus's\C_OdysseusMG1.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter3.cs" Line="79" Column="36" />
+      <File FileName="Assets\Scripts\Minigame\C5\minigame2\Detect.cs" Line="5" Column="2" />
+      <File FileName="Assets\Scripts\Minigame\C5\minigame2\Minigame2Timer.cs" Line="44" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

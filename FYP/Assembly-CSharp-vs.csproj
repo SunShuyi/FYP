@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\CameraShake.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\CountDownTimer.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\FindEumaeus&apos;s\CameraMiniGame2.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\FindEumaeus&apos;s\ExitIndicator.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\FindEumaeus&apos;s\InstructionFE.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\FindEumaeus&apos;s\InstructionsManager.cs" />
@@ -96,7 +97,6 @@
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\timer.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\wayPoint.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\C_Ship.cs" />
-     <Compile Include="Assets\Scripts\Minigame\C5\minigame2\CameraMiniGame2.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\Detect.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\EmemyWaypoint.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\Minigame2Timer.cs" />

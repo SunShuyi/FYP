@@ -2028,7 +2028,7 @@
 
 	<chapter _name="5">
 		<!-- SCENE -->
-		<scene _name="C5_Phaeacians'Beach">
+		<scene _name="Beach">
 			<npc _name="PieceofCanvas">
 			
 				<result _name="condition">pieceOfCanvas</result>
@@ -2040,7 +2040,9 @@
 		
 			<!-- NPC NAME -->
 			<npc _name="Eumaeus">
+
 				<condition _condition="have_CleanClothes">
+					<condition _condition="selected_CleanClothes">
 						<line>This is exactly what i want.</line>
 						<result _name="deleteinventory">CleanClothes</result>
 						<line>You did great, i think i can help you get a job at where i work!</line>
@@ -2051,6 +2053,13 @@
 						<changecharacter>Left</changecharacter>
 						<line>Okay.</line>
 						<result _name="loadscene">MiniGame2</result>
+						<leavedialogue/>
+				</condition>
+			</condition>
+			
+				<condition _condition="have_CleanClothes">
+						<line>Did anyone asked you to pass me something?</line>
+						<line>The piece of clothing that you are holding looks familiar. </line>
 						<leavedialogue/>
 				</condition>
 				
@@ -2072,6 +2081,7 @@
 			<!-- NPC NAME -->
 			<npc _name="Cook">
 				<condition _condition="have_CutVeggie">
+				   <condition _condition="selected_CutVeggie"> 
 						<line>Oh! I see that you are all done with the cutting, that's fast.</line>
 						<line>Thanks for the help, now i can start cooking right away!</line>
 						<result _name="deleteinventory">CutVeggie</result>
@@ -2082,6 +2092,12 @@
 						<line>Not for now, maybe you can check with the others to see if they need help.</line>
 						<changecharacter>Left</changecharacter>
 						<line>Okay, See you!</line>
+						<leavedialogue/>
+					</condition>
+				</condition>
+				
+				<condition _condition="have_CutVeggie">
+				        <line>Pass the cut vegetables to me once you are done.</line>
 						<leavedialogue/>
 				</condition>
 				
@@ -2117,7 +2133,16 @@
 		<scene _name="C5_EumaeusRoom">
 		
 			<!-- NPC NAME -->
-			<npc _name="FamilyMember">
+			<npc _name="FamilyMember">		
+							
+				<condition _condition="have_CleanClothes">
+				   <condition _condition="selected_CleanClothes"> 
+				  		<line>Dont pass it to me.</line>
+						<line>Pass the clean clothes to Eumaeu.</line>
+						<leavedialogue/>
+				   </condition>
+				</condition>
+				
 				<condition _condition="have_CleanClothes">
 						<line>Thanks for the help.</line>
 						<line>Pass the clean clothes to Eumaeu.</line>
@@ -2200,6 +2225,27 @@
 				</condition>
 			</npc>
 				
+		</scene>
+		
+		<scene _name="C5_Penelope'sRoom">
+		
+			<!-- NPC NAME -->
+			<npc _name="Penelope">
+				<condition _condition="!have_CleanClothes">
+						<line>W-what. How did a heathen like you get up here!</line>
+						<changecharacter>Left</changecharacter>
+						<line>Please, calm down. I have news about your husband, Odysseus.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Please do tell me more about him! Is he well?</line>
+						<changecharacter>Left</changecharacter>
+						<line>I once met Odysseus in Crete.</line>
+						<line>He is alive, and well.</line>
+						<line>He has been trying to return to Ithaca, return to you.</line>
+						<line>I have recently been in Thesprotia and had learned something there of Odysseus's recent wanderings.</line>
+						<line>I do not know the exact location of Odysseus, but I assure you he should return home soon.</line>
+						<leavedialogue/>
+				</condition>
+			</npc>
 		</scene>
 		
 	</chapter>

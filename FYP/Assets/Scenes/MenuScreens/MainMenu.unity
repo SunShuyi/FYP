@@ -2198,3 +2198,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOutTex: {fileID: 2800000, guid: 9548f221c7eeb6145bd12b02b55ac4c9, type: 3}
   fadeSpd: .800000012
+  byTime: 1
