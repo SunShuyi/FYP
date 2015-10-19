@@ -22,7 +22,7 @@ public class TimerCountdown : MonoBehaviour {
 	
 	
 	void Reset ()
-	{ Application.LoadLevel ("C5_EumaeusHutLivingRoom"); }
+	{ Application.LoadLevel ("C5_Beach2"); }
 	
 	
 	

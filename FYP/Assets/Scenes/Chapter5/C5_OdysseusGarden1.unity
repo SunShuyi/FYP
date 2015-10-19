@@ -2935,7 +2935,7 @@ GameObject:
   - 61: {fileID: 1363208415}
   - 114: {fileID: 1363208414}
   m_Layer: 0
-  m_Name: OdysseusHall
+  m_Name: OdysseusLivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2971,7 +2971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba858228dea20d64abfc09cbde0d25b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: C5_OdysseusHall
+  nextScene: C5_OdysseusLivingRoom
   enterDirection: 0
   exitCollider: {fileID: 0}
   lockX: 1
@@ -3312,7 +3312,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 1594324578}
-  - 60: {fileID: 1594324579}
   - 61: {fileID: 1594324580}
   m_Layer: 8
   m_Name: theWalkableRegion
@@ -3339,24 +3338,6 @@ RectTransform:
   m_AnchoredPosition: {x: -.200000003, y: -3.42000008}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
---- !u!60 &1594324579
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6099994, guid: 00f4fc4dbd0c0bd48b8a50b034797a19,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1594324577}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: 8.72143555, y: -.347753733}
-      - {x: 8.67699146, y: -3.02059841}
-      - {x: -8.17888832, y: -3.04052234}
-      - {x: -5.03550863, y: -.348480344}
 --- !u!61 &1594324580
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3365,7 +3346,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1594324577}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -4106,7 +4087,7 @@ Prefab:
     - target: {fileID: 11400636, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
       propertyPath: walkableRegion
       value: 
-      objectReference: {fileID: 1594324579}
+      objectReference: {fileID: 1594324580}
     - target: {fileID: 11400636, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
       propertyPath: dialogueUI
       value: 
