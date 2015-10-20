@@ -2030,10 +2030,10 @@
 		<!-- SCENE -->
 		<scene _name="C5_Phaeacians'Beach">
 			<npc _name="Monologue">
-					<line>What is this, some sort of puzzle?</line>
-					<line>It seems I'll have to activate the skulls in order to tread past this gate!</line>
-					<line>Well then, let's give it a shot!</line>
-					<result _name="loadscene">C5_Cutscenes_CloakIdeaPopOut</result>
+					<line>There are pieces of canvas lying on the shore.</line>
+					<line>Hmmm, I can tailor this in to a piece of canvas cloak. I should pick one up.</line>
+					<line>Now I'm missing something to tailor the material.</line>
+					<result _name="setactive" _sentence="Hidden">false</result>
 					<leavedialogue/>
 			</npc>
 		</scene>

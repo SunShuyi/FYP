@@ -3472,7 +3472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba858228dea20d64abfc09cbde0d25b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: C5_Phaeacians'Forest1
+  nextScene: 
   enterDirection: 1
   exitCollider: {fileID: 0}
   lockX: 1
