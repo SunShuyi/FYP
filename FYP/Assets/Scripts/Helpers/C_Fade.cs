@@ -14,7 +14,7 @@ public class C_Fade : MonoBehaviour {
 		if (byTime)
 			alpha += fadeDir * fadeSpd * Time.deltaTime;
 		else
-			alpha += fadeDir * fadeSpd * 0.01f;
+			alpha += fadeDir * fadeSpd * 0.1f;
 		alpha = Mathf.Clamp01 (alpha);
 
 		GUI.color = new Color (GUI.color.r, GUI.color.g, GUI.color.b, alpha); 

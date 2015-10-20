@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 1b37d4c752b30034485866956d613b79
-timeCreated: 1445312835
+guid: 545e6d68d986b11439dfc545894b6d39
+timeCreated: 1445331618
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: B_Ship_0
-    21300002: B_Ship_1
-    21300004: B_Ship_2
-    21300006: B_Ship_3
-    21300008: B_Ship_4
+    21300000: Big-Ship-death_0
+    21300002: Big-Ship-death_1
+    21300004: Big-Ship-death_2
+    21300006: Big-Ship-death_3
+    21300008: Big-Ship-death_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -54,53 +54,53 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: B_Ship_0
+    - name: Big-Ship-death_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 371
-        height: 414
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 14}
-    - name: B_Ship_1
-      rect:
-        serializedVersion: 2
-        x: 371
-        y: 0
-        width: 371
-        height: 411
+        x: 285
+        y: 138
+        width: 393
+        height: 431
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: B_Ship_2
+    - name: Big-Ship-death_1
       rect:
         serializedVersion: 2
-        x: 742
-        y: 0
-        width: 371
-        height: 411
+        x: 727
+        y: 142
+        width: 467
+        height: 430
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: B_Ship_3
+    - name: Big-Ship-death_2
       rect:
         serializedVersion: 2
-        x: 1113
-        y: 0
-        width: 371
-        height: 417
+        x: 1195
+        y: 138
+        width: 484
+        height: 431
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: B_Ship_4
+    - name: Big-Ship-death_3
       rect:
         serializedVersion: 2
-        x: 1484
-        y: 0
+        x: 1683
+        y: 147
+        width: 435
+        height: 422
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Big-Ship-death_4
+      rect:
+        serializedVersion: 2
+        x: 2225
+        y: 93
         width: 371
-        height: 414
+        height: 485
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

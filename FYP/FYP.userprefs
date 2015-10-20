@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FilesToLoad\DialogueXML.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Helpers\C_Fade.cs">
     <Files>
-      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="2029" Column="21" />
+      <File FileName="Assets\Scripts\Helpers\C_Fade.cs" Line="17" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

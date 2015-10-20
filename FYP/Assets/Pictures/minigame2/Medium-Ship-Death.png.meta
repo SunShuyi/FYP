@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 1b37d4c752b30034485866956d613b79
-timeCreated: 1445312835
+guid: 67ce6618fdeb55b449a66551ead9c39a
+timeCreated: 1445331770
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: B_Ship_0
-    21300002: B_Ship_1
-    21300004: B_Ship_2
-    21300006: B_Ship_3
-    21300008: B_Ship_4
+    21300000: Medium-Ship-Death_5
+    21300002: Medium-Ship-Death_6
+    21300004: Medium-Ship-Death_7
+    21300006: Medium-Ship-Death_8
+    21300008: Medium-Ship-Death_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -54,53 +54,53 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: B_Ship_0
+    - name: Medium-Ship-Death_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 508
+        y: 170
         width: 371
-        height: 414
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 14}
-    - name: B_Ship_1
-      rect:
-        serializedVersion: 2
-        x: 371
-        y: 0
-        width: 371
-        height: 411
+        height: 361
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: B_Ship_2
+    - name: Medium-Ship-Death_6
       rect:
         serializedVersion: 2
-        x: 742
-        y: 0
+        x: 870
+        y: 180
         width: 371
-        height: 411
+        height: 346
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: B_Ship_3
+    - name: Medium-Ship-Death_7
       rect:
         serializedVersion: 2
-        x: 1113
-        y: 0
+        x: 1232
+        y: 179
         width: 371
-        height: 417
+        height: 347
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: B_Ship_4
+    - name: Medium-Ship-Death_8
       rect:
         serializedVersion: 2
-        x: 1484
-        y: 0
+        x: 1607
+        y: 211
         width: 371
-        height: 414
+        height: 337
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Medium-Ship-Death_9
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 202
+        width: 371
+        height: 342
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

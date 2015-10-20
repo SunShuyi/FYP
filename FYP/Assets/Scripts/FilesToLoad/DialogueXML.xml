@@ -2038,6 +2038,15 @@
 			</npc>
 		</scene>
 		
+		<scene _name="C5_Phaeacians'Forest1">
+			<npc _name="Monologue">
+					<line>There are pieces of canvas lying on the shore.</line>
+					<line>Hmmm, I can tailor this in to a piece of canvas cloak. I should pick one up.</line>
+					<line>Now I'm missing something to tailor the material.</line>
+					<leavedialogue/>
+			</npc>
+		</scene>
+		
 		<scene _name="C5_EumaeusHutLivingRoom">
 		
 			<!-- NPC NAME -->

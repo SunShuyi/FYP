@@ -5,8 +5,10 @@ using System.Collections;
 public class C_Ship : MonoBehaviour {
 
 	public Slider ProgressBar1;
+	public Slider ProgressBar2;
 	public Slider ProgressBar;
 	public float sliderValue1;
+	public float sliderValue2;
 	float sliderValue;
 	public TimerCountdown hpbar;
 	Vector3 ShipPos;
@@ -89,10 +91,10 @@ public class C_Ship : MonoBehaviour {
 		//Click/Tap on left or right side to move the boat
 		if(playGame) {
 			if ( Input.GetKey(KeyCode.RightArrow) || Input.GetKeyDown("d"))//right 
-			{ this.transform.Rotate(Vector3.forward * -0.5f); } 
+			{ if (this.transform.rotation.z > -0.5f) this.transform.Rotate(Vector3.forward * -0.5f);print (this.transform.rotation);} 
 			
 			if ( Input.GetKey(KeyCode.LeftArrow) || Input.GetKeyDown("a")) //left 
-			{ this.transform.Rotate(Vector3.back* -0.5f); }
+			{ if (this.transform.rotation.z < 0.5f) this.transform.Rotate(Vector3.back* -0.5f); }
 		}
 		
 		#else
@@ -112,15 +114,12 @@ public class C_Ship : MonoBehaviour {
 		
 		#endif
 		
-		if (!instructions) {
-			DestroyObject(instrucPage);
-			playGame = true;
-		}
+
 		
 		if (ShipPos.x > 5) 
 		{ transform.Translate (Vector3.left * Time.deltaTime * 5.0f); }
 		
-		if (ShipPos.x < -5)
+		else if (ShipPos.x < -5)
 		{ transform.Translate (Vector3.right * Time.deltaTime * 5.0f); }
 		
 		//Boat moves slowly over time 
@@ -131,19 +130,30 @@ public class C_Ship : MonoBehaviour {
 			else
 			 transform.Translate (Vector3.up * Time.deltaTime * shipSpeed_normal); 
 		}
+
+		else if (!instructions && !playGame) {
+			DestroyObject(instrucPage);
+			playGame = true;
+		}
 		
 		//Progress Bar
 		ShipPos = new Vector3 (transform.position.x, transform.position.y, 10);	
-		sliderValue1 += Time.deltaTime * 4;
+		if(sliderValue2 < 75)
+			sliderValue1 += Time.deltaTime * 12;
+		if (sliderValue1 >= 75) {
+			sliderValue1 = 0;
+			sliderValue2 += 25;
+			ProgressBar2.value = sliderValue2;
+		} else 
 		ProgressBar1.value = sliderValue1;
 		
-		GameObject closestRock = FindClosestRock ();
+		//GameObject closestRock = FindClosestRock ();
 		
-		DetectRocks ();
+		//DetectRocks ();
 		
-		if (DetectRocks () && playGame) 
+		//if (DetectRocks () && playGame) 
 
-		{ moveTo(closestRock.transform.position); }
+		//{ moveTo(closestRock.transform.position); }
 		
 		if (ShipPos != lastShipPos) {
 			isMoving = true;
@@ -160,14 +170,14 @@ public class C_Ship : MonoBehaviour {
 	void moveTo (Vector3 targetPos)
 	{
 		if (ShipPos.x < targetPos.x) { //left
-			this.transform.Rotate(Vector3.forward * -0.2f);
+			this.transform.Rotate(Vector3.forward * -0.01f);
 			
 		} else {
 			
 		}
 		
 		if (ShipPos.x > targetPos.x) { //right
-			this.transform.Rotate(Vector3.back * -0.2f);
+			this.transform.Rotate(Vector3.back * -0.01f);
 			
 		} else {
 			

@@ -53,7 +53,7 @@ public class waypoint : MonoBehaviour {
 		if (coll.CompareTag ("Player")) 
 		{
 			
-			if (coll.gameObject.GetComponent<C_Ship> ().sliderValue1 > energyReq)
+			if (coll.gameObject.GetComponent<C_Ship> ().sliderValue2 > energyReq)
 				Destroy (this.gameObject);
 		}
 	}
