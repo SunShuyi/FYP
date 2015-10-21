@@ -66,7 +66,7 @@ public class EmemyWaypoint : MonoBehaviour {
 				enemyAnim.SetBool ("Dead", true);
 				this.enabled = false;
 				this.GetComponent<BoxCollider2D>().enabled = false;
-				Invoke ("SelfDestroy",0.5f);
+				Invoke ("SelfDestroy",0.6f);
 				//Destroy (this.gameObject);
 				collided = false;
 				//break;
@@ -125,7 +125,7 @@ public class EmemyWaypoint : MonoBehaviour {
 				enemyAnim.SetBool("Dead", true);
 				this.enabled = false;
 				this.GetComponent<BoxCollider2D>().enabled = false;
-				Invoke ("SelfDestroy",0.5f);
+				Invoke ("SelfDestroy",0.6f);
 				cShip.collidedShips--;
 			}
 			else 

@@ -2039,11 +2039,11 @@
 		</scene>
 		
 		<scene _name="C5_Phaeacians'Forest1">
-			<npc _name="Monologue">
-					<line>There are pieces of canvas lying on the shore.</line>
-					<line>Hmmm, I can tailor this in to a piece of canvas cloak. I should pick one up.</line>
-					<line>Now I'm missing something to tailor the material.</line>
-					<leavedialogue/>
+			<npc _name="Monologue">				
+					<condition _condition="have_CanvasCloak">
+						<line>Maybe I should disguise myself first before meeting Eumaeus so that he won't recognise me.</line>
+						<leavedialogue/>
+					</condition>
 			</npc>
 		</scene>
 		

@@ -60,13 +60,13 @@ public class C_Chapter3 : C_Chapter
 	{
 		if(scene == "C3_GateEntrance")
 		{
-			if(conditionTriggers.Contains("gate_unlocked"))
+			if(conditionTriggers.Contains("gate_unlocked")) //gate_unlocked XML condition
 			{
-				GameObject.Find("GateMG").SetActive(false);
+				GameObject.Find("GateMG").SetActive(false); //GateMG at interactive object
 
 				foreach(GameObject go in sceneManager.inactiveGameobjects)
 				{
-					if(go.name == "Gate")
+					if(go.name == "Gate") //gate is exit
 					{
 						go.SetActive(true);
 						break;
@@ -76,13 +76,13 @@ public class C_Chapter3 : C_Chapter
 		}
 		else if(scene == "C3_EndOfDock")
 		{
-			if(conditionTriggers.Contains("reaper_paid"))
+			if(conditionTriggers.Contains("reaper_paid")) //dialogue condition
 			{
-				GameObject.Find("GateBlocked").SetActive(false);
+				GameObject.Find("GateBlocked").SetActive(false); //GateBlocked at interactive object
 				
 				foreach(GameObject go in sceneManager.inactiveGameobjects)
 				{
-					if(go.name == "Gate")
+					if(go.name == "Gate")//gate is exit
 					{
 						go.SetActive(true);
 						break;

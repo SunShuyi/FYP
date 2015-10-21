@@ -58,15 +58,23 @@ public class C_Chapter5 : C_Chapter
 	
 	public override void ConditionCheck()
 	{
-		if(scene == "C5_Phaeacians'Beach")
+		if(scene == "C5_Phaeacians'Forest1")
 		{
-			if(conditionTriggers.Contains("pieceOfCanvas"))
+			if(conditionTriggers.Contains("Maze_Unlocked")) //gate_unlocked XML condition
 			{
-				Debug.Log("hi");
+				//GameObject.Find("MazeBlock").SetActive(false); //GateMG at interactive object
+				
+				foreach(GameObject go in sceneManager.inactiveGameobjects)
+				{
+					if(go.name == "MiniGame1Hut") //gate is exit
+					{
+						go.SetActive(true);
+						break;
+					}
+				}
 			}
 		}
 
 	}
-	
 	#endregion	
 }

@@ -949,7 +949,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22438178, guid: e5ca3c0d610d3d64c8b82a9feb715d42, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -507
+      value: -441
       objectReference: {fileID: 0}
     - target: {fileID: 22438178, guid: e5ca3c0d610d3d64c8b82a9feb715d42, type: 2}
       propertyPath: m_AnchoredPosition.y
@@ -989,7 +989,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 198094, guid: e5ca3c0d610d3d64c8b82a9feb715d42, type: 2}
       propertyPath: m_Name
-      value: Hidden_IB
+      value: MazeBlock_IB
       objectReference: {fileID: 0}
     - target: {fileID: 11499952, guid: e5ca3c0d610d3d64c8b82a9feb715d42, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1537,7 +1537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &716453267
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4392,7 +4392,7 @@ GameObject:
   - 114: {fileID: 1707884004}
   - 61: {fileID: 1707884006}
   m_Layer: 0
-  m_Name: Hidden
+  m_Name: MazeBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4413,7 +4413,7 @@ MonoBehaviour:
   interactCollider: {fileID: 0}
   interactionType: 1
   buttons: {fileID: 563786258}
-  observeLine: Cloth-looking material is hiddenbelow, i shall get that out.
+  observeLine: Way to Eumaeus' Hut
   loadScene: 
   wrongItemLine: I should just interact with it.
   conditionResultList: []
@@ -4432,7 +4432,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -511, y: -47}
+  m_AnchoredPosition: {x: -478, y: -47}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: .5, y: .5}
 --- !u!61 &1707884006
@@ -5485,6 +5485,10 @@ Prefab:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 2136663956}
+    - target: {fileID: 109600, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
   m_IsPrefabParent: 0

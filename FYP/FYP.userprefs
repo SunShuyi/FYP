@@ -1,8 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Helpers\C_Fade.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FilesToLoad\DialogueXML.xml">
     <Files>
-      <File FileName="Assets\Scripts\Helpers\C_Fade.cs" Line="17" Column="35" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter2.cs" Line="31" Column="3" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter3.cs" Line="91" Column="5" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter4.cs" Line="92" Column="7" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter5.cs" Line="65" Column="7" />
+      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="2056" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
