@@ -91,10 +91,17 @@ public class C_Ship : MonoBehaviour {
 		//Click/Tap on left or right side to move the boat
 		if(playGame) {
 			if ( Input.GetKey(KeyCode.RightArrow) || Input.GetKeyDown("d"))//right 
-			{ if (this.transform.rotation.z > -0.5f) this.transform.Rotate(Vector3.forward * -0.5f);print (this.transform.rotation);} 
+			{ if (this.transform.rotation.z > -0.2f){ this.transform.Rotate(Vector3.forward * -0.2f);
+				print (this.transform.rotation);
+					transform.Translate (Vector3.right * Time.deltaTime * shipSpeed_normal)	;
+				}
+			} 
 			
 			if ( Input.GetKey(KeyCode.LeftArrow) || Input.GetKeyDown("a")) //left 
-			{ if (this.transform.rotation.z < 0.5f) this.transform.Rotate(Vector3.back* -0.5f); }
+			{ if (this.transform.rotation.z < 0.2f){ this.transform.Rotate(Vector3.back* -0.2f); 
+					transform.Translate (Vector3.left * Time.deltaTime * shipSpeed_normal)	;
+				}
+			}
 		}
 		
 		#else
@@ -128,7 +135,10 @@ public class C_Ship : MonoBehaviour {
 			if(shipRB.velocity != new Vector2(0,0)) 
 			transform.Translate (Vector3.up * Time.deltaTime * shipSpeed_collided);
 			else
-			 transform.Translate (Vector3.up * Time.deltaTime * shipSpeed_normal); 
+			{
+			 	transform.Translate (Vector3.up * Time.deltaTime * shipSpeed_normal); 
+
+			}
 		}
 
 		else if (!instructions && !playGame) {

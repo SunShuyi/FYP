@@ -101,10 +101,8 @@
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\Detect.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\EmemyWaypoint.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\Minigame2Timer.cs" />
-     <Compile Include="Assets\Scripts\Minigame\C5\minigame2\ShootStrawBall.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\StrengthIndicator.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\TimerCountdown.cs" />
-     <Compile Include="Assets\Scripts\Minigame\C5\minigame2\strawBallBullet.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\waypoint.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter1.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter2.cs" />
