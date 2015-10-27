@@ -2,11 +2,7 @@
   <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FilesToLoad\DialogueXML.xml">
     <Files>
-      <File FileName="Assets\Scripts\SceneObjects\C_Chapter2.cs" Line="31" Column="3" />
-      <File FileName="Assets\Scripts\SceneObjects\C_Chapter3.cs" Line="91" Column="5" />
-      <File FileName="Assets\Scripts\SceneObjects\C_Chapter4.cs" Line="92" Column="7" />
-      <File FileName="Assets\Scripts\SceneObjects\C_Chapter5.cs" Line="65" Column="7" />
-      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="2056" Column="28" />
+      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="2194" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

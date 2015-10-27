@@ -2029,26 +2029,28 @@
 	<chapter _name="5">
 		<!-- SCENE -->
 		<scene _name="C5_Phaeacians'Beach">
-			<npc _name="Monologue">
-					<line>There are pieces of canvas lying on the shore.</line>
-					<line>Hmmm, I can tailor this in to a piece of canvas cloak. I should pick one up.</line>
-					<line>Now I'm missing something to tailor the material.</line>
-					<result _name="setactive" _sentence="Hidden">false</result>
-					<leavedialogue/>
+			<npc _name="Monologue">		
+				<line>There are pieces of canvas lying on the shore.</line>
+				<line>Hmmm, I can tailor this in to a piece of canvas cloak. I should pick one up.</line>
+				<line>Now I'm missing something to tailor the material.</line>
+				<result _name="setactive" _sentence="Hidden">false</result>
+				<leavedialogue/>
 			</npc>
 		</scene>
 		
 			<scene _name="C5_Phaeacians'Forest1">
 			<npc _name="Monologue">
-					<line>There are pieces of canvas lying on the shore.</line>
+				<line>There are pieces of canvas lying on the shore.</line>
+				<leavedialogue/>
+				
+				<condition _condition="have_CanvasCloak">
+					<line>Hmmm, I can tailor this in to a piece of canvas cloak. I should pick one up.</line>
+					<line>Now I'm missing something to tailor the material.</line>
+					<result _name="setactive" _sentence="MazeBlock">false</result>			
+					<result _name="loadscene">FindEumaeus's</result>
 					<leavedialogue/>
-					<condition _condition="have_CanvasCloak">
-						<line>Hmmm, I can tailor this in to a piece of canvas cloak. I should pick one up.</line>
-						<line>Now I'm missing something to tailor the material.</line>
-						<result _name="setactive" _sentence="MazeBlock">false</result>			
-						<result _name="loadscene">FindEumaeus's</result>
-						<leavedialogue/>
-					</condition>
+				</condition>
+				
 			</npc>
 		</scene>
 
@@ -2074,19 +2076,19 @@
 				</condition>
 			
 				<condition _condition="have_CleanClothes">
-						<line>Did anyone asked you to pass me something?</line>
-						<line>The piece of clothing that you are holding looks familiar. </line>
-						<leavedialogue/>
+					<line>Did anyone asked you to pass me something?</line>
+					<line>The piece of clothing that you are holding looks familiar. </line>
+					<leavedialogue/>
 				</condition>		
 				
-						<line>You are?</line>
-						<changecharacter>Left</changecharacter>
-						<line>Please help me, I need food and shelter.</line>
-						<changecharacter>Right</changecharacter>
-						<line>Hmmm....Why don't you try helping out around the house.</line>
-						<changecharacter>Left</changecharacter>
-						<line>Thank you! I will do my best.</line>
-						<leavedialogue/>
+				<line>You are?</line>
+				<changecharacter>Left</changecharacter>
+				<line>Please help me, I need food and shelter.</line>
+				<changecharacter>Right</changecharacter>
+				<line>Hmmm....Why don't you try helping out around the house.</line>
+				<changecharacter>Left</changecharacter>
+				<line>Thank you! I will do my best.</line>
+				<leavedialogue/>
 			</npc>
 		</scene>
 		
@@ -2096,35 +2098,21 @@
 			<npc _name="Cook">
 
 				<condition _condition="!taken_WaterMelon">
-						<line>Who are you?</line>
-						<changecharacter>Left</changecharacter>						
-						<line>Eumaeu asked me to help out in the house.</line>
-						<changecharacter>Right</changecharacter>
-						<line>Alright then, I need to prepare some watermelon slices and cheese slices for the family</line>
-						<line>why don't you cut up some for me?</line>
-						<changecharacter>Left</changecharacter>	
-						<line>Sure.</line>
-						<changecharacter>Right</changecharacter>
-						<line>Start with the watermelon.</line>
-						<result _name="addinventory">WaterMelon</result>
-						<result _name="condition">taken_WaterMelon</result>	
-						<leavedialogue/>
+					<line>Who are you?</line>
+					<changecharacter>Left</changecharacter>						
+					<line>Eumaeu asked me to help out in the house.</line>
+					<changecharacter>Right</changecharacter>
+					<line>Alright then, I need to prepare some watermelon slices and cheese slices for the family</line>
+					<line>why don't you cut up some for me?</line>
+					<changecharacter>Left</changecharacter>	
+					<line>Sure.</line>
+					<changecharacter>Right</changecharacter>
+					<line>Start with the watermelon.</line>
+					<result _name="addinventory">WaterMelon</result>
+					<result _name="condition">taken_WaterMelon</result>	
+					<leavedialogue/>
 				</condition>
 					
-				<condition _condition="have_KitchenKnife">
-					<condition _condition="selected_KitchenKnife">
-						<line>Why are you pointing a knife at me?!</line>
-						<changecharacter>Left</changecharacter>						
-						<line>Oops, sorry!</line>
-						<leavedialogue/>
-					</condition>
-				</condition>
-				
-				<condition _condition="have_KitchenKnife">
-						<line>Make good use of the knife you have.</line>
-						<leavedialogue/>
-				</condition>		
-						
 				<condition _condition="have_WaterMelon">
 					<condition _condition="selected_WaterMelon">
 						<line>This is not what i want.</line>
@@ -2145,8 +2133,8 @@
 				</condition>
 				
 				<condition _condition="have_WaterMelonHalf">
-						<line>Please cut it smaller, I want slices not halves.</line>
-						<leavedialogue/>
+					<line>Please cut it smaller, I want slices not halves.</line>
+					<leavedialogue/>
 				</condition>
 				
 					<condition _condition="have_WaterMelonSlice">
@@ -2160,13 +2148,13 @@
 					</condition>					
 										
 				<condition _condition="have_WaterMelonSlice">
-						<line>Please pass me the slices of watermelon when you are done.</line>
-						<leavedialogue/>
+					<line>Please pass me the slices of watermelon when you are done.</line>
+					<leavedialogue/>
 				</condition>
 									
 				<condition _condition="!have_WaterMelonSlice">
 					<condition _condition="!taken_Cheese">	
-						<line>Here's the cheese, please cut it into smaller slices.</line>
+						<line>Here's the cheese, please cut it into smaller slices, and return me the knife once you are done.</line>
 						<result _name="addinventory">Cheese</result>
 						<result _name="condition">taken_Cheese</result>	
 						<leavedialogue/>
@@ -2193,23 +2181,36 @@
 				</condition>
 				
 				<condition _condition="have_CheeseHalf">
-						<line>Please cut it smaller, I want slices not halves.</line>
-						<leavedialogue/>
+					<line>Please cut it smaller, I want slices not halves.</line>
+					<leavedialogue/>
 				</condition>
 				
 				<condition _condition="have_CheeseSlice">
-						<condition _condition="selected_CheeseSlice">
-							<line>This is exactly what i want.</line>
-							<result _name="deleteinventory">CheeseSlice</result>
-							<result _name="condition">taken_CheeseSlice</result>
-							<line>Anymore?</line>
-							<leavedialogue/>
-						</condition>
-					</condition>					
-										
-				<condition _condition="have_WaterMelonSlice">
-						<line>Please pass me the slices of watermelon when you are done.</line>
+					<condition _condition="selected_CheeseSlice">
+						<line>This is exactly what i want.</line>
+						<result _name="deleteinventory">CheeseSlice</result>
+						<result _name="condition">taken_CheeseSlice</result>
+						<line>Anymore?</line>
 						<leavedialogue/>
+					</condition>
+				</condition>					
+										
+				<condition _condition="have_CheeseSlice">
+					<line>Please pass me the slices of cheese and knife when you are done.</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="!have_CheeseSlice">
+					<line>Thanks for the help!</line>
+				
+					<result _name="deleteinventory">KitchenKnife</result>
+					<changecharacter>Left</changecharacter>
+					<line>No problem. Anything else I can help with?</line>
+					<changecharacter>Right</changecharacter>
+					<line>Nope, you can try looking around the house to see if anyone else nees help.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Alright, see you.</line>
+					<leavedialogue/>
 				</condition>
 				
 			</npc>
@@ -2229,21 +2230,21 @@
 				</condition>
 				
 				<condition _condition="have_CleanClothes">
-						<line>Thanks for the help.</line>
-						<line>Pass the clean clothes to Eumaeu.</line>
-						<changecharacter>Left</changecharacter>
-						<line>Sure.</line>
-						<leavedialogue/>
+					<line>Thanks for the help.</line>
+					<line>Pass the clean clothes to Eumaeu.</line>
+					<changecharacter>Left</changecharacter>
+					<line>Sure.</line>
+					<leavedialogue/>
 				</condition>
 				
-						<line>I heard from Eumaeu that you are the one that is here to help?</line>
-						<changecharacter>Left</changecharacter>
-						<line>Yes.</line>
-						<changecharacter>Right</changecharacter>
-						<line>Help me wash the clothes clean then.</line>
-						<changecharacter>Left</changecharacter>
-						<line>Right away!</line>
-						<leavedialogue/>	
+				<line>I heard from Eumaeu that you are the one that is here to help?</line>
+				<changecharacter>Left</changecharacter>
+				<line>Yes.</line>
+				<changecharacter>Right</changecharacter>
+				<line>Help me wash the clothes clean then.</line>
+				<changecharacter>Left</changecharacter>
+				<line>Right away!</line>
+				<leavedialogue/>	
 			</npc>
 			
 		</scene>
@@ -2252,13 +2253,13 @@
 		
 			<!-- NPC NAME -->
 			<npc _name="Telemacus">
-						<line>.........</line>
-						<changecharacter>Left</changecharacter>
-						<line>...</line>
-						<changecharacter>Right</changecharacter>
-						<line>.............</line>
-						<result _name="loadscene">C5_Cutscenes_Dog</result>
-						<leavedialogue/>	
+				<line>.........</line>
+				<changecharacter>Left</changecharacter>
+				<line>...</line>
+				<changecharacter>Right</changecharacter>
+				<line>.............</line>
+				<result _name="loadscene">C5_Cutscenes_Dog</result>
+				<leavedialogue/>	
 			</npc>
 		</scene>
 		
@@ -2266,10 +2267,10 @@
 		
 			<!-- NPC NAME -->
 			<npc _name="Eumaeus">
-						<line>Why don’t you walk around the house and familiarize with the surroundings?</line>
-						<changecharacter>Left</changecharacter>
-						<line>Alright.</line>
-						<leavedialogue/>
+				<line>Why don’t you walk around the house and familiarize with the surroundings?</line>
+				<changecharacter>Left</changecharacter>
+				<line>Alright.</line>
+				<leavedialogue/>
 			</npc>
 		</scene>
 		
@@ -2277,23 +2278,23 @@
 			
 			<!-- NPC NAME -->
 			<npc _name="Antinous">
-						<line>What is a dirty thing like you doing here!?</line>
-						<leavedialogue/>
+				<line>What is a dirty thing like you doing here!?</line>
+				<leavedialogue/>
 			</npc>
 			
 			<npc _name="Suitor1">
-						<line>Move along, garbage!</line>
-						<leavedialogue/>
+				<line>Move along, garbage!</line>
+				<leavedialogue/>
 			</npc>
 			
 			<npc _name="Suitor2">
-						<line>Bah! Mere Peasant! Go away!</line>
-						<leavedialogue/>
+				<line>Bah! Mere Peasant! Go away!</line>
+				<leavedialogue/>
 			</npc>
 			
 			<npc _name="Suitor3">
-						<line>You are disgusting!</line>
-						<leavedialogue/>
+				<line>You are disgusting!</line>
+				<leavedialogue/>
 			</npc>
 				
 		</scene>
@@ -2302,18 +2303,18 @@
 		
 			<!-- NPC NAME -->
 			<npc _name="Penelope">
-						<line>W-what. How did a heathen like you get up here!</line>
-						<changecharacter>Left</changecharacter>
-						<line>Please, calm down. I have news about your husband, Odysseus.</line>
-						<changecharacter>Right</changecharacter>
-						<line>Please do tell me more about him! Is he well?</line>
-						<changecharacter>Left</changecharacter>
-						<line>I once met Odysseus in Crete.</line>
-						<line>He is alive, and well.</line>
-						<line>He has been trying to return to Ithaca, return to you.</line>
-						<line>I have recently been in Thesprotia and had learned something there of Odysseus's recent wanderings.</line>
-						<line>I do not know the exact location of Odysseus, but I assure you he should return home soon.</line>
-						<leavedialogue/>
+				<line>W-what. How did a heathen like you get up here!</line>
+				<changecharacter>Left</changecharacter>
+				<line>Please, calm down. I have news about your husband, Odysseus.</line>
+				<changecharacter>Right</changecharacter>
+				<line>Please do tell me more about him! Is he well?</line>
+				<changecharacter>Left</changecharacter>
+				<line>I once met Odysseus in Crete.</line>
+				<line>He is alive, and well.</line>
+				<line>He has been trying to return to Ithaca, return to you.</line>
+				<line>I have recently been in Thesprotia and had learned something there of Odysseus's recent wanderings.</line>
+				<line>I do not know the exact location of Odysseus, but I assure you he should return home soon.</line>
+				<leavedialogue/>
 			</npc>
 		</scene>
 		

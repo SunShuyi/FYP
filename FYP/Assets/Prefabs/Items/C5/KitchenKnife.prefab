@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42eaeae77376ba4fb3e169f7c7360cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Knife
+  itemName: KitchenKnife
   itemDescription: Sharp Item
   combinationList:
   - itemToCombine: {fileID: 11497540, guid: a94662682e99f264091c692d6e2d105b, type: 2}
