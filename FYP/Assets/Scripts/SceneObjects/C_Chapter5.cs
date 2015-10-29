@@ -75,6 +75,56 @@ public class C_Chapter5 : C_Chapter
 //			}
 //		}
 
+//		if(scene == "C5_Phaeacians'Forest1")
+//		{
+//			if(conditionTriggers.Contains("gate_unlocked")) //gate_unlocked XML condition
+//			{
+//				GameObject.Find("GateBlocked").SetActive(false); //GateMG at interactive object
+//						
+//				foreach(GameObject go in sceneManager.inactiveGameobjects)
+//				{
+//				if(go.name == "MiniGame1Hut") //gate is exit
+//					{
+//						go.SetActive(true);
+//						break;
+//					}
+//				}
+//			}
+//		}
+
+//		if(scene == "C5_OdysseusGarden2")
+//		{
+//			if(conditionTriggers.Contains("room_unlocked")) //gate_unlocked XML condition
+//			{
+//				GameObject.Find("RoomBlocked").SetActive(false); //GateMG at interactive object
+//				
+//				foreach(GameObject go in sceneManager.inactiveGameobjects)
+//				{
+//					if(go.name == "Penelope'sRoom") //gate is exit
+//					{
+//						go.SetActive(true);
+//						break;
+//					}
+//				}
+//			}
+//		}
+
+//		if(scene == "C5_OdysseusGarden2")
+//		{
+//			if(conditionTriggers.Contains("gate_unlocked")) //gate_unlocked XML condition
+//			{
+//				GameObject.Find("GateMG").SetActive(false); //GateMG at interactive object
+//				
+//				foreach(GameObject go in sceneManager.inactiveGameobjects)
+//				{
+//					if(go.name == "Gate") //gate is exit
+//					{
+//						go.SetActive(true);
+//						break;
+//					}
+//				}
+//			}
+//		}
 	}
 	#endregion	
 }

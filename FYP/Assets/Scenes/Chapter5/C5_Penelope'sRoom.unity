@@ -1774,6 +1774,7 @@ RectTransform:
   m_LocalScale: {x: 67, y: 67, z: 1}
   m_Children:
   - {fileID: 1594324578}
+  - {fileID: 1224897493}
   m_Father: {fileID: 2136663957}
   m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
@@ -2490,6 +2491,53 @@ RectTransform:
   m_AnchoredPosition: {x: -147, y: 72}
   m_SizeDelta: {x: 986, y: 143}
   m_Pivot: {x: .5, y: .5}
+--- !u!1 &1224897491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 143888, guid: 00f4fc4dbd0c0bd48b8a50b034797a19, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1224897493}
+  - 61: {fileID: 1224897492}
+  m_Layer: 8
+  m_Name: theWalkableRegion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1224897492
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224897491}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: .135889187, y: -3.24627495}
+  serializedVersion: 2
+  m_Size: {x: 16.8539124, y: .607433379}
+--- !u!224 &1224897493
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22432224, guid: 00f4fc4dbd0c0bd48b8a50b034797a19,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224897491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .757462621, y: 1.0447762, z: 1}
+  m_Children: []
+  m_Father: {fileID: 958718375}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -.00999999978, y: -.209999993}
+  m_SizeDelta: {x: -.799926758, y: -.459960938}
+  m_Pivot: {x: .5, y: .5}
 --- !u!1 &1280380089
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,7 +2988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1363208413
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3320,7 +3368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1594324578
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4166,7 +4214,7 @@ Prefab:
     - target: {fileID: 11400636, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
       propertyPath: walkableRegion
       value: 
-      objectReference: {fileID: 1594324579}
+      objectReference: {fileID: 1224897492}
     - target: {fileID: 11400636, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
       propertyPath: dialogueUI
       value: 

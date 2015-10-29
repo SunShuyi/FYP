@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{9BD37F4B-81AD-61C6-2D41-C897A0D35268}") = "FYP", "Assembly-CSharp-vs.csproj", "{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}"
+Project("{D7AAAD5D-DDF5-9B5B-8A03-44E85C174AC9}") = "FYP - MGP 23. DoorBlockForestSuccess", "Assembly-CSharp-vs.csproj", "{DC0637B4-0DDD-DD81-1817-0EC6FFD0C063}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC0637B4-0DDD-DD81-1817-0EC6FFD0C063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC0637B4-0DDD-DD81-1817-0EC6FFD0C063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC0637B4-0DDD-DD81-1817-0EC6FFD0C063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC0637B4-0DDD-DD81-1817-0EC6FFD0C063}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																													GlobalSection(MonoDevelopProperties) = preSolution
+			GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

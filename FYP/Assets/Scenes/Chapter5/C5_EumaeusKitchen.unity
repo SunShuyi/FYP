@@ -1968,7 +1968,7 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8, y: 62}
+  m_AnchoredPosition: {x: 4, y: 62}
   m_SizeDelta: {x: -1260.90002, y: -709.450012}
   m_Pivot: {x: .5, y: .5}
 --- !u!212 &807239442
@@ -5079,7 +5079,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11474216, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: npcInventory.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 22480912, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: m_RootOrder
@@ -5132,6 +5132,11 @@ Prefab:
       propertyPath: npcInventory.Array.data[1]
       value: 
       objectReference: {fileID: 11499314, guid: d826593eaf1495a4880a73d2ad9e5520,
+        type: 2}
+    - target: {fileID: 11474216, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
+      propertyPath: npcInventory.Array.data[2]
+      value: 
+      objectReference: {fileID: 11459144, guid: 6f1234f477d71234895190a3f2d63e1a,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
@@ -5202,7 +5207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1879179897
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5926,7 +5931,7 @@ Prefab:
       objectReference: {fileID: 2136663956}
     - target: {fileID: 109600, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}

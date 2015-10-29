@@ -2038,27 +2038,34 @@
 			</npc>
 		</scene>
 		
-			<scene _name="C5_Phaeacians'Forest1">
-			<npc _name="Monologue">
-				<line>There are pieces of canvas lying on the shore.</line>
-				<leavedialogue/>
-				
+		<scene _name="C5_Phaeacians'Forest1">
+			<npc _name="Monologue">		
 				<condition _condition="have_CanvasCloak">
-					<line>Hmmm, I can tailor this in to a piece of canvas cloak. I should pick one up.</line>
-					<line>Now I'm missing something to tailor the material.</line>
-					<result _name="setactive" _sentence="MazeBlock">false</result>			
-					<result _name="loadscene">FindEumaeus's</result>
+					<line>I just have to wear the cloak and disguise myself now!</line>
+					<line>Hope that Euaemus won't be able to recognise me now.</line>
+					<result _name="setactive" _sentence="Hidden">false</result>
+					<result _name="deleteinventory">CanvasCloak</result>
 					<leavedialogue/>
 				</condition>
 				
+				<condition _condition="!have_CanvasCloak">
+					<line>I should disguise myself with something.</line>
+					<line>Maybe I should look around the place.</line>
+					<leavedialogue/>
+				</condition>
 			</npc>
 		</scene>
-
+		
 		<scene _name="C5_EumaeusHutLivingRoom">
 		
 			<!-- NPC NAME -->
 			<npc _name="Eumaeus">
-
+			
+				<condition _condition="have_Invisible">
+					<line>Have you check all the rooms yet?</line>
+					<leavedialogue/>
+				</condition>
+				
 				<condition _condition="have_CleanClothes">
 					<condition _condition="selected_CleanClothes">
 						<line>This is exactly what i want.</line>
@@ -2086,10 +2093,28 @@
 				<line>Please help me, I need food and shelter.</line>
 				<changecharacter>Right</changecharacter>
 				<line>Hmmm....Why don't you try helping out around the house.</line>
+
 				<changecharacter>Left</changecharacter>
 				<line>Thank you! I will do my best.</line>
 				<leavedialogue/>
+
 			</npc>
+			
+			<npc _name="Monologue">		
+				<condition _condition="have_Invisible">
+					<line>Now I can enter the room! Yay!</line>
+					<result _name="setactive" _sentence="Hidden">false</result>
+					<result _name="deleteinventory">Invisible</result>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="!have_Invisible">
+					<line>Hmmm I guess this room is locked. Wonder what's inside.</line>
+					<line>I shall look around.</line>
+					<leavedialogue/>
+				</condition>
+			</npc>
+			
 		</scene>
 		
 		<scene _name="C5_EumaeusKitchen">
@@ -2201,15 +2226,28 @@
 				</condition>
 				
 				<condition _condition="!have_CheeseSlice">
+				<condition _condition="!taken_Invisible">	
 					<line>Thanks for the help!</line>
-				
 					<result _name="deleteinventory">KitchenKnife</result>
 					<changecharacter>Left</changecharacter>
 					<line>No problem. Anything else I can help with?</line>
 					<changecharacter>Right</changecharacter>
-					<line>Nope, you can try looking around the house to see if anyone else nees help.</line>
+					<line>Nope, you can try looking around the house to see if anyone else needs help.</line>
+					<result _name="addinventory">Invisible</result>
+					<result _name="condition">taken_Invisible</result>
 					<changecharacter>Left</changecharacter>
 					<line>Alright, see you.</line>
+					<leavedialogue/>
+				</condition>
+				</condition>
+				
+				<condition _condition="have_Invisible">
+					<line>Go on.</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="!have_Invisible">
+					<line>Hi, you again~</line>
 					<leavedialogue/>
 				</condition>
 				
@@ -2253,11 +2291,9 @@
 		
 			<!-- NPC NAME -->
 			<npc _name="Telemacus">
-				<line>.........</line>
+				<line>Hi Father.</line>
 				<changecharacter>Left</changecharacter>
-				<line>...</line>
-				<changecharacter>Right</changecharacter>
-				<line>.............</line>
+				<line>Hi Son.</line>
 				<result _name="loadscene">C5_Cutscenes_Dog</result>
 				<leavedialogue/>	
 			</npc>
@@ -2314,10 +2350,28 @@
 				<line>He has been trying to return to Ithaca, return to you.</line>
 				<line>I have recently been in Thesprotia and had learned something there of Odysseus's recent wanderings.</line>
 				<line>I do not know the exact location of Odysseus, but I assure you he should return home soon.</line>
+				<result _name="loadscene">C5_Cutscenes_Competition</result>
 				<leavedialogue/>
 			</npc>
 		</scene>
 		
-	</chapter>
+		<scene _name="C5_OdysseusGarden2">
+			<npc _name="Monologue">		
+				<condition _condition="have_Ladder">
+					<line>Yes! Now i can climb up the ladder to reach the window of penelope's room.</line>
+					<result _name="setactive" _sentence="Hidden">false</result>
+					<result _name="deleteinventory">Ladder</result>
+					<result _name="loadscene">C5_Penelope'sRoom</result>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="!have_Ladder">			
+					<line>I see Penelope's room but it's too high.</line>
+					<line>I need something that can help me to reach Penelope's window.</line>
+					<leavedialogue/>
+				</condition>		
+			</npc>
+		</scene>
 	
+	</chapter>	
 </dialogue>

@@ -1,50 +1,47 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &141680
+--- !u!1 &196416
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 430814}
-  - 114: {fileID: 11472632}
+  - 4: {fileID: 489456}
+  - 114: {fileID: 11459144}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Invisible
   m_TagString: Items
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &430814
+--- !u!4 &489456
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 141680}
+  m_GameObject: {fileID: 196416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11472632
+--- !u!114 &11459144
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 141680}
+  m_GameObject: {fileID: 196416}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c42eaeae77376ba4fb3e169f7c7360cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Canvas
-  itemDescription: Rough material that can be tailored
-  combinationList:
-  - itemToCombine: {fileID: 11425384, guid: 618c9cdd5c2b0cb4c81742479f853bcb, type: 2}
-    resultItems:
-    - {fileID: 11412852, guid: ca82a20fb5dba03468e3465fabf0b201, type: 2}
+  itemName: Invisible
+  itemDescription: Invisible
+  combinationList: []
   itemSprite: {fileID: 21300000, guid: 131b54b89a753ca419ba2384a7c6b817, type: 3}
 --- !u!1001 &100100000
 Prefab:
@@ -55,5 +52,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 141680}
+  m_RootGameObject: {fileID: 196416}
   m_IsPrefabParent: 1

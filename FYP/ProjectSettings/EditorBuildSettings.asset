@@ -175,9 +175,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_LockedDoor.unity
   - enabled: 0
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_OdysseusPenelopeConvo.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_Competition.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_Victory.unity
   - enabled: 0
     path: Assets/Scenes/Mini-games/C5/FindEumaeus's.unity
