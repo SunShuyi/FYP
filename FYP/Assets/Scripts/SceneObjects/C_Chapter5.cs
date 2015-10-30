@@ -58,6 +58,33 @@ public class C_Chapter5 : C_Chapter
 	
 	public override void ConditionCheck()
 	{
+		if(scene == "C5_Phaeacians'Beach")
+		{
+			if(conditionTriggers.Contains("DeleteHidden")) //gate_unlocked XML condition
+			{
+				GameObject.Find("Hidden").SetActive(false); //GateMG at interactive object
+						
+			}
+		}
+
+		if(scene == "C5_Phaeacians'Forest1")
+		{
+			if(conditionTriggers.Contains("DeleteHiddenForest")) //gate_unlocked XML condition
+			{
+				GameObject.Find("Hidden").SetActive(false); //GateMG at interactive object
+				
+			}
+		}
+
+		if(scene == "C5_EumaeusHutLivingRoom")
+		{
+			if(conditionTriggers.Contains("DeleteHiddenBedroom")) //gate_unlocked XML condition
+			{
+				GameObject.Find("Hidden").SetActive(false); //GateMG at interactive object
+				
+			}
+		}
+
 //		if(scene == "C5_Phaeacians'Forest1")
 //		{
 //			if(conditionTriggers.Contains("Maze_Unlocked")) //gate_unlocked XML condition

@@ -2030,22 +2030,29 @@
 		<!-- SCENE -->
 		<scene _name="C5_Phaeacians'Beach">
 			<npc _name="Monologue">		
-				<line>There are pieces of canvas lying on the shore.</line>
-				<line>Hmmm, I can tailor this in to a piece of canvas cloak. I should pick one up.</line>
-				<line>Now I'm missing something to tailor the material.</line>
-				<result _name="setactive" _sentence="Hidden">false</result>
-				<leavedialogue/>
+				<condition _condition="!DeleteHidden">
+					<line>There are pieces of canvas lying on the shore.</line>
+					<line>Hmmm, I can tailor this in to a piece of canvas cloak. I should pick one up.</line>
+					<line>Now I'm missing something to tailor the material.</line>
+					<result _name="setactive" _sentence="Hidden">false</result>
+					<result _name="condition">DeleteHidden</result>
+					<line>Anymore?</line>
+					<leavedialogue/>
+				</condition>							
 			</npc>
 		</scene>
 		
 		<scene _name="C5_Phaeacians'Forest1">
-			<npc _name="Monologue">		
-				<condition _condition="have_CanvasCloak">
-					<line>I just have to wear the cloak and disguise myself now!</line>
-					<line>Hope that Euaemus won't be able to recognise me now.</line>
-					<result _name="setactive" _sentence="Hidden">false</result>
-					<result _name="deleteinventory">CanvasCloak</result>
-					<leavedialogue/>
+			<npc _name="Monologue">	
+				<condition _condition="!DeleteHiddenForest">
+					<condition _condition="have_CanvasCloak">
+						<line>I just have to wear the cloak and disguise myself now!</line>
+						<line>Hope that Euaemus won't be able to recognise me now.</line>
+						<result _name="setactive" _sentence="Hidden">false</result>
+						<result _name="condition">DeleteHiddenForest</result>
+						<result _name="deleteinventory">CanvasCloak</result>
+						<leavedialogue/>
+					</condition>
 				</condition>
 				
 				<condition _condition="!have_CanvasCloak">
@@ -2065,6 +2072,7 @@
 					<line>Have you check all the rooms yet?</line>
 					<leavedialogue/>
 				</condition>
+
 				
 				<condition _condition="have_CleanClothes">
 					<condition _condition="selected_CleanClothes">
@@ -2102,10 +2110,13 @@
 			
 			<npc _name="Monologue">		
 				<condition _condition="have_Invisible">
-					<line>Now I can enter the room! Yay!</line>
-					<result _name="setactive" _sentence="Hidden">false</result>
-					<result _name="deleteinventory">Invisible</result>
-					<leavedialogue/>
+					<condition _condition="!DeleteHiddenBedroom">
+						<line>Now I can enter the room! Yay!</line>
+						<result _name="setactive" _sentence="Hidden">false</result>
+						<result _name="condition">DeleteHiddenBedroom</result>
+						<result _name="deleteinventory">Invisible</result>
+						<leavedialogue/>
+					</condition>
 				</condition>
 				
 				<condition _condition="!have_Invisible">
