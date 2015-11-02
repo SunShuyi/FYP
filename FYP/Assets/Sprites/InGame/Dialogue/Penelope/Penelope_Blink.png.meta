@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 6b615a24bcde00645a95711f17afe1c9
-timeCreated: 1435824210
+guid: 59b99f02448b3b248bf923657987896a
+timeCreated: 1446438710
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Eurylochus_Dialogue_talking_0
-    21300002: Eurylochus_Dialogue_talking_1
-    21300004: Eurylochus_Dialogue_talking_2
-    21300006: Eurylochus_Dialogue_talking_3
+    21300000: Penelope_Blink_0
+    21300002: Penelope_Blink_1
+    21300004: Penelope_Blink_2
+    21300006: Penelope_Blink_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -53,43 +53,43 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Eurylochus_Dialogue_talking_0
+    - name: Penelope_Blink_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8
         y: 0
-        width: 299
-        height: 398
+        width: 279
+        height: 390
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Eurylochus_Dialogue_talking_1
+    - name: Penelope_Blink_1
       rect:
         serializedVersion: 2
-        x: 299
+        x: 310
         y: 0
-        width: 299
-        height: 398
+        width: 279
+        height: 390
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Eurylochus_Dialogue_talking_2
+    - name: Penelope_Blink_2
       rect:
         serializedVersion: 2
-        x: 598
+        x: 609
         y: 0
-        width: 299
-        height: 398
+        width: 279
+        height: 390
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Eurylochus_Dialogue_talking_3
+    - name: Penelope_Blink_3
       rect:
         serializedVersion: 2
-        x: 897
+        x: 911
         y: 0
-        width: 299
-        height: 398
+        width: 279
+        height: 390
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
