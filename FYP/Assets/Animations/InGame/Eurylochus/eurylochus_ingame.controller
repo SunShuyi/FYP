@@ -13,7 +13,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -26,7 +26,7 @@ AnimatorController:
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_MultiThreadedStateMachine: 1
 --- !u!1101 &110112160
 AnimatorStateTransition:
@@ -91,6 +91,23 @@ AnimatorState:
   m_Mirror: 0
   m_Motion: {fileID: 7400000, guid: 6058d4496c596c34c890722150e9a858, type: 2}
   m_Tag: 
+--- !u!1102 &110225418
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: telemacus_ide_Animation
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_Motion: {fileID: 7400000, guid: 55c42b69e5a89924fad72082b5e4c10c, type: 2}
+  m_Tag: 
 --- !u!1102 &110290038
 AnimatorState:
   serializedVersion: 5
@@ -123,6 +140,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 110290038}
     m_Position: {x: 300, y: 12, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 110225418}
+    m_Position: {x: 335, y: 77, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 110112160}

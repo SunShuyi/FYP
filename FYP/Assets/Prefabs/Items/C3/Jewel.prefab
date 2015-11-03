@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42eaeae77376ba4fb3e169f7c7360cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Jewel
+  itemName: Penelope
   itemDescription: A really beautiful jewel.
   combinationList:
   - itemToCombine: {fileID: 11429760, guid: c3c84f014f41ef74a8b4b07fa872cc5f, type: 2}

@@ -2778,11 +2778,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22480912, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 211.27507
+      value: 232
       objectReference: {fileID: 0}
     - target: {fileID: 22480912, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -5.0636301
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 22406756, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: m_AnchoredPosition.y
@@ -2822,6 +2822,15 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .943333387
       objectReference: {fileID: 0}
+    - target: {fileID: 21255178, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300002, guid: 06a05ef0903ee904480953eb00312f7b,
+        type: 3}
+    - target: {fileID: 9594626, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a0e619ba788d4d84d98b474b7eb7e7a0, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
   m_IsPrefabParent: 0
@@ -3065,7 +3074,7 @@ Animator:
   m_GameObject: {fileID: 1362965474}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af882333c41fc1047b2a59c9e64e7286, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
