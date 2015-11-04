@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FilesToLoad\DialogueXML.xml">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Minigame\C5\minigame3\Minigame2Timer.cs">
     <Files>
-      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="2092" Column="47" />
-      <File FileName="Assets\Scripts\SceneObjects\Managers\C_ChapterManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Minigame\C5\minigame3\Minigame2Timer.cs" Line="5" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
