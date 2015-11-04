@@ -2073,7 +2073,6 @@
 					<leavedialogue/>
 				</condition>
 
-				
 				<condition _condition="have_CleanClothes">
 					<condition _condition="selected_CleanClothes">
 						<line>This is exactly what i want.</line>
@@ -2091,17 +2090,64 @@
 				</condition>
 			
 				<condition _condition="have_CleanClothes">
-					<line>Did anyone asked you to pass me something?</line>
 					<line>The piece of clothing that you are holding looks familiar. </line>
 					<leavedialogue/>
 				</condition>		
+				
+				<condition _condition="have_WaterMelon">
+					<line>Why are you walking around with a watermelon?</line>
+					<leavedialogue/>
+				</condition>	
+				
+				<condition _condition="have_WaterMelonHalf">
+					<line>I think you should check with the cook if we really need watermelon in halves and not something else.</line>
+					<leavedialogue/>
+				</condition>					
+										
+				<condition _condition="have_WaterMelonSlice">
+					<line>I can't have all the slices to myself, maybe the cook will distribute it fairly to us.</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="have_Cheese">
+					<line>That's a big pile of cheese and i love cheese!</line>
+					<leavedialogue/>
+				</condition>	
+				
+				<condition _condition="have_CheeseHalf">
+					<line>The cheese still look bigger than the size we normally eat.</line>
+					<leavedialogue/>
+				</condition>				
+										
+				<condition _condition="have_CheeseSlice">
+					<line>Are you giving me all of it? I don't think that's a good idea. Pass to the cook please.</line>
+					<leavedialogue/>
+				</condition>	
+				
+				<condition _condition="have_KitchenKnife">
+					<line>Why are you pointing a knife at me!</line>
+					<changecharacter>Left</changecharacter>
+					<line>Oops sorry!</line>
+					<changecharacter>Right</changecharacter>
+					<line>Go to the kitchen and talk to the cook please!</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="have_Clothes">
+				  	<line>Why are you giving me dirty clothes?</line>
+					<leavedialogue/>
+				</condition>
+						
+				<condition _condition="DeleteHiddenBedroom">
+				<line>Go to the bedroom now~</line>
+					<leavedialogue/>
+				</condition>
 				
 				<line>You are?</line>
 				<changecharacter>Left</changecharacter>
 				<line>Please help me, I need food and shelter.</line>
 				<changecharacter>Right</changecharacter>
 				<line>Hmmm....Why don't you try helping out around the house.</line>
-
 				<changecharacter>Left</changecharacter>
 				<line>Thank you! I will do my best.</line>
 				<leavedialogue/>
@@ -2238,7 +2284,7 @@
 				
 				<condition _condition="!have_CheeseSlice">
 				<condition _condition="!taken_Invisible">	
-					<line>Thanks for the help!</line>
+					<line>You have brought me the knife! Thanks for the help!</line>
 					<result _name="deleteinventory">KitchenKnife</result>
 					<changecharacter>Left</changecharacter>
 					<line>No problem. Anything else I can help with?</line>
@@ -2254,6 +2300,16 @@
 				
 				<condition _condition="have_Invisible">
 					<line>Go on.</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="have_CleanClothes">
+					<line>Hmmm, this is not mine.</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="have_Clothes">
+				  	<line>Don't bring dirty clothes to the kitchen!</line>
 					<leavedialogue/>
 				</condition>
 				
@@ -2280,9 +2336,15 @@
 				
 				<condition _condition="have_CleanClothes">
 					<line>Thanks for the help.</line>
-					<line>Pass the clean clothes to Eumaeu.</line>
+					<line>Pass this to the owner of the clothing.</line>
 					<changecharacter>Left</changecharacter>
 					<line>Sure.</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="have_Clothes">
+				  	<line>These piece of clothing is still dirty.</line>
+					<line>Please do something about it.</line>
 					<leavedialogue/>
 				</condition>
 				

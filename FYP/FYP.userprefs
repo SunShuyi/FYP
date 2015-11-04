@@ -1,7 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SceneObjects\Managers\C_ChapterManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FilesToLoad\DialogueXML.xml">
     <Files>
+      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="2092" Column="47" />
       <File FileName="Assets\Scripts\SceneObjects\Managers\C_ChapterManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

@@ -713,7 +713,7 @@ MonoBehaviour:
   interactCollider: {fileID: 0}
   interactionType: 1
   buttons: {fileID: 629021457}
-  observeLine: Now might not be a good timing to enter this room.
+  observeLine: This is the door to bedroom.
   loadScene: 
   wrongItemLine: I should just interact with it.
   conditionResultList: []
