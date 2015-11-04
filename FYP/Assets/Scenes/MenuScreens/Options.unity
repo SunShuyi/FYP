@@ -126,6 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23b230332ff3eac4f8a3dbd570f96361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LangIndicator: {fileID: 1091437437}
+  EngPos: {fileID: 1906024469}
+  DutchPos: {fileID: 223690369}
   volumeSlider: {fileID: 1966762654}
 --- !u!1 &21862734
 GameObject:
@@ -2563,6 +2566,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOutTex: {fileID: 2800000, guid: 9548f221c7eeb6145bd12b02b55ac4c9, type: 3}
   fadeSpd: .800000012
+  byTime: 1
 --- !u!1 &2114576040
 GameObject:
   m_ObjectHideFlags: 0

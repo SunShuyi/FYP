@@ -32,6 +32,10 @@ public class C_ChapterManager : MonoBehaviour
 		if (currentChapter == null)
 		{
 			currentChapter = gameObject.GetComponent<C_Chapter> ().Instance ();
+			if (PlayerPrefs.GetInt ("Language") == 1)
+				currentChapter.conditionTriggers.Add("isEnglish");
+			else if (PlayerPrefs.GetInt ("Language") == 2)
+				currentChapter.conditionTriggers.Add("isDutch");
 			if (currentChapter == null)
 				Debug.LogWarning("currentChapter is NULL");
 		}

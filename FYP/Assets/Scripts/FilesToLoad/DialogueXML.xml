@@ -2044,17 +2044,17 @@
 		
 		<scene _name="C5_Phaeacians'Forest1">
 			<npc _name="Monologue">	
-				<condition _condition="!DeleteHiddenForest">
-					<condition _condition="have_CanvasCloak">
-						<line>I just have to wear the cloak and disguise myself now!</line>
-						<line>Hope that Euaemus won't be able to recognise me now.</line>
-						<result _name="setactive" _sentence="Hidden">false</result>
-						<result _name="condition">DeleteHiddenForest</result>
-						<result _name="deleteinventory">CanvasCloak</result>
-						<leavedialogue/>
+					<condition _condition="!DeleteHiddenForest">
+						<condition _condition="have_CanvasCloak">
+							<line>I just have to wear the cloak and disguise myself now!</line>
+							<line>Hope that Euaemus won't be able to recognise me now.</line>
+							<result _name="setactive" _sentence="Hidden">false</result>
+							<result _name="condition">DeleteHiddenForest</result>
+							<result _name="deleteinventory">CanvasCloak</result>
+							<leavedialogue/>
+						</condition>
 					</condition>
-				</condition>
-				
+			
 				<condition _condition="!have_CanvasCloak">
 					<line>I should disguise myself with something.</line>
 					<line>Maybe I should look around the place.</line>
@@ -2387,8 +2387,14 @@
 			
 			<!-- NPC NAME -->
 			<npc _name="Antinous">
+				<condition _condition="isEnglish">
 				<line>What is a dirty thing like you doing here!?</line>
 				<leavedialogue/>
+				</condition>
+				<condition _condition="isDutch">
+				<line>What ?</line>
+				<leavedialogue/>
+				</condition>
 			</npc>
 			
 			<npc _name="Suitor1">
@@ -2423,7 +2429,7 @@
 				<line>He has been trying to return to Ithaca, return to you.</line>
 				<line>I have recently been in Thesprotia and had learned something there of Odysseus's recent wanderings.</line>
 				<line>I do not know the exact location of Odysseus, but I assure you he should return home soon.</line>
-				<result _name="loadscene">C5_Cutscenes_Competition</result>
+				<result _name="loadscene">Minigame3</result>
 				<leavedialogue/>
 			</npc>
 		</scene>

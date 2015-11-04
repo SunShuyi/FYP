@@ -78,6 +78,11 @@ public class C_Chapter5 : C_Chapter
 
 		if(scene == "C5_EumaeusHutLivingRoom")
 		{
+//			if(conditionTriggers.Contains("DeleteHiddenKitchen")) //gate_unlocked XML condition
+//			{
+//				GameObject.Find("KHidden").SetActive(false); //GateMG at interactive object
+//				
+//			}
 			if(conditionTriggers.Contains("DeleteHiddenBedroom")) //gate_unlocked XML condition
 			{
 				GameObject.Find("Hidden").SetActive(false); //GateMG at interactive object

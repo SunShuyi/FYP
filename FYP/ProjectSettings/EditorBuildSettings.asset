@@ -156,9 +156,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chapter5/C5_Penelope'sRoom.unity
   - enabled: 1
+    path: Assets/Scenes/Mini-games/C5/FindEumaeus's.unity
+  - enabled: 1
     path: Assets/Scenes/Mini-games/C5/MiniGame2.unity
   - enabled: 1
-    path: Assets/Scenes/Mini-games/C5/FindEumaeus's.unity
+    path: Assets/Scenes/Mini-games/C5/Minigame3.unity
   - enabled: 1
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_Opening.unity
   - enabled: 0

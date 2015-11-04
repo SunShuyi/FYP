@@ -1,8 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Minigame\C5\minigame3\Minigame2Timer.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SceneObjects\Managers\C_LevelSelectionManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\Minigame\C5\minigame3\Minigame2Timer.cs" Line="5" Column="1" />
+      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="2395" Column="16" />
+      <File FileName="Assets\Scripts\SceneObjects\Managers\C_ChapterManager.cs" Line="29" Column="2" />
+      <File FileName="Assets\Scripts\SceneObjects\Managers\C_OptionsManager.cs" Line="39" Column="23" />
+      <File FileName="Assets\Scripts\SceneObjects\Managers\C_LevelSelectionManager.cs" Line="79" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

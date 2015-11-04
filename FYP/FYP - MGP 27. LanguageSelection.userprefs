@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SceneObjects\C_Chapter5.cs">
+    <Files>
+      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="2189" Column="7" />
+      <File FileName="Assets\Scripts\SceneObjects\Managers\C_LevelSelectionManager.cs" Line="89" Column="6" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter4.cs" Line="102" Column="7" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter5.cs" Line="91" Column="4" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter3.cs" Line="95" Column="37" />
+      <File FileName="Assets\Scripts\SceneObjects\Managers\C_DialogueManager.cs" Line="110" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
