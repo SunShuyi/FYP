@@ -20,7 +20,7 @@ public class C_CutsceneTxt : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (EngOrDutch)
+		if (PlayerPrefs.GetInt("Language") == 1)
 			TxtArry_Curr = TxtArry_Eng;
 		else 
 			TxtArry_Curr = TxtArry_Dutch;

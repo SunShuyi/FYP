@@ -13,6 +13,7 @@ public class C_InteractableObject : MonoBehaviour
 	public E_InteractType interactionType	= E_InteractType.None;
 	public GameObject buttons				= null;
 	public string observeLine				= "";
+	public string observeLineDutch			= "";
 	public string loadScene					= "";
 	
 	[Header("Item Interactions")]

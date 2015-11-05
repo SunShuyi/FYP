@@ -267,13 +267,20 @@ public class C_SceneManager : MonoBehaviour
 	public void ShowDescription(C_InWorldItem theItem)
 	{
 		theItem.buttonsCurrent.SetActive (false);
-		DisplayDescriptionBox(theItem.item.itemDescription);
+		if(PlayerPrefs.GetInt("Language") == 1)
+			DisplayDescriptionBox(theItem.item.itemDescription);
+		else
+			DisplayDescriptionBox(theItem.item.itemDescriptionDutch);
 	}
 	
 	public void ObserveObject(C_InteractableObject theObject)
 	{
 		theObject.buttons.SetActive (false);
-		DisplayDescriptionBox(theObject.observeLine);
+		//DisplayDescriptionBox(theObject.observeLine);
+		if(PlayerPrefs.GetInt("Language") == 1)
+			DisplayDescriptionBox(theObject.observeLine);
+		else
+			DisplayDescriptionBox(theObject.observeLineDutch);
 	}
 
 	public void InteractObject(C_InteractableObject theObject)

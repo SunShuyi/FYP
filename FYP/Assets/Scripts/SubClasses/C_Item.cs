@@ -7,6 +7,7 @@ public class C_Item : MonoBehaviour
 {
 	public string itemName				= "";
 	public string itemDescription		= "";
+	public string itemDescriptionDutch		= "";
 	public int itemID {get;private set;}
 	
 	// For combinations of items, interactions and get conditions

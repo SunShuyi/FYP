@@ -23,96 +23,179 @@
 		<scene _name="C2_ShipDeck">
 		
 			<npc _name="Eurylochus">
-			
-				<condition _condition="level_1">
-					<changecharacter>Left</changecharacter>
-					<line>Hey Eurylochus, are you able to help me scout the area for food?</line>
-					<changecharacter>Right</changecharacter>
-					<line>I'm sorry Sir, but I'm too hungry to do anything right now.</line>
-					<line>In addition to that, I'm suffering from a sore throat.</line>
-					<changecharacter>Left</changecharacter>
-					<line>Aren't you being too lazy?</line>
-					<line>As the second-in-command, you should be doing some tasks!</line>
-					<changecharacter>Right</changecharacter>
-					<line>But Odysseus, I'm really starving right now.</line>
-					<line>I'm sorry for not helping you out on this task.</line>
-					<line>If it is work that you want, I promise I'll do a great job at the next task that you assign me to.</line>
-					<changecharacter>Left</changecharacter>
-					<line>Hmm, alright then.</line>
-					<line>I accept your apology.</line>
-					<line>Of course remember to keep your promise then.</line>
-					<leavedialogue/>
-				</condition>
-				
-				<condition _condition="level_3">
-					<condition _condition="!odysseus_informed">
+			<condition _condition="isEnglish">
+			<condition _condition="level_1">
 						<changecharacter>Left</changecharacter>
-						<line>Eurylochus, what's the matter? You look as if you'd seen a ghost!</line>
-						<question _question="1" _choices="3" _sentence="There was a witch in the castle! She turned my comrades into pigs, Odysseus!">
-							<option _sentence="Pigs? Eurylochus, are you sure you didn't have too much wine to drink?">
+						<line>Hey Eurylochus, are you able to help me scout the area for food?</line>
+						<changecharacter>Right</changecharacter>
+						<line>I'm sorry Sir, but I'm too hungry to do anything right now.</line>
+						<line>In addition to that, I'm suffering from a sore throat.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Aren't you being too lazy?</line>
+						<line>As the second-in-command, you should be doing some tasks!</line>
+						<changecharacter>Right</changecharacter>
+						<line>But Odysseus, I'm really starving right now.</line>
+						<line>I'm sorry for not helping you out on this task.</line>
+						<line>If it is work that you want, I promise I'll do a great job at the next task that you assign me to.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Hmm, alright then.</line>
+						<line>I accept your apology.</line>
+						<line>Of course remember to keep your promise then.</line>
+						<leavedialogue/>
+					</condition>
+					
+					<condition _condition="level_3">
+						<condition _condition="!odysseus_informed">
+							<changecharacter>Left</changecharacter>
+							<line>Eurylochus, what's the matter? You look as if you'd seen a ghost!</line>
+							<question _question="1" _choices="3" _sentence="There was a witch in the castle! She turned my comrades into pigs, Odysseus!">
+								<option _sentence="Pigs? Eurylochus, are you sure you didn't have too much wine to drink?">
+									<changecharacter>Right</changecharacter>
+									<line>Why would I lie to you? I wouldn't lie to you, sir!</line>
+									<changecharacter>Left</changecharacter>
+									<line>Fine, fine.</line>
+									<line>I'll go and check it out.</line>
+									<result _name="condition">odysseus_informed</result>
+									<leavedialogue/>
+								</option>
+								<option _sentence="Are you serious? If you are, we need to go rescue them!">
+									<changecharacter>Right</changecharacter>
+									<line>No, I am never going back there!</line>
+									<line>Not even if you'd threaten to cut me down where I stand!</line>
+									<line>You can go save them yourself!</line>
+									<changecharacter>Left</changecharacter>
+									<line>What are you, a coward?</line>
+									<line>I'll go rescue our comrades by myself.</line>
+									<result _name="condition">odysseus_informed</result>
+									<leavedialogue/>
+								</option>
+								<option _sentence="Calm down, I have no idea what you are talking about!">
+									<changecharacter>Right</changecharacter>
+									<line>When we first arrived at her home, she offered us fine food and drink.</line>
+									<line>I stayed outside because I was suspicious.</line>
+									<line>Soon after the men had eaten, she cast a magic spell on all of them, turning them into pigs and locking them away!</line>
+									<changecharacter>Left</changecharacter>
+									<line>Why didn't you say that in the first place?</line>
+									<line>You stay here and rest. You've earned it.</line>
+									<result _name="condition">odysseus_informed</result>
+									<leavedialogue/>
+								</option>
+							</question>
+						</condition>
+							<changecharacter>Left</changecharacter>
+							<line>Eurylochus, about what happened in the castle ...</line>
+							<question _question="1" _choices="2" _sentence="Y-yes Odysseus?">
+								<option _sentence="Can you tell me what happened in the castle again, Eurylochus?">
+									<changecharacter>Right</changecharacter>
+									<line>When we first arrived at her home, she offered us fine food and drink.</line>
+									<line>I stayed outside because I was suspicious.</line>
+									<line>Soon after the men had eaten, she cast a magic spell on all of them, turning them into pigs and locking them away!</line>
+									<changecharacter>Left</changecharacter>
+									<line>Thank you, Eurylochus.</line>
+									<leavedialogue/>
+								</option>
+								<option _sentence="Can you show me the way to the castle, Eurylochus?">
+									<changecharacter>Right</changecharacter>
+									<line>No, sir. I don't dare go back.</line>
+									<line>I don't want to be turned into a pig like the rest of them!</line>
+									<changecharacter>Left</changecharacter>
+									<line>Are you too afraid to help our friends, Eurylochus?</line>
+									<line>You are a coward.</line>
+									<leavedialogue/>
+								</option>
+							</question>
+					</condition>
+			</condition>
+				<condition _condition="isDutch">
+					<condition _condition="level_1">
+						<changecharacter>Left</changecharacter>
+						<line>Hey Eurylochus, are you able to help me scout the area for food?</line>
+						<changecharacter>Right</changecharacter>
+						<line>I'm sorry Sir, but I'm too hungry to do anything right now.</line>
+						<line>In addition to that, I'm suffering from a sore throat.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Aren't you being too lazy?</line>
+						<line>As the second-in-command, you should be doing some tasks!</line>
+						<changecharacter>Right</changecharacter>
+						<line>But Odysseus, I'm really starving right now.</line>
+						<line>I'm sorry for not helping you out on this task.</line>
+						<line>If it is work that you want, I promise I'll do a great job at the next task that you assign me to.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Hmm, alright then.</line>
+						<line>I accept your apology.</line>
+						<line>Of course remember to keep your promise then.</line>
+						<leavedialogue/>
+					</condition>
+					
+					<condition _condition="level_3">
+						<condition _condition="!odysseus_informed">
+							<changecharacter>Left</changecharacter>
+							<line>Eurylochus, wat is er aan de hand? Je ziet er uit alsof je een spook gezien hebt!</line>
+							<question _question="1" _choices="3" _sentence="Er was een heks in het kasteel! Ze heeft al mijn kameraden veranderd in varkens, Odysseus!">
+								<option _sentence="Varkens? Eurylochus, weet je zeker dat je niet te veel wijn gedronken hebt?">
+									<changecharacter>Right</changecharacter>
+									<line>Waarom zou ik tegen u liegen? Ik zou nooit tegen u liegen, meneer!</line>
+									<changecharacter>Left</changecharacter>
+									<line>Oké, oké.</line>
+									<line>Ik ga wel kijken.</line>
+									<result _name="condition">odysseus_informed</result>
+									<leavedialogue/>
+								</option>
+								<option _sentence="Is dit serieus? Ja? Dan moeten we ze gaan redden!">
+									<changecharacter>Right</changecharacter>
+									<line>Nee, ik ga nooit meer terug!</line>
+									<line>Niet eens als u zou dreigen mij hier neer te steken.</line>
+									<line>U mag ze zelf gaan redden!</line>
+									<changecharacter>Left</changecharacter>
+									<line>WBen je een watje?.</line>
+									<line>Ik ga onze kameraden wel in mijn eentje redden</line>
+									<result _name="condition">odysseus_informed</result>
+									<leavedialogue/>
+								</option>
+								<option _sentence="Kalmeer, ik heb geen idee waar je het over hebt!">
+									<changecharacter>Right</changecharacter>
+									<line>Toen we voor het eerst aankwamen bij haar huis, bood ze ons heerlijk eten en drinken aan.</line>
+									<line>Ik bleef buiten, omdat ik het verdacht vond.</line>
+									<line>Vrij snel nadat de mannen gegeten hadden, sprak zij een spreuk uit over alle mannen, waardoor ze in varkens veranderden en sloot ze hen op!</line>
+									<changecharacter>Left</changecharacter>
+									<line>Waarom zei je dat niet meteen?</line>
+									<line>Jij blijft hier en gaat rusten, je hebt het verdiend.</line>
+									<result _name="condition">odysseus_informed</result>
+									<leavedialogue/>
+								</option>
+							</question>
+						</condition>
+						<changecharacter>Left</changecharacter>
+						<line>Eurylochus, over de gebeurtenissen in het kasteel…</line>
+						<question _question="1" _choices="2" _sentence="J-Ja, Odysseus?">
+							<option _sentence="Kun je me opnieuw vertellen wat er in het kasteel gebeurde, Eurylochus?">
 								<changecharacter>Right</changecharacter>
-								<line>Why would I lie to you? I wouldn't lie to you, sir!</line>
+								<line>Toen we voor het eerst aankwamen bij haar huis, bood ze ons heerlijk eten en drinken aan.</line>
+								<line>Ik bleef buiten, omdat ik het verdacht vond.</line>
+								<line>Vrij snel nadat de mannen gegeten hadden, sprak zij een spreuk uit over alle mannen, waardoor ze in varkens veranderden en sloot ze hen op!</line>
 								<changecharacter>Left</changecharacter>
-								<line>Fine, fine.</line>
-								<line>I'll go and check it out.</line>
-								<result _name="condition">odysseus_informed</result>
+								<line>Bedankt, Eurylochus.</line>
 								<leavedialogue/>
 							</option>
-							<option _sentence="Are you serious? If you are, we need to go rescue them!">
+							<option _sentence="Kun je me de weg wijzen naar het kasteel, Eurylochus?">
 								<changecharacter>Right</changecharacter>
-								<line>No, I am never going back there!</line>
-								<line>Not even if you'd threaten to cut me down where I stand!</line>
-								<line>You can go save them yourself!</line>
+								<line>Nee, meneer. Ik durf niet terug te gaan.</line>
+								<line>Ik wil niet ook in een varken veranderen!</line>
 								<changecharacter>Left</changecharacter>
-								<line>What are you, a coward?</line>
-								<line>I'll go rescue our comrades by myself.</line>
-								<result _name="condition">odysseus_informed</result>
-								<leavedialogue/>
-							</option>
-							<option _sentence="Calm down, I have no idea what you are talking about!">
-								<changecharacter>Right</changecharacter>
-								<line>When we first arrived at her home, she offered us fine food and drink.</line>
-								<line>I stayed outside because I was suspicious.</line>
-								<line>Soon after the men had eaten, she cast a magic spell on all of them, turning them into pigs and locking them away!</line>
-								<changecharacter>Left</changecharacter>
-								<line>Why didn't you say that in the first place?</line>
-								<line>You stay here and rest. You've earned it.</line>
-								<result _name="condition">odysseus_informed</result>
+								<line>Ben je te bang om onze vrienden te helpen, Eurylochus?</line>
+								<line>Je bent een watje.</line>
 								<leavedialogue/>
 							</option>
 						</question>
 					</condition>
-						<changecharacter>Left</changecharacter>
-						<line>Eurylochus, about what happened in the castle ...</line>
-						<question _question="1" _choices="2" _sentence="Y-yes Odysseus?">
-							<option _sentence="Can you tell me what happened in the castle again, Eurylochus?">
-								<changecharacter>Right</changecharacter>
-								<line>When we first arrived at her home, she offered us fine food and drink.</line>
-								<line>I stayed outside because I was suspicious.</line>
-								<line>Soon after the men had eaten, she cast a magic spell on all of them, turning them into pigs and locking them away!</line>
-								<changecharacter>Left</changecharacter>
-								<line>Thank you, Eurylochus.</line>
-								<leavedialogue/>
-							</option>
-							<option _sentence="Can you show me the way to the castle, Eurylochus?">
-								<changecharacter>Right</changecharacter>
-								<line>No, sir. I don't dare go back.</line>
-								<line>I don't want to be turned into a pig like the rest of them!</line>
-								<changecharacter>Left</changecharacter>
-								<line>Are you too afraid to help our friends, Eurylochus?</line>
-								<line>You are a coward.</line>
-								<leavedialogue/>
-							</option>
-						</question>
 				</condition>
-				
 			</npc>
 		
 			<npc _name="Elpenor">
 			
-				<condition _condition="level_1">
-					<condition _condition="deerKilled">
-						D
+				<condition _condition="isEnglish">				
+					<condition _condition="level_1">
+						<condition _condition="deerKilled">
 							<changecharacter>Left</changecharacter>
 							<line>Elpenor, do you happen to have any rope?</line>
 							<changecharacter>Right</changecharacter>
@@ -121,7 +204,8 @@
 							<line>Really?</line>
 							<line>Wow, it looks like there is finally someone reliable on board!</line>
 							<leavedialogue/>
-					</condition>
+						</condition>
+						
 						<line>Odysseus, we need to find supplies.</line>
 						<question _question="1" _choices="3" _sentence="The men are hungry and we have no idea where we are!">
 							<option _sentence="Don't worry, Elpenor! I'll go scout the area and find us something to eat.">
@@ -149,44 +233,106 @@
 								<leavedialogue/>
 							</option>
 						</question>
+					</condition>
+						
+					<condition _condition="level_2">
+						<line>Hey, Eurylochus!</line>
+						<line>Having a fine day, I see.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Urgh ...</line>
+						<line>What do you know ...</line>
+						<leavedialogue/>
+					</condition>
+					
+					<condition _condition="level_3">
+						<line>Hey, Odysseus!</line>
+						<line>Having a fine day, I see.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Sure do ...</line>
+						<line>Everyday is a fine day, with me around of course!</line>
+						<leavedialogue/>
+					</condition>
 				</condition>
 				
-				<condition _condition="level_2">
-					<line>Hey, Eurylochus!</line>
-					<line>Having a fine day, I see.</line>
-					<changecharacter>Left</changecharacter>
-					<line>Urgh ...</line>
-					<line>What do you know ...</line>
-					<leavedialogue/>
+				<condition _condition="isDutch">				
+					<condition _condition="level_1">
+						<condition _condition="deerKilled">
+							<changecharacter>Left</changecharacter>
+							<line>Elpenor, do you happen to have any rope?</line>
+							<changecharacter>Right</changecharacter>
+							<line>Nope, but if you can get me some cut grass, I can make one for you!</line>
+							<changecharacter>Left</changecharacter>
+							<line>Really?</line>
+							<line>Wow, it looks like there is finally someone reliable on board!</line>
+							<leavedialogue/>
+						</condition>
+						
+						<line>Odysseus, we moeten benodigdheden vinden. </line>
+						<question _question="1" _choices="3" _sentence="De mannen zijn hongerig en we hebben geen idee waar we zijn!">
+							<option _sentence="Geen zorgen, Elpenor! Ik ga de omgeving verkennen en iets te eten voor ons vinden!">
+								<changecharacter>Right</changecharacter>
+								<line>Dat is het beste, meneer.</line>
+								<line>Leid met uw voorbeeld!</line>
+								<changecharacter>Left</changecharacter>
+								<line>Ik weet het. Ik ben de beste, niet?</line>
+								<leavedialogue/>
+							</option>
+							<option _sentence="Ik heb het gevoel dat we dezelfde discussie al eerder gehad hebben, Elpenor.">
+								<changecharacter>Right</changecharacter>
+								<line>Ik heb geen idee wat u bedoeld, meneer!!</line>
+								<changecharacter>Left</changecharacter>
+								<line>Ik ga dan wel de omgeving verkennen.</line>
+								<leavedialogue/>
+							</option>
+							<option _sentence="Waarom sturen we niet iemand om de omgeving te verkennen dan?">
+								<changecharacter>Right</changecharacter>
+								<line>Meneer, de mannen hebben honger.</line>
+								<line>Ze zijn niet klaar voor een dergelijke taak!</line>
+								<changecharacter>Left</changecharacter>
+								<line>Hmh, zwakkelingen!</line>
+								<line>Dan doe ik het zelf wel.</line>
+								<leavedialogue/>
+							</option>
+						</question>
+					</condition>
+					
+					<condition _condition="level_2">
+						<line>Hey, Eurylochus!</line>
+						<line>Having a fine day, I see.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Urgh ...</line>
+						<line>What do you know ...</line>
+						<leavedialogue/>
+					</condition>
+					
+					<condition _condition="level_3">
+						<line>Hey, Odysseus!</line>
+						<line>Having a fine day, I see.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Sure do ...</line>
+						<line>Everyday is a fine day, with me around of course!</line>
+						<leavedialogue/>
+					</condition>
 				</condition>
-				
-				<condition _condition="level_3">
-					<line>Hey, Odysseus!</line>
-					<line>Having a fine day, I see.</line>
-					<changecharacter>Left</changecharacter>
-					<line>Sure do ...</line>
-					<line>Everyday is a fine day, with me around of course!</line>
-					<leavedialogue/>
-				</condition>
-				
 			</npc>
 			
 			<npc _name="Chef">
-			
-				<condition _condition="level_1">
-					<condition _condition="selected_DeadDeer">
-						<changecharacter>Left</changecharacter>
-						<line>Chef, start making a feast for the men!</line>
-						<changecharacter>Right</changecharacter>
-						<line>With pleasure, Sir!</line>
-						<result _name="deleteinventory">DeadDeer</result>
-						<result _name="condition">!level_1</result>
-						<result _name="condition">level_2</result>
-						<result _name="changeplayer">Eurylochus</result>
-						<!-- CHANGE TO CUTSCENE OF ODYSSEUS ASKING EURYLOCHUS TO MEET THE NATIVES -->
-						<result _name="loadscene">C2_ShipDeck</result>
-						<leavedialogue/>
-					</condition>
+				<condition _condition="isEnglish">
+					<condition _condition="level_1">
+						<condition _condition="selected_DeadDeer">
+							<changecharacter>Left</changecharacter>
+							<line>Chef, start making a feast for the men!</line>
+							<changecharacter>Right</changecharacter>
+							<line>With pleasure, Sir!</line>
+							<result _name="deleteinventory">DeadDeer</result>
+							<result _name="condition">!level_1</result>
+							<result _name="condition">level_2</result>
+							<result _name="changeplayer">Eurylochus</result>
+							<!-- CHANGE TO CUTSCENE OF ODYSSEUS ASKING EURYLOCHUS TO MEET THE NATIVES -->
+							<result _name="loadscene">C2_ShipDeck</result>
+							<leavedialogue/>
+						</condition>
+						
 						<changecharacter>Left</changecharacter>
 						<line>Why are you not making food for the men?</line>
 						<line>The men are hungry!</line>
@@ -208,46 +354,130 @@
 								<leavedialogue/>
 							</option>
 						</question>
-				</condition>
-				
-				<condition _condition="level_2">
-					<line>Hey, Eurylochus!</line>
-					<line>Are you still hungry? Do you want more roast meat?</line>
-					<line>I still have some raw meat ready to be roasted!</line>
-					<changecharacter>Left</changecharacter>
-					<line>It's fine. My throat is too hoarse to eat roast meat.</line>
-					<line>Maybe after I recover from it.</line>
-					<changecharacter>Right</changecharacter>
-					<line>Alright then.</line>
-					<line>I'll preserve some raw meat for you just in case.</line>
-					<leavedialogue/>
-				</condition>
-				
-				<condition _condition="level_3">
-					<condition _condition="!odysseus_gotMeat">
+					</condition>
+					
+					<condition _condition="level_2">
+						<line>Hey, Eurylochus!</line>
+						<line>Are you still hungry? Do you want more roast meat?</line>
+						<line>I still have some raw meat ready to be roasted!</line>
 						<changecharacter>Left</changecharacter>
-						<line>Is there anything left to eat, chef?</line>
-						<line>I don't know how long I will be gone.</line>
+						<line>It's fine. My throat is too hoarse to eat roast meat.</line>
+						<line>Maybe after I recover from it.</line>
 						<changecharacter>Right</changecharacter>
-						<line>There is some meat I meant to keep for Eurylochus.</line>
-						<line>You can have it if you want, however I cannot cut it up myself, as my knives have became dull and blunt.</line>
-						<changecharacter>Left</changecharacter>
-						<line>I'll just use my sword instead! Step aside, let me handle this!</line>
-						<condition _condition="have_SharpenedSword">
-							<result _name="addinventory">Meat</result>
-							<result _name="addinventory">Meat</result>
-							<result _name="condition">odysseus_gotMeat</result>
-							<leavedialogue/>
-						</condition>
+						<line>Alright then.</line>
+						<line>I'll preserve some raw meat for you just in case.</line>
+						<leavedialogue/>
+					</condition>
+					
+					<condition _condition="level_3">
+						<condition _condition="!odysseus_gotMeat">
+							<changecharacter>Left</changecharacter>
+							<line>Is there anything left to eat, chef?</line>
+							<line>I don't know how long I will be gone.</line>
+							<changecharacter>Right</changecharacter>
+							<line>There is some meat I meant to keep for Eurylochus.</line>
+							<line>You can have it if you want, however I cannot cut it up myself, as my knives have became dull and blunt.</line>
+							<changecharacter>Left</changecharacter>
+							<line>I'll just use my sword instead! Step aside, let me handle this!</line>
+							
+							<condition _condition="have_SharpenedSword">
+								<result _name="addinventory">Meat</result>
+								<result _name="addinventory">Meat</result>
+								<result _name="condition">odysseus_gotMeat</result>
+								<leavedialogue/>
+								
+							</condition>
 							<line>(On another thought, I should sharpen my sword beforehand. Just in case.)</line>
 							<line>Actually, nevermind. I'm not hungry anyway.</line>
 							<leavedialogue/>
-					</condition>
+						</condition>
+								
 						<changecharacter>Left</changecharacter>
 						<line>Thanks for the meat, chef!</line>
 						<leavedialogue/>
+					</condition>
 				</condition>
 				
+				<condition _condition="isDutch">
+					<condition _condition="level_1">
+						<condition _condition="selected_DeadDeer">
+							<changecharacter>Left</changecharacter>
+							<line>Chef, start making a feast for the men!</line>
+							<changecharacter>Right</changecharacter>
+							<line>With pleasure, Sir!</line>
+							<result _name="deleteinventory">DeadDeer</result>
+							<result _name="condition">!level_1</result>
+							<result _name="condition">level_2</result>
+							<result _name="changeplayer">Eurylochus</result>
+							<!-- CHANGE TO CUTSCENE OF ODYSSEUS ASKING EURYLOCHUS TO MEET THE NATIVES -->
+							<result _name="loadscene">C2_ShipDeck</result>
+							<leavedialogue/>
+						</condition>
+						
+						<changecharacter>Left</changecharacter>
+						<line>Waarom maak je geen voedsel voor de mannen, chef?</line>
+						<line> De mannen zijn hongerig!</line>
+						<question _question="1" _choices="2" _sentence="Meneer, onze reserves zijn op. Er is niets tee ten.">
+							<option _sentence="Waarom ga jij dan niet iets te eten zoeken dan?">
+								<changecharacter>Right</changecharacter>
+								<line>U maakt natuurlijk een grapje meneer?</line>
+								<line>Ik ben geen jager en geen krijger.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Waar ben je dan goed voor? Hmph, ik ga zelf wel iets zoeken!</line>
+								<leavedialogue/>
+							</option>
+							<option _sentence="Oké, ik zal kijken of ik iets kan vinden wat je kan koken.">
+								<changecharacter>Right</changecharacter>
+								<line>Dankuwel, meneer.</line>
+								<line>Vertel het me als u iets nuttigs vindt.</line>
+								<changecharacter>Left</changecharacter>
+								<line>Zo gauw ik iets vind, ben jij de eerste die het weet.</line>
+								<leavedialogue/>
+							</option>
+						</question>
+					</condition>
+					
+					<condition _condition="level_2">
+						<line>Hey, Eurylochus!</line>
+						<line>Are you still hungry? Do you want more roast meat?</line>
+						<line>I still have some raw meat ready to be roasted!</line>
+						<changecharacter>Left</changecharacter>
+						<line>It's fine. My throat is too hoarse to eat roast meat.</line>
+						<line>Maybe after I recover from it.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Alright then.</line>
+						<line>I'll preserve some raw meat for you just in case.</line>
+						<leavedialogue/>
+					</condition>
+					
+					<condition _condition="level_3">
+						<condition _condition="!odysseus_gotMeat">
+							<changecharacter>Left</changecharacter>
+							<line>Is there anything left to eat, chef?</line>
+							<line>I don't know how long I will be gone.</line>
+							<changecharacter>Right</changecharacter>
+							<line>There is some meat I meant to keep for Eurylochus.</line>
+							<line>You can have it if you want, however I cannot cut it up myself, as my knives have became dull and blunt.</line>
+							<changecharacter>Left</changecharacter>
+							<line>I'll just use my sword instead! Step aside, let me handle this!</line>
+							
+							<condition _condition="have_SharpenedSword">
+								<result _name="addinventory">Meat</result>
+								<result _name="addinventory">Meat</result>
+								<result _name="condition">odysseus_gotMeat</result>
+								<leavedialogue/>
+								
+							</condition>
+							<line>(On another thought, I should sharpen my sword beforehand. Just in case.)</line>
+							<line>Actually, nevermind. I'm not hungry anyway.</line>
+							<leavedialogue/>
+						</condition>
+								
+						<changecharacter>Left</changecharacter>
+						<line>Thanks for the meat, chef!</line>
+						<leavedialogue/>
+					</condition>
+				</condition>
 			</npc>
 			
 		</scene>
@@ -336,16 +566,61 @@
 		<scene _name="C2_CastleExterior">
 		
 			<npc _name="Circe">
-			
-				<condition _condition="level_2">
+				<condition _condition="isEnglish">
+					<condition _condition="level_2">
+						<condition _condition="have_HelmetWithHoneyWater">
+							<changecharacter>Left</changecharacter>
+							<line>(Now that I've had a drink, I can try calling out to her.)</line>
+							<line>Hello! Can you hear me in there?</line>
+							<question _question="1" _choices="2" _sentence="Oh? Who's calling me?">
+								<option _sentence="I am but a lost traveller from Ithaca, looking for food and shelter with my men.">
+									<changecharacter>Right</changecharacter>
+									<line>A lost traveller, hm? Why don't you come in and let me help you and your men?</line>
+									<result _name="deleteinventory">HelmetWithHoneyWater</result>
+									<result _name="condition">!level_2</result>
+									<result _name="condition">level_3</result>
+									<result _name="changeplayer">Odysseus</result>
+									<!-- CHANGE TO CUTSCENE OF CIRCE TURNING MEN INTO PIGS -->
+									<!-- LOAD EURYLOCHUS ESCAPING CIRCE MINIGAME -->
+									<result _name="loadscene">EscapingCirce</result>
+									<leavedialogue/>
+								</option>
+								<option _sentence="My name is Eurylochus. I was sent by Odysseus to meet the natives of this island.">
+									<changecharacter>Right</changecharacter>
+									<line>Odysseus? I have not heard of him. Come inside, let me prepare a meal for you and your men.</line>
+									<result _name="deleteinventory">HelmetWithHoneyWater</result>
+									<result _name="condition">!level_2</result>
+									<result _name="condition">level_3</result>
+									<result _name="changeplayer">Odysseus</result>
+									<!-- CHANGE TO CUTSCENE OF CIRCE TURNING MEN INTO PIGS -->
+									<!-- LOAD EURYLOCHUS ESCAPING CIRCE MINIGAME -->
+									<result _name="loadscene">EscapingCirce</result>
+									<leavedialogue/>
+								</option>
+							</question>
+						</condition>
+							<changecharacter>Left</changecharacter>
+							<line>... Hello? Miss?</line>
+							<changecharacter>Right</changecharacter>
+							<line>(No response)</line>
+							<changecharacter>Left</changecharacter>
+							<line>(Dang, she can't hear me and my throat is too sore for shouting ... )</line>
+							<line>(I've got to find another way to get her attention.)</line>
+							<line>(Either that or I have to cure my sore throat.)</line>
+							<leavedialogue/>
+					</condition>
+				</condition>
+				
+				<condition _condition="isDutch">
+					<condition _condition="level_2">
 					<condition _condition="have_HelmetWithHoneyWater">
 						<changecharacter>Left</changecharacter>
-						<line>(Now that I've had a drink, I can try calling out to her.)</line>
-						<line>Hello! Can you hear me in there?</line>
-						<question _question="1" _choices="2" _sentence="Oh? Who's calling me?">
-							<option _sentence="I am but a lost traveller from Ithaca, looking for food and shelter with my men.">
+						<line>(Nu ik dat gedronken heb, kan ik het weer proberen!)</line>
+						<line> Hallo! Kunt u me daar horen?</line>
+						<question _question="1" _choices="2" _sentence="Oh? Wie roept mij?">
+							<option _sentence="Ik ben een verdwaalde reiziger van Ithaca, zoekend naar voedsel en onderdak voor mij en mijnmannen.">
 								<changecharacter>Right</changecharacter>
-								<line>A lost traveller, hm? Why don't you come in and let me help you and your men?</line>
+								<line>Een verdwaalde reiziger, hm? Waarom kom je niet binnen zodat ik jou en je mannen kan helpen?</line>
 								<result _name="deleteinventory">HelmetWithHoneyWater</result>
 								<result _name="condition">!level_2</result>
 								<result _name="condition">level_3</result>
@@ -355,9 +630,9 @@
 								<result _name="loadscene">EscapingCirce</result>
 								<leavedialogue/>
 							</option>
-							<option _sentence="My name is Eurylochus. I was sent by Odysseus to meet the natives of this island.">
+							<option _sentence="Mijn naam is Eurylochus. Ik ben gestuurd door Odysseus om de plaatselijke bevolking van dit eiland te ontmoeten.">
 								<changecharacter>Right</changecharacter>
-								<line>Odysseus? I have not heard of him. Come inside, let me prepare a meal for you and your men.</line>
+								<line>Odysseus? Nog nooit van gehoord. Kom binnen, laat me een maaltijd bereiden voor jou en je mannen.</line>
 								<result _name="deleteinventory">HelmetWithHoneyWater</result>
 								<result _name="condition">!level_2</result>
 								<result _name="condition">level_3</result>
@@ -370,16 +645,17 @@
 						</question>
 					</condition>
 						<changecharacter>Left</changecharacter>
-						<line>... Hello? Miss?</line>
+						<line>…Hallo? Mevrouw?</line>
 						<changecharacter>Right</changecharacter>
-						<line>(No response)</line>
+						<line>(Geen reactie)</line>
 						<changecharacter>Left</changecharacter>
-						<line>(Dang, she can't hear me and my throat is too sore for shouting ... )</line>
+						<line>(Verdorie, ze kan me niet horen en mijn keel doet te veel pijn om te schreeuwen…)</line>
 						<line>(I've got to find another way to get her attention.)</line>
 						<line>(Either that or I have to cure my sore throat.)</line>
 						<leavedialogue/>
+					</condition>
 				</condition>
-			
+				
 			</npc>
 		
 		</scene>
@@ -2029,7 +2305,7 @@
 	<chapter _name="5">
 		<!-- SCENE -->
 		<scene _name="C5_Phaeacians'Beach">
-			<npc _name="Monologue">		
+			<npc _name="Monologue">	
 				<condition _condition="!DeleteHidden">
 					<line>There are pieces of canvas lying on the shore.</line>
 					<line>Hmmm, I can tailor this in to a piece of canvas cloak. I should pick one up.</line>
@@ -2038,7 +2314,7 @@
 					<result _name="condition">DeleteHidden</result>
 					<line>Anymore?</line>
 					<leavedialogue/>
-				</condition>							
+				</condition>					
 			</npc>
 		</scene>
 		
