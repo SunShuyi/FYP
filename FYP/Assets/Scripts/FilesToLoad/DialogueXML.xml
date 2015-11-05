@@ -453,13 +453,13 @@
 					<condition _condition="level_3">
 						<condition _condition="!odysseus_gotMeat">
 							<changecharacter>Left</changecharacter>
-							<line>Is there anything left to eat, chef?</line>
-							<line>I don't know how long I will be gone.</line>
+							<line>Is er nog iets te eten over, chef?</line>
+							<line>Ik weet niet hoe lang ik wegblijf..</line>
 							<changecharacter>Right</changecharacter>
 							<line>There is some meat I meant to keep for Eurylochus.</line>
 							<line>You can have it if you want, however I cannot cut it up myself, as my knives have became dull and blunt.</line>
 							<changecharacter>Left</changecharacter>
-							<line>I'll just use my sword instead! Step aside, let me handle this!</line>
+							<line>Ik zal mijn zwaard gebruiken! Aan de kant, laat mij dit regelen!</line>
 							
 							<condition _condition="have_SharpenedSword">
 								<result _name="addinventory">Meat</result>
@@ -468,8 +468,8 @@
 								<leavedialogue/>
 								
 							</condition>
-							<line>(On another thought, I should sharpen my sword beforehand. Just in case.)</line>
-							<line>Actually, nevermind. I'm not hungry anyway.</line>
+							<line>(Hmm, wellicht moet ik mijn zwaard voor de zekerheid eerst nog even slijpen.)</line>
+							<line>Laat maar, ik heb toch niet zo’n honger.</line>
 							<leavedialogue/>
 						</condition>
 								
@@ -517,48 +517,100 @@
 		<scene _name="C2_Clearing">
 		
 			<npc _name="Hermes">
-				<condition _condition="!odysseus_gotMoly">
-					<changecharacter>Left</changecharacter>
-					<line>Where did you come from, stranger?</line>
-					<changecharacter>Right</changecharacter>
-					<line>I am Hermes, messenger of the gods.</line>
-					<line>I know what perils await you in Circe's castle and do not want you to come to harm, Odysseus.</line>
-					<question _question="1" _choices="2" _sentence="I want to offer you my help.">
-						<option _sentence="Surely you don't think I believe you? For all I know, this might be a trap!">
-							<changecharacter>Right</changecharacter>
-							<line>What choice do you have?</line>
-							<line>If you go into the castle of the witch without being prepared, you will only invite doom to yourself.</line>
-						</option>
-						<option _sentence="I would be grateful for any help you can offer me, Hermes.">
-							<changecharacter>Right</changecharacter>
-							<line>Good choice.</line>
-							<line>Listen carefully to what I am going to tell you, as it is the only thing that can save you from the Witch.</line>
-						</option>
-					</question>
-					<line>The witch will prepare a feast for you, but she will enchant the food and the drink.</line>
-					<line>After you drink and eat, she will strike you with her magic wand and turn you into a pig like the rest of your men.</line>
-					<changecharacter>Left</changecharacter>
-					<line>And what can I do to stop this from happening?</line>
-					<line>That didn't sound very helpful, really.</line>
-					<changecharacter>Right</changecharacter>
-					<line>Do you see that root over there?</line>
-					<line>Mortal men cannot uproot it, but we gods can do with it what we will.</line>
-					<line>I will give this herb for you.</line>
-					<line>Using it will make you immune to the enchantment in the food and drink.</line>
-					<line>Then, you must threaten Circe to let your men go.</line>
-					<line>But be careful!</line>
-					<line>She will try to seduce you and lure you into another trap.</line>
-					<line>You must stay firm and refuse her offers.</line>
-					<line>Only when your men are free can you rest easy.</line>
-					<line>Do you understand, Odysseus?</line>
-					<changecharacter>Left</changecharacter>
-					<line>I understand.</line>
-					<result _name="addinventory">WhiteMoly</result>
-					<result _name="condition">odysseus_gotMoly</result>
-					<leavedialogue/>
-				</condition>
+				<condition _condition="isEnglish">
+					<condition _condition="!odysseus_gotMoly">
+						<changecharacter>Left</changecharacter>
+						<line>Where did you come from, stranger?</line>
+						<changecharacter>Right</changecharacter>
+						<line>I am Hermes, messenger of the gods.</line>
+						<line>I know what perils await you in Circe's castle and do not want you to come to harm, Odysseus.</line>
+						
+						<question _question="1" _choices="2" _sentence="I want to offer you my help.">
+							<option _sentence="Surely you don't think I believe you? For all I know, this might be a trap!">
+								<changecharacter>Right</changecharacter>
+								<line>What choice do you have?</line>
+								<line>If you go into the castle of the witch without being prepared, you will only invite doom to yourself.</line>
+							</option>
+							<option _sentence="I would be grateful for any help you can offer me, Hermes.">
+								<changecharacter>Right</changecharacter>
+								<line>Good choice.</line>
+								<line>Listen carefully to what I am going to tell you, as it is the only thing that can save you from the Witch.</line>
+							</option>
+						</question>
+						
+						<line>The witch will prepare a feast for you, but she will enchant the food and the drink.</line>
+						<line>After you drink and eat, she will strike you with her magic wand and turn you into a pig like the rest of your men.</line>
+						<changecharacter>Left</changecharacter>
+						<line>And what can I do to stop this from happening?</line>
+						<line>That didn't sound very helpful, really.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Do you see that root over there?</line>
+						<line>Mortal men cannot uproot it, but we gods can do with it what we will.</line>
+						<line>I will give this herb for you.</line>
+						<line>Using it will make you immune to the enchantment in the food and drink.</line>
+						<line>Then, you must threaten Circe to let your men go.</line>
+						<line>But be careful!</line>
+						<line>She will try to seduce you and lure you into another trap.</line>
+						<line>You must stay firm and refuse her offers.</line>
+						<line>Only when your men are free can you rest easy.</line>
+						<line>Do you understand, Odysseus?</line>
+						<changecharacter>Left</changecharacter>
+						<line>I understand.</line>
+						<result _name="addinventory">WhiteMoly</result>
+						<result _name="condition">odysseus_gotMoly</result>
+						<leavedialogue/>
+					</condition>
 					<line>I wish you all the best for the confrontation against Circe.</line>
 					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="isDutch">
+					<condition _condition="!odysseus_gotMoly">
+						<changecharacter>Left</changecharacter>
+						<line>Waar kom jij vandaan, vreemdeling?</line>
+						<changecharacter>Right</changecharacter>
+						<line>Ik ben Hermes, boodschapper van de goden.</line>
+						<line>Ik weet wat voor perikelen u te wachten staan in Circe’s kasteel en ik wil niet dat u gewond raakt, Odysseus.</line>
+						
+						<question _question="1" _choices="2" _sentence="Ik wil je mijn hulp aanbieden.">
+							<option _sentence="Je begrijpt toch wel dat ik je niet geloof? Voor hetzelfde geld is dit een val!">
+								<changecharacter>Right</changecharacter>
+								<line>Welke keus heeft u?</line>
+								<line>Als u het kasteel van de heks in gaat zonder voorbereid te zijn, dan kan het enkel slecht met u aflopen.</line>
+							</option>
+							<option _sentence="Ik zou dankbaar zijn voor elke hulp die u mij kan bieden, Hermes.">
+								<changecharacter>Right</changecharacter>
+								<line>Goede keus.</line>
+								<line>Luister zorgvuldig naar wat ik u vertel; dit is het enige wat u kan redden van de heks.</line>
+							</option>
+						</question>
+						
+						<line>De heks zal een heerlijke maaltijd voor u klaarmaken, maar ze zal het eten en drinken betoveren.</line>
+						<line>Na het eten en drinken, zal ze u aanvallen met haar toverstok en u in een varken veranderen; net als de rest van je mannen.</line>
+						<changecharacter>Left</changecharacter>
+						<line>AEn wat kan ik er aan doen om dat te voorkomen?</line>
+						<line>Het klonk niet echt behulpzaam, namelijk.</line>
+						<changecharacter>Right</changecharacter>
+						<line>Ziet u die wortels daar?</line>
+						<line>Sterfelijke mannen kunnen ze niet ontwortelen, maar wij goden kunnen er alles mee doen.</line>
+						<line>Laat mij u deze kruid geven.</line>
+						<line>Als u deze gebruikt wordt u immuun voor de betovering in het eten en drinken.</line>
+						<line>Daarna moet u Circe bedreigen, zodat zij u mannen laat gaan.</line>
+						<line>Maar wees voorzichtig!</line>
+						<line>Ze zal u proberen te verleiden en je zo in een andere val te lokken.</line>
+						<line>U moet vastberaden zijn en haar aanboden weigeren.</line>
+						<line>Pas als uw mannen vrij zijn kunt u tot rust komen.</line>
+						<line>Begrijpt u het, Odysseus?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Ik begrijp het.</line>
+						<result _name="addinventory">WhiteMoly</result>
+						<result _name="condition">odysseus_gotMoly</result>
+						<leavedialogue/>
+					</condition>
+					<line>I wish you all the best for the confrontation against Circe.</line>
+					<leavedialogue/>
+				</condition>
+				
 			</npc>
 		
 		</scene>
@@ -663,44 +715,46 @@
 		<scene _name="C2_CastleInterior">
 		
 			<npc _name="Circe">
-			
-				<condition _condition="odysseus_toastCirce">
-					<condition _condition="have_GobletWithMoly">
-						<changecharacter>Right</changecharacter>
-						<line>Aren't you going to drink yet?</line>
-						<changecharacter>Left</changecharacter>
-						<line>Alright, just a second.</line>
-						<line>*Glug glug*</line>
-						<line>Oh my, this taste so great!</line>
-						<line>Is it alright if I can have more?</line>
-						<changecharacter>Right</changecharacter>
-						<line> ... </line>
-						<line>I-I don't understand ...</line>
-						<line>Why aren't you turned into a pig yet?</line>
-						<changecharacter>Left</changecharacter>
-						<line>(Now's my chance to threaten her!)</line>
-						<result _name="deleteinventory">GobletWithMoly</result>
-						<result _name="condition">!odysseus_toastCirce</result>
-						<result _name="condition">odysseus_drankWine</result>
-						<!-- DELETE EXIT -->
-						<result _name="setactive" _sentence="Castle">false</result>
-						<leavedialogue/>
-					</condition>
-					<condition _condition="have_Goblet">
-						<line>Why aren't you drinking yet, Odysseus?</line>
-						<line>Are you feeling ill?</line>
-						<changecharacter>Left</changecharacter>
-						<line>Nope, I'm just admiring your wonderful castle.</line>
-						<line>(I've got to remember what Hermes said.)</line>
-						<line>(I need to add the herb into the wine before drinking it.)</line>
-						<changecharacter>Right</changecharacter>
-						<line>Ohh, is that so?</line>
-						<leavedialogue/>
-					</condition>
+			<condition _condition="isEnglish">
+					<condition _condition="odysseus_toastCirce">
+						<condition _condition="have_GobletWithMoly">
+							<changecharacter>Right</changecharacter>
+							<line>Aren't you going to drink yet?</line>
+							<changecharacter>Left</changecharacter>
+							<line>Alright, just a second.</line>
+							<line>*Glug glug*</line>
+							<line>Oh my, this taste so great!</line>
+							<line>Is it alright if I can have more?</line>
+							<changecharacter>Right</changecharacter>
+							<line> ... </line>
+							<line>I-I don't understand ...</line>
+							<line>Why aren't you turned into a pig yet?</line>
+							<changecharacter>Left</changecharacter>
+							<line>(Now's my chance to threaten her!)</line>
+							<result _name="deleteinventory">GobletWithMoly</result>
+							<result _name="condition">!odysseus_toastCirce</result>
+							<result _name="condition">odysseus_drankWine</result>
+							<!-- DELETE EXIT -->
+							<result _name="setactive" _sentence="Castle">false</result>
+							<leavedialogue/>
+						</condition>
+						
+						<condition _condition="have_Goblet">
+							<line>Why aren't you drinking yet, Odysseus?</line>
+							<line>Are you feeling ill?</line>
+							<changecharacter>Left</changecharacter>
+							<line>Nope, I'm just admiring your wonderful castle.</line>
+							<line>(I've got to remember what Hermes said.)</line>
+							<line>(I need to add the herb into the wine before drinking it.)</line>
+							<changecharacter>Right</changecharacter>
+							<line>Ohh, is that so?</line>
+							<leavedialogue/>
+						</condition>
 						<line>Trust me, my wine is good.</line>
 						<line>You can drink it from my goblet on the table.</line>
 						<leavedialogue/>
-				</condition>
+					</condition>
+					
 					<condition _condition="odysseus_drankWine">
 						<condition _condition="selected_SharpenedSword">
 							<line>Please spare me, Odysseus! I promise I will bring you no harm.</line>
@@ -724,18 +778,98 @@
 							<line>(I shouldn't miss this chance to threaten her!)</line>
 							<leavedialogue/>
 					</condition>
-						<changecharacter>Left</changecharacter>
-						<line>Circe, release my men at once!</line>
-						<changecharacter>Right</changecharacter>
-						<line>Oh Odysseus.</line>
-						<line>I have been waiting for you. I will do what you ask, but let's not hurry.</line>
-						<line>Let's have a drink first. I have great wine.</line>
-						<line>You can drink from the goblet on the table.</line>
-						<changecharacter>Left</changecharacter>
-						<line>(Alright, I need to remember what Hermes said!)</line>
-						<line>Of course, anything for a beautiful woman such as yourself.</line>
-						<result _name="condition">odysseus_toastCirce</result>
+					
+					<changecharacter>Left</changecharacter>
+					<line>Circe, release my men at once!</line>
+					<changecharacter>Right</changecharacter>
+					<line>Oh Odysseus.</line>
+					<line>I have been waiting for you. I will do what you ask, but let's not hurry.</line>
+					<line>Let's have a drink first. I have great wine.</line>
+					<line>You can drink from the goblet on the table.</line>
+					<changecharacter>Left</changecharacter>
+					<line>(Alright, I need to remember what Hermes said!)</line>
+					<line>Of course, anything for a beautiful woman such as yourself.</line>
+					<result _name="condition">odysseus_toastCirce</result>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="isDutch">
+					<condition _condition="odysseus_toastCirce">
+						<condition _condition="have_GobletWithMoly">
+							<changecharacter>Right</changecharacter>
+							<line>Aren't you going to drink yet?</line>
+							<changecharacter>Left</changecharacter>
+							<line>Alright, just a second.</line>
+							<line>*Glug glug*</line>
+							<line>Oh my, this taste so great!</line>
+							<line>Is it alright if I can have more?</line>
+							<changecharacter>Right</changecharacter>
+							<line> ... </line>
+							<line>I-I don't understand ...</line>
+							<line>Why aren't you turned into a pig yet?</line>
+							<changecharacter>Left</changecharacter>
+							<line>(Now's my chance to threaten her!)</line>
+							<result _name="deleteinventory">GobletWithMoly</result>
+							<result _name="condition">!odysseus_toastCirce</result>
+							<result _name="condition">odysseus_drankWine</result>
+							<!-- DELETE EXIT -->
+							<result _name="setactive" _sentence="Castle">false</result>
+							<leavedialogue/>
+						</condition>
+						
+						<condition _condition="have_Goblet">
+							<line>Odysseus, waarom bent u niet aan het drinken?</line>
+							<line>Voelt u zich niet goed?</line>
+							<changecharacter>Left</changecharacter>
+							<line>Nope, I'm just admiring your wonderful castle.</line>
+							<line>(I've got to remember what Hermes said.)</line>
+							<line>(I need to add the herb into the wine before drinking it.)</line>
+							<changecharacter>Right</changecharacter>
+							<line>Ohh, is that so?</line>
+							<leavedialogue/>
+						</condition>
+						<line>Trust me, my wine is good.</line>
+						<line>You can drink it from my goblet on the table.</line>
 						<leavedialogue/>
+					</condition>
+					
+					<condition _condition="odysseus_drankWine">
+						<condition _condition="selected_SharpenedSword">
+							<line>Spaar me alstublieft, Odysseus. Ik beloof dat ik je geen kwaad zal doen.</line>
+							<line>Laat ons vrienden zijn.</line>
+							<changecharacter>Left</changecharacter>
+							<line>Hoe kan ik jouw woorden geloven terwijl mijn mannen nog steeds opgesloten zitten in je varkensstal, jij heks?</line>
+							<line>Je wilde mij ook er in luizen en nu probeer je me nog steeds voor de gek te houden.</line>
+							<line>Laat mijn mannen vrij en beloof dat je geen één van ons kwaad zult doen.</line>
+							<changecharacter>Right</changecharacter>
+							<line>Ik beloof het. Ik bevrijd je mannen en ik zal je geen kwaad doen, Odysseus, zoon van Laertes.</line>
+							<!-- CHANGE TO CUTSCENE OF CIRCE FREEING MEN AND ENDING -->
+							<!-- LOAD EURYLOCHUS DUEL ODYSSEUS MINIGAME -->
+							<result _name="deleteinventory">SharpenedSword</result>
+							<result _name="endchapter"/>
+							<result _name="loadscene">SwordClash</result>
+							<leavedialogue/>
+						</condition>
+							<line>H-how is it possible?</line>
+							<line>You should have turned into a pig!</line>
+							<changecharacter>Left</changecharacter>
+							<line>(I shouldn't miss this chance to threaten her!)</line>
+							<leavedialogue/>
+					</condition>
+					
+					<changecharacter>Left</changecharacter>
+					<line>Circe, laat mijn mannen nu vrij!</line>
+					<changecharacter>Right</changecharacter>
+					<line>Oh, Odysseus.</line>
+					<line>Ik heb op u gewacht. Ik zal doen wat u vraagt, maar geen haast.</line>
+					<line>Neem eerst een drankje. De wijn is super..</line>
+					<line>You can drink from the goblet on the table.</line>
+					<changecharacter>Left</changecharacter>
+					<line>(Oké, ik moet onthouden wat Hermes zei!)</line>
+					<line>Natuurlijk, alles voor een prachtige vrouw als u.</line>
+					<result _name="condition">odysseus_toastCirce</result>
+					<leavedialogue/>
+				</condition>
 			</npc>
 			
 		</scene>

@@ -401,6 +401,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 2063363862}
   observeLine: I will have to distract the animals first.
+  observeLineDutch: 
   loadScene: 
   wrongItemLine: That won't work.
   conditionResultList: []
@@ -729,6 +730,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 1332489382}
   observeLine: It'll only let me pass if it's owners give it permission to.
+  observeLineDutch: 
   loadScene: 
   wrongItemLine: I don't want to be suicidal here.
   conditionResultList:
@@ -1215,6 +1217,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 573341635}
   observeLine: Such a majestic creature.
+  observeLineDutch: 
   loadScene: 
   wrongItemLine: I think there are better options.
   conditionResultList:
