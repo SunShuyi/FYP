@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: CutGrass
   itemDescription: A bunch of dried, long grass.
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: 58c621e18523fe54a815bab54b9c3d3d, type: 3}
 --- !u!1001 &100100000

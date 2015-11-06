@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: WhiteMoly
   itemDescription: Needed to break Circe's enchantment.
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11491634, guid: 231de6339f539e0488d43318d8238183, type: 2}
     resultItems:

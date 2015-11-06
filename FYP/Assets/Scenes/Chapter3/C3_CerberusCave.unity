@@ -256,6 +256,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 1042568440}
   observeLine: It'll be the death of me if I try and take the bones now.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: Sorry, I don't want to die just yet.
   conditionResultList:
@@ -1063,6 +1064,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 1206293923}
   observeLine: The magical lyre seems to be very effective.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: Sorry, I don't want to die just yet.
   conditionResultList: []

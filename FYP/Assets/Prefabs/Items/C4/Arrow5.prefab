@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Arrow5
   itemDescription: There are 5 arrows left.
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: 72fd62f1c2227174db2540e0dafacfa4, type: 3}
 --- !u!1001 &100100000

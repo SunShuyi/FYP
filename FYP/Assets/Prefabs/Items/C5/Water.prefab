@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Water
   itemDescription: Pail of Clean Water
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: a0d3e9deeeb8c1948a97629cb55c33e9, type: 3}
 --- !u!1001 &100100000

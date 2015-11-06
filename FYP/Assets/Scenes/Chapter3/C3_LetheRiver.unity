@@ -303,6 +303,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 2086749818}
   observeLine: The river Lethe. I'd better not drink it's water.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: I don't think that will work out.
   conditionResultList:

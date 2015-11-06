@@ -33,9 +33,19 @@ public class C_ChapterManager : MonoBehaviour
 		{
 			currentChapter = gameObject.GetComponent<C_Chapter> ().Instance ();
 			if (PlayerPrefs.GetInt ("Language") == 1)
+			{
+				currentChapter.conditionTriggers.Remove("isEnglish");
+				currentChapter.conditionTriggers.Remove("isDutch");
 				currentChapter.conditionTriggers.Add("isEnglish");
+				//currentChapter.conditionTriggers.RemoveAll("isDutch");
+			}
 			else if (PlayerPrefs.GetInt ("Language") == 2)
+			{
+				currentChapter.conditionTriggers.Remove("isEnglish");
+				currentChapter.conditionTriggers.Remove("isDutch");
 				currentChapter.conditionTriggers.Add("isDutch");
+				//currentChapter.conditionTriggers.RemoveAll("isEnglish");//RemoveAll("isEnglish");
+			}
 			if (currentChapter == null)
 				Debug.LogWarning("currentChapter is NULL");
 		}

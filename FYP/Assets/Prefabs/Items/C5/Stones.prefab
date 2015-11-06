@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Stones
   itemDescription: Hard material
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11476954, guid: 145492366ec76cf47943d8ec47f5ef9a, type: 2}
     resultItems:

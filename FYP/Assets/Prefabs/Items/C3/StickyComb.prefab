@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: StickyComb
   itemDescription: Comb with adhesive on it.
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11454264, guid: 81f26337cdb5bbc45ad4bba63d90d49c, type: 2}
     resultItems:

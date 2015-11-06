@@ -316,6 +316,12 @@ MonoBehaviour:
   - After escaping the Land of Death, Odysseus has to travel through the strait of
     Scylla and Charybdis. Help Odysseus sail pass the monsters to safety!
   - Chapter 5 details
+  chapterDetailsDutch:
+  - DUTCH
+  - MORE DUTCH
+  - EVEN MORE DUTCH
+  - DUTCH DUTCH DUTCH
+  - DUTCHMANIA
   chapterSprites:
   - {fileID: 21300000, guid: 847aa63d3f6b0dd4e99ed466b9e58b6e, type: 3}
   - {fileID: 21300000, guid: 28cc51051e5cf83469353a4b715d7c3c, type: 3}
@@ -3477,3 +3483,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOutTex: {fileID: 2800000, guid: 9548f221c7eeb6145bd12b02b55ac4c9, type: 3}
   fadeSpd: .800000012
+  byTime: 1

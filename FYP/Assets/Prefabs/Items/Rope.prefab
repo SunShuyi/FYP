@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Rope
   itemDescription: Can be used bind things together.
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: 3822db9a181ff904d887f6cf4d9aaeef, type: 3}
 --- !u!1001 &100100000

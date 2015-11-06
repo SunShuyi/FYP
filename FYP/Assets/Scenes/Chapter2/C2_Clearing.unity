@@ -378,6 +378,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 401465912}
   observeLine: A clear, flowing river.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: That won't work out.
   conditionResultList:
@@ -920,6 +921,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 414034400}
   observeLine: I will need something to tie it up. Maybe Elpenor can help me.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: Maybe I should try something else.
   conditionResultList:
@@ -1975,6 +1977,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 1804259373}
   observeLine: A deer! Just what we need.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: Maybe I should try something else.
   conditionResultList:

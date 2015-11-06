@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Bow
   itemDescription: Such a fine bow.
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: 8c7b7fa33e43db848a7ddad967aec18a, type: 3}
 --- !u!1001 &100100000

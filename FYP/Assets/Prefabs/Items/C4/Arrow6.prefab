@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Arrow6
   itemDescription: A quiver with 6 arrows.
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: 034fd039988944543828fa98fbda55ce, type: 3}
 --- !u!1001 &100100000

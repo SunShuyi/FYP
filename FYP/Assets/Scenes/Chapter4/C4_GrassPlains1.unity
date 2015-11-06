@@ -283,6 +283,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 721212144}
   observeLine: The bird seems small, but I hope it's enough for us.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: I will be able to kill it with my spear.
   conditionResultList:
@@ -619,6 +620,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 1626112435}
   observeLine: The nest looks barren without it's owners.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: There's nothing left to salvage.
   conditionResultList: []
@@ -1587,6 +1589,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 1484589172}
   observeLine: Since I'm at it, I might as well get those eggs.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: A spear should be long enough to reach it.
   conditionResultList:

@@ -659,6 +659,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 1177513419}
   observeLine: It's blocking the way!
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: 
   conditionResultList:
@@ -674,6 +675,7 @@ MonoBehaviour:
       deleteItem: 
       destroyGameObject: {fileID: 0}
       setGameObjectActive: {fileID: 0}
+      condition: 
     - resultType: 3
       haveBuffer: 1
       bufferTime: 1
@@ -683,6 +685,7 @@ MonoBehaviour:
       deleteItem: 
       destroyGameObject: {fileID: 1619115967}
       setGameObjectActive: {fileID: 0}
+      condition: 
 --- !u!1 &1631197967
 GameObject:
   m_ObjectHideFlags: 0

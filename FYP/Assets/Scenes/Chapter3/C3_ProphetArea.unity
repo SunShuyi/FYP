@@ -707,6 +707,7 @@ MonoBehaviour:
   interactionType: 1
   buttons: {fileID: 368274801}
   observeLine: This leads to the fiery cave.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: What am I suppose to do again?
   conditionResultList: []

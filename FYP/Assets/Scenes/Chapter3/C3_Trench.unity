@@ -804,6 +804,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 1097664425}
   observeLine: The gate is locked!
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: That won't do anything...
   conditionResultList: []

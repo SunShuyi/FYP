@@ -454,6 +454,7 @@ MonoBehaviour:
   interactionType: 1
   buttons: {fileID: 1279297053}
   observeLine: It looks like some sort of puzzle ...
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: 
   conditionResultList: []

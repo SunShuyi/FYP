@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: SharpenedSword
   itemDescription: A sharpened sword. Great for slicing meat up!
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: b8ce92dc960f97f4a9d47c4ab7593b3c, type: 3}
 --- !u!1001 &100100000

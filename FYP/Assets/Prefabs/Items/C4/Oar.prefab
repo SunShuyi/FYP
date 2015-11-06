@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Oar
   itemDescription: A crew member's oar.
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: 68054f47cdd08bc47b090b200beec2de, type: 3}
 --- !u!1001 &100100000

@@ -15,6 +15,7 @@ public class C_LevelSelectionManager : MonoBehaviour
 
 	public List<string> chapterTitles	= new List<string> (5);
 	public List<string> chapterDetails	= new List<string> (5);
+	public List<string> chapterDetailsDutch	= new List<string> (5);
 	public List<Sprite> chapterSprites	= new List<Sprite> (5);
 
 	#endregion
@@ -24,7 +25,11 @@ public class C_LevelSelectionManager : MonoBehaviour
 	public void PointerEnterChapter(int chapterNo)
 	{
 		titleText.text = chapterTitles [chapterNo-1];
-		detailsText.text = chapterDetails [chapterNo-1];
+		if (PlayerPrefs.GetInt ("Language") == 1) {
+			detailsText.text = chapterDetails [chapterNo - 1];
+		} else if (PlayerPrefs.GetInt ("Language") == 2) {
+			detailsText.text = chapterDetailsDutch [chapterNo - 1];
+		}
 		detailImage.sprite = chapterSprites [chapterNo-1];
 
 		animator.SetBool ("showDetails",true);

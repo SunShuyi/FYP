@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Penelope
   itemDescription: A really beautiful jewel.
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11429760, guid: c3c84f014f41ef74a8b4b07fa872cc5f, type: 2}
     resultItems:

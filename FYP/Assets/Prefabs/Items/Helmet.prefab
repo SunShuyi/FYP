@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Helmet
   itemDescription: It has a stylish look.
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: 62a3407d15cc4414b987e25e1713b68d, type: 3}
 --- !u!1001 &100100000

@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Arrow3
   itemDescription: 3 shots. Better make it count.
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: 13931ac547471c3458cd2af97d6a5d93, type: 3}
 --- !u!1001 &100100000

@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Viel
   itemDescription: A fine piece of cloth.
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11440184, guid: 4a989b8bc30287e4085c4701285fe4b8, type: 2}
     resultItems:

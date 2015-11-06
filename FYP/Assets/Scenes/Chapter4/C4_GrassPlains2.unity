@@ -445,6 +445,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 1095373092}
   observeLine: Looks tasty! If only I have something to kill it with.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: A spear will be a better option...
   conditionResultList:

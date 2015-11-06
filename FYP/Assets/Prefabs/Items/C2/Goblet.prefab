@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Goblet
   itemDescription: A golden goblet. Must be expensive.
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11408788, guid: b78f4d28db5726a4b88e898045ecdbef, type: 2}
     resultItems:

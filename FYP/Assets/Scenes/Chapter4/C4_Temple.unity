@@ -153,6 +153,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 1594446967}
   observeLine: Is ... is that Odysseus sleeping? Better not disturb him.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: That just isn't right.
   conditionResultList: []
@@ -327,6 +328,7 @@ MonoBehaviour:
   interactionType: 1
   buttons: {fileID: 1539532419}
   observeLine: What a shiny statue.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: I don't think I should be doing that.
   conditionResultList: []

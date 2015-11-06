@@ -3568,6 +3568,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 357679754}
   observeLine: Penelopes's Door is locked, try another way.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: I will be able to kill it with my spear.
   conditionResultList: []

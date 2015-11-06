@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Invisible
   itemDescription: Invisible
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: 131b54b89a753ca419ba2384a7c6b817, type: 3}
 --- !u!1001 &100100000

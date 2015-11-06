@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Honeycomb
   itemDescription: Makes any food sweet.
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11483498, guid: 038ddd4b80d4a0c4ea0889e71d7618aa, type: 2}
     resultItems:

@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: DeadDeer
   itemDescription: The chef will enjoy cooking this!
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: 484dc9bcc029ad941ab3d8859cf0825e, type: 3}
 --- !u!1001 &100100000

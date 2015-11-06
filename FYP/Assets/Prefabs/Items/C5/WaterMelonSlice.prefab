@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: WaterMelonSlice
   itemDescription: Slice of watermelon
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: f618a5cdb0af7d04aba7da864eb2132b, type: 3}
 --- !u!1001 &100100000

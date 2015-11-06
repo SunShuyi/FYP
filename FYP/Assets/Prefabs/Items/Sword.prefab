@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Sword
   itemDescription: Has a really sharp edge.
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11427208, guid: 01d74b90cb77bc241926b1c90250ce03, type: 2}
     resultItems:

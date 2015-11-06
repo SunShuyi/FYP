@@ -1184,6 +1184,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 145825227}
   observeLine: It is covering the armor.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: There must be another way.
   conditionResultList:

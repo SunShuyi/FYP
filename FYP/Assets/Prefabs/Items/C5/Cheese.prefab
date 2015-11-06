@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Cheese
   itemDescription: Tasty looking pile of cheese
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11495162, guid: f028fe95157def74da9fb23e0d8292be, type: 2}
     resultItems:

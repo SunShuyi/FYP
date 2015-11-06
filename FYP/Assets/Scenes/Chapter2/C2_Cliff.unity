@@ -125,6 +125,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 2039570673}
   observeLine: I will need something to protect myself against the bees.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: I don't think this will work out.
   conditionResultList:
@@ -1102,6 +1103,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 728569690}
   observeLine: Better not get too close to those angry bees.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: I must be out of my mind.
   conditionResultList: []

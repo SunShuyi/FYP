@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: BowlWithWater
   itemDescription: A bowl with water from Lake Lethe.
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: 69e28a3a00434624e8d246045ee0b3a9, type: 3}
 --- !u!1001 &100100000

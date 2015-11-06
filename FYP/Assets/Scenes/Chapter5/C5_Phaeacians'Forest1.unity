@@ -4728,6 +4728,7 @@ MonoBehaviour:
   interactionType: 1
   buttons: {fileID: 195019391}
   observeLine: I need to get my cloak before meeting Euaemus.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: I should just interact with it.
   conditionResultList: []

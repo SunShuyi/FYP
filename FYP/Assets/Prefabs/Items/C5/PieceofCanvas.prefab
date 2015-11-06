@@ -41,7 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: PieceofCanvas
   itemDescription: Rough material that can be tailored
-  itemDescriptionDutch: dutch
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11425384, guid: 618c9cdd5c2b0cb4c81742479f853bcb, type: 2}
     resultItems:

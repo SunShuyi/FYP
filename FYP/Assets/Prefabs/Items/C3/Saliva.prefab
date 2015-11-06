@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Saliva
   itemDescription: A really sticky substance. Probably Cerberus' drool.
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11446970, guid: b5a59becf4bc3e74b9a12ddff85524f4, type: 2}
     resultItems:

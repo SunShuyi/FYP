@@ -764,6 +764,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 1066449396}
   observeLine: I will have to pay Charon first before I am able pass him.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: 
   conditionResultList: []

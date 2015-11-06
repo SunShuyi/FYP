@@ -3414,7 +3414,7 @@ MonoBehaviour:
   interactionType: 1
   buttons: {fileID: 110363659}
   observeLine: Cloth-looking material is hiddenbelow, i shall get that out.
-  observeLineDutch: Dutch
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: I should just interact with it.
   conditionResultList: []

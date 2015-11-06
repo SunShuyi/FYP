@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: GreyHelmet
   itemDescription: A simple piece of armor.
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11486204, guid: 24cc2bace8c59494383d28cd2e4eebfe, type: 2}
     resultItems:

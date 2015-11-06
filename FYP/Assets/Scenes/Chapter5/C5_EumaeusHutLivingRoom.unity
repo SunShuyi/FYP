@@ -714,6 +714,7 @@ MonoBehaviour:
   interactionType: 1
   buttons: {fileID: 629021457}
   observeLine: This is the door to bedroom.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: I should just interact with it.
   conditionResultList: []
@@ -4458,6 +4459,7 @@ MonoBehaviour:
   interactionType: 1
   buttons: {fileID: 1758933557}
   observeLine: This is the door to kitchen
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: I should just interact with it.
   conditionResultList: []

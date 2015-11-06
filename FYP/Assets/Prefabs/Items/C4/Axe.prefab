@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Axe
   itemDescription: Handy for chopping logs.
+  itemDescriptionDutch: DutchDescription
   combinationList: []
   itemSprite: {fileID: 21300000, guid: e2af0cb5af4fc824a850f4dc6250c6b4, type: 3}
 --- !u!1001 &100100000

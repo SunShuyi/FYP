@@ -993,6 +993,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 1468184486}
   observeLine: Looks tasty! If only I have something to kill it with.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: A spear will be a better option...
   conditionResultList:
@@ -1008,6 +1009,7 @@ MonoBehaviour:
       deleteItem: 
       destroyGameObject: {fileID: 0}
       setGameObjectActive: {fileID: 0}
+      condition: 
     - resultType: 0
       haveBuffer: 1
       bufferTime: 1
@@ -1017,6 +1019,7 @@ MonoBehaviour:
       deleteItem: 
       destroyGameObject: {fileID: 0}
       setGameObjectActive: {fileID: 0}
+      condition: 
     - resultType: 2
       haveBuffer: 1
       bufferTime: 2
@@ -1026,6 +1029,7 @@ MonoBehaviour:
       deleteItem: 
       destroyGameObject: {fileID: 0}
       setGameObjectActive: {fileID: 0}
+      condition: 
     - resultType: 3
       haveBuffer: 1
       bufferTime: 2
@@ -1035,6 +1039,7 @@ MonoBehaviour:
       deleteItem: 
       destroyGameObject: {fileID: 2013215039}
       setGameObjectActive: {fileID: 0}
+      condition: 
 --- !u!61 &2013215042
 BoxCollider2D:
   m_ObjectHideFlags: 0

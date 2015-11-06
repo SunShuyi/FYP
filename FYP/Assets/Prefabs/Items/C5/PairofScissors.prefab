@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: PairofScissors
   itemDescription: Sharp item that can cut things up
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11499616, guid: be5c4506bdfcdd844b82bad2370666db, type: 2}
     resultItems:

@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: HelmetWithHotWater
   itemDescription: Can be used to make tea.
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11451984, guid: e32ae85241fb56d4b9e6e66be002ed4e, type: 2}
     resultItems:

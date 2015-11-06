@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Veggie
   itemDescription: Fresh Vegetable
+  itemDescriptionDutch: DutchDescription
   combinationList:
   - itemToCombine: {fileID: 11443052, guid: 01d3d868dadff324eb420ed447a4429d, type: 2}
     resultItems:

@@ -174,6 +174,7 @@ MonoBehaviour:
   interactionType: 0
   buttons: {fileID: 1291934503}
   observeLine: This looks like a good place to place the ladder.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: That won't work out.
   conditionResultList:
@@ -917,6 +918,7 @@ MonoBehaviour:
   interactionType: 1
   buttons: {fileID: 989842007}
   observeLine: I need to get my cloak before meeting Euaemus.
+  observeLineDutch: DutchDescription
   loadScene: 
   wrongItemLine: I should just interact with it.
   conditionResultList: []
