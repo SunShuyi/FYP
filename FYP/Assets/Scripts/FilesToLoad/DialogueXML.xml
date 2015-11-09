@@ -619,12 +619,12 @@
 		
 			<npc _name="Circe">
 				<condition _condition="isEnglish">
-					<condition _condition="level_2">
+						<condition _condition="level_2">
 						<condition _condition="have_HelmetWithHoneyWater">
 							<changecharacter>Left</changecharacter>
 							<line>(Now that I've had a drink, I can try calling out to her.)</line>
 							<line>Hello! Can you hear me in there?</line>
-							<question _question="1" _choices="2" _sentence="Oh? Who's calling me?">
+							<question _question="1" _choices="2" _sentence="Oh? Who's calling me?">s
 								<option _sentence="I am but a lost traveller from Ithaca, looking for food and shelter with my men.">
 									<changecharacter>Right</changecharacter>
 									<line>A lost traveller, hm? Why don't you come in and let me help you and your men?</line>
@@ -665,37 +665,37 @@
 				
 				<condition _condition="isDutch">
 					<condition _condition="level_2">
-					<condition _condition="have_HelmetWithHoneyWater">
-						<changecharacter>Left</changecharacter>
-						<line>(Nu ik dat gedronken heb, kan ik het weer proberen!)</line>
-						<line> Hallo! Kunt u me daar horen?</line>
-						<question _question="1" _choices="2" _sentence="Oh? Wie roept mij?">
-							<option _sentence="Ik ben een verdwaalde reiziger van Ithaca, zoekend naar voedsel en onderdak voor mij en mijnmannen.">
-								<changecharacter>Right</changecharacter>
-								<line>Een verdwaalde reiziger, hm? Waarom kom je niet binnen zodat ik jou en je mannen kan helpen?</line>
-								<result _name="deleteinventory">HelmetWithHoneyWater</result>
-								<result _name="condition">!level_2</result>
-								<result _name="condition">level_3</result>
-								<result _name="changeplayer">Odysseus</result>
-								<!-- CHANGE TO CUTSCENE OF CIRCE TURNING MEN INTO PIGS -->
-								<!-- LOAD EURYLOCHUS ESCAPING CIRCE MINIGAME -->
-								<result _name="loadscene">EscapingCirce</result>
-								<leavedialogue/>
-							</option>
-							<option _sentence="Mijn naam is Eurylochus. Ik ben gestuurd door Odysseus om de plaatselijke bevolking van dit eiland te ontmoeten.">
-								<changecharacter>Right</changecharacter>
-								<line>Odysseus? Nog nooit van gehoord. Kom binnen, laat me een maaltijd bereiden voor jou en je mannen.</line>
-								<result _name="deleteinventory">HelmetWithHoneyWater</result>
-								<result _name="condition">!level_2</result>
-								<result _name="condition">level_3</result>
-								<result _name="changeplayer">Odysseus</result>
-								<!-- CHANGE TO CUTSCENE OF CIRCE TURNING MEN INTO PIGS -->
-								<!-- LOAD EURYLOCHUS ESCAPING CIRCE MINIGAME -->
-								<result _name="loadscene">EscapingCirce</result>
-								<leavedialogue/>
-							</option>
-						</question>
-					</condition>
+						<condition _condition="have_HelmetWithHoneyWater">
+							<changecharacter>Left</changecharacter>
+							<line>(Nu ik dat gedronken heb, kan ik het weer proberen!)</line>
+							<line> Hallo! Kunt u me daar horen?</line>
+							<question _question="1" _choices="2" _sentence="Oh? Wie roept mij?">
+								<option _sentence="Ik ben een verdwaalde reiziger van Ithaca, zoekend naar voedsel en onderdak voor mij en mijnmannen.">
+									<changecharacter>Right</changecharacter>
+									<line>Een verdwaalde reiziger, hm? Waarom kom je niet binnen zodat ik jou en je mannen kan helpen?</line>
+									<result _name="deleteinventory">HelmetWithHoneyWater</result>
+									<result _name="condition">!level_2</result>
+									<result _name="condition">level_3</result>
+									<result _name="changeplayer">Odysseus</result>
+									<!-- CHANGE TO CUTSCENE OF CIRCE TURNING MEN INTO PIGS -->
+									<!-- LOAD EURYLOCHUS ESCAPING CIRCE MINIGAME -->
+									<result _name="loadscene">EscapingCirce</result>
+									<leavedialogue/>
+								</option>
+								<option _sentence="Mijn naam is Eurylochus. Ik ben gestuurd door Odysseus om de plaatselijke bevolking van dit eiland te ontmoeten.">
+									<changecharacter>Right</changecharacter>
+									<line>Odysseus? Nog nooit van gehoord. Kom binnen, laat me een maaltijd bereiden voor jou en je mannen.</line>
+									<result _name="deleteinventory">HelmetWithHoneyWater</result>
+									<result _name="condition">!level_2</result>
+									<result _name="condition">level_3</result>
+									<result _name="changeplayer">Odysseus</result>
+									<!-- CHANGE TO CUTSCENE OF CIRCE TURNING MEN INTO PIGS -->
+									<!-- LOAD EURYLOCHUS ESCAPING CIRCE MINIGAME -->
+									<result _name="loadscene">EscapingCirce</result>
+									<leavedialogue/>
+								</option>
+							</question>
+						</condition>
 						<changecharacter>Left</changecharacter>
 						<line>…Hallo? Mevrouw?</line>
 						<changecharacter>Right</changecharacter>

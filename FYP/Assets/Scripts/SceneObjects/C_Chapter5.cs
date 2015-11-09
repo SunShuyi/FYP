@@ -46,7 +46,9 @@ public class C_Chapter5 : C_Chapter
 	public static string s_lastScene = "";
 	public static List<string> s_pickedUpItems = new List<string> ();
 	public static List<string> s_conditionTriggers = new List<string> (1){"level_1"};
-	
+	public RuntimeAnimatorController nextRAC;
+	public Sprite nextSprite;
+
 	public override E_Player currentPlayer { get { return s_currentPlayer; } set{s_currentPlayer = value;}}
 	public override string lastScene { get { return s_lastScene; } set{s_lastScene = value;}}
 	public override List<string> destroyedObjects { get { return s_pickedUpItems; } set{s_pickedUpItems = value;}}
@@ -55,7 +57,25 @@ public class C_Chapter5 : C_Chapter
 	#endregion
 	
 	#region Condition Management
-	
+
+	void Update()
+	{
+		if (scene == "C5_Phaeacians'Forest1" || scene == "C5_Phaeacians'Beach")
+		{
+			if(conditionTriggers.Contains ("woreCloak"))
+			{
+			}
+			else if(conditionTriggers.Contains ("have_CanvasCloak")) {
+				C_PlayerData tempPlayerData = GetPlayer (currentPlayer);
+				tempPlayerData.animationController = nextRAC;
+				tempPlayerData.playerSprite = nextSprite;
+				C_Player tempPlayer = C_Player.getInstance;
+				tempPlayer.ChangePlayer(currentPlayer);
+				//conditionTriggers.Remove("have_CanvasCloak");
+				conditionTriggers.Add("woreCloak");
+			}
+		}
+	}
 	public override void ConditionCheck()
 	{
 		if(scene == "C5_Phaeacians'Beach")
@@ -65,6 +85,13 @@ public class C_Chapter5 : C_Chapter
 				GameObject.Find("Hidden").SetActive(false); //GateMG at interactive object
 						
 			}
+
+
+			C_PlayerData tempPlayer = GetPlayer (currentPlayer);
+			tempPlayer.animationController = nextRAC;
+			tempPlayer.playerSprite = nextSprite;
+			conditionTriggers.Remove("woreCloak");
+			//conditionTriggers.Remove("have_CanvasCloak");
 		}
 
 		if(scene == "C5_Phaeacians'Forest1")
@@ -72,12 +99,20 @@ public class C_Chapter5 : C_Chapter
 			if(conditionTriggers.Contains("DeleteHiddenForest")) //gate_unlocked XML condition
 			{
 				GameObject.Find("Hidden").SetActive(false); //GateMG at interactive object
-				
+
+			}
+			if(conditionTriggers.Contains ("have_CanvasCloak")) {
+				C_PlayerData tempPlayer = GetPlayer (currentPlayer);
+				tempPlayer.animationController = nextRAC;
+				tempPlayer.playerSprite = nextSprite;
+				//conditionTriggers.Remove("have_CanvasCloak");
+				conditionTriggers.Add("woreCloak");
 			}
 		}
 
 		if(scene == "C5_EumaeusHutLivingRoom")
 		{
+
 //			if(conditionTriggers.Contains("DeleteHiddenKitchen")) //gate_unlocked XML condition
 //			{
 //				GameObject.Find("KHidden").SetActive(false); //GateMG at interactive object

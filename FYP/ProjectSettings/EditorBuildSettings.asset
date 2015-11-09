@@ -15,21 +15,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Mini-games/C2/EscapingCirce.unity
   - enabled: 1
     path: Assets/Scenes/Mini-games/C2/SwordClash.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Mini-games/C3/HadesGateMinigame.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Mini-games/C3/BloodSacrificeMinigame.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Mini-games/C3/FireCaveMinigame.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Mini-games/C3/HadesExitMinigame.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Mini-games/C4/PassingtheSirens.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Mini-games/C4/DodgingScylla.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Mini-games/C4/EscapingCharybdis.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter1/C1_ShipDeck.unity
   - enabled: 1
     path: Assets/Scenes/Chapter2/C2_ShipDeck.unity
@@ -45,141 +45,141 @@ EditorBuildSettings:
     path: Assets/Scenes/Chapter2/C2_CastleExterior.unity
   - enabled: 1
     path: Assets/Scenes/Chapter2/C2_CastleInterior.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_ShipDeck.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_OdysseusRoom.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_Dock.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_EndOfDock.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_GateEntrance.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_Trench.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_Junction.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_HallOfSinEntrance.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_HallOfSin.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_PathToBridge.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_OnBridge.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_EndOfBridge.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_Townhall.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_ProphetArea.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_LetheRiver.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_MotherArea.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_PathToCerberus.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter3/C3_CerberusCave.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_ShipDeck.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_OdysseusRoom.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_ShipDeck2.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_CoastCave.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_SunIslandCoast1.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_SunIslandCoast2.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_SunIslandCliff.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_GrassPlains1.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_GrassPlains2.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_GrassPlains3.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_HeliosPavilion1.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_HeliosPavilion2.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_Pond.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_TempleEntrance.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_Temple.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_OdysseusRoomAfterMG.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_ShipDeckAfterMG.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/C4_ShipDeck2AfterMG.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/Cutscenes/C4_Cutscenes_Blackout.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/Cutscenes/C4_Cutscenes_Cattle.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/Cutscenes/C4_Cutscenes_Ending.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/Cutscenes/C4_Cutscenes_Island.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/Cutscenes/C4_Cutscenes_Opening.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/Cutscenes/C4_Cutscenes_Scylla.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/Cutscenes/C4_Cutscenes_Siren.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter4/Cutscenes/C4_Cutscenes_TwoMonsters.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/C5_Phaeacians'Beach.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/C5_Phaeacians'Forest1.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/C5_EumaeusHutLivingRoom.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/C5_EumaeusKitchen.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/C5_EumaeusRoom.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/C5_Beach2.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/C5_OdysseusLivingRoom.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/C5_OdysseusHall.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/C5_OdysseusGarden1.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/C5_OdysseusGarden2.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/C5_Penelope'sRoom.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Mini-games/C5/FindEumaeus's.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Mini-games/C5/MiniGame2.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Mini-games/C5/Minigame3.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_Opening.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_Dog.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_CloakIdeaPopOut.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_CloakDonePopOut.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_OdysseusTelemacusConvo.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_Dog.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_LockedDoor.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_OdysseusPenelopeConvo.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_Competition.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter5/CutScenes/C5_Cutscenes_Victory.unity
   - enabled: 0
     path: Assets/Scenes/Mini-games/C5/FindEumaeus's.unity

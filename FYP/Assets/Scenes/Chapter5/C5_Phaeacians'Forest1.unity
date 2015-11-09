@@ -5420,6 +5420,15 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11406278, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
+      propertyPath: nextRAC
+      value: 
+      objectReference: {fileID: 9100000, guid: d3d3f3c50e60b6641a939a5c916a475e, type: 2}
+    - target: {fileID: 11406278, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
+      propertyPath: nextSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d1679a3baee6cf34e8fff6db0553a9b6,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
   m_IsPrefabParent: 0

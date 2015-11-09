@@ -5236,6 +5236,15 @@ Prefab:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 2136663956}
+    - target: {fileID: 11406278, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
+      propertyPath: nextRAC
+      value: 
+      objectReference: {fileID: 9100000, guid: a2950d979c3895b4db1a9cb9a82dd644, type: 2}
+    - target: {fileID: 11406278, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
+      propertyPath: nextSprite
+      value: 
+      objectReference: {fileID: 21300014, guid: 2f284e4c834f2714babfc2a5221133cd,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e7431c4c59b01744da532a3476cb8e9f, type: 2}
   m_IsPrefabParent: 0
