@@ -57,7 +57,7 @@ public class Manager : MonoBehaviour {
 				return;
 			}
 			
-			bool gotHit = false;
+			//bool gotHit = false;
 			
 
 
@@ -65,7 +65,12 @@ public class Manager : MonoBehaviour {
 			charge = true;
 			Minigame2Timer.Timer.enabled = true;
 			Minigame2Timer.Timer.text.enabled = true;
-			}
+		}
+
+		if (Input.GetKeyDown ("r")) 
+		{ Reset (); 
+		
+		}
 			else if(charge)
 			{
 				progressBar.value += Time.deltaTime * speed * 100 * cDir;
@@ -87,5 +92,7 @@ public class Manager : MonoBehaviour {
 			
 			
 		}
+	void Reset ()
+	{ Application.LoadLevel ("MiniGame3"); }
 		
 	}

@@ -9,7 +9,7 @@ public class Minigame2Timer : MonoBehaviour {
 	public Text text;
 	public  int time;
 	private float rtime;
-	private int seconds = 5;
+	private int seconds = 10;
 	public Slider progressBar;
 
 	public static Minigame2Timer Timer;
@@ -18,7 +18,7 @@ public class Minigame2Timer : MonoBehaviour {
 	{
 		Timer = this;
 		//text.enabled = true;
-		time = 5;
+		time = 10;
 		rtime = Time.time;
 		this.enabled = false;
 				text.enabled = false;
@@ -45,7 +45,7 @@ public class Minigame2Timer : MonoBehaviour {
 			Manager.manager.charge = false;
 			shooter.Shoots();
 			progressBar.value = 0;
-			time = 5;
+			time = 10;
 			text.text = time.ToString();
 		}
 	}
@@ -54,7 +54,7 @@ public class Minigame2Timer : MonoBehaviour {
 	{
 		this.enabled = enable;
 		text.enabled = enable;
-		time = 5;
+		time = 10;
 		text.text = time.ToString();
 	}
 }

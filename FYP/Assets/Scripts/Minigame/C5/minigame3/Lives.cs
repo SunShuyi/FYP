@@ -24,10 +24,13 @@ public class Lives : MonoBehaviour {
 		lifeText.text = " x " + lifeCount;
 		
 		if (lifeCount < 0) 
-		{ lifeCount = 0; }
+		{ lifeCount = 0;
+		}
 		
 		if (lifeCount > startingLives) 
-		{ lifeCount = startingLives; }
+		{ lifeCount = startingLives; 
+
+		}
 	}
 	
 	void Hit () 

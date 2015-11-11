@@ -104,13 +104,17 @@
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\TimerCountdown.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\waypoint.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame3\Appear.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\minigame3\Arrow.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame3\Destroy.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\minigame3\Fade_image.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame3\Lives.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame3\Manager.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame3\Minigame2Timer.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame3\ScreenShake.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame3\Shooter.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame3\WinPage.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\minigame3\destory_prompt.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\minigame3\lost.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter1.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter2.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter3.cs" />

@@ -6,13 +6,13 @@ public class WinPage : MonoBehaviour {
 	//public Text text;
 	public  int time;
 	private float rtime;
-	public Image Win;
-	private int seconds = 5;
+	//public Image Win;
+	private int seconds = 4;
 
 	// Use this for initialization
 	void Start () {
 		//text.enabled = true;
-		time = 5;
+		time = 4;
 		rtime = Time.time;
 
 	}
@@ -34,7 +34,8 @@ public class WinPage : MonoBehaviour {
 			
 		}
 		if (time<= 0) {
-			Win.enabled = false;
+			//Win.enabled = false;
+			Application.LoadLevel ("MiniGame2");
 			
 		}
 	}

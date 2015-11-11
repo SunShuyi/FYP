@@ -15,20 +15,21 @@ public class Shooter : MonoBehaviour {
 	public Lives lifeScript;
 	public Lives lifeScriptShadow;
 	public int lifeCount;
-	private bool playGame;
-	private bool instructions;
-	Vector3 PlayerPos;//PlayerPos
-	Vector3 lastPlayerPos;//PlayerPos
-	public float playerSpeed_normal;//playerSpeed
+	public GameObject Lose;
+	//private bool playGame;
+//	private bool instructions;
+//	Vector3 PlayerPos;//PlayerPos
+//	Vector3 lastPlayerPos;//PlayerPos
+//	public float playerSpeed_normal;//playerSpeed
 
 	// Use this for initialization
 	void Start () {
-		lastPlayerPos = transform.position;
+		//lastPlayerPos = transform.position;
 		//yield return StartCoroutine (Shoots ());
 		lifeScript = theLives.GetComponent<Lives> ();
 		lifeScriptShadow = theLivesShadow.GetComponent<Lives> ();
-		instructions = true;
-		playGame = false;
+		//instructions = true;
+		//playGame = false;
 
 	}
 	
@@ -42,30 +43,52 @@ public class Shooter : MonoBehaviour {
 			Shoots ();
 			Minigame2Timer.Timer.ResetTimer(false);
 		}
+
 		
-		if (!instructions) {
+		if (Input.GetKeyDown ("r")) 
+		{ Reset (); 
 			
-			playGame = true;
 		}
+		
+//		if (!instructions) {
+//			
+//			playGame = true;
+//		}
 		
 
 			 
 			
 
 		lifeCount = lifeScript.lifeCount;
-		PlayerPos = new Vector3 (transform.position.x, transform.position.y, 10);	//PlayerPos
+		//PlayerPos = new Vector3 (transform.position.x, transform.position.y, 10);	//PlayerPos
 	}
+
+
 
 	public void Shoots()
 	{
 
 			GameObject clone = (GameObject)Instantiate(projectile,transform.position,Quaternion.identity);
 			clone.transform.localRotation = projectile.transform.localRotation;
-			clone.transform.position = projectile.transform.position;
-			clone.GetComponent<Rigidbody>().velocity = shooter.forward*progressBar.value *1.2f;
+			clone.transform.SetLocalPositionY (transform.position.y - 10);
+			clone.GetComponent<Arrow> ().target = transform.position;
+			//clone.GetComponent<Arrow> ().Vel =  progressBar.value * 1.2f;
+			clone.GetComponent<Arrow> ().hitChance = 100-Mathf.Abs((progressBar.value -50) * 2);
 			progressBar.value = 0;
-		Lives.life.lifeCount--;
+			Lives.life.lifeCount--;
+			clone.GetComponent<Arrow> ().lifeWhenShot = Lives.life.lifeCount;
+			clone.GetComponent<Arrow> ().Lose = Lose;
+			//clone.GetComponent<Rigidbody>().velocity = shooter.forward*progressBar.value *1.2f;
+
+		//if( Lives.life.lifeCount == 0)
+		//{
+		//	Reset (); 
+		//}
+		
 		Manager.manager.charge = false;
+	}
+	void Reset ()
+	{ Application.LoadLevel ("MiniGame3"); 
 	}
 
 

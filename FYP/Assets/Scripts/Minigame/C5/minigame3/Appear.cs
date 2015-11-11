@@ -3,11 +3,11 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Appear : MonoBehaviour {
-	public Image Win;
+	public GameObject Win;
 
 	// Use this for initialization
 	void Start () {
-		Win.enabled = false;
+		Win.SetActive (false);
 	
 	}
 	
@@ -21,16 +21,19 @@ public class Appear : MonoBehaviour {
 		{
 			if(this.gameObject.name != "axe")
 			{
-				Win.enabled = true;
-				Win.GetComponent<WinPage>().enabled=true;
-				Win.GetComponent<WinPage>().time = 5;
+				//Win.enabled = true;
+				Win.SetActive(true);
+				Win.GetComponent<WinPage>().time =4;
 				//Destroy (this.gameObject);
-				
+				Destroy(coll.gameObject);
 				
 			}
 			
 		}
 		
 	}
-	
+	void OnCollisionEnter2D(Collision2D coll)
+	{
+		Debug.Log("hit");
+	}
 }
