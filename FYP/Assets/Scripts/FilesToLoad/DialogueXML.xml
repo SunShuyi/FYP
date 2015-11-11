@@ -2461,6 +2461,7 @@
 							<result _name="setactive" _sentence="Hidden">false</result>
 							<result _name="condition">DeleteHiddenForest</result>
 							<result _name="deleteinventory">CanvasCloak</result>
+							<result _name="loadscene">FindEumaeus's</result>
 							<leavedialogue/>
 						</condition>
 					</condition>

@@ -73,6 +73,7 @@ public class C_Chapter5 : C_Chapter
 				tempPlayer.ChangePlayer(currentPlayer);
 				//conditionTriggers.Remove("have_CanvasCloak");
 				conditionTriggers.Add("woreCloak");
+				GameObject.Find("C5_Phaeacians'Beach").SetActive(false);
 			}
 		}
 	}
