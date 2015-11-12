@@ -1,15 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SceneObjects\Managers\C_LevelSelectionManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FilesToLoad\DialogueXML.xml">
     <Files>
-      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="2846" Column="78" />
-      <File FileName="Assets\Scripts\SceneObjects\C_Chapter5.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SceneObjects\C_Chapter3.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SceneObjects\C_Chapter4.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SceneObjects\C_Chapter2.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="2861" Column="4" />
       <File FileName="Assets\Scripts\SceneObjects\Managers\C_ChapterManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SceneObjects\Managers\C_LevelSelectionManager.cs" Line="67" Column="68" />
       <File FileName="Assets\Scripts\SceneObjects\Managers\C_SceneManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SceneObjects\Managers\C_LevelSelectionManager.cs" Line="105" Column="2" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter5.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter4.cs" Line="53" Column="59" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter3.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter2.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SubClasses\C_Chapter.cs" Line="116" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
