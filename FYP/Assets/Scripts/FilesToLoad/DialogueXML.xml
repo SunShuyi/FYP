@@ -195,7 +195,19 @@
 			
 				<condition _condition="isEnglish">				
 					<condition _condition="level_1">
-						<condition _condition="deerKilled">
+						<condition _condition="deerKilled">	
+							<condition _condition="selected_CutGrass">
+								<changecharacter>Left</changecharacter>
+								<line>Here is the grass, Elpenor.</line>
+								<changecharacter>Right</changecharacter>
+								<line>Okay, just a second.</line>
+								<line> ... ... </line>
+								<line>Done. Here you go.</line>
+								<result _name="deleteinventory">CutGrass</result>
+								<result _name="addinventory">Rope</result>
+								<result _name="condition">!deerKilled</result>
+								<leavedialogue/>
+							</condition>
 							<changecharacter>Left</changecharacter>
 							<line>Elpenor, do you happen to have any rope?</line>
 							<changecharacter>Right</changecharacter>
