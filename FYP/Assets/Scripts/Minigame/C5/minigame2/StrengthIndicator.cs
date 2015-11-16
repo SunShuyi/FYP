@@ -20,7 +20,7 @@ public class StrengthIndicator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		StrengthText.text = " x " + StrengthCount;
+		//StrengthText.text = " " + StrengthCount;
 		if (StrengthCount < 0) 
 		{ StrengthCount = 0; }
 		

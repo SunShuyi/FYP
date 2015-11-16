@@ -42,6 +42,8 @@ public class C_Ship : MonoBehaviour {
 	public int StrengthCount;
 
 	public int collidedShips = 0;
+
+	private GameObject audioCollect;
 	void Awake()
 	{
 		if(theInput == null)
@@ -50,6 +52,7 @@ public class C_Ship : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		audioCollect = GameObject.Find ("SFX");
 		Time.timeScale = 0;
 		lastShipPos= transform.position;
 		
@@ -60,6 +63,7 @@ public class C_Ship : MonoBehaviour {
 		playGame = false;
 		
 		tiltAngles = Input.acceleration.x;
+
 		
 		
 		StrengthScript = theStrength.GetComponent<StrengthIndicator> ();
@@ -91,14 +95,14 @@ public class C_Ship : MonoBehaviour {
 		//Click/Tap on left or right side to move the boat
 		if(playGame) {
 			if ( Input.GetKey(KeyCode.RightArrow) || Input.GetKeyDown("d"))//right 
-			{ if (this.transform.rotation.z > -0.2f){ this.transform.Rotate(Vector3.forward * -0.2f);
-				print (this.transform.rotation);
+			{ if (this.transform.rotation.z > -0.2f){ //this.transform.Rotate(Vector3.forward * -0.2f);
+					print (this.transform.rotation);
 					transform.Translate (Vector3.right * Time.deltaTime * shipSpeed_normal)	;
 				}
 			} 
 			
 			if ( Input.GetKey(KeyCode.LeftArrow) || Input.GetKeyDown("a")) //left 
-			{ if (this.transform.rotation.z < 0.2f){ this.transform.Rotate(Vector3.back* -0.2f); 
+			{ if (this.transform.rotation.z < 0.2f){ //this.transform.Rotate(Vector3.back* -0.2f); 
 					transform.Translate (Vector3.left * Time.deltaTime * shipSpeed_normal)	;
 				}
 			}
@@ -109,19 +113,18 @@ public class C_Ship : MonoBehaviour {
 		{ instructions = false; }
 		
 		tiltAngles = Input.acceleration.x;
-		if(playGame){
-			if(tiltAngles> 0.2) 
+		//		if(playGame){
+		//			if(tiltAngles> 0.2) 
+		//
+		//			{ this.transform.Rotate(Vector3.forward * -0.5f); }
+		//			
+		//			if(tiltAngles < -0.2) 
+		//			{ this.transform.Rotate(Vector3.back* -0.5f); }
+		//		}
 
-			{ this.transform.Rotate(Vector3.forward * -0.5f); }
-			
-			if(tiltAngles < -0.2) 
-			{ this.transform.Rotate(Vector3.back* -0.5f); }
-		}
-		
 		
 		#endif
 		
-
 		
 		if (ShipPos.x > 5) 
 		{ transform.Translate (Vector3.left * Time.deltaTime * 5.0f); }
@@ -133,19 +136,18 @@ public class C_Ship : MonoBehaviour {
 		if (playGame && !instructions)
 		{
 			if(shipRB.velocity != new Vector2(0,0)) 
-			transform.Translate (Vector3.up * Time.deltaTime * shipSpeed_collided);
+				transform.Translate (Vector3.up * Time.deltaTime * shipSpeed_collided);
 			else
 			{
-			 	transform.Translate (Vector3.up * Time.deltaTime * shipSpeed_normal); 
-
+				transform.Translate (Vector3.up * Time.deltaTime * shipSpeed_normal); 
+				
 			}
 		}
-
+		
 		else if (!instructions && !playGame) {
 			DestroyObject(instrucPage);
 			playGame = true;
 		}
-		
 		//Progress Bar
 		ShipPos = new Vector3 (transform.position.x, transform.position.y, 10);	
 		if(sliderValue2 < 75)
@@ -153,10 +155,11 @@ public class C_Ship : MonoBehaviour {
 		if (sliderValue1 >= 75) {
 			sliderValue1 = 0;
 			sliderValue2 += 25;
-			ProgressBar2.value = sliderValue2;
+
 		} else 
 		ProgressBar1.value = sliderValue1;
-		
+
+		ProgressBar2.value = sliderValue2;
 		//GameObject closestRock = FindClosestRock ();
 		
 		//DetectRocks ();
@@ -177,25 +180,24 @@ public class C_Ship : MonoBehaviour {
 		
 	}
 	
-	void moveTo (Vector3 targetPos)
-	{
-		if (ShipPos.x < targetPos.x) { //left
-			this.transform.Rotate(Vector3.forward * -0.01f);
+		void moveTo (Vector3 targetPos)
+		{
+			if (ShipPos.x < targetPos.x) { //left
+				this.transform.Rotate(Vector3.forward * -0.01f);
+				
+			} else {
+				
+			}
 			
-		} else {
+			if (ShipPos.x > targetPos.x) { //right
+				this.transform.Rotate(Vector3.back * -0.01f);
+				
+			} else {
+				
+				
+			}
 			
 		}
-		
-		if (ShipPos.x > targetPos.x) { //right
-			this.transform.Rotate(Vector3.back * -0.01f);
-			
-		} else {
-			
-			
-		}
-		
-	}
-	
 	void AnimateShip()
 	{
 		if (isMoving) 
@@ -239,6 +241,7 @@ public class C_Ship : MonoBehaviour {
 //		} else if (coll.CompareTag ("Rocks")) {
 //			if (StrengthCount == 0) {
 //				shipAnim.SetBool ("isDead", true);
+	//audioCollect.GetComponent<AudioScript>().playOnceCustom(1);
 //				shipRB.velocity = Vector2.zero;
 //			} else {
 //				StrengthScript.SendMessage ("Hit");
@@ -253,11 +256,13 @@ public class C_Ship : MonoBehaviour {
 	{
 		if (coll.collider.CompareTag ("enemy")) {
 			collidedShips++;
+			audioCollect.GetComponent<AudioScript>().playOnceCustom(0);
 
 			if(collidedShips >= 2)
 			{
 				shipAnim.SetBool ("isDead", true);
 				shipRB.velocity = Vector2.zero;
+
 
 			}
 		}

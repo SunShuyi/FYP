@@ -71,22 +71,31 @@ public class Manager : MonoBehaviour {
 					Destroy (instructionsImg);
 					showInstructions = false;
 				}
-				return;
+				if (Input.touchCount > 0) {
+					
+					if(Input.GetTouch(0).phase == TouchPhase.Began)
+					{
+						Time.timeScale = 1;
+						Destroy (instructionsImg);
+						showInstructions = false;
+					}
+				}
+				//return;
 			}
 
 		if (Input.touchCount > 0) {
 
-			if(Input.GetTouch(0).phase == TouchPhase.Ended)
+			if(Input.GetTouch(0).phase == TouchPhase.Began)
 			{
 
-				if (Lives.life.lifeCount > 0) {
+				//if (Lives.life.lifeCount > 0) {
 					
 					charge = true;
 					Minigame2Timer.Timer.enabled = true;
 					Minigame2Timer.Timer.text.enabled = true;
 					//shootAnim.SetBool ("ready", true);
 					
-				}
+				//}
 
 			}
 		}
@@ -104,11 +113,12 @@ public class Manager : MonoBehaviour {
 	
 		}
 
-		if (Input.GetKeyDown ("r")) 
-		{ Reset (); 
-		
-		}
-			else if(charge)
+//		if (Input.GetKeyDown ("r")) 
+//		{ Reset (); 
+//		
+//		}
+//			else 
+		if(charge)
 			{
 				progressBar.value += Time.deltaTime * speed * 100 * cDir;
 				if(progressBar.value <= progressBar.minValue || progressBar.value >= progressBar.maxValue)

@@ -96,6 +96,7 @@
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\spawnBonus.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\timer.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\wayPoint.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\minigame2\AudioScript.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\C_Ship.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\Camera_2.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame2\Detect.cs" />
