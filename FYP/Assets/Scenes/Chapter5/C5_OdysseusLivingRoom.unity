@@ -773,7 +773,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11474216, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: npcInventory.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22480912, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: m_RootOrder
@@ -798,7 +798,7 @@ Prefab:
     - target: {fileID: 11474216, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: npcInventory.Array.data[0]
       value: 
-      objectReference: {fileID: 11431108, guid: c2fbabf78123c4c44b2bcba1215e8c0c,
+      objectReference: {fileID: 11403352, guid: a57706bf92651ed488af80aa26c1e420,
         type: 2}
     - target: {fileID: 157216, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: m_IsActive
@@ -4227,7 +4227,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1963146299
 RectTransform:
   m_ObjectHideFlags: 0

@@ -87,7 +87,6 @@ public class C_Chapter5 : C_Chapter
 						
 			}
 
-
 			C_PlayerData tempPlayer = GetPlayer (currentPlayer);
 			tempPlayer.animationController = nextRAC;
 			tempPlayer.playerSprite = nextSprite;
@@ -111,108 +110,25 @@ public class C_Chapter5 : C_Chapter
 			}
 		}
 
-//		if (scene == "C5_EumaeusKitchen") {
-//			
-//			//			if(conditionTriggers.Contains("DeleteHiddenKitchen")) //gate_unlocked XML condition
-//			//			{
-//			//				GameObject.Find("KHidden").SetActive(false); //GateMG at interactive object
-//			//				
-//			//			}
-//			if (conditionTriggers.Contains ("GottenWM")) {
-//				GameObject.Find ("Gate").SetActive (false);
-//			
-//				foreach (GameObject go in sceneManager.inactiveGameobjects) {
-//					if (go.name == "GateLocked") {
-//						go.SetActive (true);
-//						break;
-//					}
-//				}
-//			}
-//		}
-
 		if(scene == "C5_EumaeusHutLivingRoom")
 		{
-
-//			if(conditionTriggers.Contains("DeleteHiddenKitchen")) //gate_unlocked XML condition
-//			{
-//				GameObject.Find("KHidden").SetActive(false); //GateMG at interactive object
-//				
-//			}
-
 			if(conditionTriggers.Contains("DeleteHiddenBedroom")) //gate_unlocked XML condition
 			{
 				GameObject.Find("Hidden").SetActive(false); //GateMG at interactive object
 				
 			}
 		}
+		if(scene == "C5_OdysseusHall")
+		{
+			
+			if(conditionTriggers.Contains("DeletePenelopeRoom")) //gate_unlocked XML condition
+			{
+				GameObject.Find("Penelope'sDoor").SetActive(false); //GateMG at interactive object
+				
+			}
+		}
 
-//		if(scene == "C5_Phaeacians'Forest1")
-//		{
-//			if(conditionTriggers.Contains("Maze_Unlocked")) //gate_unlocked XML condition
-//			{
-//				GameObject.Find("MazeBlock").SetActive(false); //GateMG at interactive object
-//				
-//				foreach(GameObject go in sceneManager.inactiveGameobjects)
-//				{
-//					if(go.name == "MiniGame1Hut") //gate is exit
-//					{
-//						go.SetActive(true);
-//						break;
-//					}
-//				}
-//			}
-//		}
 
-//		if(scene == "C5_Phaeacians'Forest1")
-//		{
-//			if(conditionTriggers.Contains("gate_unlocked")) //gate_unlocked XML condition
-//			{
-//				GameObject.Find("GateBlocked").SetActive(false); //GateMG at interactive object
-//						
-//				foreach(GameObject go in sceneManager.inactiveGameobjects)
-//				{
-//				if(go.name == "MiniGame1Hut") //gate is exit
-//					{
-//						go.SetActive(true);
-//						break;
-//					}
-//				}
-//			}
-//		}
-
-//		if(scene == "C5_OdysseusGarden2")
-//		{
-//			if(conditionTriggers.Contains("room_unlocked")) //gate_unlocked XML condition
-//			{
-//				GameObject.Find("RoomBlocked").SetActive(false); //GateMG at interactive object
-//				
-//				foreach(GameObject go in sceneManager.inactiveGameobjects)
-//				{
-//					if(go.name == "Penelope'sRoom") //gate is exit
-//					{
-//						go.SetActive(true);
-//						break;
-//					}
-//				}
-//			}
-//		}
-
-//		if(scene == "C5_OdysseusGarden2")
-//		{
-//			if(conditionTriggers.Contains("gate_unlocked")) //gate_unlocked XML condition
-//			{
-//				GameObject.Find("GateMG").SetActive(false); //GateMG at interactive object
-//				
-//				foreach(GameObject go in sceneManager.inactiveGameobjects)
-//				{
-//					if(go.name == "Gate") //gate is exit
-//					{
-//						go.SetActive(true);
-//						break;
-//					}
-//				}
-//			}
-//		}
 	}
 	#endregion	
 }

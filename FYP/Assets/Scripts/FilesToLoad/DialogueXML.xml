@@ -2472,7 +2472,7 @@
 							<line>Hope that Euaemus won't be able to recognise me now.</line>
 							<result _name="setactive" _sentence="Hidden">false</result>>
 							<result _name="deleteinventory">CanvasCloak</result>
-							<result _name="loadscene">FindEumaeus's</result>
+							<result _name="loadscene">C5_Cutscenes_CloakDonePopOut</result>
 							<leavedialogue/>
 						</condition>
 					</condition>
@@ -2800,6 +2800,14 @@
 		
 			<!-- NPC NAME -->
 			<npc _name="Eumaeus">
+			
+				<condition _condition="have_EInvisible">
+					<line>Great!</line>
+					<result _name="deleteinventory">EInvisible</result>
+					<result _name="addinventory">Key</result>
+					<leavedialogue/>
+				</condition>
+				
 				<line>Why don’t you walk around the house and familiarize with the surroundings?</line>
 				<changecharacter>Left</changecharacter>
 				<line>Alright.</line>
@@ -2808,17 +2816,51 @@
 		</scene>
 		
 		<scene _name="C5_OdysseusHall">
-			
+
 			<!-- NPC NAME -->
+			<npc _name="Monologue">	
+				<condition _condition="!DeletePenelopeRoom">
+					<condition _condition="have_Key">
+						<line>Yes! Now i can center Penelope's room.</line>
+						<result _name="setactive" _sentence="Penelope'sDoor">false</result>
+						<result _name="deleteinventory">Key</result>
+						<result _name="loadscene">C5_Penelope'sRoom</result>
+						<leavedialogue/>
+					</condition>
+				</condition>
+				
+				<condition _condition="!have_Key">
+					<line>Penelope's room is locked.</line>			
+					<line>Maybe I can look around and see who can give me the access to Penelope's room.</line>
+					<leavedialogue/>
+				</condition>		
+			</npc>
+			
 			<npc _name="Antinous">
 				<condition _condition="isEnglish">
-				<line>What is a dirty thing like you doing here!?</line>
-				<leavedialogue/>
+					<condition _condition="!taken_EInvisible">
+						<line>What is a dirty thing like you doing here!?</line>
+						<result _name="addinventory">EInvisible</result>
+						<result _name="condition">taken_EInvisible</result>
+						<leavedialogue/>
+					</condition>
 				</condition>
+				
 				<condition _condition="isDutch">
 				<line>What ?</line>
 				<leavedialogue/>
 				</condition>
+												
+				<condition _condition="have_Invisible">
+					<line>Go on.</line>
+					<leavedialogue/>
+				</condition>
+	
+				<condition _condition="!have_Invisible">
+					<line>Hi, you again~</line>
+					<leavedialogue/>
+				</condition>
+				
 			</npc>
 			
 			<npc _name="Suitor1">
