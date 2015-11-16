@@ -80,10 +80,10 @@ public class C_LevelSelectionManager : MonoBehaviour
 		case 5:
 			// Application.LoadLevel("C5_???");
 			//Application.LoadLevel("C5_Phaeacians'Forest1");
-//			if(C_Chapter5.getInstance.conditionTriggers.Contains("shipAtCave"))
-//				Application.LoadLevel("C4_ShipDeckAfterMG");
-//			else
-//			{
+			if(C_Chapter5.getInstance.conditionTriggers.Contains("GottenWM"))
+				Application.LoadLevel("C5_EumaeusKitchen");
+			else
+			{
 				if(C_Chapter5.getInstance.conditionTriggers.Contains("startedGame"))
 					Application.LoadLevel("C5_Phaeacians'Beach");
 				else
@@ -91,7 +91,7 @@ public class C_LevelSelectionManager : MonoBehaviour
 					C_Chapter5.getInstance.conditionTriggers.Add ("startedGame");
 					Application.LoadLevel("C5_Cutscenes_Opening");
 				}
-			//}
+			}
 			break;
 		default:
 			break;

@@ -22,33 +22,33 @@ public class ScreenShake : MonoBehaviour {
 //			Offset = Offset + (Vector2)(Vector3.up * Time.deltaTime * 5);
 //
 //		}
-//		if (Input.acceleration.x > 0) {
-//			if ((Input.acceleration.x + transform.position.x) <= maxX) {
-//				transform.Translate (Input.acceleration.x, 0);
-//				targetPos = targetPos + (Vector2)(Input.acceleration.x);
-//				Offset = Offset + (Vector2)(Input.acceleration.x);
-//			}
-//		}
-//		else if (Input.acceleration.x < 0) {
-//			if ((Input.acceleration.x + transform.position.x) >= minX) {
-//				transform.Translate (Input.acceleration.x, 0);
-//				targetPos = targetPos + (Vector2)(Input.acceleration.x);
-//				Offset = Offset + (Vector2)(Input.acceleration.x);
-//			}
-//		}
-//
+		if (Input.acceleration.x > 0) {
+			if ((Input.acceleration.x + transform.position.x) <= maxX) {
+				transform.SetPositionX (Input.acceleration.x + transform.position.x);
+				targetPos.x = targetPos.x + (Input.acceleration.x);
+				Offset.x = Offset.x + (Input.acceleration.x);
+			}
+		}
+		else if (Input.acceleration.x < 0) {
+			if ((Input.acceleration.x + transform.position.x) >= minX) {
+				transform.SetPositionX (Input.acceleration.x + transform.position.x);
+				targetPos.x = targetPos.x + (Input.acceleration.x);
+				Offset.x = Offset.x + (Input.acceleration.x);
+			}
+		}
+
 //		if (Input.acceleration.y > 0) {
 //			if ((Input.acceleration.y + transform.position.y) <= maxX) {
-//				transform.Translate (Input.acceleration.y, 0);
-//				targetPos = targetPos + (Vector2)(Input.acceleration.y);
-//				Offset = Offset + (Vector2)(Input.acceleration.y);
+//				transform.SetPositionY (Input.acceleration.y + transform.position.y);
+//				targetPos.y = targetPos.y + (Input.acceleration.y);
+//				Offset.y = Offset.y + (Input.acceleration.y);
 //			}
 //		}
 //		else if (Input.acceleration.y < 0) {
 //			if ((Input.acceleration.y + transform.position.y) >= minX) {
-//				transform.Translate (Input.acceleration.y, 0);
-//				targetPos = targetPos + (Vector2)(Input.acceleration.y);
-//				Offset = Offset + (Vector2)(Input.acceleration.y);
+//				transform.SetPositionY (Input.acceleration.y + transform.position.y);
+//				targetPos.y = targetPos.y + (Input.acceleration.y);
+//				Offset.y = Offset.y + (Input.acceleration.y);
 //			}
 //		}
 

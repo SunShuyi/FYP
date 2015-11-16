@@ -101,7 +101,7 @@ public class Rotate : MonoBehaviour {
 		Quaternion rotation = transform.localRotation;
 		Vector3 angle = rotation.eulerAngles;
 		if (angle.z >= 360)
-			angle.z = 0;
+			angle.z -= 360;
 		angle.z += 90.0f;
 		angle.z = roundOff(angle.z);
 		rotation.eulerAngles = angle;

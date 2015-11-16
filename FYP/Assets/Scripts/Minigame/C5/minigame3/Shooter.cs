@@ -16,6 +16,9 @@ public class Shooter : MonoBehaviour {
 	public Lives lifeScriptShadow;
 	public int lifeCount;
 	public GameObject Lose;
+	public static Manager manager;
+    public Animator shootAnim;
+	private bool ready = false;
 	//private bool playGame;
 //	private bool instructions;
 //	Vector3 PlayerPos;//PlayerPos
@@ -28,21 +31,44 @@ public class Shooter : MonoBehaviour {
 		//yield return StartCoroutine (Shoots ());
 		lifeScript = theLives.GetComponent<Lives> ();
 		lifeScriptShadow = theLivesShadow.GetComponent<Lives> ();
+		shootAnim = GetComponent<Animator> ();
 		//instructions = true;
 		//playGame = false;
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-
-
+		if (Input.touchCount > 0) {
+			if(Input.GetTouch (0).phase == TouchPhase.Began)
+			{
+				if (Lives.life.lifeCount > 0) 
+					shootAnim.SetBool ("ready", true);
+			}
+			else if(Input.GetTouch(0).phase == TouchPhase.Ended)
+			{
+				Shoots ();
+				Minigame2Timer.Timer.ResetTimer(false);
+				
+				shootAnim.SetBool ("ready", false);
+			}
+		}
+		//AnimateShoot();
 
 		if(Input.GetKeyUp(KeyCode.Backspace) && Manager.manager.charge && Lives.life.lifeCount > 0)
 		{
 			Shoots ();
 			Minigame2Timer.Timer.ResetTimer(false);
+	
+			shootAnim.SetBool ("ready", false);
 		}
+
+		if(Input.GetKeyDown(KeyCode.Backspace))
+		{
+
+			shootAnim.SetBool ("ready", true);
+		}
+
 
 		
 		if (Input.GetKeyDown ("r")) 
@@ -63,6 +89,14 @@ public class Shooter : MonoBehaviour {
 		//PlayerPos = new Vector3 (transform.position.x, transform.position.y, 10);	//PlayerPos
 	}
 
+	
+	void AnimateShoot()
+	{
+		if (ready) 
+			shootAnim.SetBool ("ready", true);
+		else
+			shootAnim.SetBool ("ready", false);
+	}
 
 
 	public void Shoots()
@@ -70,7 +104,7 @@ public class Shooter : MonoBehaviour {
 
 			GameObject clone = (GameObject)Instantiate(projectile,transform.position,Quaternion.identity);
 			clone.transform.localRotation = projectile.transform.localRotation;
-			clone.transform.SetLocalPositionY (transform.position.y - 10);
+			clone.transform.SetLocalPositionY (transform.position.y - 4.19f);
 			clone.GetComponent<Arrow> ().target = transform.position;
 			//clone.GetComponent<Arrow> ().Vel =  progressBar.value * 1.2f;
 			clone.GetComponent<Arrow> ().hitChance = 100-Mathf.Abs((progressBar.value -50) * 2);
@@ -78,6 +112,7 @@ public class Shooter : MonoBehaviour {
 			Lives.life.lifeCount--;
 			clone.GetComponent<Arrow> ().lifeWhenShot = Lives.life.lifeCount;
 			clone.GetComponent<Arrow> ().Lose = Lose;
+		   // clone.GetComponent<Manager> ().ready = false;
 			//clone.GetComponent<Rigidbody>().velocity = shooter.forward*progressBar.value *1.2f;
 
 		//if( Lives.life.lifeCount == 0)

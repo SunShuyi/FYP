@@ -2470,19 +2470,19 @@
 						<condition _condition="have_CanvasCloak">
 							<line>I just have to wear the cloak and disguise myself now!</line>
 							<line>Hope that Euaemus won't be able to recognise me now.</line>
-							<result _name="setactive" _sentence="Hidden">false</result>
-							<result _name="condition">DeleteHiddenForest</result>
+							<result _name="setactive" _sentence="Hidden">false</result>>
 							<result _name="deleteinventory">CanvasCloak</result>
 							<result _name="loadscene">FindEumaeus's</result>
 							<leavedialogue/>
 						</condition>
 					</condition>
-			
-				<condition _condition="!have_CanvasCloak">
-					<line>I should disguise myself with something.</line>
-					<line>Maybe I should look around the place.</line>
-					<leavedialogue/>
-				</condition>
+					
+					<condition _condition="!have_CanvasCloak">
+						<line>I should disguise myself with something.</line>
+						<line>Maybe I should look around the place.</line>
+						<leavedialogue/>
+					</condition>			
+				
 			</npc>
 		</scene>
 		
@@ -2627,6 +2627,7 @@
 				
 				<condition _condition="have_WaterMelon">
 					<line>Please start cutting the watermelon.</line>
+					<result _name="condition">GottenWM</result>
 					<leavedialogue/>
 				</condition>	
 				

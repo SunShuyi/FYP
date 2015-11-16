@@ -27,6 +27,7 @@ public class EnemySpawner : MonoBehaviour {
 				Array[i].transform.parent = this.transform;
 				Array[i].transform.localScale = new Vector3(1,1,1);
 				Array[i].transform.localPosition = Map1Pos[i];
+				wp = Array[i].GetComponent<wayPoint>();
 				//tempTransform.transform.parent = Array[i].transform;
 				if(wp != null)
 				wp.wpName = wayPoint1[i];
@@ -44,6 +45,7 @@ public class EnemySpawner : MonoBehaviour {
 				Array[i].transform.parent = this.transform;
 				Array[i].transform.localScale = new Vector3(1,1,1);
 				Array[i].transform.localPosition = Map2Pos[i];
+				wp = Array[i].GetComponent<wayPoint>();
 				//tempTransform.transform.parent = Array[i].transform;
 				if(wp != null)
 				wp.wpName = wayPoint2[i];
@@ -61,6 +63,7 @@ public class EnemySpawner : MonoBehaviour {
 				Array[i].transform.parent = this.transform;
 				Array[i].transform.localScale = new Vector3(1,1,1);
 				Array[i].transform.localPosition = Map3Pos[i];
+				wp = Array[i].GetComponent<wayPoint>();
 				//tempTransform.transform.parent = Array[i].transform;
 				if(wp != null)
 				wp.wpName = wayPoint3[i];

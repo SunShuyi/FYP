@@ -130,25 +130,25 @@ public class C_OdysseusMG1 : MonoBehaviour {
 				case 0:
 					if (Input.GetKey (KeyCode.UpArrow))
 					{
-						temp.y += moveSpeed;
+						temp.y += moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 4);
 					} 
 					else if (Input.GetKey (KeyCode.DownArrow))
 					{
-						temp.y -= moveSpeed;
+						temp.y -= moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 3);
 					}
 					else if (Input.GetKey (KeyCode.LeftArrow))
 					{
-						temp.x -= moveSpeed;
+						temp.x -= moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 1);
 					} 
 					else if (Input.GetKey (KeyCode.RightArrow))
 					{
-						temp.x += moveSpeed;
+						temp.x += moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 2);
 					}
@@ -158,28 +158,28 @@ public class C_OdysseusMG1 : MonoBehaviour {
 				case 90:
 					if (Input.GetKey (KeyCode.UpArrow)) 
 					{
-						temp.x -= moveSpeed;
+						temp.x -= moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 1);
 					} 
 					else if (Input.GetKey (KeyCode.DownArrow))
 					{
 						
-						temp.x += moveSpeed;
+						temp.x += moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 2);
 					} 
 					else if (Input.GetKey (KeyCode.LeftArrow)) 
 					{
 						
-						temp.y -= moveSpeed;
+						temp.y -= moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 4);
 					}
 					else if (Input.GetKey (KeyCode.RightArrow))
 					{
 						
-						temp.y += moveSpeed;
+						temp.y += moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 3);
 						
@@ -191,28 +191,28 @@ public class C_OdysseusMG1 : MonoBehaviour {
 					if (Input.GetKey (KeyCode.UpArrow))
 					{
 						
-						temp.y -= moveSpeed;
+						temp.y -= moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 3);
 					} 
 					else if (Input.GetKey (KeyCode.DownArrow)) 
 					{
 						
-						temp.y += moveSpeed;
+						temp.y += moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 4);
 					} 
 					else if (Input.GetKey (KeyCode.LeftArrow))
 					{
 						
-						temp.x += moveSpeed;
+						temp.x += moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 1);
 					} 
 					else if (Input.GetKey (KeyCode.RightArrow)) 
 					{
 						
-						temp.x -= moveSpeed;
+						temp.x -= moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 2);
 						
@@ -223,14 +223,14 @@ public class C_OdysseusMG1 : MonoBehaviour {
 					if (Input.GetKey (KeyCode.UpArrow))
 					{
 						
-						temp.x += moveSpeed;
+						temp.x += moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 2);
 					} 
 					else if (Input.GetKey (KeyCode.DownArrow)) 
 					{
 						
-						temp.x -= moveSpeed;
+						temp.x -= moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 1);
 						
@@ -238,7 +238,7 @@ public class C_OdysseusMG1 : MonoBehaviour {
 					else if (Input.GetKey (KeyCode.LeftArrow)) 
 					{
 						
-						temp.y += moveSpeed;
+						temp.y += moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 4);
 						
@@ -246,7 +246,7 @@ public class C_OdysseusMG1 : MonoBehaviour {
 					else if (Input.GetKey (KeyCode.RightArrow))
 					{
 						
-						temp.y -= moveSpeed;
+						temp.y -= moveSpeed * Time.deltaTime * 50;
 						transform.position = temp;
 						GetComponent<Animator> ().SetInteger ("Type", 3);
 						

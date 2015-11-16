@@ -111,6 +111,25 @@ public class C_Chapter5 : C_Chapter
 			}
 		}
 
+//		if (scene == "C5_EumaeusKitchen") {
+//			
+//			//			if(conditionTriggers.Contains("DeleteHiddenKitchen")) //gate_unlocked XML condition
+//			//			{
+//			//				GameObject.Find("KHidden").SetActive(false); //GateMG at interactive object
+//			//				
+//			//			}
+//			if (conditionTriggers.Contains ("GottenWM")) {
+//				GameObject.Find ("Gate").SetActive (false);
+//			
+//				foreach (GameObject go in sceneManager.inactiveGameobjects) {
+//					if (go.name == "GateLocked") {
+//						go.SetActive (true);
+//						break;
+//					}
+//				}
+//			}
+//		}
+
 		if(scene == "C5_EumaeusHutLivingRoom")
 		{
 
@@ -119,6 +138,7 @@ public class C_Chapter5 : C_Chapter
 //				GameObject.Find("KHidden").SetActive(false); //GateMG at interactive object
 //				
 //			}
+
 			if(conditionTriggers.Contains("DeleteHiddenBedroom")) //gate_unlocked XML condition
 			{
 				GameObject.Find("Hidden").SetActive(false); //GateMG at interactive object
