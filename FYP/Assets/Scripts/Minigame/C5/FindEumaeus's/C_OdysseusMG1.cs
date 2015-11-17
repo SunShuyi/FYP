@@ -33,6 +33,7 @@ public class C_OdysseusMG1 : MonoBehaviour {
 	public AnimationClip Right;
 	public AnimationClip Idle;
 
+	public static C_OdysseusMG1 staticPlayer;
 
 	void Awake()
 	{
@@ -42,7 +43,7 @@ public class C_OdysseusMG1 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		staticPlayer = this;
 		moveSpeed = 4 * Time.deltaTime;//TEST
 		lastPlayerPos = transform.position;//PlayerPos
 
@@ -118,7 +119,7 @@ public class C_OdysseusMG1 : MonoBehaviour {
 			if (!InstructionsManager.b_IsDone)
 				GetComponent<Animator> ().SetInteger ("Type", 0);
 			
-			if (playGame && !instructions && InstructionsManager.b_IsDone) 
+			if (playGame && !instructions && InstructionsManager.b_IsDone && Rotate.sRotate.RotIsZeroOrNinty()) 
 			{
 				
 				

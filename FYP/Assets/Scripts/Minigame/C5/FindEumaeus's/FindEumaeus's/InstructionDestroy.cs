@@ -2,13 +2,13 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class timer : MonoBehaviour {
+public class InstructionDestroy : MonoBehaviour {
 	
 	//public static int timers;
 	public Text text;
 	public  int time;
 	private float rtime;
-	public Image map;
+	public Image Instructions;
 	private int seconds = 5;
 	
 	// Use this for initialization
@@ -28,7 +28,7 @@ public class timer : MonoBehaviour {
 			time -=1;
 			rtime = Time.time;
 			seconds =(time*1);
-			text.text = seconds.ToString();
+			//text.text = seconds.ToString();
 			if(seconds <= 0)
 			{
 				this.enabled = false;
@@ -38,7 +38,7 @@ public class timer : MonoBehaviour {
 			
 		}
 		if (time<= 0) {
-			map.enabled = false;
+			Instructions.enabled = false;
 		}
 	}
 	

@@ -2783,9 +2783,10 @@ GameObject:
   - 222: {fileID: 1373444066}
   - 114: {fileID: 1373444065}
   - 114: {fileID: 1373444068}
+  - 114: {fileID: 1373444069}
   m_Layer: 0
   m_Name: Instructions
-  m_TagString: Untagged
+  m_TagString: Instructions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2846,6 +2847,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c6d9de53fa813e47a79d79ee0317887, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1373444069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1373444064}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3ea882b261ce54cabd6e9052328a3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 536426375}
+  time: 0
+  Instructions: {fileID: 1373444065}
 --- !u!1 &1408506877
 GameObject:
   m_ObjectHideFlags: 0
@@ -3125,7 +3140,7 @@ GameObject:
   - 114: {fileID: 1683501454}
   m_Layer: 0
   m_Name: Instruction Canvas
-  m_TagString: Untagged
+  m_TagString: Instructions
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4234,6 +4249,7 @@ MonoBehaviour:
   - {fileID: 1043507044}
   - {fileID: 1269731259}
   StationeryObjects: {fileID: 20055945}
+  rotationSpeed: 10
   Shaking: 0
   ReadyToRotate: 0
 --- !u!1 &2010793767

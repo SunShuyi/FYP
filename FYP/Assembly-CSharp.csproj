@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}</ProjectGuid>
+	<ProjectGuid>{53C1B996-00B2-2A07-6676-2939378D456A}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -85,6 +85,7 @@
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\FindEumaeus&apos;s\CameraMiniGame2.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\FindEumaeus&apos;s\ExitIndicator.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\FindEumaeus&apos;s\InstructionDestroy.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\FindEumaeus&apos;s\InstructionFE.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\FindEumaeus&apos;s\InstructionsManager.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\FindEumaeus&apos;s\Level1.cs" />

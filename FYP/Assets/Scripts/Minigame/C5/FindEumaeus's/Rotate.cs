@@ -14,18 +14,21 @@ public class Rotate : MonoBehaviour {
 	//2 = up
 	//3 = down
 	//public float zspeed = 0.0f;
-	
+	public float rotationSpeed = 1;
 	public bool Shaking; 
 	public bool ReadyToRotate;
+	private float curRotation = 0;
 	private float ShakeDecay, ShakeDecayValue;
 	private float ShakeIntensity, ShakeIntensityValue;
 	private Vector3 OriginalPos;
 	private Quaternion OriginalRot;
 	private int SkipFrame, SkipFrameCount;
 	private float MinimumRotateDuration, MaximumRotateDuration;
-	
+
+	public static Rotate sRotate;
 	// Use this for initialization
 	void Start () {
+		sRotate = this;
 		MinimumRotateDuration = 15.0f;
 		MaximumRotateDuration = 35.0f;
 		ShakeIntensity = ShakeIntensityValue = 0.15f;
@@ -60,8 +63,12 @@ public class Rotate : MonoBehaviour {
 		}
 		if ( true == ReadyToRotate )
 		{
-			Invoke("ObjRotate", 0.5f);
+			curRotation = 0;
 			ReadyToRotate = false;
+			Invoke("ObjRotate", 0.5f);
+			Invoke("SetPlayerIdle", 0.501f);
+			Invoke ("DoShake", +0.5f + Random.Range (MinimumRotateDuration, MaximumRotateDuration));
+
 		}
 	}
 	
@@ -75,6 +82,10 @@ public class Rotate : MonoBehaviour {
 		Shaking = true;
 	}   
 
+	void SetPlayerIdle()
+	{
+		C_OdysseusMG1.staticPlayer.GetComponent<Animator> ().SetInteger ("Type", 0);
+	}
 	float roundOff(float value)
 	{
 		Vector2 val = new Vector2 (value, 0);
@@ -95,6 +106,14 @@ public class Rotate : MonoBehaviour {
 		}
 		return degrees [(int)nearestValue.y].x;
 	}
+
+	public bool RotIsZeroOrNinty()
+	{
+		if (curRotation == 0 || (int)curRotation == 90)
+			return true;
+		return false;
+	}
+
 	public void ObjRotate()
 	{
 		
@@ -102,8 +121,15 @@ public class Rotate : MonoBehaviour {
 		Vector3 angle = rotation.eulerAngles;
 		if (angle.z >= 360)
 			angle.z -= 360;
-		angle.z += 90.0f;
-		angle.z = roundOff(angle.z);
+		float incrementVal = Time.deltaTime * rotationSpeed;
+		curRotation += incrementVal;
+		if (incrementVal + curRotation > 90)
+			incrementVal = 90 - curRotation;
+		angle.z += incrementVal;
+		if (curRotation >= 90)
+			angle.z = roundOff(angle.z);
+		//angle.z += 90.0f;
+		//angle.z = roundOff(angle.z);
 		rotation.eulerAngles = angle;
 		this.transform.localRotation = rotation;
 
@@ -113,8 +139,11 @@ public class Rotate : MonoBehaviour {
 			Vector3 anglePlayer = rotation2.eulerAngles;
 			if (angle.z <= -360)
 				anglePlayer.z = 360;
-			anglePlayer.z -= 90.0f;
-			anglePlayer.z = roundOff(anglePlayer.z);
+			anglePlayer.z += incrementVal;
+			if (curRotation >= 90)
+				anglePlayer.z = roundOff(anglePlayer.z);
+			//anglePlayer.z -= 90.0f;
+			//anglePlayer.z = roundOff(anglePlayer.z);
 			rotation2.eulerAngles = angle;
 			Obj.transform.localRotation = rotation;
 		}
@@ -138,7 +167,10 @@ public class Rotate : MonoBehaviour {
 		else 
 			state = 0;
 		
-		ReadyToRotate = false;
-		Invoke ("DoShake", Random.Range (MinimumRotateDuration, MaximumRotateDuration));	
+		if (curRotation < 90)
+			Invoke ("ObjRotate", 0);
+		else {
+			roundOff (curRotation);
+		}
 	}
 }
