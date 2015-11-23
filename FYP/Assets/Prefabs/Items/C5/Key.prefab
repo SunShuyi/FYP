@@ -43,7 +43,7 @@ MonoBehaviour:
   itemDescription: Key to Penelope's Room
   itemDescriptionDutch: DutchDescription
   combinationList: []
-  itemSprite: {fileID: 21300000, guid: 91890d33482ad3a45a5c18b6e1fcd4b0, type: 3}
+  itemSprite: {fileID: 21300000, guid: 3050492de04c79345b33244fbf232322, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

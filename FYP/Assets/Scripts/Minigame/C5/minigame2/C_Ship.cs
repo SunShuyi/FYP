@@ -17,6 +17,8 @@ public class C_Ship : MonoBehaviour {
 	public float shipSpeed_normal;
 	public float shipSpeed_collided;
 
+	Vector3 dir = new Vector3(0, 1);
+
 	private bool isMoving = false;
 	
 	public GameObject instrucPage;
@@ -63,9 +65,8 @@ public class C_Ship : MonoBehaviour {
 		playGame = false;
 		
 		tiltAngles = Input.acceleration.x;
+			
 
-		
-		
 		StrengthScript = theStrength.GetComponent<StrengthIndicator> ();
 		StrengthScriptShadow = theStrengthShadow.GetComponent<StrengthIndicator> ();
 
@@ -77,35 +78,109 @@ public class C_Ship : MonoBehaviour {
 		theInput.InputUpdate ();
 		
 		StrengthCount = StrengthScript.StrengthCount;
-		
-		#if UNITY_EDITOR || UNITY_STANDALONE_WIN
-		
-		if (Input.GetKeyDown ("space") && instructions) //Start the game 
-		{ 
-			instructions = false; Time.timeScale = 1;
-		
-			hpbar.enabled = true;
-		
+
+		if (Input.touchCount > 0) {
+			
+			if(Input.GetTouch(0).phase == TouchPhase.Began)
+			{
+				Time.timeScale = 1;
+				Destroy (instrucPage);
+				instructions = false;
+				hpbar.enabled = true;
+			}
 		}
-		
-		
+
+		#if UNITY_ANDROID
+		if(Input.GetMouseButton(0)){
+			Vector3 pos = this.transform.position;
+			Vector3 pt = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			
+			dir = (pt - pos).normalized;
+			shipAnim.SetBool("isMoving", true);
+		}
+		else{
+			shipAnim.SetBool("isMoving", false);
+		}
+
+		AnimateShip ();
+
+		//			if(Input.touches.Length > 0){
+//				Vector3 pos = this.transform.position;
+//				Vector3 pt = Camera.main.ScreenToWorldPoint(Input.touches[0].position);
+//
+//				dir = (pt - pos).normalized;
+//				shipAnim.SetBool("isMoving", true);
+//			Debug.Log ("True");
+//			}
+//			else{
+//				shipAnim.SetBool("isMoving", false);
+//			Debug.Log ("False");
+//			}
+
+		#endif
+
+
+
+		#if UNITY_EDITOR || UNITY_STANDALONE_WIN
+
+		if (instructions) {
+			if (C_Input.getInstance.I_Up || Input.GetKeyUp (KeyCode.Space)) {
+				Time.timeScale = 1;
+				Destroy (instrucPage);
+				instructions = false;
+				hpbar.enabled = true;
+			}
+					//return;
+		}
+
+		//		if (Input.GetKeyDown ("space") && instructions) //Start the game 
+//		{ 
+//			instructions = false; Time.timeScale = 1;
+//		
+//			hpbar.enabled = true;
+//
+//
+//		}
+//		if (Input.GetMouseButtonDown(0))
+//		{
+//			instructions = false; Time.timeScale = 1;
+//			
+//			hpbar.enabled = true;
+//			
+//			Debug.Log ("Works");
+//		}
+//		
+
 		if (Input.GetKeyDown ("r")) 
 		{ Reset (); }
 		
 		//Click/Tap on left or right side to move the boat
 		if(playGame) {
-			if ( Input.GetKey(KeyCode.RightArrow) || Input.GetKeyDown("d"))//right 
+
+			if ( Input.GetKey(KeyCode.RightArrow) || Input.GetKey("d"))//right 
 			{ if (this.transform.rotation.z > -0.2f){ //this.transform.Rotate(Vector3.forward * -0.2f);
 					print (this.transform.rotation);
 					transform.Translate (Vector3.right * Time.deltaTime * shipSpeed_normal)	;
+					if(GetComponent<Animator> ().GetInteger ("Type") == 1)
+						GetComponent<Animator> ().SetInteger ("Type", 0);
+					else
+						GetComponent<Animator> ().SetInteger ("Type", 2);
 				}
 			} 
 			
-			if ( Input.GetKey(KeyCode.LeftArrow) || Input.GetKeyDown("a")) //left 
+			else if ( Input.GetKey(KeyCode.LeftArrow) || Input.GetKey("a")) //left 
 			{ if (this.transform.rotation.z < 0.2f){ //this.transform.Rotate(Vector3.back* -0.2f); 
 					transform.Translate (Vector3.left * Time.deltaTime * shipSpeed_normal)	;
+					if(GetComponent<Animator> ().GetInteger ("Type") == 2)
+						GetComponent<Animator> ().SetInteger ("Type", 0);
+					else
+						GetComponent<Animator> ().SetInteger ("Type", 1);
 				}
 			}
+
+			else
+				GetComponent<Animator> ().SetInteger ("Type", 0);
+
 		}
 		
 		#else
@@ -174,8 +249,6 @@ public class C_Ship : MonoBehaviour {
 			isMoving = false;
 		}
 		
-		AnimateShip ();
-		
 		lastShipPos = ShipPos;
 		
 	}
@@ -184,6 +257,7 @@ public class C_Ship : MonoBehaviour {
 		{
 			if (ShipPos.x < targetPos.x) { //left
 				this.transform.Rotate(Vector3.forward * -0.01f);
+
 				
 			} else {
 				
@@ -200,8 +274,45 @@ public class C_Ship : MonoBehaviour {
 		}
 	void AnimateShip()
 	{
-		if (isMoving) 
-			shipAnim.SetBool ("isMoving", true);
+
+//		if (isMoving) 
+//			shipAnim.SetBool ("isMoving", true);
+		if(shipAnim.GetBool("isMoving")){
+//			Vector3 maxPoint = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+//			Vector3 minPoint = Camera.main.ScreenToWorldPoint(Vector3.zero);
+//			float half_size = gameObject.GetComponent<Renderer>().bounds.size.x/2;
+			
+			if(ShipPos.x > 5)
+				transform.Translate (Vector3.left * Time.deltaTime * 5.0f);
+			else if(ShipPos.x < -5)
+				transform.Translate (Vector3.right * Time.deltaTime * 5.0f);
+
+			if(Mathf.Abs (dir.x) < 0.1f)
+			{
+				dir.x = 0;
+				GetComponent<Animator> ().SetInteger ("Type", 0);
+			}
+			else if(dir.x > 0)
+			{
+				dir.x = 1;
+				GetComponent<Animator> ().SetInteger ("Type", 2);
+			}
+			else if(dir.x < 0)
+			{
+				dir.x = -1;
+				GetComponent<Animator> ().SetInteger ("Type", 1);
+			}
+			this.transform.Translate(dir * Time.deltaTime * 5, Space.World);
+			
+//			//Bind character to world
+//			if(this.transform.position.x > maxPoint.x - half_size || this.transform.position.x < minPoint.x + half_size){
+//				this.transform.Translate(new Vector3(-dir.x * Time.deltaTime * 5, 0), Space.World);
+//			}
+//			if(this.transform.position.y > maxPoint.y - half_size || this.transform.position.y < minPoint.y + half_size){
+//				this.transform.Translate(new Vector3(0, -dir.y * Time.deltaTime * 5), Space.World);
+//			}
+		}
+
 		else
 			shipAnim.SetBool ("isMoving", false);
 	}
@@ -242,7 +353,7 @@ public class C_Ship : MonoBehaviour {
 //			if (StrengthCount == 0) {
 //				shipAnim.SetBool ("isDead", true);
 	//audioCollect.GetComponent<AudioScript>().playOnceCustom(1);
-//				shipRB.velocity = Vector2.zero;
+//				shipRB.velocity = Vector3.zero;
 //			} else {
 //				StrengthScript.SendMessage ("Hit");
 //				StrengthScriptShadow.SendMessage ("Hit");

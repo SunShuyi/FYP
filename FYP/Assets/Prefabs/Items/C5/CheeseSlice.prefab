@@ -43,7 +43,7 @@ MonoBehaviour:
   itemDescription: Slice of cheese
   itemDescriptionDutch: DutchDescription
   combinationList: []
-  itemSprite: {fileID: 21300000, guid: d2ef2a86cdb2735489853fc6c76b6ebf, type: 3}
+  itemSprite: {fileID: 21300000, guid: 26f1f52676d52794382138ab6e0ef8a9, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

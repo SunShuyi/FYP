@@ -40,8 +40,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Antinous
-  characterSprite: {fileID: 21300000, guid: c524d3a9fe1289440a3d76030956d06a, type: 3}
-  characterAnimator: {fileID: 9100000, guid: fc887ae8a18bba24ca1438dc2238c7c2, type: 2}
+  characterSprite: {fileID: 21300000, guid: a96515056a079ae429820ced00f75c4b, type: 3}
+  characterAnimator: {fileID: 9100000, guid: 2cdf2e4de92756a49a18f975eceb9d34, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

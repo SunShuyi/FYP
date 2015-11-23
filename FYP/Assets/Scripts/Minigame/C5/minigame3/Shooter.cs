@@ -19,6 +19,8 @@ public class Shooter : MonoBehaviour {
 	public static Manager manager;
     public Animator shootAnim;
 	private bool ready = false;
+	public colide colides;
+	//private GameObject audioCollect;
 	//private bool playGame;
 //	private bool instructions;
 //	Vector3 PlayerPos;//PlayerPos
@@ -29,6 +31,7 @@ public class Shooter : MonoBehaviour {
 	void Start () {
 		//lastPlayerPos = transform.position;
 		//yield return StartCoroutine (Shoots ());
+		//audioCollect = GameObject.Find ("SFX");
 		lifeScript = theLives.GetComponent<Lives> ();
 		lifeScriptShadow = theLivesShadow.GetComponent<Lives> ();
 		shootAnim = GetComponent<Animator> ();
@@ -99,20 +102,30 @@ public class Shooter : MonoBehaviour {
 	}
 
 
+	void Colide()
+
+	{
+		colides.change ();
+
+	}
+
 	public void Shoots()
 	{
+		Invoke ("Colide", 1);
+		//audioCollect.GetComponent<AudioScript>().playOnceCustom(0);
 
-			GameObject clone = (GameObject)Instantiate(projectile,transform.position,Quaternion.identity);
-			clone.transform.localRotation = projectile.transform.localRotation;
-			clone.transform.SetLocalPositionY (transform.position.y - 4.19f);
-			clone.GetComponent<Arrow> ().target = transform.position;
-			//clone.GetComponent<Arrow> ().Vel =  progressBar.value * 1.2f;
-			clone.GetComponent<Arrow> ().hitChance = 100-Mathf.Abs((progressBar.value -50) * 2);
-			progressBar.value = 0;
+
+		GameObject clone = (GameObject)Instantiate(projectile,transform.position+new Vector3(-5.3f,-4.92f,0),Quaternion.identity);
+//			clone.transform.localRotation = projectile.transform.localRotation;
+//			clone.transform.SetLocalPositionY (transform.position.y - 3.19f);
+//			clone.GetComponent<Arrow> ().target = transform.position;
+//			//clone.GetComponent<Arrow> ().Vel =  progressBar.value * 1.2f;
+//			clone.GetComponent<Arrow> ().hitChance = 100-Mathf.Abs((progressBar.value -50) * 2);
+			
 			Lives.life.lifeCount--;
-			clone.GetComponent<Arrow> ().lifeWhenShot = Lives.life.lifeCount;
-			clone.GetComponent<Arrow> ().Lose = Lose;
-		   // clone.GetComponent<Manager> ().ready = false;
+//			clone.GetComponent<Arrow> ().lifeWhenShot = Lives.life.lifeCount;
+//			clone.GetComponent<Arrow> ().Lose = Lose;
+//		   clone.GetComponent<Manager> ().ready = false;
 			//clone.GetComponent<Rigidbody>().velocity = shooter.forward*progressBar.value *1.2f;
 
 		//if( Lives.life.lifeCount == 0)

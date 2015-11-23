@@ -201,7 +201,7 @@ Animator:
   m_GameObject: {fileID: 16360475}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a3f73b5ee0d1bc4d895c3f6c1d3a5eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f71eba2c7582ac4ca30ba6084a120b2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -232,6 +232,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 16360477}
   ship: {fileID: 997275979}
   Chase: 0
+  deathSpeed: 3
 --- !u!50 &16360479
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -257,9 +258,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .0414954312, y: .314873606}
+  m_Offset: {x: .161877215, y: .0225067157}
   serializedVersion: 2
-  m_Size: {x: 3.1540184, y: 3.29101372}
+  m_Size: {x: 2.50051713, y: 4.4948988}
 --- !u!212 &16360481
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -328,7 +329,7 @@ Animator:
   m_GameObject: {fileID: 30818545}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a3f73b5ee0d1bc4d895c3f6c1d3a5eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f71eba2c7582ac4ca30ba6084a120b2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -359,6 +360,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 30818547}
   ship: {fileID: 1308623293}
   Chase: 0
+  deathSpeed: 3
 --- !u!50 &30818549
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -664,6 +666,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 94637421}
   ship: {fileID: 1316592266}
   Chase: 0
+  deathSpeed: 1
 --- !u!95 &94637421
 Animator:
   serializedVersion: 3
@@ -673,7 +676,7 @@ Animator:
   m_GameObject: {fileID: 94637418}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db9103ed9faf9814eb1ea51775db3be7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9c0bffc322c149d48a6f3ce2b1d1fa1c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -929,6 +932,78 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 3
+--- !u!1 &106570389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 106570392}
+  - 212: {fileID: 106570391}
+  - 95: {fileID: 106570390}
+  m_Layer: 0
+  m_Name: S_Ship_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!95 &106570390
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 106570389}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3aea43e1dea92ab419000729813544d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &106570391
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 106570389}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300006, guid: c95bdc6df914b6b4b826be77ea287a04, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &106570392
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 106570389}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.20000005, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
 --- !u!1 &119807258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,7 +1528,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 487474, guid: 9478564b424fdb542a962df0d6bd1d89, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11441454, guid: 9478564b424fdb542a962df0d6bd1d89, type: 2}
       propertyPath: choice
@@ -1553,7 +1628,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 191002367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 104.5, z: -.100000001}
+  m_LocalPosition: {x: 3, y: 129.199997, z: -.100000001}
   m_LocalScale: {x: .899999976, y: .899999976, z: 1}
   m_Children:
   - {fileID: 1670148208}
@@ -1568,7 +1643,7 @@ Animator:
   m_GameObject: {fileID: 191002367}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db9103ed9faf9814eb1ea51775db3be7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9c0bffc322c149d48a6f3ce2b1d1fa1c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1599,6 +1674,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 191002369}
   ship: {fileID: 1670148208}
   Chase: 0
+  deathSpeed: 1
 --- !u!50 &191002371
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1624,9 +1700,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .00937567838, y: .0151231559}
+  m_Offset: {x: -.0422159843, y: -.260026723}
   serializedVersion: 2
-  m_Size: {x: 2.11364126, y: 2.69154859}
+  m_Size: {x: 1.66651416, y: 3.2418592}
 --- !u!212 &191002373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2141,7 +2217,7 @@ Animator:
   m_GameObject: {fileID: 260382426}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db9103ed9faf9814eb1ea51775db3be7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9c0bffc322c149d48a6f3ce2b1d1fa1c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2172,6 +2248,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 260382428}
   ship: {fileID: 1819853559}
   Chase: 0
+  deathSpeed: 1
 --- !u!212 &260382430
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2268,7 +2345,7 @@ Animator:
   m_GameObject: {fileID: 264837760}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db9103ed9faf9814eb1ea51775db3be7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9c0bffc322c149d48a6f3ce2b1d1fa1c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2299,6 +2376,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 264837762}
   ship: {fileID: 2124443442}
   Chase: 0
+  deathSpeed: 1
 --- !u!50 &264837764
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -2408,7 +2486,7 @@ Transform:
   - {fileID: 396706234}
   - {fileID: 189737186}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
 --- !u!1 &283025096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,7 +2568,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 297041672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.470001221, y: 89.7999878, z: -.100000001}
+  m_LocalPosition: {x: -.5, y: 99.6999969, z: -.100000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1741159974}
@@ -2519,6 +2597,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 297041675}
   ship: {fileID: 1741159974}
   Chase: 0
+  deathSpeed: .5
 --- !u!95 &297041675
 Animator:
   serializedVersion: 3
@@ -2528,7 +2607,7 @@ Animator:
   m_GameObject: {fileID: 297041672}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa30aa03e01d1b24a881a406810fa412, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3aea43e1dea92ab419000729813544d6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2561,9 +2640,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .0137023926, y: -.065826416}
+  m_Offset: {x: .0480957031, y: .29524231}
   serializedVersion: 2
-  m_Size: {x: 1.63801694, y: 1.85351706}
+  m_Size: {x: 1.22533619, y: 1.61273015}
 --- !u!212 &297041678
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2755,6 +2834,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 327014667}
   ship: {fileID: 886297357}
   Chase: 0
+  deathSpeed: .5
 --- !u!95 &327014667
 Animator:
   serializedVersion: 3
@@ -2764,7 +2844,7 @@ Animator:
   m_GameObject: {fileID: 327014664}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa30aa03e01d1b24a881a406810fa412, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3aea43e1dea92ab419000729813544d6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2823,9 +2903,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .0137023926, y: -.065826416}
+  m_Offset: {x: .0652923584, y: .209289551}
   serializedVersion: 2
-  m_Size: {x: 1.63801694, y: 1.85351706}
+  m_Size: {x: 1.32852232, y: 1.71597099}
 --- !u!1 &335358301
 GameObject:
   m_ObjectHideFlags: 0
@@ -3262,6 +3342,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 429909721}
   ship: {fileID: 987225095}
   Chase: 0
+  deathSpeed: .5
 --- !u!95 &429909721
 Animator:
   serializedVersion: 3
@@ -3271,7 +3352,7 @@ Animator:
   m_GameObject: {fileID: 429909718}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa30aa03e01d1b24a881a406810fa412, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3aea43e1dea92ab419000729813544d6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3330,9 +3411,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .0137023926, y: -.065826416}
+  m_Offset: {x: .0480957031, y: .260879517}
   serializedVersion: 2
-  m_Size: {x: 1.63801694, y: 1.85351706}
+  m_Size: {x: 1.43167984, y: 1.68156457}
 --- !u!1 &431612959
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,8 +3566,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8d33b9c7867c448ae05cd0a3d5ae28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shooter: {fileID: 0}
   text: {fileID: 1583648347}
   time: 0
+  progressBar: {fileID: 0}
 --- !u!1 &481493173
 GameObject:
   m_ObjectHideFlags: 0
@@ -4031,6 +4114,78 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starting: 1
   StrengthCount: 0
+--- !u!1 &593349479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 593349482}
+  - 212: {fileID: 593349481}
+  - 95: {fileID: 593349480}
+  m_Layer: 0
+  m_Name: S_Ship_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!95 &593349480
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 593349479}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9862f87ddddd499459f6697f6eccec8e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &593349481
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 593349479}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300002, guid: c95bdc6df914b6b4b826be77ea287a04, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &593349482
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 593349479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &600055988
 GameObject:
   m_ObjectHideFlags: 0
@@ -4312,7 +4467,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 652700668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 104, z: 0}
+  m_LocalPosition: {x: 3, y: 130, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 659155454}
@@ -4604,7 +4759,7 @@ Animator:
   m_GameObject: {fileID: 686898393}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa30aa03e01d1b24a881a406810fa412, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3aea43e1dea92ab419000729813544d6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4635,6 +4790,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 686898396}
   ship: {fileID: 326738133}
   Chase: 0
+  deathSpeed: .600000024
 --- !u!50 &686898398
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -4660,9 +4816,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .0137023926, y: -.065826416}
+  m_Offset: {x: .0308990479, y: .226501465}
   serializedVersion: 2
-  m_Size: {x: 1.63801694, y: 1.85351706}
+  m_Size: {x: 1.32851553, y: 1.54395866}
 --- !u!1 &691375307
 GameObject:
   m_ObjectHideFlags: 0
@@ -4800,7 +4956,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 740010755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: 85, z: 0}
+  m_LocalPosition: {x: -1.5, y: 93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1245340369}
@@ -5303,6 +5459,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 792091560}
   ship: {fileID: 662408745}
   Chase: 0
+  deathSpeed: 1
 --- !u!95 &792091560
 Animator:
   serializedVersion: 3
@@ -5312,7 +5469,7 @@ Animator:
   m_GameObject: {fileID: 792091557}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db9103ed9faf9814eb1ea51775db3be7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9c0bffc322c149d48a6f3ce2b1d1fa1c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5637,9 +5794,10 @@ MonoBehaviour:
   moveBack: 0
   player: {fileID: 1043507044}
   energyReq: 75
-  enemyAnim: {fileID: 191002369}
+  enemyAnim: {fileID: 839510257}
   ship: {fileID: 1810323038}
   Chase: 0
+  deathSpeed: 3
 --- !u!212 &839510256
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5675,7 +5833,7 @@ Animator:
   m_GameObject: {fileID: 839510253}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a3f73b5ee0d1bc4d895c3f6c1d3a5eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f71eba2c7582ac4ca30ba6084a120b2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5708,9 +5866,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .0414954312, y: .314873606}
+  m_Offset: {x: .0758955255, y: .194464803}
   serializedVersion: 2
-  m_Size: {x: 3.1540184, y: 3.29101372}
+  m_Size: {x: 2.39733458, y: 4.56364632}
 --- !u!1 &842086285
 GameObject:
   m_ObjectHideFlags: 0
@@ -6386,6 +6544,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 916563440}
   ship: {fileID: 2125754797}
   Chase: 0
+  deathSpeed: 1
 --- !u!95 &916563440
 Animator:
   serializedVersion: 3
@@ -6395,7 +6554,7 @@ Animator:
   m_GameObject: {fileID: 916563437}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a3f73b5ee0d1bc4d895c3f6c1d3a5eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f71eba2c7582ac4ca30ba6084a120b2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6774,7 +6933,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 950180548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5, y: 104, z: 0}
+  m_LocalPosition: {x: -3.5, y: 99.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 31795276}
@@ -6895,6 +7054,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 974559079}
   ship: {fileID: 96728046}
   Chase: 0
+  deathSpeed: 1
 --- !u!95 &974559079
 Animator:
   serializedVersion: 3
@@ -6904,7 +7064,7 @@ Animator:
   m_GameObject: {fileID: 974559076}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db9103ed9faf9814eb1ea51775db3be7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9c0bffc322c149d48a6f3ce2b1d1fa1c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6937,9 +7097,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .00937567838, y: .0151231559}
+  m_Offset: {x: .0265672486, y: -.242818207}
   serializedVersion: 2
-  m_Size: {x: 2.11364126, y: 2.69154859}
+  m_Size: {x: 1.73529577, y: 3.20749211}
 --- !u!212 &974559082
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7034,7 +7194,7 @@ Animator:
   m_GameObject: {fileID: 981910302}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a3f73b5ee0d1bc4d895c3f6c1d3a5eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f71eba2c7582ac4ca30ba6084a120b2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7065,6 +7225,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 191002369}
   ship: {fileID: 744902455}
   Chase: 0
+  deathSpeed: 1
 --- !u!50 &981910307
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -7225,7 +7386,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 988012202}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.5, y: 90, z: 0}
+  m_LocalPosition: {x: -.5, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 749324846}
@@ -7565,7 +7726,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: c40efb61af4509d4991fc261f4002397, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8aac2f0843b1b3748b2398690570ee79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1043507046
 Transform:
@@ -7633,9 +7794,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 8.39233398e-05, y: -.278533936}
+  m_Offset: {x: 8.39233398e-05, y: -.134521484}
   serializedVersion: 2
-  m_Size: {x: 1.77901983, y: 2.70545626}
+  m_Size: {x: 1.77901983, y: 2.99362421}
 --- !u!95 &1043507050
 Animator:
   serializedVersion: 3
@@ -8414,7 +8575,7 @@ Animator:
   m_GameObject: {fileID: 1156919528}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a3f73b5ee0d1bc4d895c3f6c1d3a5eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f71eba2c7582ac4ca30ba6084a120b2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8442,9 +8603,10 @@ MonoBehaviour:
   moveBack: 0
   player: {fileID: 1043507044}
   energyReq: 75
-  enemyAnim: {fileID: 191002369}
+  enemyAnim: {fileID: 1156919530}
   ship: {fileID: 600055989}
   Chase: 0
+  deathSpeed: 3
 --- !u!50 &1156919532
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -8470,9 +8632,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .0414954312, y: .314873606}
+  m_Offset: {x: .117001012, y: .13871935}
   serializedVersion: 2
-  m_Size: {x: 3.1540184, y: 3.29101372}
+  m_Size: {x: 2.24805427, y: 4.29777861}
 --- !u!212 &1156919534
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8685,7 +8847,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1199672748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.40000153, y: 84.6000061, z: 0}
+  m_LocalPosition: {x: -1.39999998, y: 92.5400009, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 904682004}
@@ -8700,7 +8862,7 @@ Animator:
   m_GameObject: {fileID: 1199672748}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa30aa03e01d1b24a881a406810fa412, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3aea43e1dea92ab419000729813544d6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8731,6 +8893,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 1199672750}
   ship: {fileID: 904682004}
   Chase: 0
+  deathSpeed: .600000024
 --- !u!50 &1199672752
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -8756,9 +8919,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .0137023926, y: -.065826416}
+  m_Offset: {x: .0481033325, y: .260955811}
   serializedVersion: 2
-  m_Size: {x: 1.63801694, y: 1.85351706}
+  m_Size: {x: 1.2941227, y: 1.8191607}
 --- !u!212 &1199672754
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8888,7 +9051,7 @@ Animator:
   m_GameObject: {fileID: 1207328218}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa30aa03e01d1b24a881a406810fa412, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3aea43e1dea92ab419000729813544d6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8919,6 +9082,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 1207328220}
   ship: {fileID: 985004953}
   Chase: 0
+  deathSpeed: 1
 --- !u!50 &1207328222
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -9069,7 +9233,7 @@ Animator:
   m_GameObject: {fileID: 1214327630}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db9103ed9faf9814eb1ea51775db3be7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9c0bffc322c149d48a6f3ce2b1d1fa1c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9100,6 +9264,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 1214327632}
   ship: {fileID: 846386581}
   Chase: 0
+  deathSpeed: 1
 --- !u!50 &1214327634
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -9125,9 +9290,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .00937567838, y: .0151231559}
+  m_Offset: {x: .0434112586, y: -.257127553}
   serializedVersion: 2
-  m_Size: {x: 2.11364126, y: 2.69154859}
+  m_Size: {x: 1.45565939, y: 3.23602009}
 --- !u!212 &1214327636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9773,6 +9938,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 1286689346}
   ship: {fileID: 842086286}
   Chase: 0
+  deathSpeed: .5
 --- !u!95 &1286689346
 Animator:
   serializedVersion: 3
@@ -9782,7 +9948,7 @@ Animator:
   m_GameObject: {fileID: 1286689343}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa30aa03e01d1b24a881a406810fa412, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3aea43e1dea92ab419000729813544d6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9815,9 +9981,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .0137023926, y: -.065826416}
+  m_Offset: {x: .0308990479, y: .209289551}
   serializedVersion: 2
-  m_Size: {x: 1.63801694, y: 1.85351706}
+  m_Size: {x: 1.19096303, y: 1.50960648}
 --- !u!212 &1286689349
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11769,6 +11935,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 1666307303}
   ship: {fileID: 1552866202}
   Chase: 0
+  deathSpeed: 1
 --- !u!95 &1666307303
 Animator:
   serializedVersion: 3
@@ -11778,7 +11945,7 @@ Animator:
   m_GameObject: {fileID: 1666307300}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a3f73b5ee0d1bc4d895c3f6c1d3a5eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f71eba2c7582ac4ca30ba6084a120b2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -12229,7 +12396,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
 --- !u!1 &1731249397
 GameObject:
   m_ObjectHideFlags: 0
@@ -12359,6 +12526,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 1731960438}
   ship: {fileID: 1410651662}
   Chase: 0
+  deathSpeed: 1
 --- !u!95 &1731960438
 Animator:
   serializedVersion: 3
@@ -12368,7 +12536,7 @@ Animator:
   m_GameObject: {fileID: 1731960435}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db9103ed9faf9814eb1ea51775db3be7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9c0bffc322c149d48a6f3ce2b1d1fa1c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -12665,6 +12833,78 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 92b90882c1892054faef287cfd215f76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1765404947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1765404950}
+  - 212: {fileID: 1765404949}
+  - 95: {fileID: 1765404948}
+  m_Layer: 0
+  m_Name: B_Ship_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!95 &1765404948
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1765404947}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5f71eba2c7582ac4ca30ba6084a120b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!212 &1765404949
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1765404947}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300008, guid: 1b37d4c752b30034485866956d613b79, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &1765404950
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1765404947}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 8.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &1766053641
 GameObject:
   m_ObjectHideFlags: 0
@@ -13309,6 +13549,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 1821917385}
   ship: {fileID: 1095875940}
   Chase: 0
+  deathSpeed: 1
 --- !u!50 &1821917387
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -13714,7 +13955,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1844118579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.59999847, y: 104.100006, z: -.100000001}
+  m_LocalPosition: {x: -3.5999999, y: 99.5, z: -.100000001}
   m_LocalScale: {x: .899999976, y: .899999976, z: 1}
   m_Children:
   - {fileID: 1893278960}
@@ -13740,9 +13981,10 @@ MonoBehaviour:
   moveBack: 0
   player: {fileID: 1043507044}
   energyReq: 75
-  enemyAnim: {fileID: 191002369}
+  enemyAnim: {fileID: 1844118583}
   ship: {fileID: 1893278960}
   Chase: 0
+  deathSpeed: 3
 --- !u!212 &1844118582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13778,7 +14020,7 @@ Animator:
   m_GameObject: {fileID: 1844118579}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a3f73b5ee0d1bc4d895c3f6c1d3a5eb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5f71eba2c7582ac4ca30ba6084a120b2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -13811,9 +14053,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .0414954312, y: .314873606}
+  m_Offset: {x: .093087092, y: .00532362238}
   serializedVersion: 2
-  m_Size: {x: 3.1540184, y: 3.29101372}
+  m_Size: {x: 2.56930947, y: 4.18526173}
 --- !u!1 &1846981328
 GameObject:
   m_ObjectHideFlags: 0
@@ -14078,6 +14320,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 1875231734}
   ship: {fileID: 102823646}
   Chase: 0
+  deathSpeed: 1
 --- !u!95 &1875231734
 Animator:
   serializedVersion: 3
@@ -14087,7 +14330,7 @@ Animator:
   m_GameObject: {fileID: 1875231731}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db9103ed9faf9814eb1ea51775db3be7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9c0bffc322c149d48a6f3ce2b1d1fa1c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -14146,9 +14389,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .00937567838, y: .0151231559}
+  m_Offset: {x: .0265672486, y: -.294426829}
   serializedVersion: 2
-  m_Size: {x: 2.11364126, y: 2.69154859}
+  m_Size: {x: 1.46014774, y: 3.31064105}
 --- !u!1 &1880274258
 GameObject:
   m_ObjectHideFlags: 0
@@ -14780,7 +15023,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 75
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 75
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -14865,7 +15108,7 @@ Animator:
   m_GameObject: {fileID: 1958274869}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa30aa03e01d1b24a881a406810fa412, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3aea43e1dea92ab419000729813544d6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -14896,6 +15139,7 @@ MonoBehaviour:
   enemyAnim: {fileID: 1958274872}
   ship: {fileID: 165637086}
   Chase: 0
+  deathSpeed: .699999988
 --- !u!50 &1958274874
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -14921,9 +15165,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: .0137023926, y: -.065826416}
+  m_Offset: {x: .0137023926, y: .226470947}
   serializedVersion: 2
-  m_Size: {x: 1.63801694, y: 1.85351706}
+  m_Size: {x: 1.36290336, y: 1.95664072}
 --- !u!1 &1962430261
 GameObject:
   m_ObjectHideFlags: 0

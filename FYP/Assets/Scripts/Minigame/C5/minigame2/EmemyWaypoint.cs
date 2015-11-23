@@ -20,7 +20,7 @@ public class EmemyWaypoint : MonoBehaviour {
 	C_Ship cShip;
 	private bool Moving = true;
 	//public bool Dead;
-
+	public float deathSpeed = 1;
 	
 	
 	void Start ()
@@ -67,7 +67,7 @@ public class EmemyWaypoint : MonoBehaviour {
 				enemyAnim.SetBool ("Dead", true);
 				this.enabled = false;
 				this.GetComponent<BoxCollider2D>().enabled = false;
-				Invoke ("SelfDestroy",0.45f);
+				Invoke ("SelfDestroy",deathSpeed);
 				//Destroy (this.gameObject);
 				collided = false;
 				//break;
@@ -126,17 +126,17 @@ public class EmemyWaypoint : MonoBehaviour {
 				enemyAnim.SetBool("Dead", true);
 				this.enabled = false;
 				this.GetComponent<BoxCollider2D>().enabled = false;
-				Invoke ("SelfDestroy",0.45f);
+				Invoke ("SelfDestroy",deathSpeed);
 				cShip.collidedShips--;
 			}
 			else 
 			{
-				cShip.StrengthScript.StrengthCount--;
-				cShip.StrengthScriptShadow.StrengthCount--;
-				if( cShip.StrengthScript.StrengthCount == 0)
-				{
-					cShip.shipAnim.SetBool ("isDead", true);
-				}
+				//cShip.StrengthScript.StrengthCount--;
+				//cShip.StrengthScriptShadow.StrengthCount--;
+				//if( cShip.StrengthScript.StrengthCount == 0)
+				//{
+				cShip.shipAnim.SetBool ("isDead", true);
+				//}
 			}
 		}
 	}

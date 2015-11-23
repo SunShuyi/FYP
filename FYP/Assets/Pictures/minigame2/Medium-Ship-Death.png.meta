@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 67ce6618fdeb55b449a66551ead9c39a
-timeCreated: 1445331770
+timeCreated: 1447731739
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -57,50 +57,50 @@ TextureImporter:
     - name: Medium-Ship-Death_5
       rect:
         serializedVersion: 2
-        x: 508
-        y: 170
+        x: 1
+        y: 0
         width: 371
-        height: 361
+        height: 500
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Medium-Ship-Death_6
       rect:
         serializedVersion: 2
-        x: 870
-        y: 180
+        x: 374
+        y: 0
         width: 371
-        height: 346
+        height: 500
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Medium-Ship-Death_7
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 179
+        x: 745
+        y: 0
         width: 371
-        height: 347
+        height: 500
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Medium-Ship-Death_8
       rect:
         serializedVersion: 2
-        x: 1607
-        y: 211
+        x: 1117
+        y: 0
         width: 371
-        height: 337
+        height: 500
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Medium-Ship-Death_9
       rect:
         serializedVersion: 2
-        x: 2020
-        y: 202
+        x: 1484
+        y: 3
         width: 371
-        height: 342
+        height: 497
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

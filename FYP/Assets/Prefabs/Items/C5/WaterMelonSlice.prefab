@@ -43,7 +43,7 @@ MonoBehaviour:
   itemDescription: Slice of watermelon
   itemDescriptionDutch: DutchDescription
   combinationList: []
-  itemSprite: {fileID: 21300000, guid: f618a5cdb0af7d04aba7da864eb2132b, type: 3}
+  itemSprite: {fileID: 21300000, guid: db55d681eb8e8e24289dcead1297a7a2, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

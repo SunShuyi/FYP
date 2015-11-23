@@ -1,0 +1,22 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Minigame\C5\minigame3\colide.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Minigame\C5\minigame3\Shooter.cs" Line="124" Column="4" />
+      <File FileName="Assets\Scripts\Minigame\C5\minigame3\colide.cs" Line="45" Column="3" />
+      <File FileName="Assets\Scripts\Minigame\C5\minigame3\Arrow.cs" Line="8" Column="30" />
+      <File FileName="Assets\Scripts\Minigame\C5\minigame2\C_Ship.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Minigame\C5\minigame3\destory_prompt.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Minigame\C5\minigame3\Minigame2Timer.cs" Line="47" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\130009m\Desktop\New folder\FYP_put_update\Assets\Scripts\Minigame\C5\minigame3\colide.cs" line="29" />
+      <Breakpoint file="C:\Users\130009m\Desktop\New folder\FYP_put_update\Assets\Scripts\Minigame\C5\minigame3\colide.cs" line="36" />
+      <Breakpoint file="C:\Users\130009m\Desktop\New folder\FYP_put_update\Assets\Scripts\Minigame\C5\minigame3\colide.cs" line="38" />
+      <Breakpoint file="C:\Users\130009m\Desktop\New folder\FYP_put_update\Assets\Scripts\Minigame\C5\minigame3\colide.cs" line="39" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

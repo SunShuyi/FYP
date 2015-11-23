@@ -2450,22 +2450,19 @@
 
 	<chapter _name="5">
 		<!-- SCENE -->
-		<scene _name="C5_Phaeacians'Beach">
-			<npc _name="Monologue">	
-				<condition _condition="!DeleteHidden">
-					<line>There are pieces of canvas lying on the shore.</line>
-					<line>Hmmm, I can tailor this in to a piece of canvas cloak. I should pick one up.</line>
-					<line>Now I'm missing something to tailor the material.</line>
-					<result _name="setactive" _sentence="Hidden">false</result>
-					<result _name="condition">DeleteHidden</result>
-					<line>Anymore?</line>
-					<leavedialogue/>
-				</condition>					
-			</npc>
-		</scene>
 		
 		<scene _name="C5_Phaeacians'Forest1">
 			<npc _name="Monologue">	
+					<condition _condition="!DeleteHiddenCanvas">
+						<line>There are pieces of canvas lying on the shore.</line>
+						<line>Hmmm, I can tailor this in to a piece of canvas cloak. I should pick one up.</line>
+						<line>Now I'm missing something to tailor the material.</line>
+						<result _name="setactive" _sentence="HiddenCanvas">false</result>
+						<result _name="condition">DeleteHiddenCanvas</result>
+						<line>Anymore?</line>
+						<leavedialogue/>
+					</condition>	
+							
 					<condition _condition="!DeleteHiddenForest">
 						<condition _condition="have_CanvasCloak">
 							<line>I just have to wear the cloak and disguise myself now!</line>
@@ -2505,9 +2502,10 @@
 						<line>That is really kind of you. Thank you.</line>
 						<changecharacter>Right</changecharacter>
 						<line>Prepare yourself a bit, i will inform you when we leave</line>
+						<result _name="addinventory">Note</result>
 						<changecharacter>Left</changecharacter>
 						<line>Okay.</line>
-						<result _name="loadscene">MiniGame2</result>
+						<result _name="loadscene">C5_OdysseusLivingRoom</result>
 						<leavedialogue/>
 					</condition>
 				</condition>
@@ -2547,6 +2545,21 @@
 					<leavedialogue/>
 				</condition>	
 				
+				<condition _condition="have_Grapes">
+					<line>Why are you walking around with grapes!</line>
+					<leavedialogue/>
+				</condition>	
+				
+				<condition _condition="have_GrapesHalf">
+					<line>Are you going to keep the grapes to yourself?</line>
+					<leavedialogue/>
+				</condition>				
+										
+				<condition _condition="have_GrapesSmall">
+					<line>The grapes look ready, give them to the Cook.</line>
+					<leavedialogue/>
+				</condition>
+				
 				<condition _condition="have_KitchenKnife">
 					<line>Why are you pointing a knife at me!</line>
 					<changecharacter>Left</changecharacter>
@@ -2558,6 +2571,11 @@
 				
 				<condition _condition="have_Clothes">
 				  	<line>Why are you giving me dirty clothes?</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="have_ClothesAfter">
+				  	<line>That's a big pile of clothes.</line>
 					<leavedialogue/>
 				</condition>
 						
@@ -2660,7 +2678,7 @@
 									
 				<condition _condition="!have_WaterMelonSlice">
 					<condition _condition="!taken_Cheese">	
-						<line>Here's the cheese, please cut it into smaller slices, and return me the knife once you are done.</line>
+						<line>Here's the cheese, please cut it into smaller slices.</line>
 						<result _name="addinventory">Cheese</result>
 						<result _name="condition">taken_Cheese</result>	
 						<leavedialogue/>
@@ -2702,11 +2720,59 @@
 				</condition>					
 										
 				<condition _condition="have_CheeseSlice">
-					<line>Please pass me the slices of cheese and knife when you are done.</line>
+					<line>Please pass me the slices of cheese when you are done.</line>
 					<leavedialogue/>
 				</condition>
 				
 				<condition _condition="!have_CheeseSlice">
+					<condition _condition="!taken_Grapes">	
+						<line>Here's the grapes, please divide it into smaller servings, and return me the knife once you are done.</line>
+						<result _name="addinventory">Grapes</result>
+						<result _name="condition">taken_Grapes</result>	
+						<leavedialogue/>
+					</condition>
+				</condition>
+				
+				<condition _condition="have_Grapes">
+					<condition _condition="selected_Grapes">
+						<line>This is not what i want.</line>
+						<leavedialogue/>
+					</condition>
+				</condition>	
+				
+				<condition _condition="have_Grapes">
+					<line>Mind Cutting the cheese into smaller slices?</line>
+					<leavedialogue/>
+				</condition>	
+				
+				<condition _condition="have_GrapesHalf">
+					<condition _condition="selected_GrapesHalf">
+						<line>Please divide it smaller.</line>
+						<leavedialogue/>
+					</condition>
+				</condition>
+				
+				<condition _condition="have_GrapesHalf">
+					<line>Please divide it smaller.</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="have_GrapesSmall">
+					<condition _condition="selected_GrapesSmall">
+						<line>This is exactly what i want.</line>
+						<result _name="deleteinventory">GrapesSmall</result>
+						<result _name="condition">taken_GrapesSmall</result>
+						<line>Anymore?</line>
+						<leavedialogue/>
+					</condition>
+				</condition>					
+										
+				<condition _condition="have_GrapesSmall">
+					<line>Please pass me the smallerservings of grapes and knife when you are done.</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="!have_GrapesSmall">
 				<condition _condition="!taken_Invisible">	
 					<line>You have brought me the knife! Thanks for the help!</line>
 					<result _name="deleteinventory">KitchenKnife</result>
@@ -2737,6 +2803,11 @@
 					<leavedialogue/>
 				</condition>
 				
+				<condition _condition="have_ClothesAfter">
+				  	<line>These pile of clothes may get dirty in the kitchen!</line>
+					<leavedialogue/>
+				</condition>
+				
 				<condition _condition="!have_Invisible">
 					<line>Hi, you again~</line>
 					<leavedialogue/>
@@ -2758,11 +2829,31 @@
 				   </condition>
 				</condition>
 				
+				<condition _condition="have_ClothesAfter">
+				   <condition _condition="selected_ClothesAfter"> 
+				  		<line>That's fast, Thank you.</line>
+				  		<result _name="deleteinventory">ClothesAfter</result>
+				  		<result _name="addinventory">CleanClothes</result>
+				  		<changecharacter>Left</changecharacter>
+						<line>No problem.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Pass this piece of clothing to Eumaeu.</line>
+						<changecharacter>Left</changecharacter>
+						<line>Alright.</line>
+						<leavedialogue/>
+				   </condition>
+				</condition>
+				
 				<condition _condition="have_CleanClothes">
 					<line>Thanks for the help.</line>
 					<line>Pass this to the owner of the clothing.</line>
 					<changecharacter>Left</changecharacter>
 					<line>Sure.</line>
+					<leavedialogue/>
+				</condition>
+				
+				<condition _condition="have_ClothesAfter">
+					<line>Please pass me the pile of clothes after you are done.</line>
 					<leavedialogue/>
 				</condition>
 				
@@ -2800,14 +2891,32 @@
 		
 			<!-- NPC NAME -->
 			<npc _name="Eumaeus">
-			
+								
 				<condition _condition="have_EInvisible">
-					<line>Great!</line>
-					<result _name="deleteinventory">EInvisible</result>
-					<result _name="addinventory">Key</result>
-					<leavedialogue/>
+					<condition _condition="selected_Note">
+						<line>Great!</line>
+						<result _name="deleteinventory">EInvisible</result>
+						<result _name="addinventory">Key</result>
+						<leavedialogue/>
+					</condition>
 				</condition>
 				
+				<condition _condition="have_EInvisible">
+					<condition _condition="have_Note">
+						<line>Remember the note that i passed to you earlier on?</line>
+						<changecharacter>Left</changecharacter>
+						<line>Yes of course.</line>
+						<leavedialogue/>
+					</condition>
+				</condition>
+				
+				<condition _condition="!have_Invisible">	
+					<condition _condition="selected_Note">
+						<line>I don't need it now.</line>
+						<leavedialogue/>
+					</condition>
+				</condition>
+
 				<line>Why don’t you walk around the house and familiarize with the surroundings?</line>
 				<changecharacter>Left</changecharacter>
 				<line>Alright.</line>
@@ -2837,19 +2946,12 @@
 			</npc>
 			
 			<npc _name="Antinous">
-				<condition _condition="isEnglish">
 					<condition _condition="!taken_EInvisible">
 						<line>What is a dirty thing like you doing here!?</line>
 						<result _name="addinventory">EInvisible</result>
 						<result _name="condition">taken_EInvisible</result>
 						<leavedialogue/>
 					</condition>
-				</condition>
-				
-				<condition _condition="isDutch">
-				<line>What ?</line>
-				<leavedialogue/>
-				</condition>
 												
 				<condition _condition="have_Invisible">
 					<line>Go on.</line>

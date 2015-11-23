@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &184344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 405706}
+  - 114: {fileID: 11471122}
+  m_Layer: 0
+  m_Name: GrapesHalf
+  m_TagString: Items
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &405706
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184344}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11471122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42eaeae77376ba4fb3e169f7c7360cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: GrapesHalf
+  itemDescription: Half a pile of grape
+  itemDescriptionDutch: DutchDescription
+  combinationList:
+  - itemToCombine: {fileID: 11495162, guid: f028fe95157def74da9fb23e0d8292be, type: 2}
+    resultItems:
+    - {fileID: 11495162, guid: f028fe95157def74da9fb23e0d8292be, type: 2}
+    - {fileID: 11454308, guid: 6c6da39e10e0b2d40ac841f30667113c, type: 2}
+    - {fileID: 11454308, guid: 6c6da39e10e0b2d40ac841f30667113c, type: 2}
+  itemSprite: {fileID: 21300000, guid: fb6cf51ab8e8d954db7d07f64a4c05ed, type: 3}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 184344}
+  m_IsPrefabParent: 1

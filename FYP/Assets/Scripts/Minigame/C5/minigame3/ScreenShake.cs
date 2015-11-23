@@ -8,9 +8,12 @@ public class ScreenShake : MonoBehaviour {
 	Vector2 Offset = new Vector2(0,0);
 	public float minX = 0;
 	public float maxX = 0;
+//	public float minY = 0;
+//	public float maxY = 0;
 	// Use this for initialization
 	void Start () {
-		targetPos = Random.insideUnitCircle * Radius;
+		Offset = transform.position;
+		targetPos = Offset + Random.insideUnitCircle * Radius;
 	}
 	
 	// Update is called once per frame
@@ -69,6 +72,28 @@ public class ScreenShake : MonoBehaviour {
 //			transform.Translate (Vector3.down * Time.deltaTime *  5); 
 //			targetPos = targetPos + (Vector2)(Vector3.down * Time.deltaTime * 5);
 //			Offset = Offset + (Vector2)(Vector3.down * Time.deltaTime * 5);
+//		}
+
+//		if (Input.GetKey (KeyCode.DownArrow) || Input.GetKeyDown ("s"))
+//		{
+//			if(((Vector3.left * Time.deltaTime *  5).y+transform.position.y) >= minY)
+//			{
+//				transform.Translate (Vector3.down * Time.deltaTime *  5); 
+//				targetPos = targetPos + (Vector2)(Vector3.down * Time.deltaTime * 5);
+//				Offset = Offset + (Vector2)(Vector3.down * Time.deltaTime * 5);
+//			}
+//			
+//		}
+
+//		if (Input.GetKey (KeyCode.UpArrow) || Input.GetKeyDown ("s"))
+//		{
+//			if(((Vector3.left * Time.deltaTime *  5).y+transform.position.y) >= minY)
+//			{
+//				transform.Translate (Vector3.down * Time.deltaTime *  5); 
+//				targetPos = targetPos + (Vector2)(Vector3.down * Time.deltaTime * 5);
+//				Offset = Offset + (Vector2)(Vector3.down * Time.deltaTime * 5);
+//			}
+//			
 //		}
 
 		if (Input.GetKey (KeyCode.RightArrow) || Input.GetKeyDown ("d"))

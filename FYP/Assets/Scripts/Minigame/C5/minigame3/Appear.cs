@@ -23,7 +23,7 @@ public class Appear : MonoBehaviour {
 			{
 				//Win.enabled = true;
 				Win.SetActive(true);
-				Win.GetComponent<WinPage>().time =4;
+				Win.GetComponent<WinPage>().time =2;
 				//Destroy (this.gameObject);
 				Destroy(coll.gameObject);
 				

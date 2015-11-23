@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{53C1B996-00B2-2A07-6676-2939378D456A}</ProjectGuid>
+	<ProjectGuid>{4C363F3F-15D1-DCA8-F7C9-3AF0D0F4CB5F}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -115,6 +115,7 @@
      <Compile Include="Assets\Scripts\Minigame\C5\minigame3\ScreenShake.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame3\Shooter.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame3\WinPage.cs" />
+     <Compile Include="Assets\Scripts\Minigame\C5\minigame3\colide.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame3\destory_prompt.cs" />
      <Compile Include="Assets\Scripts\Minigame\C5\minigame3\lost.cs" />
      <Compile Include="Assets\Scripts\SceneObjects\C_Chapter1.cs" />
@@ -151,9 +152,25 @@
      <Compile Include="Assets\Scripts\SubClasses\C_Item.cs" />
      <Compile Include="Assets\Scripts\SubClasses\C_PlayerData.cs" />
      <Compile Include="Assets\Scripts\SubClasses\C_Result.cs" />
+     <Compile Include="Assets\TouchScript\Examples\General\2D - Double Tap\Scripts\DoubleTap_Sprite.cs" />
+     <Compile Include="Assets\TouchScript\Examples\General\Hierarchy\Scripts\Heirarchy_Button.cs" />
+     <Compile Include="Assets\TouchScript\Examples\General\Hierarchy\Scripts\Heirarchy_Panel.cs" />
+     <Compile Include="Assets\TouchScript\Examples\General\Input\Scripts\InputExample.cs" />
+     <Compile Include="Assets\TouchScript\Examples\General\Input\Scripts\InputExample_Ball.cs" />
+     <Compile Include="Assets\TouchScript\Examples\General\Layers\Scripts\Layers_Sprite.cs" />
+     <Compile Include="Assets\TouchScript\Examples\General\LongPress\Scripts\LongPress_Button.cs" />
+     <Compile Include="Assets\TouchScript\Examples\General\Pan\Scripts\Pan_Button.cs" />
+     <Compile Include="Assets\TouchScript\Examples\General\Pan\Scripts\Pan_Object.cs" />
+     <Compile Include="Assets\TouchScript\Examples\General\Tap\Scripts\Tap_Breaker.cs" />
+     <Compile Include="Assets\TouchScript\Examples\General\Tap\Scripts\Tap_Spawner.cs" />
+     <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Example.cs" />
+     <Compile Include="Assets\TouchScript\Examples\_misc\Scripts\Examples.cs" />
      <None Include="Assets\Scripts\FilesToLoad\DialogueXML.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="TouchScript">
+ <HintPath>C:/Users/134365Q/Desktop/FYP/FYP/Assets/TouchScript/Plugins/TouchScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

@@ -46,7 +46,7 @@ MonoBehaviour:
   - itemToCombine: {fileID: 11499616, guid: be5c4506bdfcdd844b82bad2370666db, type: 2}
     resultItems:
     - {fileID: 11412852, guid: ca82a20fb5dba03468e3465fabf0b201, type: 2}
-  itemSprite: {fileID: 21300000, guid: da77ab92aab5678449a5a550a8779683, type: 3}
+  itemSprite: {fileID: 21300000, guid: f812d92ac0d101840af2030d9f726cc4, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

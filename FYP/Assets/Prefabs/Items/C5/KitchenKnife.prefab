@@ -63,7 +63,7 @@ MonoBehaviour:
     - {fileID: 11495162}
     - {fileID: 11405906, guid: 50879ee5c7fa6ac43989e84a5791348a, type: 2}
     - {fileID: 11405906, guid: 50879ee5c7fa6ac43989e84a5791348a, type: 2}
-  itemSprite: {fileID: 21300000, guid: 6eb642ad85c6d2f46a0b4e892cdae071, type: 3}
+  itemSprite: {fileID: 21300000, guid: efe0e3c6eb5f1794fa2b8f17b46c9c3d, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

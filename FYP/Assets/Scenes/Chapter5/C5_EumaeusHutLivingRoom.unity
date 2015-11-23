@@ -1020,7 +1020,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11474216, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: npcInventory.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 22480912, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
       propertyPath: m_RootOrder
@@ -1085,6 +1085,11 @@ Prefab:
       propertyPath: npcInventory.Array.data[1]
       value: 
       objectReference: {fileID: 11472882, guid: cd9505e969f43ff4fa2d0510cadfd254,
+        type: 2}
+    - target: {fileID: 11474216, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}
+      propertyPath: npcInventory.Array.data[2]
+      value: 
+      objectReference: {fileID: 11411684, guid: f1ea85b2b927995409fddaefb86fbd34,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3aab4d6db0d4bef41bced51eb0cdab2d, type: 2}

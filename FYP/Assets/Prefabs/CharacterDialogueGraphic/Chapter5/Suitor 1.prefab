@@ -40,8 +40,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Suitor1
-  characterSprite: {fileID: 21300000, guid: 6f6017b8ab6524c44992ddfd4601c093, type: 3}
-  characterAnimator: {fileID: 9100000, guid: ff692c64a59054c489e34c5957473320, type: 2}
+  characterSprite: {fileID: 21300000, guid: 1dd73d7a1dbe7dd47931cdbaa1bfe9ff, type: 3}
+  characterAnimator: {fileID: 9100000, guid: c9c6379000db0784f9adadb83af4d59a, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

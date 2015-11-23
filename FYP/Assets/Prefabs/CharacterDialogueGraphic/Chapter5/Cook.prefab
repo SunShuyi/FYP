@@ -40,8 +40,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Cook
-  characterSprite: {fileID: 21300000, guid: c2ada59f056a91144882fb8198ca0edc, type: 3}
-  characterAnimator: {fileID: 9100000, guid: 9da9ee8047447a84e8a86ef5023348fe, type: 2}
+  characterSprite: {fileID: 21300000, guid: 9d10364e6169dbc49bb40d3c0d38bbab, type: 3}
+  characterAnimator: {fileID: 9100000, guid: 52a799f4e6d359e4a9388d4131b16031, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

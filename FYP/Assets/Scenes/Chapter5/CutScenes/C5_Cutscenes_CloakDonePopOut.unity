@@ -255,7 +255,7 @@ MonoBehaviour:
   SceneCount: 1
   theCSText: {fileID: 1829238108}
   timeSecs: 2
-  nextScene: FindEumaeus's
+  nextScene: C5_EumaeusHutLivingRoom
   timeDelay: 0
 --- !u!224 &233177269
 RectTransform:

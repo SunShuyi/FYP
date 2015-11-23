@@ -85,7 +85,7 @@ public class C_LevelSelectionManager : MonoBehaviour
 			else
 			{
 				if(C_Chapter5.getInstance.conditionTriggers.Contains("startedGame"))
-					Application.LoadLevel("C5_Phaeacians'Beach");
+					Application.LoadLevel("C5_Phaeacians'Forest1");
 				else
 				{
 					C_Chapter5.getInstance.conditionTriggers.Add ("startedGame");

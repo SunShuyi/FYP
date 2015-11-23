@@ -1,10 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Minigame\C5\FindEumaeus's\Rotate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FilesToLoad\DialogueXML.xml">
     <Files>
-      <File FileName="Assets\Scripts\Minigame\C5\FindEumaeus's\Rotate.cs" Line="39" Column="3" />
-      <File FileName="Assets\Scripts\Minigame\C5\FindEumaeus's\RotateWithPlayer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Minigame\C5\FindEumaeus's\CameraShake.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FilesToLoad\DialogueXML.xml" Line="2839" Column="2" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter5.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter4.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SceneObjects\Managers\C_LevelSelectionManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Player.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SceneObjects\C_Chapter2.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Helpers\C_Constants.cs" Line="29" Column="6" />
+      <File FileName="Assets\Scripts\Minigame\C5\FindEumaeus's\RandomMap.cs" Line="19" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

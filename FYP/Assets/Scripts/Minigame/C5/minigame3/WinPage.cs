@@ -7,12 +7,12 @@ public class WinPage : MonoBehaviour {
 	public  int time;
 	private float rtime;
 	//public Image Win;
-	private int seconds = 4;
+	private int seconds = 1;
 
 	// Use this for initialization
 	void Start () {
 		//text.enabled = true;
-		time = 4;
+		time = 1;
 		rtime = Time.time;
 
 	}
@@ -35,7 +35,7 @@ public class WinPage : MonoBehaviour {
 		}
 		if (time<= 0) {
 			//Win.enabled = false;
-			Application.LoadLevel ("MiniGame2");
+			Application.LoadLevel ("C5_Cutscenes_Victory");
 			
 		}
 	}

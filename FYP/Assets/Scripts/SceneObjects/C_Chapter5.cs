@@ -79,23 +79,14 @@ public class C_Chapter5 : C_Chapter
 	}
 	public override void ConditionCheck()
 	{
-		if(scene == "C5_Phaeacians'Beach")
-		{
-			if(conditionTriggers.Contains("DeleteHidden")) //gate_unlocked XML condition
-			{
-				GameObject.Find("Hidden").SetActive(false); //GateMG at interactive object
-						
-			}
-
-			C_PlayerData tempPlayer = GetPlayer (currentPlayer);
-			tempPlayer.animationController = nextRAC;
-			tempPlayer.playerSprite = nextSprite;
-			conditionTriggers.Remove("woreCloak");
-			//conditionTriggers.Remove("have_CanvasCloak");
-		}
-
 		if(scene == "C5_Phaeacians'Forest1")
 		{
+			if(conditionTriggers.Contains("DeleteHiddenCanvas")) //gate_unlocked XML condition
+			{
+				GameObject.Find("HiddenCanvas").SetActive(false); //GateMG at interactive object
+				
+			}
+
 			if(conditionTriggers.Contains("DeleteHiddenForest")) //gate_unlocked XML condition
 			{
 				GameObject.Find("Hidden").SetActive(false); //GateMG at interactive object
